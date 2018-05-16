@@ -1,0 +1,19 @@
+-i https://pypi.python.org/simple
+affine==2.2.0
+attrs==18.1.0
+boto3==1.7.21
+botocore==1.10.21
+click-plugins==1.0.3
+click==6.7
+cligj==0.4.0
+docutils==0.14
+fiona==1.7.11
+jmespath==0.9.3
+munch==2.3.2
+numpy==1.14.3
+pyparsing==2.2.0
+python-dateutil==2.7.3; python_version >= '2.7'
+rasterio==1.0a12
+s3transfer==0.1.13
+six==1.11.0
+snuggs==1.4.1
