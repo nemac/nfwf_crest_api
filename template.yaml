@@ -1,9 +1,7 @@
 AWSTemplateFormatVersion: '2010-09-09'
 Transform: AWS::Serverless-2016-10-31
 Description: >
-    lambda-rasterio-test
-    
-    A short description of the project
+    NFWF Web Tool REST API
 
 # More info about Globals: https://github.com/awslabs/serverless-application-model/blob/master/docs/globals.rst
 Globals:
@@ -13,10 +11,10 @@ Globals:
 
 Resources:
 
-    FirstFunction:
+    IdentifyFunction:
         Type: AWS::Serverless::Function # More info about Function Resource: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
         Properties:
-            CodeUri: first_function/build/
+            CodeUri: identify_function/build/
             Handler: app.lambda_handler
             Runtime: python3.6 # https://docs.aws.amazon.com/lambda/latest/dg/lambda-x-ray.html
             Events:
@@ -31,11 +29,11 @@ Resources:
 
 Outputs:
 
-    FirstApigwURL:
-      Description: "API Gateway endpoint URL for Prod environment for First Function"
+    IdentifyApigwURL:
+      Description: "API Gateway endpoint URL for Prod environment for Identify Function"
       Value: !Sub "https://${ServerlessRestApi}.execute-api.${AWS::Region}.amazonaws.com/Prod/first/proxy"
 
-    FirstFunction:
-      Description: "First Lambda Function ARN"
-      Value: !GetAtt FirstFunction.Arn
+    IdentifyFunction:
+      Description: "Identify Function ARN"
+      Value: !GetAtt IdentifyFunction.Arn
 
