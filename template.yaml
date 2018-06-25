@@ -1,39 +1,51 @@
 AWSTemplateFormatVersion: '2010-09-09'
 Transform: AWS::Serverless-2016-10-31
-Description: >
-    NFWF Web Tool REST API
+Description: NFWF Web Tool REST API
 
 # More info about Globals: https://github.com/awslabs/serverless-application-model/blob/master/docs/globals.rst
 Globals:
-    Function:
-        Timeout: 5
+  Function:
+    Timeout: 5
 
+  Api:
+    # enable CORS; to make more specific, change the origin wildcard
+    # to a particular domain name, e.g. "'www.example.com'"
+    Cors:
+      AllowMethods: "'*'"
+      AllowHeaders: "'*'"
+      AllowOrigin: "'*'"
 
 Resources:
 
-    IdentifyFunction:
-        Type: AWS::Serverless::Function # More info about Function Resource: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
-        Properties:
-            CodeUri: identify_function/build/
-            Handler: app.lambda_handler
-            Runtime: python3.6 # https://docs.aws.amazon.com/lambda/latest/dg/lambda-x-ray.html
-            Events:
-                CatchAll:
-                    Type: Api # More info about API Event Source: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#api
-                    Properties:
-                        Path: /first/{proxy+}
-                        Method: any 
-            Environment: # More info about Env Vars: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#environment-object
-                Variables:
-                    PARAM1: VALUE
+  IdentifyFunction:
+    Type: AWS::Serverless::Function # More info about Function Resource: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
+    Properties:
+      Policies: AmazonS3ReadOnlyAccess # Policies are attached to a generated IAM Role
+      CodeUri: identify_function/build/
+      Handler: app.lambda_handler
+      Runtime: python3.6 # https://docs.aws.amazon.com/lambda/latest/dg/lambda-x-ray.html
+      Events:
+        CatchAll:
+          Type: Api # More info about API Event Source: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#api
+          Properties:
+            Path: /identify/{proxy+}
+            Method: get
 
 Outputs:
 
-    IdentifyApigwURL:
-      Description: "API Gateway endpoint URL for Prod environment for Identify Function"
-      Value: !Sub "https://${ServerlessRestApi}.execute-api.${AWS::Region}.amazonaws.com/Prod/first/proxy"
+  IdentifyProdApigwURL:
+    Description: "API Gateway endpoint URL for Prod environment for Identify Function"
+    Value: !Sub "https://${ServerlessRestApi}.execute-api.${AWS::Region}.amazonaws.com/Prod/identify/proxy"
 
-    IdentifyFunction:
-      Description: "Identify Function ARN"
-      Value: !GetAtt IdentifyFunction.Arn
+  IdentifyStageApigwURL:
+    Description: "API Gateway endpoint URL for Stage environment for Identify Function"
+    Value: !Sub "https://${ServerlessRestApi}.execute-api.${AWS::Region}.amazonaws.com/Stage/identify/proxy"
+
+  IdentifyFunction:
+    Description: "Identify Function ARN"
+    Value: !GetAtt IdentifyFunction.Arn
+
+
+
+
 

@@ -1,0 +1,40 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: NFWF Web Tool REST API
+Globals:
+  Api:
+    Cors:
+      AllowHeaders: '''*'''
+      AllowMethods: '''*'''
+      AllowOrigin: '''*'''
+  Function:
+    Timeout: 5
+Outputs:
+  IdentifyFunction:
+    Description: Identify Function ARN
+    Value:
+      Fn::GetAtt:
+      - IdentifyFunction
+      - Arn
+  IdentifyProdApigwURL:
+    Description: API Gateway endpoint URL for Prod environment for Identify Function
+    Value:
+      Fn::Sub: https://${ServerlessRestApi}.execute-api.${AWS::Region}.amazonaws.com/Prod/identify/proxy
+  IdentifyStageApigwURL:
+    Description: API Gateway endpoint URL for Stage environment for Identify Function
+    Value:
+      Fn::Sub: https://${ServerlessRestApi}.execute-api.${AWS::Region}.amazonaws.com/Stage/identify/proxy
+Resources:
+  IdentifyFunction:
+    Properties:
+      CodeUri: s3://nfwf-tool-cloudformation/cbf367b9205bb47010354af69d146312
+      Events:
+        CatchAll:
+          Properties:
+            Method: get
+            Path: /identify/{proxy+}
+          Type: Api
+      Handler: app.lambda_handler
+      Policies: AmazonS3ReadOnlyAccess
+      Runtime: python3.6
+    Type: AWS::Serverless::Function
+Transform: AWS::Serverless-2016-10-31

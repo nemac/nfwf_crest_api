@@ -1,4 +1,4 @@
-# lambda-rasterio-test
+# NFWF Tool API
 
 A short description of the project
 
@@ -95,7 +95,7 @@ Next, the following command will create a Cloudformation Stack and deploy your S
 ```bash
 aws cloudformation deploy \
     --template-file packaged.yaml \
-    --stack-name lambda-rasterio-test \
+    --stack-name nfwf-tool-api \
     --capabilities CAPABILITY_IAM
 ```
 
@@ -106,7 +106,7 @@ After deployment is complete you can run the following command to retrieve the A
 
 ```bash
 aws cloudformation describe-stacks \
-    --stack-name lambda-rasterio-test \
+    --stack-name nfwf-tool-api \
     --query 'Stacks[].Outputs'
 ``` 
 
@@ -142,10 +142,10 @@ aws cloudformation package \
 
 aws cloudformation deploy \
     --template-file packaged.yaml \
-    --stack-name lambda-rasterio-test \
+    --stack-name nfwf-tool-api \
     --capabilities CAPABILITY_IAM \
     --parameter-overrides MyParameterSample=MySampleValue
 
 aws cloudformation describe-stacks \
-    --stack-name lambda-rasterio-test --query 'Stacks[].Outputs'
+    --stack-name nfwf-tool-api --query 'Stacks[].Outputs'
 ```

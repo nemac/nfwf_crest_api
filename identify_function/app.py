@@ -2,14 +2,16 @@ import boto3
 import json
 import os
 import rasterio as rio
+import rasterio.warp as warp
+from rasterio.crs import CRS
+
+session = boto3.Session()
 
 def runs_on_aws_lambda():
     """
         Returns True if this function is executed on AWS Lambda service.
     """
     return 'AWS_SAM_LOCAL' not in os.environ and 'LAMBDA_TASK_ROOT' in os.environ
-
-session = boto3.Session()
 
 
 def lambda_handler(event, context):
@@ -19,33 +21,54 @@ def lambda_handler(event, context):
         This method is invoked by the API Gateway: /Prod/first/{proxy+} endpoint.
     """
 
-    response = get_identify(event)
+    params = event['queryStringParameters']
+
+    response = get_identify(params)
 
     return {
         "statusCode": 200,
-        "body": json.dumps(response)
+        "body": json.dumps(response),
+        "headers": {
+            "Content-Type": 'application/json',
+            "Access-Control-Allow-Origin": "*"
+        }
     }
 
 
-def get_identify(event):
+def get_identify(params):
 
-    data_source = "s3://nfwf-tool/NA_AssetThreatIndexAsBands.tif"
+    # Band 1 = Exposure Index
+    # Band 2 = Asset Index
+    # Band 3 = Threat Index
+    bands = (1, 2, 3, 4, 5, 6)
 
-    # coords = [ (1745727, 451980) ]
-    coords = [ (float(event['x']), float(event['y'])) ]
+    data_source = "ALL_INDICES_CONUS.vrt"
 
-    # Band 1 = Asset Index
-    # Band 2 = Threat Index
+    with rio.Env(GDAL_DISABLE_READDIR_ON_OPEN=True, CPL_CURL_VERBOSE=True):
+        with rio.open(data_source) as src:
 
-    bands = (1, 2)
+            # Transform Coords
+            if runs_on_aws_lambda():
+                xs = [ float(params['lng']) ]
+                ys = [ float(params['lat']) ]
+            else:
+                xs = [ float(params['lng'][0]) ]
+                ys = [ float(params['lat'][0]) ]
 
-    response = {}
-
-    with rio.open(data_source) as src:
-        result_gen = src.sample(coords, bands)
-        result = next(result_gen)
-        response['asset'] = str(result[0])
-        response['threat'] = str(result[1])
-        response['exposure'] = str(result[0] * result[1])
+            src_crs = CRS.from_epsg(4326)
+            dst_crs = src.get_crs()
+            t_coords = warp.transform(src_crs, dst_crs, xs, ys)
+            coords = [(t_coords[0][0], t_coords[1][0])]
+            
+            # Identify
+            response = {}
+            result_gen = src.sample(coords, bands)
+            result = next(result_gen)
+            response['asset'] = str(result[0])
+            response['threat'] = str(result[1])
+            response['exposure'] = str(result[2])
+            response['aquatic'] = str(result[3])
+            response['terrestrial'] = str(result[4])
+            response['hubs'] = str(result[5])
 
     return response
