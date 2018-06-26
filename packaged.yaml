@@ -1,13 +1,5 @@
 AWSTemplateFormatVersion: '2010-09-09'
 Description: NFWF Web Tool REST API
-Globals:
-  Api:
-    Cors:
-      AllowHeaders: '''*'''
-      AllowMethods: '''*'''
-      AllowOrigin: '''*'''
-  Function:
-    Timeout: 5
 Outputs:
   IdentifyFunction:
     Description: Identify Function ARN
@@ -16,25 +8,67 @@ Outputs:
       - IdentifyFunction
       - Arn
   IdentifyProdApigwURL:
-    Description: API Gateway endpoint URL for Prod environment for Identify Function
+    Description: API Gateway endpoint URL for Identify Function
     Value:
-      Fn::Sub: https://${ServerlessRestApi}.execute-api.${AWS::Region}.amazonaws.com/Prod/identify/proxy
-  IdentifyStageApigwURL:
-    Description: API Gateway endpoint URL for Stage environment for Identify Function
-    Value:
-      Fn::Sub: https://${ServerlessRestApi}.execute-api.${AWS::Region}.amazonaws.com/Stage/identify/proxy
+      Fn::Sub: https://${ApiGatewayApi}.execute-api.${AWS::Region}.amazonaws.com/identify/proxy
+Parameters:
+  Stage:
+    Type: String
 Resources:
+  ApiGatewayApi:
+    Properties:
+      Cors: '''*'''
+      DefinitionBody:
+        basePath: /
+        definitions:
+          Empty:
+            title: Empty Schema
+            type: object
+        info:
+          title:
+            Fn::Sub: NFWF Tool (${Stage})
+        paths:
+          /identify/{proxy+}:
+            get:
+              parameters:
+              - in: path
+                name: proxy
+                required: true
+                type: string
+              produces:
+              - application/json
+              responses: {}
+              x-amazon-apigateway-auth:
+                type: aws_iam
+              x-amazon-apigateway-integration:
+                httpMethod: POST
+                type: aws_proxy
+                uri:
+                  Fn::Sub: arn:aws:apigateway:${AWS::Region}:lambda:path/2015-03-31/functions/${IdentifyFunction.Arn}/invocations
+        schemes:
+        - https
+        swagger: 2.0
+      StageName:
+        Ref: Stage
+    Type: AWS::Serverless::Api
   IdentifyFunction:
     Properties:
-      CodeUri: s3://nfwf-tool-cloudformation/cbf367b9205bb47010354af69d146312
+      CodeUri: s3://nfwf-tool-cloudformation/ee0a9e04c0243c240c9a9ab115aa8797
       Events:
-        CatchAll:
+        GetApi:
           Properties:
-            Method: get
+            Method: GET
             Path: /identify/{proxy+}
+            RestApiId:
+              Ref: ApiGatewayApi
           Type: Api
       Handler: app.lambda_handler
       Policies: AmazonS3ReadOnlyAccess
       Runtime: python3.6
+      Tags:
+        AppFunction: Identify
+        AppName: NfwfTool
+        ClientName: NFWF
+      Timeout: 8
     Type: AWS::Serverless::Function
 Transform: AWS::Serverless-2016-10-31

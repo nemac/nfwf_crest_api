@@ -1,45 +1,77 @@
 AWSTemplateFormatVersion: '2010-09-09'
 Transform: AWS::Serverless-2016-10-31
+
 Description: NFWF Web Tool REST API
 
-# More info about Globals: https://github.com/awslabs/serverless-application-model/blob/master/docs/globals.rst
-Globals:
-  Function:
-    Timeout: 5
-
-  Api:
-    # enable CORS; to make more specific, change the origin wildcard
-    # to a particular domain name, e.g. "'www.example.com'"
-    Cors:
-      AllowMethods: "'*'"
-      AllowHeaders: "'*'"
-      AllowOrigin: "'*'"
+Parameters:
+  Stage:
+    Type: String
 
 Resources:
+
+  ApiGatewayApi:
+    Type: AWS::Serverless::Api
+    Properties:
+      StageName: !Ref Stage
+      Cors: "'*'"
+      DefinitionBody:
+        swagger: 2.0
+        basePath: /
+        info:
+          title: !Sub "NFWF Tool (${Stage})"
+        schemes:
+        - https
+        paths:
+          /identify/{proxy+}:
+            get:
+              x-amazon-apigateway-auth:
+                type: aws_iam
+              produces:
+              - application/json
+              parameters:
+              - name: proxy
+                in: path
+                required: true
+                type: string
+              responses: {}
+              x-amazon-apigateway-integration:
+                uri: 
+                  Fn::Sub: "arn:aws:apigateway:${AWS::Region}:lambda:path/2015-03-31/functions/${IdentifyFunction.Arn}/invocations"
+                httpMethod: POST
+                type: aws_proxy
+        definitions:
+          Empty:
+            type: object
+            title: Empty Schema
+
 
   IdentifyFunction:
     Type: AWS::Serverless::Function # More info about Function Resource: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
     Properties:
+      Timeout: 8
       Policies: AmazonS3ReadOnlyAccess # Policies are attached to a generated IAM Role
       CodeUri: identify_function/build/
       Handler: app.lambda_handler
       Runtime: python3.6 # https://docs.aws.amazon.com/lambda/latest/dg/lambda-x-ray.html
       Events:
-        CatchAll:
-          Type: Api # More info about API Event Source: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#api
+        GetApi:
+          Type: Api
           Properties:
             Path: /identify/{proxy+}
-            Method: get
+            Method: GET
+            RestApiId: !Ref ApiGatewayApi
+
+      Tags:
+        AppFunction: Identify
+        AppName: NfwfTool
+        ClientName: NFWF
+
 
 Outputs:
 
   IdentifyProdApigwURL:
-    Description: "API Gateway endpoint URL for Prod environment for Identify Function"
-    Value: !Sub "https://${ServerlessRestApi}.execute-api.${AWS::Region}.amazonaws.com/Prod/identify/proxy"
-
-  IdentifyStageApigwURL:
-    Description: "API Gateway endpoint URL for Stage environment for Identify Function"
-    Value: !Sub "https://${ServerlessRestApi}.execute-api.${AWS::Region}.amazonaws.com/Stage/identify/proxy"
+    Description: "API Gateway endpoint URL for Identify Function"
+    Value: !Sub "https://${ApiGatewayApi}.execute-api.${AWS::Region}.amazonaws.com/identify/proxy"
 
   IdentifyFunction:
     Description: "Identify Function ARN"

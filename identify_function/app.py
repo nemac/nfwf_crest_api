@@ -40,11 +40,15 @@ def get_identify(params):
     # Band 1 = Exposure Index
     # Band 2 = Asset Index
     # Band 3 = Threat Index
+    # Band 4 = Aquatic Index
+    # Band 5 = Terrestrial Index
+    # Band 6 = Hubs (preliminary)
+    
     bands = (1, 2, 3, 4, 5, 6)
 
     data_source = "ALL_INDICES_CONUS.vrt"
 
-    with rio.Env(GDAL_DISABLE_READDIR_ON_OPEN=True, CPL_CURL_VERBOSE=True):
+    with rio.Env(GDAL_DISABLE_READDIR_ON_OPEN=True):
         with rio.open(data_source) as src:
 
             # Transform Coords
@@ -56,6 +60,7 @@ def get_identify(params):
                 ys = [ float(params['lat'][0]) ]
 
             src_crs = CRS.from_epsg(4326)
+            # deprecated, use src.crs
             dst_crs = src.get_crs()
             t_coords = warp.transform(src_crs, dst_crs, xs, ys)
             coords = [(t_coords[0][0], t_coords[1][0])]
