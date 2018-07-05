@@ -22,23 +22,27 @@ Resources:
         schemes:
         - https
         paths:
-          /identify/{proxy+}:
+          /identify:
             get:
-              x-amazon-apigateway-auth:
-                type: aws_iam
               produces:
               - application/json
-              parameters:
-              - name: proxy
-                in: path
-                required: true
-                type: string
               responses: {}
               x-amazon-apigateway-integration:
                 uri: 
-                  Fn::Sub: "arn:aws:apigateway:${AWS::Region}:lambda:path/2015-03-31/functions/${IdentifyFunction.Arn}/invocations"
+                  !Sub "arn:aws:apigateway:${AWS::Region}:lambda:path/2015-03-31/functions/${IdentifyFunction.Arn}/invocations"
                 httpMethod: POST
                 type: aws_proxy
+          /zonal_stats:
+            post:
+              produces:
+              - application/json
+              responses: {}
+              x-amazon-apigateway-integration:
+                uri: 
+                  !Sub "arn:aws:apigateway:${AWS::Region}:lambda:path/2015-03-31/functions/${ZonalStatsFunction.Arn}/invocations"
+                httpMethod: POST
+                type: aws_proxy
+
         definitions:
           Empty:
             type: object
@@ -57,26 +61,58 @@ Resources:
         GetApi:
           Type: Api
           Properties:
-            Path: /identify/{proxy+}
+            Path: /identify
             Method: GET
             RestApiId: !Ref ApiGatewayApi
 
       Tags:
+        AppName: NfwfToolRestApi
         AppFunction: Identify
-        AppName: NfwfTool
-        ClientName: NFWF
+        Project: NfwfTool
+        Client: NFWF
+        Stage: !Ref Stage
+
+  ZonalStatsFunction:
+    Type: AWS::Serverless::Function # More info about Function Resource: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
+    Properties:
+      Timeout: 10
+      Policies: AmazonS3ReadOnlyAccess # Policies are attached to a generated IAM Role
+      CodeUri: zonal_stats_function/build/
+      Handler: app.lambda_handler
+      Runtime: python3.6 # https://docs.aws.amazon.com/lambda/latest/dg/lambda-x-ray.html
+      Events:
+        PostApi:
+          Type: Api
+          Properties:
+            Path: /zonal_stats
+            Method: POST
+            RestApiId: !Ref ApiGatewayApi
+
+      Tags:
+        AppName: NfwfToolApi
+        AppFunction: ZonalStats
+        Project: NfwfTool
+        Client: NFWF
+        Stage: !Ref Stage
 
 
 Outputs:
 
-  IdentifyProdApigwURL:
+  IdentifyApigwURL:
     Description: "API Gateway endpoint URL for Identify Function"
-    Value: !Sub "https://${ApiGatewayApi}.execute-api.${AWS::Region}.amazonaws.com/identify/proxy"
+    Value: !Sub "https://${ApiGatewayApi}.execute-api.${AWS::Region}.amazonaws.com/identify"
 
   IdentifyFunction:
     Description: "Identify Function ARN"
     Value: !GetAtt IdentifyFunction.Arn
 
+  ZonalStatsApigwURL:
+    Description: "API Gateway endpoint URL for Zonal Stats Function"
+    Value: !Sub "https://${ApiGatewayApi}.execute-api.${AWS::Region}.amazonaws.com/zonal_stats"
+
+  ZonalStatsFunction:
+    Description: "Identify Function ARN"
+    Value: !GetAtt ZonalStatsFunction.Arn
 
 
 

@@ -1,16 +1,26 @@
 AWSTemplateFormatVersion: '2010-09-09'
 Description: NFWF Web Tool REST API
 Outputs:
+  IdentifyApigwURL:
+    Description: API Gateway endpoint URL for Identify Function
+    Value:
+      Fn::Sub: https://${ApiGatewayApi}.execute-api.${AWS::Region}.amazonaws.com/identify
   IdentifyFunction:
     Description: Identify Function ARN
     Value:
       Fn::GetAtt:
       - IdentifyFunction
       - Arn
-  IdentifyProdApigwURL:
-    Description: API Gateway endpoint URL for Identify Function
+  ZonalStatsApigwURL:
+    Description: API Gateway endpoint URL for Zonal Stats Function
     Value:
-      Fn::Sub: https://${ApiGatewayApi}.execute-api.${AWS::Region}.amazonaws.com/identify/proxy
+      Fn::Sub: https://${ApiGatewayApi}.execute-api.${AWS::Region}.amazonaws.com/zonal_stats
+  ZonalStatsFunction:
+    Description: Identify Function ARN
+    Value:
+      Fn::GetAtt:
+      - ZonalStatsFunction
+      - Arn
 Parameters:
   Stage:
     Type: String
@@ -28,23 +38,26 @@ Resources:
           title:
             Fn::Sub: NFWF Tool (${Stage})
         paths:
-          /identify/{proxy+}:
+          /identify:
             get:
-              parameters:
-              - in: path
-                name: proxy
-                required: true
-                type: string
               produces:
               - application/json
               responses: {}
-              x-amazon-apigateway-auth:
-                type: aws_iam
               x-amazon-apigateway-integration:
                 httpMethod: POST
                 type: aws_proxy
                 uri:
                   Fn::Sub: arn:aws:apigateway:${AWS::Region}:lambda:path/2015-03-31/functions/${IdentifyFunction.Arn}/invocations
+          /zonal_stats:
+            post:
+              produces:
+              - application/json
+              responses: {}
+              x-amazon-apigateway-integration:
+                httpMethod: POST
+                type: aws_proxy
+                uri:
+                  Fn::Sub: arn:aws:apigateway:${AWS::Region}:lambda:path/2015-03-31/functions/${ZonalStatsFunction.Arn}/invocations
         schemes:
         - https
         swagger: 2.0
@@ -53,12 +66,12 @@ Resources:
     Type: AWS::Serverless::Api
   IdentifyFunction:
     Properties:
-      CodeUri: s3://nfwf-tool-cloudformation/ee0a9e04c0243c240c9a9ab115aa8797
+      CodeUri: s3://nemac-cloudformation/ee7a899bba9988373c67e0b197c9cdb5
       Events:
         GetApi:
           Properties:
             Method: GET
-            Path: /identify/{proxy+}
+            Path: /identify
             RestApiId:
               Ref: ApiGatewayApi
           Type: Api
@@ -67,8 +80,34 @@ Resources:
       Runtime: python3.6
       Tags:
         AppFunction: Identify
-        AppName: NfwfTool
-        ClientName: NFWF
+        AppName: NfwfToolRestApi
+        Client: NFWF
+        Project: NfwfTool
+        Stage:
+          Ref: Stage
       Timeout: 8
+    Type: AWS::Serverless::Function
+  ZonalStatsFunction:
+    Properties:
+      CodeUri: s3://nemac-cloudformation/a86dd567cc319a770e6328528b9cb755
+      Events:
+        PostApi:
+          Properties:
+            Method: POST
+            Path: /zonal_stats
+            RestApiId:
+              Ref: ApiGatewayApi
+          Type: Api
+      Handler: app.lambda_handler
+      Policies: AmazonS3ReadOnlyAccess
+      Runtime: python3.6
+      Tags:
+        AppFunction: ZonalStats
+        AppName: NfwfToolApi
+        Client: NFWF
+        Project: NfwfTool
+        Stage:
+          Ref: Stage
+      Timeout: 10
     Type: AWS::Serverless::Function
 Transform: AWS::Serverless-2016-10-31
