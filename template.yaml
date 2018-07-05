@@ -53,7 +53,9 @@ Resources:
     Type: AWS::Serverless::Function # More info about Function Resource: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
     Properties:
       Timeout: 8
-      Policies: AmazonS3ReadOnlyAccess # Policies are attached to a generated IAM Role
+      Policies:
+        - AmazonS3ReadOnlyAccess
+        - IAMReadOnlyAccess
       CodeUri: identify_function/build/
       Handler: app.lambda_handler
       Runtime: python3.6 # https://docs.aws.amazon.com/lambda/latest/dg/lambda-x-ray.html
@@ -76,7 +78,9 @@ Resources:
     Type: AWS::Serverless::Function # More info about Function Resource: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
     Properties:
       Timeout: 10
-      Policies: AmazonS3ReadOnlyAccess # Policies are attached to a generated IAM Role
+      Policies:
+        - AmazonS3ReadOnlyAccess
+        - IAMReadOnlyAccess
       CodeUri: zonal_stats_function/build/
       Handler: app.lambda_handler
       Runtime: python3.6 # https://docs.aws.amazon.com/lambda/latest/dg/lambda-x-ray.html
