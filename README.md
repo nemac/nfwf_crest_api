@@ -14,8 +14,7 @@ A short description of the project
 Provided that you have requirements above installed, proceed by installing the application dependencies and development dependencies:
 
 ```bash
-pipenv install
-pipenv install -d
+./build.sh
 ```
 
 ## Testing
@@ -26,33 +25,19 @@ pipenv install -d
 pipenv run python -m pytest tests/ -v
 ```
 
-**Tip**: Commands passed to `pipenv run` will be executed in the Virtual environment created for our project.
-
 ## Packaging
 
-AWS Lambda Python runtime requires a flat folder with all dependencies including the application. To facilitate this process, the pre-made SAM template expects this structure to be under `<src>/build/`:
+AWS Lambda Python runtime requires a flat folder with all dependencies including the application. To facilitate this process, the pre-made SAM template expects this structure to be under `<src>/<function>/build/`:
 
 ```yaml
 ...
-    FirstFunction:
+    FunctionName:
         Type: AWS::Serverless::Function
         Properties:
-            CodeUri: first_function/build/
+            CodeUri: folder_function/build/
             ...
 ```
 
-With that in mind, we will:
-
-1. Generate a hashed `requirements.txt` out of our `Pipfile` dep file
-1. Install all dependencies directly to `build` sub-folder
-2. Copy our function (app.py) into `build` sub-folder
-
-```bash
-# Create a hashed pip requirements.txt file only with our app dependencies (no dev deps)
-pipenv lock -r > requirements.txt
-pip install -r requirements.txt -t first_function/build/
-cp -R first_function/app.py first_function/build/
-```
 
 ### Local development
 
@@ -61,7 +46,7 @@ Given that you followed Packaging instructions then run one of the following opt
 **Invoking function locally without API Gateway**
 
 ```bash
-echo '{"lambda": "payload"}' | sam local invoke FirstFunction
+echo '{"lambda": "payload"}' | sam local invoke FunctionName
 ```
 
 **Invoking function locally through local API Gateway**

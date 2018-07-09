@@ -46,7 +46,7 @@ def get_response(geojson):
         for feature in geojson['features']:
           geom = [ feature['geometry'] ]
           out_image, out_transform = rasterio.mask.mask(vrt, geom, crop=True)
-          arr = ma.masked_outside(out_image, 0.0, 10.0)
+          arr = ma.masked_outside(out_image, 0.0, 100)
           feature['mean'] = {}
           for i in range(0, len(arr)):
             index_name = index_names[i]

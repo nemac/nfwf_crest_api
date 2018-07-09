@@ -3,22 +3,15 @@ version: 0.2
 phases:
   install:
     commands:
-      - echo Installing pipenv...
-      - pip install -U pip pipenv
+      - echo Nothing to do in install phase...
   pre_build:
     commands:
       - echo Nothing to do in the pre_build phase...
   build:
     commands:
-      - rm -rf identify_function/build/*
-      - rm -rf zonal_stats_function/build/*
-      - pipenv lock -r > requirements.txt
-      - pip install -Ur requirements.txt -t identify_function/build/
-      - pip install -Ur requirements.txt -t zonal_stats_function/build/
-      - cp identify_function/app.py identify_function/build/
-      - cp zonal_stats_function/app.py zonal_stats_function/build/
-      - aws cloudformation package --template-file template.yaml --output-template-file packaged.yaml --s3-bucket nemac-cloudformation
-      - aws cloudformation deploy --template-file packaged.yaml --stack-name nfwf-tool-api-dev --capabilities CAPABILITY_IAM
+      - echo Preparing environment
+      - ./build.sh
   post_build:
     commands:
-      - echo Build completed
+      - aws cloudformation package --template-file template.yaml --output-template-file packaged.yaml --s3-bucket nemac-cloudformation
+      - aws cloudformation deploy --template-file packaged.yaml --stack-name nfwf-tool-api-dev --capabilities CAPABILITY_IAM

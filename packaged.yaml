@@ -66,7 +66,7 @@ Resources:
     Type: AWS::Serverless::Api
   IdentifyFunction:
     Properties:
-      CodeUri: s3://nemac-cloudformation/ee7a899bba9988373c67e0b197c9cdb5
+      CodeUri: s3://nemac-cloudformation/343b57114eac0a86f3266951afe29a83
       Events:
         GetApi:
           Properties:
@@ -76,7 +76,9 @@ Resources:
               Ref: ApiGatewayApi
           Type: Api
       Handler: app.lambda_handler
-      Policies: AmazonS3ReadOnlyAccess
+      Policies:
+      - AmazonS3ReadOnlyAccess
+      - IAMReadOnlyAccess
       Runtime: python3.6
       Tags:
         AppFunction: Identify
@@ -89,7 +91,7 @@ Resources:
     Type: AWS::Serverless::Function
   ZonalStatsFunction:
     Properties:
-      CodeUri: s3://nemac-cloudformation/a86dd567cc319a770e6328528b9cb755
+      CodeUri: s3://nemac-cloudformation/124a4bc90951406104509b201f74155c
       Events:
         PostApi:
           Properties:
@@ -99,7 +101,9 @@ Resources:
               Ref: ApiGatewayApi
           Type: Api
       Handler: app.lambda_handler
-      Policies: AmazonS3ReadOnlyAccess
+      Policies:
+      - AmazonS3ReadOnlyAccess
+      - IAMReadOnlyAccess
       Runtime: python3.6
       Tags:
         AppFunction: ZonalStats
