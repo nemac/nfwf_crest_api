@@ -77,7 +77,8 @@ Resources:
   ZonalStatsFunction:
     Type: AWS::Serverless::Function # More info about Function Resource: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
     Properties:
-      Timeout: 10
+      Timeout: 300
+      MemorySize: 1024
       Policies:
         - AmazonS3ReadOnlyAccess
         - IAMReadOnlyAccess
@@ -112,7 +113,7 @@ Outputs:
 
   ZonalStatsApigwURL:
     Description: "API Gateway endpoint URL for Zonal Stats Function"
-    Value: !Sub "https://${ApiGatewayApi}.execute-api.${AWS::Region}.amazonaws.com/zonal_stats"
+    Value: !Sub "https://${ApiGatewayApi}.execute-api.${AWS::Region}.amazonaws.com/${Stage}/zonal_stats"
 
   ZonalStatsFunction:
     Description: "Identify Function ARN"

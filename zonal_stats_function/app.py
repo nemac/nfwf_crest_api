@@ -1,11 +1,18 @@
 import boto3
-import rasterio
-import rasterio.mask
-import numpy.ma as ma
+import os
 import json
+import pyproj
+from rasterio import Env, open
+from rasterio.mask import mask
+from numpy.ma import masked_outside
+from numpy import isnan
 from rasterio.vrt import WarpedVRT
+from rasterio.enums import Resampling
+from copy import deepcopy
 
 session = boto3.Session()
+
+proj = pyproj.Proj(proj='aea', lat_1=29.5, lat_2=45.5, lat_0=37.5, lon_0=-96, x_0=0, y_0=0, datum='NAD83', units='m')
 
 def runs_on_aws_lambda():
   """
@@ -21,7 +28,11 @@ def lambda_handler(event, context):
     This method is invoked by the API Gateway: /zonal_stats/{proxy+} endpoint.
   """
 
-  geojson = json.loads(event['body'])
+  if runs_on_aws_lambda():
+    geojson = json.loads(event['body'])
+  else:
+    geojson = event['body']
+
   response = get_response(geojson)
 
   return {
@@ -34,23 +45,58 @@ def lambda_handler(event, context):
   }
 
 
+def transform_polygon(coords):
+  new_coords = []
+  for coord in coords:
+    coord = list(proj(*coord))
+    new_coords.append(coord)
+  return new_coords
+
+
+def transform_geom(geom):
+  if geom['type'] == 'Polygon':
+    coords = geom['coordinates'][0]
+    geom['coordinates'] = [ transform_polygon(coords) ]
+  elif geom['type'] == 'MultiPolygon':
+    new_polys = []
+    for poly in geom['coordinates']:
+      new_coords = []
+      for coords in poly:
+        new_coords.append(transform_polygon(coords))
+      new_polys.append(new_coords)
+    geom['coordinates'] = new_polys
+  else:
+    print("Geometry type must be MultiPolygon or Polygon")
+    raise
+  return geom
+
 def get_response(geojson):
 
-  index_names = [ 'asset', 'threat', 'exposure', 'aquatic', 'terrestrial', 'hubs' ]
+  dataset_names = [ 'exposure', 'asset', 'threat', 'aquatic', 'terrestrial', 'hubs',
+      'crit_infra', 'crit_facilities', 'pop_density', 'social_vuln', 'drainage',
+      'erosion', 'floodprone_areas', 'geostress', 'sea_level_rise', 'slope',
+      'storm_surge'
+  ]
   
-  data_source = "s3://nfwf-tool/ALL_INDICES_CONUS.vrt"
+  data_source = "s3://nfwf-tool/ALL_DATASETS_CONUS.vrt"
 
-  with rasterio.Env(GDAL_DISABLE_READDIR_ON_OPEN=True):
-    with rasterio.open(data_source) as src:
-      with WarpedVRT(src, crs='EPSG:4326') as vrt:
-        for feature in geojson['features']:
-          geom = [ feature['geometry'] ]
-          out_image, out_transform = rasterio.mask.mask(vrt, geom, crop=True)
-          arr = ma.masked_outside(out_image, 0.0, 100)
-          feature['mean'] = {}
-          for i in range(0, len(arr)):
-            index_name = index_names[i]
-            mean = arr[i].mean()
-            feature['mean'][index_name] = float(mean)
+  with Env(GDAL_DISABLE_READDIR_ON_OPEN=True):
+    with open(data_source) as src:
+      for feature in geojson['features']:
+        geom_latlng = deepcopy(feature['geometry'])
+        geom_albers = transform_geom(geom_latlng)
+        geom = [ geom_albers ]
+        out_image, out_transform = mask(src, geom, pad=True, crop=True)
+        arr = masked_outside(out_image, 0.0, 100.0)
+        feature['mean'] = {}
+        for i in range(0, len(arr)):
+          index_name = dataset_names[i]
+          prelim_mean = arr[i].mean()
+          if isnan([prelim_mean]):
+            mean = "NaN"
+          else:
+            mean = float(prelim_mean)
+          feature['mean'][index_name] = mean
 
   return geojson
+

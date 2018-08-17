@@ -37,9 +37,13 @@ def lambda_handler(event, context):
 
 def get_identify(params):
 
-  bands = (1, 2, 3, 4, 5, 6)
+  dataset_names = [ 'exposure', 'asset', 'threat', 'aquatic', 'terrestrial', 'hubs',
+      'crit_infra', 'crit_facilities', 'pop_density', 'social_vuln', 'drainage',
+      'erosion', 'floodprone_areas', 'geostress', 'sea_level_rise', 'slope',
+      'storm_surge'
+  ]
 
-  data_source = "s3://nfwf-tool/ALL_INDICES_CONUS.vrt"
+  data_source = "s3://nfwf-tool/ALL_DATASETS_CONUS.vrt"
 
   with rio.Env(GDAL_DISABLE_READDIR_ON_OPEN=True):
     with rio.open(data_source) as src:
@@ -54,13 +58,10 @@ def get_identify(params):
 
         coords = [(x, y)]
         response = {}
-        result_gen = vrt.sample(coords, bands)
+        result_gen = vrt.sample(coords, list(range(1, len(dataset_names)+1)))
         result = next(result_gen)
-        response['asset'] = str(result[0])
-        response['threat'] = str(result[1])
-        response['exposure'] = str(result[2])
-        response['aquatic'] = str(result[3])
-        response['terrestrial'] = str(result[4])
-        response['hubs'] = str(result[5])
+        for i in range(0, len(dataset_names)):
+          dataset_name = dataset_names[i]
+          response[dataset_name] = str(result[i])
 
   return response

@@ -1,17 +1,18 @@
 -i https://pypi.python.org/simple
 affine==2.2.1
 attrs==18.1.0
-boto3==1.7.49
-botocore==1.10.49
+boto3==1.7.75
+botocore==1.10.75
 click-plugins==1.0.3
 click==6.7
 cligj==0.4.0
 docutils==0.14
 jmespath==0.9.3
-numpy==1.14.5; python_version != '3.1.*'
+numpy==1.15.0; python_version != '3.3.*'
 pyparsing==2.2.0
+pyproj==1.9.5.1
 python-dateutil==2.7.3; python_version >= '2.7'
-rasterio==1.0rc1
+rasterio==1.0.2
 s3transfer==0.1.13
 six==1.11.0
 snuggs==1.4.2

@@ -1,6 +1,7 @@
 import json
 import pytest
-from first_function import app
+import boto3
+from zonal_stats_function import app
 
 
 @pytest.fixture()
@@ -30,7 +31,7 @@ def apigw_event():
                 "sourceIp": "127.0.0.1",
                 "accountId": ""
             },
-            "stage": "prod"
+            "stage": "Prod"
         },
         "queryStringParameters": {
             "foo": "bar"
@@ -73,14 +74,8 @@ def apigw_event():
             "Accept-Encoding":
             "gzip, deflate, sdch"
         },
-        "pathParameters": {
-            "proxy": "/examplepath"
-        },
         "httpMethod": "POST",
-        "stageVariables": {
-            "baz": "qux"
-        },
-        "path": "/examplepath"
+        "path": "/zonal_stats"
     }
 
 

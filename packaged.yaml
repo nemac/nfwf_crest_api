@@ -14,7 +14,7 @@ Outputs:
   ZonalStatsApigwURL:
     Description: API Gateway endpoint URL for Zonal Stats Function
     Value:
-      Fn::Sub: https://${ApiGatewayApi}.execute-api.${AWS::Region}.amazonaws.com/zonal_stats
+      Fn::Sub: https://${ApiGatewayApi}.execute-api.${AWS::Region}.amazonaws.com/${Stage}/zonal_stats
   ZonalStatsFunction:
     Description: Identify Function ARN
     Value:
@@ -66,7 +66,7 @@ Resources:
     Type: AWS::Serverless::Api
   IdentifyFunction:
     Properties:
-      CodeUri: s3://nemac-cloudformation/343b57114eac0a86f3266951afe29a83
+      CodeUri: s3://nemac-cloudformation/c5a6ea82a2dc7b741018e1937376e4ec
       Events:
         GetApi:
           Properties:
@@ -91,7 +91,7 @@ Resources:
     Type: AWS::Serverless::Function
   ZonalStatsFunction:
     Properties:
-      CodeUri: s3://nemac-cloudformation/124a4bc90951406104509b201f74155c
+      CodeUri: s3://nemac-cloudformation/a27f56ed4a84048f1fb8c72030a9574c
       Events:
         PostApi:
           Properties:
@@ -101,6 +101,7 @@ Resources:
               Ref: ApiGatewayApi
           Type: Api
       Handler: app.lambda_handler
+      MemorySize: 1024
       Policies:
       - AmazonS3ReadOnlyAccess
       - IAMReadOnlyAccess
@@ -112,6 +113,6 @@ Resources:
         Project: NfwfTool
         Stage:
           Ref: Stage
-      Timeout: 10
+      Timeout: 300
     Type: AWS::Serverless::Function
 Transform: AWS::Serverless-2016-10-31
