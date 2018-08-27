@@ -3,6 +3,8 @@ import pytest
 import boto3
 from zonal_stats_function import app
 
+session = boto3.Session()
+
 apigw_event_template = {
         "body": "",
         "resource": "/{proxy+}",
