@@ -2,7 +2,17 @@
 
 set -ev
 
-STACK_NAME='nfwf-tool-api-dev'
+case $1 in "master")
+  STACK_NAME='nfwf-tool-api-dev'
+  ;;
+"prod")
+  STACK_NAME='nfwf-tool-api'
+  ;;
+*)
+  echo "You must provide a stage to deploy to as an argument to this script (either 'master' or 'prod')"
+  exit 1
+  ;;
+esac
 
 ZONAL_STATS_OUTPUT_VALUE='ZonalStatsApigwURL'
 IDENTIFY_OUTPUT_VALUE='IdentifyApigwURL'
@@ -38,13 +48,13 @@ IDENTIFY_STATUS_CODE=$(curl -s \
 
 if [ "$IDENTIFY_STATUS_CODE" -ne "200" ]
 then
-echo "Identify API failed with status code $IDENTIFY_STATUS_CODE"
+echo "Identify request failed with status code $IDENTIFY_STATUS_CODE"
 exit 1
 fi
 
 if [ "$ZONAL_STATS_STATUS_CODE" -ne "200" ]
 then
-echo "Zonal statistics API failed with status code $ZONAL_STATS_STATUS_CODE"
+echo "Zonal stats request failed with status code $ZONAL_STATS_STATUS_CODE"
 exit 1
 fi
 

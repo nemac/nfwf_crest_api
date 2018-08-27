@@ -1,13 +1,30 @@
 #! /usr/bin/env sh
 
-set -ev
-
-STACK_NAME='nfwf-tool-api-dev'
+set -e
 
 TEMPLATE_NAME='template.yaml'
 PACKAGED_TEMPLATE='packaged.yaml'
 BUCKET_NAME='nemac-cloudformation'
-STAGE_NAME='Dev'
+
+case $1 in "master")
+  STACK_NAME='nfwf-tool-api-dev'
+  STAGE_NAME='Dev'
+  ;;
+"prod")
+  STACK_NAME='nfwf-tool-api'
+  STAGE_NAME='Prod'
+  ;;
+*)
+  echo "You must provide a stage to deploy to as an argument to this script (either 'master' or 'prod')"
+  exit 1
+  ;;
+esac
+
+echo "Updating cloudformation resources..."
+echo "Stage name: $STAGE_NAME"
+echo "Cloudformation stack: $STACK_NAME"
+
+set -ev
 
 aws cloudformation package \
   --template-file $TEMPLATE_NAME \
