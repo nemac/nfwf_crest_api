@@ -6,11 +6,11 @@ TEMPLATE_NAME='template.yaml'
 PACKAGED_TEMPLATE='packaged.yaml'
 BUCKET_NAME='nemac-cloudformation'
 
-case $1 in "master")
+case $1 in "staging")
   STACK_NAME='nfwf-tool-api-dev'
   STAGE_NAME='Dev'
   ;;
-"prod")
+"production")
   STACK_NAME='nfwf-tool-api'
   STAGE_NAME='Prod'
   ;;
@@ -23,6 +23,8 @@ esac
 echo "Updating cloudformation resources..."
 echo "Stage name: $STAGE_NAME"
 echo "Cloudformation stack: $STACK_NAME"
+
+docker run --rm -v $PWD:/var/task -it lambci/lambda:build-python3.6 /bin/sh -c 'pre-deploy.sh'
 
 set -ev
 

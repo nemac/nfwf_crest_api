@@ -8,29 +8,17 @@ services:
 - docker
 
 install:
+- "sudo apt install awscli"
 - "docker pull lambci/lambda:build-python3.6"
-- "apt install awscli"
 
-jobs:
-  include:
-    - stage: test
-      script: "docker run --rm -v $PWD:/var/task -it lambci/lambda:build-python3.6 /bin/sh -c 'run-tests.sh'"
+script: "docker run --rm -v $PWD:/var/task -it lambci/lambda:build-python3.6 /bin/sh -c 'run-tests.sh'"
 
-    - stage: pre-deploy
-      script: "docker run --rm -v $PWD:/var/task -it lambci/lambda:build-python3.6 /bin/sh -c 'pre-deploy.sh'"
+deploy:
+- provider: script
+  script: ./deploy.sh $TRAVIS_BRANCH
+  on:
+    all_branches: true
+    condition: TRAVIS_BRANCH =~ ^staging|production$
 
-    - stage: deploy
-      deploy:
-        - provider: script
-          script: ./deploy.sh $TRAVIS_BRANCH
-          on:
-            branch: master
-
-        - provider: script
-          script: ./deploy.sh $TRAVIS_BRANCH
-          on:
-            branch: prod
-
-      after_deploy: ./test-api.sh $TRAVIS_BRANCH
-
+after_deploy: ./test-api.sh $TRAVIS_BRANCH
 

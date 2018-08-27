@@ -2,10 +2,10 @@
 
 set -ev
 
-case $1 in "master")
+case $1 in "staging")
   STACK_NAME='nfwf-tool-api-dev'
   ;;
-"prod")
+"production")
   STACK_NAME='nfwf-tool-api'
   ;;
 *)
