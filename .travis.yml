@@ -13,20 +13,11 @@ install:
 script:
   - docker run --rm -v $PWD:/var/task -it lambci/lambda:build-python3.6 /bin/bash -c 'run-tests.sh'
 
-
 before_deploy:
   - docker run --rm -v $PWD:/var/task -it lambci/lambda:build-python3.6 /bin/bash -c 'pre-deploy.sh'
-  - aws cloudformation package \
-    --template-file template.yaml \
-    --output-template-file packaged.yaml \
-    --s3-bucket nemac-cloudformation
 
 deploy:
-  - aws cloudformation deploy \
-    --template-file packaged.yaml \
-    --stack-name nfwf-tool-api-dev \
-    --capabilities CAPABILITY_IAM \
-    --parameter-overrides Stage=Dev
+  - ./deploy-dev.sh
 
 after_deploy:
   - ./test-api.sh
