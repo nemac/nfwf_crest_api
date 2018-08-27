@@ -8,13 +8,13 @@ services:
   - docker
 
 install:
-  - docker pull lambci/lambda:build-python3.6
+  - "docker pull lambci/lambda:build-python3.6"
 
 script:
-  - docker run --rm -v $PWD:/var/task -it lambci/lambda:build-python3.6 /bin/bash -c 'run-tests.sh'
+  - "docker run --rm -v $PWD:/var/task -it lambci/lambda:build-python3.6 /bin/sh -c 'run-tests.sh'"
 
 before_deploy:
-  - docker run --rm -v $PWD:/var/task -it lambci/lambda:build-python3.6 /bin/bash -c 'pre-deploy.sh'
+  - "docker run --rm -v $PWD:/var/task -it lambci/lambda:build-python3.6 /bin/sh -c 'pre-deploy.sh'"
 
 deploy:
   - ./deploy-dev.sh
