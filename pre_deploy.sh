@@ -1,4 +1,6 @@
-#! /bin/bash
+#! /usr/bin/env sh
+
+set -ev
 
 pip install -U pip pipenv
 

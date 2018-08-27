@@ -4,7 +4,7 @@ Outputs:
   IdentifyApigwURL:
     Description: API Gateway endpoint URL for Identify Function
     Value:
-      Fn::Sub: https://${ApiGatewayApi}.execute-api.${AWS::Region}.amazonaws.com/identify
+      Fn::Sub: https://${ApiGatewayApi}.execute-api.${AWS::Region}.amazonaws.com/${Stage}/identify
   IdentifyFunction:
     Description: Identify Function ARN
     Value:

@@ -16,7 +16,7 @@ GIS microservices build on AWS services.
 Provided that you have requirements above installed, proceed by installing the application dependencies and development dependencies:
 
 ```bash
-docker run --rm -v $PWD:/var/task -it lambci/lambda:build-python3.6 /bin/bash -c './build.sh'
+docker run --rm -v $PWD:/var/task -it lambci/lambda:build-python3.6 /bin/bash -c './pre-deploy.sh'
 ```
 
 ## Testing
@@ -26,7 +26,7 @@ docker run --rm -v $PWD:/var/task -it lambci/lambda:build-python3.6 /bin/bash -c
 `Pytest` is used to discover tests created under `tests` folder - Here's how you can run tests our initial unit tests:
 
 ```bash
-pipenv run python -m pytest tests/ -v
+docker run --rm -v $PWD:/var/task -it lambci/lambda:build-python3.6 /bin/bash -c './run-tests.sh'
 ```
 
 ## Packaging

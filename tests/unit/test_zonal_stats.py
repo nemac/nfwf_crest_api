@@ -3,13 +3,8 @@ import pytest
 import boto3
 from zonal_stats_function import app
 
-
-@pytest.fixture()
-def apigw_event():
-    """ Generates API GW Event"""
-
-    return {
-        "body": "{ \"test\": \"body\"}",
+apigw_event_template = {
+        "body": "",
         "resource": "/{proxy+}",
         "requestContext": {
             "resourceId": "123456",
@@ -31,7 +26,7 @@ def apigw_event():
                 "sourceIp": "127.0.0.1",
                 "accountId": ""
             },
-            "stage": "Prod"
+            "stage": "Dev"
         },
         "queryStringParameters": {
             "foo": "bar"
@@ -78,10 +73,89 @@ def apigw_event():
         "path": "/zonal_stats"
     }
 
+polygon_event_body = '''
+{
+    "type": "FeatureCollection",
+    "name": "charleston-poly",
+    "features": [{
+        "type": "Feature",
+        "properties": {
+            "id": null
+        },
+        "geometry": {
+            "type": "Polygon",
+            "coordinates": [
+                [
+                    [-79.662208557128906, 32.920664249232836],
+                    [-79.685039520263672, 32.930174118010605],
+                    [-79.717311859130845, 32.906541649538447],
+                    [-79.691219329833984, 32.895299602872463],
+                    [-79.676971435546875, 32.902362080894527],
+                    [-79.675083160400391, 32.909568110575655],
+                    [-79.662208557128906, 32.920664249232836]
+                ]
+            ]
+        }
+    }]
+}
+'''
 
-def test_lambda_handler(apigw_event):
+multipolygon_event_body = '''
+{
+    "type": "FeatureCollection",
+    "name": "charleston-multi-poly",
+    "crs": {
+        "type": "name",
+        "properties": {
+            "name": "urn:ogc:def:crs:OGC:1.3:CRS84"
+        }
+    },
+    "features": [{
+        "type": "Feature",
+        "properties": {
+            "id": null
+        },
+        "geometry": {
+            "type": "MultiPolygon",
+            "coordinates": [
+                [
+                    [
+                        [-79.744316416802718, 32.918307771183919],
+                        [-79.758743269652271, 32.880394658156938],
+                        [-79.827024159455647, 32.910824100458811],
+                        [-79.793686860877372, 32.942719190317831],
+                        [-79.744316416802718, 32.918307771183919]
+                    ]
+                ],
+                [
+                    [
+                        [-79.662208557128906, 32.920664249232836],
+                        [-79.685039520263672, 32.930174118010605],
+                        [-79.717311859130845, 32.906541649538447],
+                        [-79.691219329833984, 32.895299602872463],
+                        [-79.676971435546875, 32.902362080894527],
+                        [-79.675083160400391, 32.909568110575655],
+                        [-79.662208557128906, 32.920664249232836]
+                    ]
+                ]
+            ]
+        }
+    }]
+}
+'''
 
-    ret = app.lambda_handler(apigw_event, "")
+def test_polygon_event():
+    event = apigw_event_template
+    event['body'] = polygon_event_body
+    ret = app.lambda_handler(event, "")
 
     assert ret['statusCode'] == 200
-    assert ret['body'] == json.dumps({'hello': 'world'})
+#    assert ret['body'] == json.dumps({'hello': 'world'})
+
+def test_multipolygon_event():
+    event = apigw_event_template
+    event['body'] = multipolygon_event_body
+    ret = app.lambda_handler(event, "")
+
+    assert ret['statusCode'] == 200
+

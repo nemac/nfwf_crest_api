@@ -6,8 +6,6 @@ from rasterio import Env, open
 from rasterio.mask import mask
 from numpy.ma import masked_outside
 from numpy import isnan
-from rasterio.vrt import WarpedVRT
-from rasterio.enums import Resampling
 from copy import deepcopy
 
 session = boto3.Session()
@@ -70,6 +68,21 @@ def transform_geom(geom):
     raise
   return geom
 
+
+def get_zonal_stat(arr, statistic):
+  if statistic == 'mean':
+    result = arr.mean()
+  elif statistic == 'sum':
+    result = arr.sum()
+
+  if isnan([result]):
+    result = "NaN"
+  else:
+    result = float(result)
+
+  return result
+
+
 def get_response(geojson):
 
   dataset_names = [ 'exposure', 'asset', 'threat', 'aquatic', 'terrestrial', 'hubs',
@@ -88,15 +101,14 @@ def get_response(geojson):
         geom = [ geom_albers ]
         out_image, out_transform = mask(src, geom, pad=True, crop=True)
         arr = masked_outside(out_image, 0.0, 100.0)
-        feature['mean'] = {}
+        feature['properties']['mean'] = {}
+        feature['properties']['sum'] = {}
         for i in range(0, len(arr)):
           index_name = dataset_names[i]
-          prelim_mean = arr[i].mean()
-          if isnan([prelim_mean]):
-            mean = "NaN"
-          else:
-            mean = float(prelim_mean)
-          feature['mean'][index_name] = mean
+          mean = get_zonal_stat(arr[i], 'mean')
+          total = get_zonal_stat(arr[i], 'sum')
+          feature['properties']['mean'][index_name] = mean
+          feature['properties']['sum'][index_name] = total
 
   return geojson
 
