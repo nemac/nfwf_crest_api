@@ -1,5 +1,8 @@
 
-
+*.tif
+*.xml
+*.vrt
+*.lock
 
 assets/
 notebooks/
