@@ -2,14 +2,14 @@
 
 set -ev
 
-case $1 in "staging")
+case $1 in "dev")
   STACK_NAME='nfwf-tool-api-dev'
   ;;
-"production")
+"prod")
   STACK_NAME='nfwf-tool-api'
   ;;
 *)
-  echo "You must provide a stage to deploy to as an argument to this script (either 'master' or 'prod')"
+  echo "You must provide a stage to deploy to as an argument to this script (either 'dev' or 'prod')"
   exit 1
   ;;
 esac

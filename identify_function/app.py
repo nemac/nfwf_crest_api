@@ -1,18 +1,11 @@
 import boto3
 import json
-import os
 import rasterio as rio
+import lib
 from rasterio.crs import CRS
 from rasterio.vrt import WarpedVRT
 
 session = boto3.Session()
-
-def runs_on_aws_lambda():
-  """
-    Returns True if this function is executed on AWS Lambda service.
-  """
-  return 'AWS_SAM_LOCAL' not in os.environ and 'LAMBDA_TASK_ROOT' in os.environ
-
 
 def lambda_handler(event, context):
   """
@@ -21,9 +14,11 @@ def lambda_handler(event, context):
     This method is invoked by the API Gateway: /identify/{proxy+} endpoint.
   """
 
+  arn = context.invoked_function_arn
+  stage = lib.get_stage(arn)
   params = event['queryStringParameters']
 
-  response = get_identify(params)
+  response = get_identify(params, stage)
 
   return {
     "statusCode": 200,
@@ -35,21 +30,20 @@ def lambda_handler(event, context):
   }
 
 
-def get_identify(params):
+def get_identify(params, stage):
 
-  dataset_names = [ 'exposure', 'asset', 'threat', 'aquatic', 'terrestrial', 'hubs',
-      'crit_infra', 'crit_facilities', 'pop_density', 'social_vuln', 'drainage',
-      'erosion', 'floodprone_areas', 'geostress', 'sea_level_rise', 'slope',
-      'storm_surge'
-  ]
+  config = lib.get_config(stage)
+  data_source = lib.get_vrt_path(stage)
 
-  data_source = "s3://nfwf-tool/ALL_DATASETS_CONUS.vrt"
+  dataset_names = lib.get_dataset_names(config)
+  
+  print(data_source)
 
   with rio.Env(GDAL_DISABLE_READDIR_ON_OPEN=True):
     with rio.open(data_source) as src:
       with WarpedVRT(src, crs='EPSG:4326') as vrt:
 
-        if runs_on_aws_lambda():
+        if lib.runs_on_aws_lambda():
           x = float(params['lng'])
           y = float(params['lat'])
         else:

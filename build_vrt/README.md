@@ -45,7 +45,7 @@ For example, let's say the GIS team has updated the Aquatic Index dataset.
 Convert it to a cloud-optimized GeoTIFF:
 
 ```bash
-pipenv run ./convert_to_cogeo.py --convert_nodata PATH_TO_FILE/AQUATIC
+pipenv run ./convert_to_cogeo.py --convert_nodata PATH_TO_FILE
 ```
 
 We use the `--convert_nodata` flag to change pixel values equal to the nodata value 

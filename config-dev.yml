@@ -1,6 +1,5 @@
 
 dataset_bucket: nfwf-tool/
-config_bucket:  nfwf-tool/dataset-config/
 
 datasets:
   - name: exposure

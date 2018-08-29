@@ -2,6 +2,7 @@ import boto3
 import os
 import json
 import pyproj
+import lib
 from rasterio import Env, open
 from rasterio.mask import mask
 from numpy.ma import masked_outside
@@ -10,15 +11,6 @@ from copy import deepcopy
 
 session = boto3.Session()
 
-proj = pyproj.Proj(proj='aea', lat_1=29.5, lat_2=45.5, lat_0=37.5, lon_0=-96, x_0=0, y_0=0, datum='NAD83', units='m')
-
-def runs_on_aws_lambda():
-  """
-    Returns True if this function is executed on AWS Lambda service.
-  """
-  return 'AWS_SAM_LOCAL' not in os.environ and 'LAMBDA_TASK_ROOT' in os.environ
-
-
 def lambda_handler(event, context):
   """
     AWS Lambda handler
@@ -26,12 +18,15 @@ def lambda_handler(event, context):
     This method is invoked by the API Gateway: /zonal_stats/{proxy+} endpoint.
   """
 
-  if runs_on_aws_lambda():
+  if lib.runs_on_aws_lambda():
     geojson = json.loads(event['body'])
   else:
     geojson = event['body']
 
-  response = get_response(geojson)
+  arn = context.invoked_function_arn
+  stage = lib.get_stage(arn)
+
+  response = get_response(geojson, stage)
 
   return {
     "statusCode": 200,
@@ -45,6 +40,7 @@ def lambda_handler(event, context):
 
 def transform_polygon(coords):
   new_coords = []
+  proj = lib.get_proj()
   for coord in coords:
     coord = list(proj(*coord))
     new_coords.append(coord)
@@ -79,19 +75,15 @@ def get_zonal_stat(arr, statistic):
     result = "NaN"
   else:
     result = float(result)
-
   return result
 
 
-def get_response(geojson):
+def get_response(geojson, stage):
 
-  dataset_names = [ 'exposure', 'asset', 'threat', 'aquatic', 'terrestrial', 'hubs',
-      'crit_infra', 'crit_facilities', 'pop_density', 'social_vuln', 'drainage',
-      'erosion', 'floodprone_areas', 'geostress', 'sea_level_rise', 'slope',
-      'storm_surge'
-  ]
-  
-  data_source = "s3://nfwf-tool/ALL_DATASETS_CONUS.vrt"
+  config = lib.get_config(stage)
+  data_source = lib.get_vrt_path(stage)
+
+  dataset_names = lib.get_dataset_names(config)
 
   with Env(GDAL_DISABLE_READDIR_ON_OPEN=True):
     with open(data_source) as src:

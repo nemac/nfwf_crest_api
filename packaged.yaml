@@ -1,5 +1,13 @@
 AWSTemplateFormatVersion: '2010-09-09'
 Description: NFWF Web Tool REST API
+Globals:
+  Function:
+    Environment:
+      Variables:
+        CONFIG_FILE_DEV: config-dev.yml
+        CONFIG_FILE_PROD: config-prod.yml
+        VRT_FILE_DEV: ALL_DATASETS_CONUS_DEV.vrt
+        VRT_FILE_PROD: ALL_DATSETS_CONUS_PROD.vrt
 Outputs:
   IdentifyApigwURL:
     Description: API Gateway endpoint URL for Identify Function
@@ -66,7 +74,7 @@ Resources:
     Type: AWS::Serverless::Api
   IdentifyFunction:
     Properties:
-      CodeUri: s3://nemac-cloudformation/c5a6ea82a2dc7b741018e1937376e4ec
+      CodeUri: s3://nemac-cloudformation/413e02a136e1df45225999086b019651
       Events:
         GetApi:
           Properties:
@@ -87,11 +95,11 @@ Resources:
         Project: NfwfTool
         Stage:
           Ref: Stage
-      Timeout: 8
+      Timeout: 12
     Type: AWS::Serverless::Function
   ZonalStatsFunction:
     Properties:
-      CodeUri: s3://nemac-cloudformation/a27f56ed4a84048f1fb8c72030a9574c
+      CodeUri: s3://nemac-cloudformation/7a0f0fde597c2d404078f29b401e063c
       Events:
         PostApi:
           Properties:

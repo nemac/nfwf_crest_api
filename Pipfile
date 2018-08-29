@@ -7,8 +7,9 @@ name = "pypi"
 
 [packages]
 
-rasterio = { version = "==1.0.2", extras = ["s3"] }
-pyproj = "==1.9.5.1"
+rasterio = { version = "*", extras = ["s3"] }
+pyproj = "*"
+pyyaml = "*"
 
 [dev-packages]
 pytest = "*"

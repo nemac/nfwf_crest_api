@@ -7,6 +7,15 @@ Parameters:
   Stage:
     Type: String
 
+Globals:
+  Function:
+    Environment:
+      Variables:
+        CONFIG_FILE_DEV: "config-dev.yml"
+        CONFIG_FILE_PROD: "config-prod.yml"
+        VRT_FILE_DEV: "ALL_DATASETS_CONUS_DEV.vrt"
+        VRT_FILE_PROD: "ALL_DATSETS_CONUS_PROD.vrt"
+
 Resources:
 
   ApiGatewayApi:
@@ -52,7 +61,7 @@ Resources:
   IdentifyFunction:
     Type: AWS::Serverless::Function # More info about Function Resource: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
     Properties:
-      Timeout: 8
+      Timeout: 12
       Policies:
         - AmazonS3ReadOnlyAccess
         - IAMReadOnlyAccess

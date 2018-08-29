@@ -13,13 +13,18 @@ vrtnodata_arg = '-vrtnodata {0}'
 extent_arg = '-te {0}'
 band_arg = '-b {0}'
 
-with open('../config.yml') as f:
-  config = yaml.safe_load(f)
-
-dataset_bucket = config['dataset_bucket']
-bands = config['datasets']
+def get_config(stage):
+  with open('../config-{0}.yml'.format(stage)) as f:
+    config = yaml.safe_load(f)
+  return config
 
 @click.command()
+@click.option('-stage',
+  default='dev',
+  show_default=True,
+  type=type=click.Choice(['dev', 'prod']),
+  help='The stage to generate. Either \'dev\' or \'prod\''
+)
 @click.option('-te',
   default='-4954548.0 -2178809.0 4771843.0 3632558.0',
   show_default=True,
@@ -31,13 +36,16 @@ bands = config['datasets']
 )
 @click.option('-b', default='1', show_default=True, type=click.STRING, help='Band number to fetch for each dataset.')
 @click.option('-vrtnodata', default='255', show_default=True, help=('Value to set for NODATA on vrt band.'))
-def build_full_vrt(te, b, vrtnodata):
+def build_full_vrt(stage, te, b, vrtnodata):
+  config = get_config(stage)
+  dataset_bucket = config['dataset_bucket']
+  bands = config['datasets']
   main_tree = None
   main_root = None
   for i in range(0, len(bands)):
     band_num = str(i+1)
     band = bands[i]
-    vrt_path = build_intermediate_vrt(band, te, b, vrtnodata)
+    vrt_path = build_intermediate_vrt(band, te, b, vrtnodata, dataset_bucket)
     if band_num == '1':
       main_tree = ET.parse(vrt_path)
       main_root = main_tree.getroot()
@@ -47,10 +55,12 @@ def build_full_vrt(te, b, vrtnodata):
       bandElement = root.find('VRTRasterBand')
       bandElement.attrib['band'] = band_num
       main_root.append(bandElement)
-  main_tree.write('ALL_DATASETS_CONUS.vrt')
+  big_vrt_name = 'ALL_DATASETS_CONUS_{0}.vrt'.format(stage.upper())
+  main_tree.write(big_vrt_name)
+  os.rename(big_vrt_name, '../{0}'.format(big_vrt_name))
 
 
-def build_intermediate_vrt(band, te, b, vrtnodata):
+def build_intermediate_vrt(band, te, b, vrtnodata, dataset_bucket):
   try:
     folder = band['folder']
   except:
