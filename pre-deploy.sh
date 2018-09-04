@@ -1,6 +1,6 @@
 #! /usr/bin/env bash
 
-funcs=( 'identify_function' 'zonal_stats_function' )
+funcs=( 'identify_function' 'zonal_stats_function' 'upload_shape_function' )
 
 source '.env'
 
@@ -13,7 +13,7 @@ do
 	cp $CONFIG_FILE_DEV $CONFIG_FILE_PROD $i/
 	cp $VRT_FILE_DEV $VRT_FILE_PROD $i/
 	cp $i/* $i/build/
-	cp -R ./lib/ $i/lib/
-	cp -R ./lib/ $i/build/lib/
+	cp -R lib/ $i/
+	cp -R lib/ $i/build/
 done
 

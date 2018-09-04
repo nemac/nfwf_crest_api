@@ -16,7 +16,7 @@ GIS microservices build on AWS services.
 Provided that you have requirements above installed, proceed by installing the application dependencies and development dependencies:
 
 ```bash
-docker run --rm -v $PWD:/var/task -it lambci/lambda:build-python3.6 /bin/bash -c './build-deps.sh'
+docker run --rm -v $PWD:/var/task -it lambci/lambda:build-python3.6 /bin/bash -c 'cd /var/task && ./pre-deploy.sh'
 ```
 
 ## Testing
