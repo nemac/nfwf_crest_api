@@ -1,8 +1,6 @@
 import boto3
 import os
 import json
-# MUST be imported this way for tests to work
-from lib import *
 
 session = boto3.Session()
 
