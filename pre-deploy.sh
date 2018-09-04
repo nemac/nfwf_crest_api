@@ -13,7 +13,7 @@ do
 	cp $CONFIG_FILE_DEV $CONFIG_FILE_PROD $i/
 	cp $VRT_FILE_DEV $VRT_FILE_PROD $i/
 	cp $i/* $i/build/
-	cp -R lib/ $i/
-	cp -R lib/ $i/build/
+	cp -R ./lib/ $i/lib/
+	cp -R ./lib/ $i/build/lib/
 done
 
