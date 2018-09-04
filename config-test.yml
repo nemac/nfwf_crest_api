@@ -1,0 +1,69 @@
+
+datasets:
+  - name: exposure
+    input_files:
+      - ./tests/data/exposure_sample.tif
+
+  - name: asset
+    input_files:
+      - ./tests/data/asset_sample.tif
+
+  - name: threat
+    input_files:
+      - ./tests/data/threat_sample.tif
+
+  - name: aquatic
+    input_files:
+      - ./tests/data/aquatic_sample.tif
+
+  - name: terrestrial
+    input_files:
+      - ./tests/data/terrestrial_sample.tif
+
+  - name: hubs
+    input_files:
+      - ./tests/data/hubs_sample.tif
+
+  - name: crit_infra
+    input_files:
+      - ./tests/data/crit_infra_sample.tif
+
+  - name: crit_facilities
+    input_files:
+      - ./tests/data/crit_facilities_sample.tif
+
+  - name: pop_density
+    input_files:
+      - ./tests/data/pop_density_sample.tif
+
+  - name: social_vuln
+    input_files:
+      - ./tests/data/social_vuln_sample.tif
+
+  - name: drainage
+    input_files:
+      - ./tests/data/drainage_sample.tif
+
+  - name: erosion
+    input_files:
+      - ./tests/data/erosion_sample.tif
+
+  - name: floodprone_areas
+    input_files:
+      - ./tests/data/floodprone_areas_sample.tif
+
+  - name: geostress
+    input_files:
+      - ./tests/data/geostress_sample.tif
+
+  - name: sea_level_rise
+    input_files:
+      - ./tests/data/sea_level_rise_sample.tif
+
+  - name: slope
+    input_files:
+      - ./tests/data/slope_sample.tif
+
+  - name: storm_surge
+    input_files:
+      - ./tests/data/storm_surge_sample.tif

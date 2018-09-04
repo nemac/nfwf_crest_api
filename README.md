@@ -21,9 +21,13 @@ docker run --rm -v $PWD:/var/task -it lambci/lambda:build-python3.6 /bin/bash -c
 
 ## Testing
 
-(There aren't any tests right now.)
+`Pytest` is used to discover tests created under `tests` folder
 
-`Pytest` is used to discover tests created under `tests` folder - Here's how you can run tests our initial unit tests:
+To run tests, start by renaming the file `sample.env` to `.env`. This file holds environment variables that get picked up by pipenv (see [this section of pipenv docs](https://pipenv.readthedocs.io/en/latest/advanced/#automatic-loading-of-env)). The variables `LANG` and `LC_ALL` are both used by rasterio.
+
+**Note:** The variable `CURL_CA_BUNDLE`, also used by rasterio, is a path to the cURL Certificate Authority bundle file (see [this rasterio issue](https://github.com/mapbox/rasterio/issues/942)). **The default value set in `sample.env` is configured for Ubuntu**. If you want to run the tests manually on an OS other than Ubuntu, you will need to change this value for rasterio's bundled libcurl to work correctly. If you remove this variable from `.env` rasterio's libcurl will use its default: `/etc/pki/tls/certs/ca-bundle.crt`.
+
+Here's how you can run tests our initial unit tests:
 
 ```bash
 docker run --rm -v $PWD:/var/task -it lambci/lambda:build-python3.6 /bin/bash -c './run-tests.sh'
@@ -60,6 +64,24 @@ echo '{ "body": { "type": "FeatureCollection", "name": "char9", "crs": { "type":
 
 # Florida Keys Multipolygon (TIMING OUT)
 echo '{ "body": {  "type": "FeatureCollection",  "name": "keys_multi",  "crs": {  "type": "name",  "properties": {  "name": "urn:ogc:def:crs:OGC:1.3:CRS84"  }  },  "features": [{  "type": "Feature",  "properties": {  "EZG_ID": 62145,  "prg_name": "Mote Marine Laboratory, Inc.",  "proj_name": "Florida Keys Coral Disease Response & Restoration Initiative",  "region": "Gulf",  "name": "Florida Keys Coral Disease Response & Restoration Initiative",  "id": 62145,  "area": 391374264.7,  "nfwf_proje": null,  "nfwf_pro_1": null,  "asset": null,  "threat": null,  "exposure": null,  "aquatic": null,  "terrestria": null,  "hubs": null,  "crit_infra": null,  "crit_facil": null,  "pop_densit": null,  "social_vul": null,  "drainage": null,  "erosion": null,  "floodprone": null,  "geostress": null,  "sea_level_": null,  "slope": null,  "storm_surg": null  },  "geometry": {  "type": "MultiPolygon",  "coordinates": [  [  [  [-81.302133056890256, 24.60695607607207],  [-81.808877441885357, 24.499532477742999],  [-81.815743897117486, 24.54326248601156],  [-81.306252930209197, 24.650648613252887],  [-81.302133056890256, 24.60695607607207]  ]  ],  [  [  [-80.10747716193147, 25.690925958783847],  [-80.167901966716897, 25.391066939726667],  [-80.209100697211582, 25.410915452360324],  [-80.155542347658283, 25.658745696291859],  [-80.10747716193147, 25.690925958783847]  ]  ]  ]  }  }] }}' | sam local invoke ZonalStatsFunction
+```
+
+**Testing the actual API Endpoint**
+
+```bash
+# Dev
+curl -v -X POST \
+'https://ktj0thaws0.execute-api.us-east-1.amazonaws.com/Dev/zonal_stats' \
+-H 'Content-Type: application/json' \
+-d '{"type": "FeatureCollection","name": "charleston-poly","features": [{ "type": "Feature", "geometry": { "type": "Polygon", "coordinates": [ [ [ -79.662208557128906, 32.920664249232836 ], [ -79.685039520263672, 32.930174118010605 ], [ -79.717311859130845, 32.906541649538447 ], [ -79.691219329833984, 32.895299602872463 ], [ -79.676971435546875, 32.902362080894527 ], [ -79.675083160400391, 32.909568110575655 ], [ -79.662208557128906, 32.920664249232836 ] ] ] } }]}'
+
+# Prod
+
+curl -v -X POST \
+'https://lg0njzoglg.execute-api.us-east-1.amazonaws.com/Prod/zonal_stats' \
+-H 'Content-Type: application/json' \
+-d '{"type": "FeatureCollection","name": "charleston-poly","features": [{ "type": "Feature", "geometry": { "type": "Polygon", "coordinates": [ [ [ -79.662208557128906, 32.920664249232836 ], [ -79.685039520263672, 32.930174118010605 ], [ -79.717311859130845, 32.906541649538447 ], [ -79.691219329833984, 32.895299602872463 ], [ -79.676971435546875, 32.902362080894527 ], [ -79.675083160400391, 32.909568110575655 ], [ -79.662208557128906, 32.920664249232836 ] ] ] } }]}'
+
 ```
 
 **Invoking function locally through local API Gateway**

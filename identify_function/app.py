@@ -1,9 +1,9 @@
 import boto3
 import json
 import rasterio as rio
-import lib
 from rasterio.crs import CRS
 from rasterio.vrt import WarpedVRT
+from lib import lib
 
 session = boto3.Session()
 
@@ -37,8 +37,6 @@ def get_identify(params, stage):
 
   dataset_names = lib.get_dataset_names(config)
   
-  print(data_source)
-
   with rio.Env(GDAL_DISABLE_READDIR_ON_OPEN=True):
     with rio.open(data_source) as src:
       with WarpedVRT(src, crs='EPSG:4326') as vrt:

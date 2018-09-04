@@ -13,8 +13,8 @@ Globals:
       Variables:
         CONFIG_FILE_DEV: "config-dev.yml"
         CONFIG_FILE_PROD: "config-prod.yml"
-        VRT_FILE_DEV: "ALL_DATASETS_CONUS_DEV.vrt"
-        VRT_FILE_PROD: "ALL_DATSETS_CONUS_PROD.vrt"
+        VRT_FILE_DEV:  "ALL_DATASETS_CONUS_DEV.vrt"
+        VRT_FILE_PROD: "ALL_DATASETS_CONUS_PROD.vrt"
 
 Resources:
 

@@ -9,7 +9,3 @@ name = "pypi"
 
 click = "*"
 pyyaml = "*"
-
-[dev-packages]
-
-pytest = "*"
