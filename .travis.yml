@@ -2,17 +2,11 @@
 git:
   depth: 3
 
-env:
-  global:
-    - CONFIG_FILE_TEST="config-test.yml"
-    - VRT_FILE_TEST="tests/data/ALL_DATASETS_CONUS_TEST.vrt"
-    - CURL_CA_BUNDLE=/etc/ssl/certs/ca-certificates.crt
-
 install:
   - "sudo apt install awscli"
   - "docker pull lambci/lambda:build-python3.6"
 
-script: docker run --rm -it -v $PWD:/var/task lambci/lambda:build-python3.6 /bin/bash -c './pre-deploy.sh && ./run-tests.sh'
+script: docker run --rm -it --env-file './.env' -v $PWD:/var/task lambci/lambda:build-python3.6 /bin/bash -c './pre-deploy.sh && ./run-tests.sh'
 
 
 #deploy:
