@@ -3,9 +3,10 @@ git:
   depth: 3
 
 env:
-  - CONFIG_FILE_TEST="config-test.yml"
-  - VRT_FILE_TEST="tests/data/ALL_DATASETS_CONUS_TEST.vrt"
-  - CURL_CA_BUNDLE=/etc/ssl/certs/ca-certificates.crt
+  global:
+    - CONFIG_FILE_TEST="config-test.yml"
+    - VRT_FILE_TEST="tests/data/ALL_DATASETS_CONUS_TEST.vrt"
+    - CURL_CA_BUNDLE=/etc/ssl/certs/ca-certificates.crt
 
 install:
   - "sudo apt install awscli"
