@@ -1,7 +1,5 @@
 
-*.tif
 *.xml
-*.vrt
 *.lock
 
 assets/

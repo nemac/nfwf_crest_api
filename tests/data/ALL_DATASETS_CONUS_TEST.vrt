@@ -1,0 +1,208 @@
+<VRTDataset rasterXSize="324213" rasterYSize="193712">
+  <SRS>PROJCS["unnamed",GEOGCS["NAD83",DATUM["North_American_Datum_1983",SPHEROID["GRS 1980",6378137,298.2572221010042,AUTHORITY["EPSG","7019"]],TOWGS84[0,0,0,0,0,0,0],AUTHORITY["EPSG","6269"]],PRIMEM["Greenwich",0],UNIT["degree",0.0174532925199433],AUTHORITY["EPSG","4269"]],PROJECTION["Albers_Conic_Equal_Area"],PARAMETER["standard_parallel_1",29.5],PARAMETER["standard_parallel_2",45.5],PARAMETER["latitude_of_center",37.5],PARAMETER["longitude_of_center",-96],PARAMETER["false_easting",0],PARAMETER["false_northing",0],UNIT["metre",1,AUTHORITY["EPSG","9001"]]]</SRS>
+  <GeoTransform> -4.9545480000000000e+06,  3.0000000000000000e+01,  0.0000000000000000e+00,  3.6325580000000000e+06,  0.0000000000000000e+00, -3.0000000000000000e+01</GeoTransform>
+  <VRTRasterBand band="1" dataType="Byte">
+    <NoDataValue>255</NoDataValue>
+    <ColorInterp>Gray</ColorInterp>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="1">exposure_sample.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties BlockXSize="128" BlockYSize="128" DataType="Byte" RasterXSize="47" RasterYSize="39" />
+      <SrcRect xOff="0" xSize="47" yOff="0" ySize="39" />
+      <DstRect xOff="214462" xSize="47" yOff="134126" ySize="39" />
+      <NODATA>255</NODATA>
+    </ComplexSource>
+  </VRTRasterBand>
+<VRTRasterBand band="2" dataType="Byte">
+    <NoDataValue>255</NoDataValue>
+    <ColorInterp>Gray</ColorInterp>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="1">asset_sample.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties BlockXSize="128" BlockYSize="128" DataType="Byte" RasterXSize="47" RasterYSize="39" />
+      <SrcRect xOff="0" xSize="47" yOff="0" ySize="39" />
+      <DstRect xOff="214462" xSize="47" yOff="134126" ySize="39" />
+      <NODATA>255</NODATA>
+    </ComplexSource>
+  </VRTRasterBand>
+<VRTRasterBand band="3" dataType="Byte">
+    <NoDataValue>255</NoDataValue>
+    <ColorInterp>Gray</ColorInterp>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="1">threat_sample.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties BlockXSize="128" BlockYSize="128" DataType="Byte" RasterXSize="47" RasterYSize="39" />
+      <SrcRect xOff="0" xSize="47" yOff="0" ySize="39" />
+      <DstRect xOff="214462" xSize="47" yOff="134126" ySize="39" />
+      <NODATA>255</NODATA>
+    </ComplexSource>
+  </VRTRasterBand>
+<VRTRasterBand band="4" dataType="Byte">
+    <NoDataValue>255</NoDataValue>
+    <ColorInterp>Gray</ColorInterp>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="1">aquatic_sample.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties BlockXSize="128" BlockYSize="128" DataType="Byte" RasterXSize="47" RasterYSize="39" />
+      <SrcRect xOff="0" xSize="47" yOff="0" ySize="39" />
+      <DstRect xOff="214462" xSize="47" yOff="134126" ySize="39" />
+      <NODATA>255</NODATA>
+    </ComplexSource>
+  </VRTRasterBand>
+<VRTRasterBand band="5" dataType="Byte">
+    <NoDataValue>255</NoDataValue>
+    <ColorInterp>Gray</ColorInterp>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="1">terrestrial_sample.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties BlockXSize="128" BlockYSize="128" DataType="Byte" RasterXSize="47" RasterYSize="39" />
+      <SrcRect xOff="0" xSize="47" yOff="0" ySize="39" />
+      <DstRect xOff="214462" xSize="47" yOff="134126" ySize="39" />
+      <NODATA>255</NODATA>
+    </ComplexSource>
+  </VRTRasterBand>
+<VRTRasterBand band="6" dataType="Byte">
+    <NoDataValue>255</NoDataValue>
+    <ColorInterp>Gray</ColorInterp>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="1">hubs_sample.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties BlockXSize="128" BlockYSize="128" DataType="Byte" RasterXSize="47" RasterYSize="39" />
+      <SrcRect xOff="0" xSize="47" yOff="0" ySize="39" />
+      <DstRect xOff="214462" xSize="47" yOff="134126" ySize="39" />
+      <NODATA>255</NODATA>
+    </ComplexSource>
+  </VRTRasterBand>
+<VRTRasterBand band="7" dataType="Byte">
+    <NoDataValue>255</NoDataValue>
+    <ColorInterp>Gray</ColorInterp>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="1">crit_infra_sample.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties BlockXSize="128" BlockYSize="128" DataType="Byte" RasterXSize="47" RasterYSize="39" />
+      <SrcRect xOff="0" xSize="47" yOff="0" ySize="39" />
+      <DstRect xOff="214462" xSize="47" yOff="134126" ySize="39" />
+      <NODATA>255</NODATA>
+    </ComplexSource>
+  </VRTRasterBand>
+<VRTRasterBand band="8" dataType="Byte">
+    <NoDataValue>255</NoDataValue>
+    <ColorInterp>Gray</ColorInterp>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="1">crit_facilities_sample.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties BlockXSize="128" BlockYSize="128" DataType="Byte" RasterXSize="47" RasterYSize="39" />
+      <SrcRect xOff="0" xSize="47" yOff="0" ySize="39" />
+      <DstRect xOff="214462" xSize="47" yOff="134126" ySize="39" />
+      <NODATA>255</NODATA>
+    </ComplexSource>
+  </VRTRasterBand>
+<VRTRasterBand band="9" dataType="Byte">
+    <NoDataValue>255</NoDataValue>
+    <ColorInterp>Gray</ColorInterp>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="1">pop_density_sample.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties BlockXSize="128" BlockYSize="128" DataType="Byte" RasterXSize="47" RasterYSize="39" />
+      <SrcRect xOff="0" xSize="47" yOff="0" ySize="39" />
+      <DstRect xOff="214462" xSize="47" yOff="134126" ySize="39" />
+      <NODATA>255</NODATA>
+    </ComplexSource>
+  </VRTRasterBand>
+<VRTRasterBand band="10" dataType="Byte">
+    <NoDataValue>255</NoDataValue>
+    <ColorInterp>Gray</ColorInterp>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="1">social_vuln_sample.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties BlockXSize="128" BlockYSize="128" DataType="Byte" RasterXSize="47" RasterYSize="39" />
+      <SrcRect xOff="0" xSize="47" yOff="0" ySize="39" />
+      <DstRect xOff="214462" xSize="47" yOff="134126" ySize="39" />
+      <NODATA>255</NODATA>
+    </ComplexSource>
+  </VRTRasterBand>
+<VRTRasterBand band="11" dataType="Byte">
+    <NoDataValue>255</NoDataValue>
+    <ColorInterp>Gray</ColorInterp>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="1">drainage_sample.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties BlockXSize="128" BlockYSize="128" DataType="Byte" RasterXSize="47" RasterYSize="39" />
+      <SrcRect xOff="0" xSize="47" yOff="0" ySize="39" />
+      <DstRect xOff="214462" xSize="47" yOff="134126" ySize="39" />
+      <NODATA>255</NODATA>
+    </ComplexSource>
+  </VRTRasterBand>
+<VRTRasterBand band="12" dataType="Byte">
+    <NoDataValue>255</NoDataValue>
+    <ColorInterp>Gray</ColorInterp>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="1">erosion_sample.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties BlockXSize="128" BlockYSize="128" DataType="Byte" RasterXSize="47" RasterYSize="39" />
+      <SrcRect xOff="0" xSize="47" yOff="0" ySize="39" />
+      <DstRect xOff="214462" xSize="47" yOff="134126" ySize="39" />
+      <NODATA>255</NODATA>
+    </ComplexSource>
+  </VRTRasterBand>
+<VRTRasterBand band="13" dataType="Byte">
+    <NoDataValue>255</NoDataValue>
+    <ColorInterp>Gray</ColorInterp>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="1">floodprone_areas_sample.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties BlockXSize="128" BlockYSize="128" DataType="Byte" RasterXSize="47" RasterYSize="39" />
+      <SrcRect xOff="0" xSize="47" yOff="0" ySize="39" />
+      <DstRect xOff="214462" xSize="47" yOff="134126" ySize="39" />
+      <NODATA>255</NODATA>
+    </ComplexSource>
+  </VRTRasterBand>
+<VRTRasterBand band="14" dataType="Byte">
+    <NoDataValue>255</NoDataValue>
+    <ColorInterp>Gray</ColorInterp>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="1">geostress_sample.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties BlockXSize="128" BlockYSize="128" DataType="Byte" RasterXSize="47" RasterYSize="39" />
+      <SrcRect xOff="0" xSize="47" yOff="0" ySize="39" />
+      <DstRect xOff="214462" xSize="47" yOff="134126" ySize="39" />
+      <NODATA>255</NODATA>
+    </ComplexSource>
+  </VRTRasterBand>
+<VRTRasterBand band="15" dataType="Byte">
+    <NoDataValue>255</NoDataValue>
+    <ColorInterp>Gray</ColorInterp>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="1">sea_level_rise_sample.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties BlockXSize="128" BlockYSize="128" DataType="Byte" RasterXSize="47" RasterYSize="39" />
+      <SrcRect xOff="0" xSize="47" yOff="0" ySize="39" />
+      <DstRect xOff="214462" xSize="47" yOff="134126" ySize="39" />
+      <NODATA>255</NODATA>
+    </ComplexSource>
+  </VRTRasterBand>
+<VRTRasterBand band="16" dataType="Byte">
+    <NoDataValue>255</NoDataValue>
+    <ColorInterp>Gray</ColorInterp>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="1">slope_sample.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties BlockXSize="128" BlockYSize="128" DataType="Byte" RasterXSize="47" RasterYSize="39" />
+      <SrcRect xOff="0" xSize="47" yOff="0" ySize="39" />
+      <DstRect xOff="214462" xSize="47" yOff="134126" ySize="39" />
+      <NODATA>255</NODATA>
+    </ComplexSource>
+  </VRTRasterBand>
+<VRTRasterBand band="17" dataType="Byte">
+    <NoDataValue>255</NoDataValue>
+    <ColorInterp>Gray</ColorInterp>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="1">storm_surge_sample.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties BlockXSize="128" BlockYSize="128" DataType="Byte" RasterXSize="47" RasterYSize="39" />
+      <SrcRect xOff="0" xSize="47" yOff="0" ySize="39" />
+      <DstRect xOff="214462" xSize="47" yOff="134126" ySize="39" />
+      <NODATA>255</NODATA>
+    </ComplexSource>
+  </VRTRasterBand>
+</VRTDataset>
