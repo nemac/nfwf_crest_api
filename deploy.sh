@@ -1,5 +1,6 @@
 #! /usr/bin/env sh
 
+
 set -e
 
 BUCKET_NAME='nemac-cloudformation'
@@ -21,6 +22,8 @@ case $1 in "dev")
   exit 1
   ;;
 esac
+
+./build.sh
 
 echo "Updating cloudformation resources..."
 echo "Stage name: $STAGE_NAME"

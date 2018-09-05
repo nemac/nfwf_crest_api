@@ -6,7 +6,7 @@ install:
   - "sudo apt install awscli"
   - "docker pull lambci/lambda:build-python3.6"
 
-script: docker run --rm -it --env-file './.env' -v $PWD:/var/task lambci/lambda:build-python3.6 /bin/bash -c './pre-deploy.sh && ./run-tests.sh'
+script: docker run --rm -it --env-file './.env' -v $PWD:/var/task lambci/lambda:build-python3.6 /bin/bash -c './run-tests.sh'
 
 
 #deploy:
