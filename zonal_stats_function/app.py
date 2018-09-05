@@ -55,6 +55,7 @@ def get_response(geojson, stage):
 
   config = lib.get_config(stage)
   data_source = lib.get_vrt_path(stage)
+  print(data_source)
 
   dataset_names = lib.get_dataset_names(config)
 

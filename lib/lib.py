@@ -7,6 +7,7 @@ into lambda function folders by a build script. Do not edit these copies!
 '''
 
 import os
+import os.path
 import boto3
 import yaml
 import pyproj
@@ -71,7 +72,7 @@ def get_vrt_path(stage):
     filename = os.environ['VRT_FILE_TEST']
   else:
     filename = os.environ['VRT_FILE_PROD']
-  return filename
+  return os.path.abspath(filename)
 
 
 def get_config(stage):
