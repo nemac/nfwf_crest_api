@@ -225,43 +225,19 @@
     <NoDataValue>255</NoDataValue>
     <ColorInterp>Gray</ColorInterp>
     <ComplexSource>
-      <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/ca_hubs_080918.tif</SourceFilename>
+      <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/WestCoastHubs_081718.tif</SourceFilename>
       <SourceBand>1</SourceBand>
-      <SourceProperties BlockXSize="128" BlockYSize="128" DataType="Byte" RasterXSize="15865" RasterYSize="39522" />
-      <SrcRect xOff="0" xSize="15865" yOff="0" ySize="39522" />
-      <DstRect xOff="86614.1" xSize="15865" yOff="93033.3086859113" ySize="39522" />
+      <SourceProperties BlockXSize="128" BlockYSize="128" DataType="Byte" RasterXSize="15789" RasterYSize="63370" />
+      <SrcRect xOff="0" xSize="15789" yOff="0" ySize="63370" />
+      <DstRect xOff="86614.3088433333" xSize="15789" yOff="69184.50313" ySize="63370" />
       <NODATA>255</NODATA>
     </ComplexSource>
     <ComplexSource>
-      <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/gulf_hubs_080918.tif</SourceFilename>
+      <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/EastCoastHubs_081718.tif</SourceFilename>
       <SourceBand>1</SourceBand>
-      <SourceProperties BlockXSize="128" BlockYSize="128" DataType="Byte" RasterXSize="61249" RasterYSize="24312" />
-      <SrcRect xOff="0" xSize="61249" yOff="0" ySize="24312" />
-      <DstRect xOff="157020.1" xSize="61249" yOff="141104.308685911" ySize="24312" />
-      <NODATA>255</NODATA>
-    </ComplexSource>
-    <ComplexSource>
-      <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/na_hubs_080918.tif</SourceFilename>
-      <SourceBand>1</SourceBand>
-      <SourceProperties BlockXSize="128" BlockYSize="128" DataType="Byte" RasterXSize="23635" RasterYSize="36619" />
-      <SrcRect xOff="0" xSize="23635" yOff="0" ySize="36619" />
-      <DstRect xOff="216390.1" xSize="23635" yOff="81758.3086859113" ySize="36619" />
-      <NODATA>255</NODATA>
-    </ComplexSource>
-    <ComplexSource>
-      <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/nw_hubs_080918.tif</SourceFilename>
-      <SourceBand>1</SourceBand>
-      <SourceProperties BlockXSize="128" BlockYSize="128" DataType="Byte" RasterXSize="12998" RasterYSize="23882" />
-      <SrcRect xOff="0" xSize="12998" yOff="0" ySize="23882" />
-      <DstRect xOff="88618.1" xSize="12998" yOff="69183.3086859113" ySize="23882" />
-      <NODATA>255</NODATA>
-    </ComplexSource>
-    <ComplexSource>
-      <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/sa_hubs_080918.tif</SourceFilename>
-      <SourceBand>1</SourceBand>
-      <SourceProperties BlockXSize="128" BlockYSize="128" DataType="Byte" RasterXSize="16966" RasterYSize="45586" />
-      <SrcRect xOff="0" xSize="16966" yOff="0" ySize="45586" />
-      <DstRect xOff="209296.1" xSize="16966" yOff="117458.308685911" ySize="45586" />
+      <SourceProperties BlockXSize="128" BlockYSize="128" DataType="Byte" RasterXSize="82903" RasterYSize="83276" />
+      <SrcRect xOff="0" xSize="82903" yOff="0" ySize="83276" />
+      <DstRect xOff="157020.701303333" xSize="82903" yOff="82139.8742059112" ySize="83276" />
       <NODATA>255</NODATA>
     </ComplexSource>
   </VRTRasterBand>

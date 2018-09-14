@@ -1,6 +1,8 @@
 
 dataset_bucket: nfwf-tool/
 
+user_shapes_bucket: nfwf-tool-user-shapes
+
 datasets:
   - name: exposure
     input_files:
@@ -44,11 +46,8 @@ datasets:
 
   - name: hubs
     input_files:
-      - ca_hubs_080918.tif
-      - gulf_hubs_080918.tif
-      - na_hubs_080918.tif
-      - nw_hubs_080918.tif
-      - sa_hubs_080918.tif
+      - WestCoastHubs_081718.tif
+      - EastCoastHubs_081718.tif
 
   - name: crit_infra
     folder: asset-inputs

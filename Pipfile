@@ -1,3 +1,15 @@
+[scripts]
+
+build_test_data = './tests/build_test_data/build_test_data.py'
+
+build_vrt_test = './build_vrt/build_vrt.py -stage test'
+
+build_vrt_dev = './build_vrt/build_vrt.py -stage dev -te "-4954548.0 -2178809.0 4771843.0 3632558.0"'
+
+build_vrt_prod = './build_vrt/build_vrt.py -stage prod -te "-4954548.0 -2178809.0 4771843.0 3632558.0"'
+
+tests = "docker run --rm -v ${PWD}:/var/task -it lambci/lambda:build-python3.6 /bin/bash -c './scripts/run-tests.sh'"
+
 [[source]]
 
 url = "https://pypi.python.org/simple"
@@ -7,6 +19,7 @@ name = "pypi"
 
 [packages]
 
+click = "*"
 rasterio = { version = "*", extras = ["s3"] }
 pyproj = "*"
 pyyaml = "*"

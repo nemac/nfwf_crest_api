@@ -14,7 +14,7 @@ do
 	pipenv lock -r > requirements.txt
 	pip install -Ur requirements.txt -t $i/build/
 	cp $CONFIG_FILE_DEV $CONFIG_FILE_PROD $i/
-	cp $VRT_FILE_DEV $VRT_FILE_PROD $VRT_FILE_TEST $i/
+	cp $VRT_FILE_DEV $VRT_FILE_PROD $i/
 	cp $i/* $i/build/
 	cp -R lib/ $i/
 	cp -R lib/ $i/build/

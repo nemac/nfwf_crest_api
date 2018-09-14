@@ -51,6 +51,16 @@ Resources:
                   !Sub "arn:aws:apigateway:${AWS::Region}:lambda:path/2015-03-31/functions/${ZonalStatsFunction.Arn}/invocations"
                 httpMethod: POST
                 type: aws_proxy
+          /upload_shape:
+            post:
+              produces:
+                - application/json
+              responses: {}
+              x-amazon-apigateway-integration:
+                uri:
+                  !Sub "arn:aws:apigateway:${AWS::Region}:lambda:path/2015-03-31/functions/${UploadShapeFunction.Arn}/invocations"
+                httpMethod: POST
+                type: aws_proxy
 
         definitions:
           Empty:
@@ -109,6 +119,30 @@ Resources:
         Client: NFWF
         Stage: !Ref Stage
 
+  UploadShapeFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      Timeout: 10
+      Policies:
+        - IAMReadOnlyAccess
+        - AmazonS3FullAccess
+      CodeUri: upload_shape_function/build/
+      Handler: app.lambda_handler
+      Runtime: python3.6
+      Events:
+        PostApi:
+          Type: Api
+          Properties:
+            Path: upload_shape
+            Method: POST
+            RestApiId: !Ref ApiGatewayApi
+
+      Tags:
+        AppName: NfwfToolApi
+        AppFunction: UploadShape
+        Project: NfwfTool
+        Client: NFWF
+        Stage: !Ref Stage
 
 Outputs:
 
@@ -128,6 +162,13 @@ Outputs:
     Description: "Identify Function ARN"
     Value: !GetAtt ZonalStatsFunction.Arn
 
+  UploadShapeApigwURL:
+    Description: "API Gateway endpoint URL for Upload Shape Function"
+    Value: !Sub "https://${ApiGatewayApi}.execute-api.${AWS::Region}.amazonaws.com/${Stage}/upload_shape"
+
+  UploadShapeFunction:
+    Description: "Upload Shape Function ARN"
+    Value: !GetAtt UploadShapeFunction.Arn
 
 
 

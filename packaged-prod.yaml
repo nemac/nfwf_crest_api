@@ -19,6 +19,16 @@ Outputs:
       Fn::GetAtt:
       - IdentifyFunction
       - Arn
+  UploadShapeApigwURL:
+    Description: API Gateway endpoint URL for Upload Shape Function
+    Value:
+      Fn::Sub: https://${ApiGatewayApi}.execute-api.${AWS::Region}.amazonaws.com/${Stage}/upload_shape
+  UploadShapeFunction:
+    Description: Upload Shape Function ARN
+    Value:
+      Fn::GetAtt:
+      - UploadShapeFunction
+      - Arn
   ZonalStatsApigwURL:
     Description: API Gateway endpoint URL for Zonal Stats Function
     Value:
@@ -56,6 +66,16 @@ Resources:
                 type: aws_proxy
                 uri:
                   Fn::Sub: arn:aws:apigateway:${AWS::Region}:lambda:path/2015-03-31/functions/${IdentifyFunction.Arn}/invocations
+          /upload_shape:
+            post:
+              produces:
+              - application/json
+              responses: {}
+              x-amazon-apigateway-integration:
+                httpMethod: POST
+                type: aws_proxy
+                uri:
+                  Fn::Sub: arn:aws:apigateway:${AWS::Region}:lambda:path/2015-03-31/functions/${UploadShapeFunction.Arn}/invocations
           /zonal_stats:
             post:
               produces:
@@ -74,7 +94,7 @@ Resources:
     Type: AWS::Serverless::Api
   IdentifyFunction:
     Properties:
-      CodeUri: s3://nemac-cloudformation/dd0ff594b7fc16c36cb0556f9f63aae4
+      CodeUri: s3://nemac-cloudformation/e3e6ab63770418d75cc269402c353411
       Events:
         GetApi:
           Properties:
@@ -97,9 +117,34 @@ Resources:
           Ref: Stage
       Timeout: 12
     Type: AWS::Serverless::Function
+  UploadShapeFunction:
+    Properties:
+      CodeUri: s3://nemac-cloudformation/484fa2703ead514fb6fdac2f555ea57c
+      Events:
+        PostApi:
+          Properties:
+            Method: POST
+            Path: upload_shape
+            RestApiId:
+              Ref: ApiGatewayApi
+          Type: Api
+      Handler: app.lambda_handler
+      Policies:
+      - IAMReadOnlyAccess
+      - AmazonS3FullAccess
+      Runtime: python3.6
+      Tags:
+        AppFunction: UploadShape
+        AppName: NfwfToolApi
+        Client: NFWF
+        Project: NfwfTool
+        Stage:
+          Ref: Stage
+      Timeout: 10
+    Type: AWS::Serverless::Function
   ZonalStatsFunction:
     Properties:
-      CodeUri: s3://nemac-cloudformation/f90b8f4602401498fc8338027c482830
+      CodeUri: s3://nemac-cloudformation/30591f56ae96af72325cbff040e33ff2
       Events:
         PostApi:
           Properties:

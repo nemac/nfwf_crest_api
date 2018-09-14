@@ -23,13 +23,9 @@ case $1 in "dev")
   ;;
 esac
 
-./build.sh
-
 echo "Updating cloudformation resources..."
 echo "Stage name: $STAGE_NAME"
 echo "Cloudformation stack: $STACK_NAME"
-
-#docker run --rm -it -v $PWD:/var/task lambci/lambda:build-python3.6 /bin/bash -c './build-deps.sh; ./cp-config.sh'
 
 aws cloudformation package \
   --template-file $TEMPLATE_NAME \

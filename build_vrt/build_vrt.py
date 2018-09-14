@@ -13,10 +13,6 @@ import yaml
 import sys
 import xml.etree.ElementTree as ET
 
-# Move up one directory
-_dir = os.path.dirname(os.path.abspath(os.path.join('..',__file__)))
-os.chdir(_dir)
-
 vrtnodata_arg = '-vrtnodata {0}'
 extent_arg = '-te {0}'
 band_arg = '-b {0}'
@@ -36,14 +32,14 @@ def get_config(stage):
 @click.option('-te',
   type=click.STRING,
   help=(
-    'Extent of VRT mosaic. To cover the continental US, try "-4954548.0 -2178809.0 4771843.0 3632558.0" (albers equal area). '
+    'Extent of VRT mosaic. To cover the continental US, use "-4954548.0 -2178809.0 4771843.0 3632558.0" (albers equal area). '
     'String of the form xmin ymin xmax ymax. '
     'The values must be expressed in georeferenced units.')
 )
 @click.option('-b', default='1', show_default=True, type=click.STRING, help='Band number to fetch for each dataset.')
 @click.option('-vrtnodata', default='255', show_default=True, help=('Value to set for NODATA on vrt band.'))
 @click.option('-vsi', type=click.Choice(['s3', 'tar', 'curl']),
-  help=('Use a GDAL Virtual File System for component dataset paths -- see https://www.gdal.org/gdal_virtual_file_systems.html')
+  help=('Prepend a GDAL Virtual File System identifier to component dataset paths (vsis3, vsicurl, etc) -- see https://www.gdal.org/gdal_virtual_file_systems.html')
 )
 def build_full_vrt(stage, te, b, vrtnodata, vsi):
   config = get_config(stage)
@@ -77,25 +73,26 @@ def build_full_vrt(stage, te, b, vrtnodata, vsi):
 
 
 def build_intermediate_vrt(band_config, te, b, vrtnodata, vsi, dataset_bucket):
-  path = ''
+  path = []
   if vsi:
-    path += '/vsi{0}'.format(vsi)
+    path.append('/vsi{0}'.format(vsi))
     if dataset_bucket:
-      path += '/{0}/'.format(dataset_bucket)
+      path.append('{0}'.format(dataset_bucket))
   if 'folder' in band_config:
-    path += '{0}'.format(band_config['folder'])
+    path.append('{0}'.format(band_config['folder']))
   vrt_path = '{0}.vrt'.format(os.path.join('./tests/data/', band_config['name']))
   command_pieces = [
     'gdalbuildvrt',
     vrtnodata_arg.format(vrtnodata),
-    extent_arg.format(te),
     band_arg.format(b),
-    '-overwrite',
-    "{0}".format(vrt_path),
+    '-overwrite'
   ]
+  if te:
+    command_pieces.append(extent_arg.format(te))
+  command_pieces.append("{0}".format(vrt_path))
 
   input_files = list(map(
-    lambda f: os.path.join(path, f),
+    lambda f: os.path.join(*path, f),
     band_config['input_files'])
   )
   command_pieces.extend(input_files)

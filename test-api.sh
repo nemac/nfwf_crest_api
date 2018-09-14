@@ -1,6 +1,6 @@
 #! /usr/bin/env sh
 
-set -ev
+set -e
 
 case $1 in "dev")
   STACK_NAME='nfwf-tool-api-dev'
@@ -16,6 +16,7 @@ esac
 
 ZONAL_STATS_OUTPUT_VALUE='ZonalStatsApigwURL'
 IDENTIFY_OUTPUT_VALUE='IdentifyApigwURL'
+UPLOAD_SHAPE_OUTPUT_VALUE='UploadShapeApigwURL'
 
 get_endpoint () {
 	echo $(aws cloudformation describe-stacks \
@@ -26,6 +27,8 @@ get_endpoint () {
 
 ZONAL_STATS_ENDPOINT=$(get_endpoint $ZONAL_STATS_OUTPUT_VALUE)
 IDENTIFY_ENDPOINT=$(get_endpoint $IDENTIFY_OUTPUT_VALUE)
+UPLOAD_SHAPE_ENDPOINT=$(get_endpoint $UPLOAD_SHAPE_OUTPUT_VALUE)
+
 IDENTIFY_PARAMS="?lat=80&lng=33"
 IDENTIFY_REQUEST="$IDENTIFY_ENDPOINT$IDENTIFY_PARAMS"
 
@@ -46,6 +49,14 @@ IDENTIFY_STATUS_CODE=$(curl -s \
 	-w "%{http_code}" \
 )
 
+UPLOAD_SHAPE_STATUS_CODE=$(curl -s -X POST \
+	$UPLOAD_SHAPE_ENDPOINT \
+	-H 'Content-Type: application/json' \
+	-d "$GEOJSON" \
+	-o /dev/null \
+	-w "%{http_code}" \
+)
+
 if [ "$IDENTIFY_STATUS_CODE" -ne "200" ]
 then
 echo "Identify request failed with status code $IDENTIFY_STATUS_CODE"
@@ -57,5 +68,12 @@ then
 echo "Zonal stats request failed with status code $ZONAL_STATS_STATUS_CODE"
 exit 1
 fi
+
+if [ "$UPLOAD_SHAPE_STATUS_CODE" -ne "200" ]
+then
+echo "Upload shape request failed with status code $UPLOAD_SHAPE_STATUS_CODE"
+exit 1
+fi
+
 
 exit 0
