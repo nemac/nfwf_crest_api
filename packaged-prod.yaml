@@ -94,7 +94,7 @@ Resources:
     Type: AWS::Serverless::Api
   IdentifyFunction:
     Properties:
-      CodeUri: s3://nemac-cloudformation/e3e6ab63770418d75cc269402c353411
+      CodeUri: s3://nemac-cloudformation/ab9723fbb771bf9edcd1b662b0f091b7
       Events:
         GetApi:
           Properties:
@@ -119,7 +119,7 @@ Resources:
     Type: AWS::Serverless::Function
   UploadShapeFunction:
     Properties:
-      CodeUri: s3://nemac-cloudformation/484fa2703ead514fb6fdac2f555ea57c
+      CodeUri: s3://nemac-cloudformation/baf076a559ca21882fd9b734d009d89c
       Events:
         PostApi:
           Properties:
@@ -144,7 +144,7 @@ Resources:
     Type: AWS::Serverless::Function
   ZonalStatsFunction:
     Properties:
-      CodeUri: s3://nemac-cloudformation/30591f56ae96af72325cbff040e33ff2
+      CodeUri: s3://nemac-cloudformation/7b436298beca205de1f930a1035657c0
       Events:
         PostApi:
           Properties:

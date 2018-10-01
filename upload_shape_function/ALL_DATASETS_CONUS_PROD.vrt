@@ -665,11 +665,11 @@
       <NODATA>255</NODATA>
     </ComplexSource>
     <ComplexSource>
-      <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/threat-inputs/SA_v2_SLR_shift_053018.tif</SourceFilename>
+      <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/threat-inputs/SA_v2_Slope_shift_053018.tif</SourceFilename>
       <SourceBand>1</SourceBand>
-      <SourceProperties BlockXSize="128" BlockYSize="128" DataType="Byte" RasterXSize="21228" RasterYSize="45596" />
-      <SrcRect xOff="0" xSize="21228" yOff="0" ySize="45596" />
-      <DstRect xOff="205230.1" xSize="21228" yOff="117383.308685911" ySize="45596" />
+      <SourceProperties BlockXSize="128" BlockYSize="128" DataType="Byte" RasterXSize="34305" RasterYSize="48759" />
+      <SrcRect xOff="0" xSize="34305" yOff="0" ySize="48759" />
+      <DstRect xOff="199613.1" xSize="34305" yOff="116071.308685911" ySize="48759" />
       <NODATA>255</NODATA>
     </ComplexSource>
   </VRTRasterBand>

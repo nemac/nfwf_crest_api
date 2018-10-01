@@ -133,7 +133,7 @@ Resources:
         PostApi:
           Type: Api
           Properties:
-            Path: upload_shape
+            Path: /upload_shape
             Method: POST
             RestApiId: !Ref ApiGatewayApi
 
