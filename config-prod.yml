@@ -136,7 +136,7 @@ datasets:
       - Gulf_Slope_050917.tif
       - NA_Slope_5_8_17.tif
       - PNW_Slope_shift_031918.tif
-      - SA_v2_SLR_shift_053018.tif
+      - SA_v2_Slope_shift_053018.tif
 
   - name: storm_surge
     folder: threat-inputs

@@ -38,7 +38,7 @@ def get_config(stage):
 )
 @click.option('-b', default='1', show_default=True, type=click.STRING, help='Band number to fetch for each dataset.')
 @click.option('-vrtnodata', default='255', show_default=True, help=('Value to set for NODATA on vrt band.'))
-@click.option('-vsi', type=click.Choice(['s3', 'tar', 'curl']),
+@click.option('-vsi', default='s3', type=click.Choice(['s3', 'tar', 'curl']),
   help=('Prepend a GDAL Virtual File System identifier to component dataset paths (vsis3, vsicurl, etc) -- see https://www.gdal.org/gdal_virtual_file_systems.html')
 )
 def build_full_vrt(stage, te, b, vrtnodata, vsi):
@@ -73,6 +73,7 @@ def build_full_vrt(stage, te, b, vrtnodata, vsi):
 
 
 def build_intermediate_vrt(band_config, te, b, vrtnodata, vsi, dataset_bucket):
+  print(band_config)
   path = []
   if vsi:
     path.append('/vsi{0}'.format(vsi))
@@ -80,7 +81,7 @@ def build_intermediate_vrt(band_config, te, b, vrtnodata, vsi, dataset_bucket):
       path.append('{0}'.format(dataset_bucket))
   if 'folder' in band_config:
     path.append('{0}'.format(band_config['folder']))
-  vrt_path = '{0}.vrt'.format(os.path.join('./tests/data/', band_config['name']))
+  vrt_path = '{0}.vrt'.format(os.path.join('./', band_config['name']))
   command_pieces = [
     'gdalbuildvrt',
     vrtnodata_arg.format(vrtnodata),
@@ -90,7 +91,6 @@ def build_intermediate_vrt(band_config, te, b, vrtnodata, vsi, dataset_bucket):
   if te:
     command_pieces.append(extent_arg.format(te))
   command_pieces.append("{0}".format(vrt_path))
-
   input_files = list(map(
     lambda f: os.path.join(*path, f),
     band_config['input_files'])
@@ -100,6 +100,7 @@ def build_intermediate_vrt(band_config, te, b, vrtnodata, vsi, dataset_bucket):
   click.echo(c)
   os.system(c)
   return vrt_path
+
 
 if __name__ == '__main__':
   build_full_vrt()
