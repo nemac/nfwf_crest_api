@@ -51,7 +51,7 @@ geometry = {
 with open('config-prod.yml', 'r') as stream:
   config = yaml.safe_load(stream)
 
-data_source = './ALL_DATASETS_CONUS_DEV.vrt'
+data_source = './ALL_DATASETS_CONUS_PROD.vrt'
 
 dataset_names = lib.get_dataset_names(config)
 

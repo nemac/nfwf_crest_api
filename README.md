@@ -1,10 +1,8 @@
 # NFWF Tool API
 
-GIS microservices build on AWS services. 
+GIS microservices built on the [AWS Serverless Application Model](https://docs.aws.amazon.com/lambda/latest/dg/serverless_app.html). 
 
-(Forked from https://github.com/aws-samples/cookiecutter-aws-sam-python)
-
-## Requirements
+### Requirements
 
 * AWS CLI already configured with at least PowerUser permission
 * [Python 3 installed](https://www.python.org/downloads/)
@@ -13,189 +11,163 @@ GIS microservices build on AWS services.
 * [Docker installed](https://www.docker.com/community-edition)
 * [SAM Local installed](https://github.com/awslabs/aws-sam-local) 
 
-Provided that you have requirements above installed, proceed by installing the application dependencies and development dependencies:
 
-```bash
-docker run --rm -v $PWD:/var/task -it lambci/lambda:build-python3.6 /bin/bash -c 'cd /var/task && ./pre-deploy.sh'
-```
+### Getting Started
 
-## Testing
+* Clone or fork this repository 
+* Make a copy of the file `sample.env` called `.env`.  
+* Initialize a local development environment: `pipenv install --dev`
 
-`Pytest` is used to discover tests created under `tests` folder
 
-To run tests, start by renaming the file `sample.env` to `.env`. This file holds environment variables that get picked up by pipenv (see [this section of pipenv docs](https://pipenv.readthedocs.io/en/latest/advanced/#automatic-loading-of-env)). The variables `LANG` and `LC_ALL` are both used by rasterio.
+### Add a new function
 
-**Note:** The variable `CURL_CA_BUNDLE`, also used by rasterio, is a path to the cURL Certificate Authority bundle file (see [this rasterio issue](https://github.com/mapbox/rasterio/issues/942)). **The default value set in `sample.env` is configured for Ubuntu**. If you want to run the tests manually on an OS other than Ubuntu, you will need to change this value for rasterio's bundled libcurl to work correctly. If you remove this variable from `.env` rasterio's libcurl will use its default: `/etc/pki/tls/certs/ca-bundle.crt`.
+Let's say we have a function called `getData`.
 
-Here's how you can run tests our initial unit tests:
+* Create a new folder called "get_data_function"
 
-```bash
-docker run --rm -v $PWD:/var/task -it lambci/lambda:build-python3.6 /bin/bash -c './run-tests.sh'
-```
-
-## Packaging
-
-AWS Lambda Python runtime requires a flat folder with all dependencies including the application. To facilitate this process, the pre-made SAM template expects this structure to be under `<src>/<function>/build/`:
+* Add API endpoint settings to `template.yaml`
 
 ```yaml
-...
-    FunctionName:
-        Type: AWS::Serverless::Function
-        Properties:
-            CodeUri: folder_function/build/
-            ...
-```
-
-
-### Local development
-
-Given that you followed Packaging instructions then run one of the following options to invoke your function locally:
-
-**Invoking function locally without API Gateway**
-
-```bash
-echo '{ "body": { "type": "FeatureCollection","name": "charleston-poly","features": [{ "type": "Feature", "properties": { "id": null }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -79.662208557128906, 32.920664249232836 ], [ -79.685039520263672, 32.930174118010605 ], [ -79.717311859130845, 32.906541649538447 ], [ -79.691219329833984, 32.895299602872463 ], [ -79.676971435546875, 32.902362080894527 ], [ -79.675083160400391, 32.909568110575655 ], [ -79.662208557128906, 32.920664249232836 ] ] ] } }]} }' | sam local invoke ZonalStatsFunction
-
-# MultiPolygon
-
-echo '{ "body": { "type": "FeatureCollection", "name": "charleston-multi-poly", "crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } }, "features": [{ "type": "Feature", "properties": { "id": null }, "geometry": { "type": "MultiPolygon", "coordinates": [ [ [ [-79.744316416802718, 32.918307771183919], [-79.758743269652271, 32.880394658156938], [-79.827024159455647, 32.910824100458811], [-79.793686860877372, 32.942719190317831], [-79.744316416802718, 32.918307771183919] ] ], [ [ [-79.662208557128906, 32.920664249232836], [-79.685039520263672, 32.930174118010605], [-79.717311859130845, 32.906541649538447], [-79.691219329833984, 32.895299602872463], [-79.676971435546875, 32.902362080894527], [-79.675083160400391, 32.909568110575655], [-79.662208557128906, 32.920664249232836] ] ] ] } }] }}' | sam local invoke ZonalStatsFunction
-
-echo '{ "body": { "type": "FeatureCollection", "name": "char9", "crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } }, "features": [ { "type": "Feature", "properties": { "FID": 0, "it": 1, "_mean": 9.0 }, "geometry": { "type": "MultiPolygon", "coordinates": [ [ [ [ -79.935407638549805, 32.773635858629468 ], [ -79.931888580322266, 32.77406886435805 ], [ -79.93201732635498, 32.772156406494297 ], [ -79.935021400451646, 32.772228575461689 ], [ -79.935407638549805, 32.773635858629468 ] ] ] ] } } ] } }' | sam local invoke ZonalStatsFunction
-
-# Florida Keys Multipolygon (TIMING OUT)
-echo '{ "body": {  "type": "FeatureCollection",  "name": "keys_multi",  "crs": {  "type": "name",  "properties": {  "name": "urn:ogc:def:crs:OGC:1.3:CRS84"  }  },  "features": [{  "type": "Feature",  "properties": {  "EZG_ID": 62145,  "prg_name": "Mote Marine Laboratory, Inc.",  "proj_name": "Florida Keys Coral Disease Response & Restoration Initiative",  "region": "Gulf",  "name": "Florida Keys Coral Disease Response & Restoration Initiative",  "id": 62145,  "area": 391374264.7,  "nfwf_proje": null,  "nfwf_pro_1": null,  "asset": null,  "threat": null,  "exposure": null,  "aquatic": null,  "terrestria": null,  "hubs": null,  "crit_infra": null,  "crit_facil": null,  "pop_densit": null,  "social_vul": null,  "drainage": null,  "erosion": null,  "floodprone": null,  "geostress": null,  "sea_level_": null,  "slope": null,  "storm_surg": null  },  "geometry": {  "type": "MultiPolygon",  "coordinates": [  [  [  [-81.302133056890256, 24.60695607607207],  [-81.808877441885357, 24.499532477742999],  [-81.815743897117486, 24.54326248601156],  [-81.306252930209197, 24.650648613252887],  [-81.302133056890256, 24.60695607607207]  ]  ],  [  [  [-80.10747716193147, 25.690925958783847],  [-80.167901966716897, 25.391066939726667],  [-80.209100697211582, 25.410915452360324],  [-80.155542347658283, 25.658745696291859],  [-80.10747716193147, 25.690925958783847]  ]  ]  ]  }  }] }}' | sam local invoke ZonalStatsFunction
-```
-
-**Testing the actual API Endpoint**
-
-```bash
-# Dev
-curl -v -X POST \
-'https://ktj0thaws0.execute-api.us-east-1.amazonaws.com/Dev/zonal_stats' \
--H 'Content-Type: application/json' \
--d '{"type": "FeatureCollection","name": "charleston-poly","features": [{ "type": "Feature", "geometry": { "type": "Polygon", "coordinates": [ [ [ -79.662208557128906, 32.920664249232836 ], [ -79.685039520263672, 32.930174118010605 ], [ -79.717311859130845, 32.906541649538447 ], [ -79.691219329833984, 32.895299602872463 ], [ -79.676971435546875, 32.902362080894527 ], [ -79.675083160400391, 32.909568110575655 ], [ -79.662208557128906, 32.920664249232836 ] ] ] } }]}'
-
-
-# Upload shape
-
-curl -v -X POST \
-'https://ktj0thaws0.execute-api.us-east-1.amazonaws.com/Dev/upload_shape' \
--H 'Content-Type: application/json' \
--d '{"type": "FeatureCollection","name": "charleston-poly","features": [{ "type": "Feature", "geometry": { "type": "Polygon", "coordinates": [ [ [ -79.662208557128906, 32.920664249232836 ], [ -79.685039520263672, 32.930174118010605 ], [ -79.717311859130845, 32.906541649538447 ], [ -79.691219329833984, 32.895299602872463 ], [ -79.676971435546875, 32.902362080894527 ], [ -79.675083160400391, 32.909568110575655 ], [ -79.662208557128906, 32.920664249232836 ] ] ] } }]}'
-
-
-# Prod
-
-curl -v -X POST \
-'https://lg0njzoglg.execute-api.us-east-1.amazonaws.com/Prod/zonal_stats' \
--H 'Content-Type: application/json' \
--d '{"type": "FeatureCollection","name": "charleston-poly","features": [{ "type": "Feature", "geometry": { "type": "Polygon", "coordinates": [ [ [ -79.662208557128906, 32.920664249232836 ], [ -79.685039520263672, 32.930174118010605 ], [ -79.717311859130845, 32.906541649538447 ], [ -79.691219329833984, 32.895299602872463 ], [ -79.676971435546875, 32.902362080894527 ], [ -79.675083160400391, 32.909568110575655 ], [ -79.662208557128906, 32.920664249232836 ] ] ] } }]}'
-
-```
-
-**Invoking function locally through local API Gateway**
-
-```bash
-sam local start-api
-```
-
-If the previous command run successfully you should now be able to hit the following local endpoint to invoke your function. For example, to test the identify function go to the following URL: `http://localhost:3000/identify?lat=80&lng=-30`.
-
-## Deployment
-
-
-First and foremost, we need a S3 bucket where we can upload our Lambda functions packaged as ZIP before we deploy anything - If you don't have a S3 bucket to store code artifacts then this is a good time to create one:
-
-```bash
-aws s3 mb s3://BUCKET_NAME
-```
-
-Provided you have a S3 bucket created, run the following command to package our Lambda function to S3:
-
-```bash
-aws cloudformation package \
-    --template-file template.yaml \
-    --output-template-file packaged.yaml \
-    --s3-bucket nemac-cloudformation
-```
-
-Next, the following command will create a Cloudformation Stack and deploy your SAM resources.
-
-```bash
-# Dev
-aws cloudformation deploy \
-    --template-file packaged.yaml \
-    --stack-name nfwf-tool-api-dev \
-    --capabilities CAPABILITY_IAM \
-    --parameter-overrides Stage=Dev
-
-# Prod
-aws cloudformation deploy \
-    --template-file packaged.yaml \
-    --stack-name nfwf-tool-api \
-    --capabilities CAPABILITY_IAM \
-    --parameter-overrides Stage=Prod
-
-```
-
-> **See [Serverless Application Model (SAM) HOWTO Guide](https://github.com/awslabs/serverless-application-model/blob/master/HOWTO.md) for more details in how to get started.**
-
-
-After deployment is complete you can run the following command to retrieve the API Gateway Endpoint URL:
-
-```bash
-aws cloudformation describe-stacks \
-    --stack-name nfwf-tool-api \
-    --query 'Stacks[].Outputs'
+Resources:
+  ApiGatewayApi:
+    Properties:
+      ... 
+      DefinitionBody:
+        ... 
+	paths:
+          /get_data: # The endpoint URL path
+            get: # The HTTP method to use
+              produces:
+              - application/json
+              responses: {}
+              x-amazon-apigateway-integration:
+                uri: 
+                  !Sub "arn:aws:apigateway:${AWS::Region}:lambda:path/2015-03-31/functions/${GetData.Arn}/invocations"
+                httpMethod: GET
+                type: aws_proxy
+ 
 ``` 
 
+* Add function settings to `template.yaml`
+
+```yaml
+Resources:
+  ...
+
+  GetData: # Note that this identifier is referenced in the uri entry of the API settings above
+    Type: AWS::Serverless::Function
+    Properties:
+  
+      Policies:
+        - AmazonS3ReadOnlyAccess
+        - IAMReadOnlyAccess
+      CodeUri: get_data_function/build/
+      Handler: app.lambda_handler # This assumes there is a file called app.py with a function lambda_handler
+      Runtime: python3.6 
+      Events:
+        PostApi:
+          Type: Api
+          Properties:
+            Path: /get_data
+            Method: POST
+            RestApiId: !Ref ApiGatewayApi
 
 
-# Appendix
 
-## Makefile
+```
 
-(The supplied Makefile should only be considered as reference material as the build processes have slightly changed.)
+* Add any new python dependencies to the Pipfile
 
-It is important that the Makefile created only works on OSX/Linux but the tasks above can easily be turned into a Powershell or any scripting language you may want too.
+* Add a subdirectory called `build` to the function folder
 
-The following make targets will automate that we went through above:
+* Make a new file `app.py` in the `get_data_function` folder
 
-* Find all available targets: `make`
-* Install all deps and clone (OS hard link) our lambda function to `/build`: `make build SERVICE="first_function"`
-    - `SERVICE="first_function"` tells Make to start the building process from there
-    - By creating a hard link we no longer need to keep copying our app over to Build and keeps it tidy and clean
-* Run `Pytest` against all tests found under `tests` folder: `make test`
-* Install all deps and builds a ZIP file ready to be deployed: `make package SERVICE="first_function"`
-    - You can also build deps and a ZIP file within a Docker Lambda container: `make package SERVICE="first_function" DOCKER=1`
-    - This is particularly useful when using C-extensions that if built on your OS may not work when deployed to Lambda (different OS)
+* Import the utility library with `from lib import lib`
+
+* Add a function called `lambda_handler` to `app.py`
 
 
+### Packaging Functions  
 
-## AWS CLI commands
+Before we can run our function locally, we need to bundle all of its code and dependencies into the function's `build` folder. 
 
-AWS CLI commands to package, deploy and describe outputs defined within the cloudformation stack:
+* Build all function packages: `pipenv run build_packages`
+
+You don't need to re-package a function every time you change its `app.py` file. Simply copy `app.py` to the function's `build` folder when you are ready to test any changes.
+
+
+### Invoke a Function Locally
+
+We can use the SAM CLI to invoke a function in a docker container that mimics a Python Lambda execution environment. 
+
+For example, we can mimic a POST method requesting zonal statistics for a polygonal region by supplying a geojson feature collection as a string through standard input:
 
 ```bash
-aws cloudformation package \
-    --template-file template.yaml \
-    --output-template-file packaged.yaml \
-    --s3-bucket nemac-cloudformation
 
-# Dev
-aws cloudformation deploy \
-    --template-file packaged.yaml \
-    --stack-name nfwf-tool-api-dev \
-    --capabilities CAPABILITY_IAM \
-    --parameter-overrides Stage=Dev
+# Get zonal statistics for a Polygon
+echo '{ "body": { "type": "FeatureCollection","name": "charleston-poly","features": [{ "type": "Feature", "properties": { "id": null }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -79.662208557128906, 32.920664249232836 ], [ -79.685039520263672, 32.930174118010605 ], [ -79.717311859130845, 32.906541649538447 ], [ -79.691219329833984, 32.895299602872463 ], [ -79.676971435546875, 32.902362080894527 ], [ -79.675083160400391, 32.909568110575655 ], [ -79.662208557128906, 32.920664249232836 ] ] ] } }]} }' | sam local invoke ZonalStatsFunction
 
-# Prod
-aws cloudformation deploy \
-    --template-file packaged.yaml \
-    --stack-name nfwf-tool-api-dev \
-    --capabilities CAPABILITY_IAM \
-    --parameter-overrides Stage=Dev
+# Get zonal statistics for a MultiPolygon 
+echo '{ "body": { "type": "FeatureCollection", "name": "charleston-multi-poly", "crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } }, "features": [{ "type": "Feature", "properties": { "id": null }, "geometry": { "type": "MultiPolygon", "coordinates": [ [ [ [-79.744316416802718, 32.918307771183919], [-79.758743269652271, 32.880394658156938], [-79.827024159455647, 32.910824100458811], [-79.793686860877372, 32.942719190317831], [-79.744316416802718, 32.918307771183919] ] ], [ [ [-79.662208557128906, 32.920664249232836], [-79.685039520263672, 32.930174118010605], [-79.717311859130845, 32.906541649538447], [-79.691219329833984, 32.895299602872463], [-79.676971435546875, 32.902362080894527], [-79.675083160400391, 32.909568110575655], [-79.662208557128906, 32.920664249232836] ] ] ] } }] }}' | sam local invoke ZonalStatsFunction
 
-aws cloudformation describe-stacks \
-    --stack-name nfwf-tool-api --query 'Stacks[].Outputs'
+# Florida Keys Multipolygon (TIMING OUT) echo '{ "body": {  "type": "FeatureCollection",  "name": "keys_multi",  "crs": {  "type": "name",  "properties": {  "name": "urn:ogc:def:crs:OGC:1.3:CRS84"  }  },  "features": [{  "type": "Feature",  "properties": {  "EZG_ID": 62145,  "prg_name": "Mote Marine Laboratory, Inc.",  "proj_name": "Florida Keys Coral Disease Response & Restoration Initiative",  "region": "Gulf",  "name": "Florida Keys Coral Disease Response & Restoration Initiative",  "id": 62145,  "area": 391374264.7,  "nfwf_proje": null,  "nfwf_pro_1": null,  "asset": null,  "threat": null,  "exposure": null,  "aquatic": null,  "terrestria": null,  "hubs": null,  "crit_infra": null,  "crit_facil": null,  "pop_densit": null,  "social_vul": null,  "drainage": null,  "erosion": null,  "floodprone": null,  "geostress": null,  "sea_level_": null,  "slope": null,  "storm_surg": null  },  "geometry": {  "type": "MultiPolygon",  "coordinates": [  [  [  [-81.302133056890256, 24.60695607607207],  [-81.808877441885357, 24.499532477742999],  [-81.815743897117486, 24.54326248601156],  [-81.306252930209197, 24.650648613252887],  [-81.302133056890256, 24.60695607607207]  ]  ],  [  [  [-80.10747716193147, 25.690925958783847],  [-80.167901966716897, 25.391066939726667],  [-80.209100697211582, 25.410915452360324],  [-80.155542347658283, 25.658745696291859],  [-80.10747716193147, 25.690925958783847]  ]  ]  ]  }  }] }}' | sam local invoke ZonalStatsFunction 
+
 ```
+
+### Run a Local API
+
+We can use the SAM CLI to spin up a local API: `sam local start-api`
+
+Now that our local API is running we can test our `getData` function by hitting its API endpoint in a browser: `http://localhost:3000/get_data?config1=key1&config2=key2`. Since `getData` is a GET request, the only way we can pass configuration to the function is through the URL query string.
+
+For POST requests, we can use cURL to pass function parameters via the body of the HTTP request:
+
+```bash
+# Send a POST request to get zonal stats for geojson features.
+ 
+curl -v -X POST \
+'http://localhost:3000/zonal_stats' \
+-H 'Content-Type: application/json' \
+-d '{"type": "FeatureCollection","name": "charleston-poly","features": [{ "type": "Feature", "geometry": { "type": "Polygon", "coordinates": [ [ [ -79.662208557128906, 32.920664249232836 ], [ -79.685039520263672, 32.930174118010605 ], [ -79.717311859130845, 32.906541649538447 ], [ -79.691219329833984, 32.895299602872463 ], [ -79.676971435546875, 32.902362080894527 ], [ -79.675083160400391, 32.909568110575655 ], [ -79.662208557128906, 32.920664249232836 ] ] ] } }]}'
+```
+
+
+### Deployment
+
+Instead of manually zipping function folders and uploading to S3, we'll use the SAM CLI `package` command to do it for us and generate a final "packaged" template. The packaged template is then used by [AWS CloudFormation](https://aws.amazon.com/cloudformation/) to create or update AWS resources for the API.
+
+* Deploy API updates: `pipenv run deploy <stage>` where `<stage>` is either `dev` or `prod`.
+
+
+### Running Unit Tests
+
+* Build the [Virtual Raster Table](https://www.gdal.org/gdal_vrttut.html) used for local testing: `pipenv run test_prep`
+* Run local tests with [Pytest](https://docs.pytest.org/en/latest/): `pipenv run tests` 
+
+
+### Testing the Live API
+
+Once we've deployed our API, we can use cURL to quickly see the results of our API functions.
+
+* Get the URLs of all of our API functions:
+
+```bash
+# Retrieve a json object with outputs defined in template.yaml
+# For the production API use the stack name 'nfwf-tool-api' instead.
+
+aws cloudformation describe-stacks --stack-name nfwf-tool-api-dev --query 'Stacks[].Outputs'
+```
+
+* Send the request with cURL:
+
+```bash
+curl -v -X POST \
+'https://lg0njzoglg.execute-api.us-east-1.amazonaws.com/Dev/zonal_stats' \
+-H 'Content-Type: application/json' \
+-d '{"type": "FeatureCollection","name": "charleston-poly","features": [{ "type": "Feature", "geometry": { "type": "Polygon", "coordinates": [ [ [ -79.662208557128906, 32.920664249232836 ], [ -79.685039520263672, 32.930174118010605 ], [ -79.717311859130845, 32.906541649538447 ], [ -79.691219329833984, 32.895299602872463 ], [ -79.676971435546875, 32.902362080894527 ], [ -79.675083160400391, 32.909568110575655 ], [ -79.662208557128906, 32.920664249232836 ] ] ] } }]}'
+```
+
+### Notes
+
+- This repository was built with the help of [this project template](https://github.com/aws-samples/cookiecutter-aws-sam-python).
+- Take a look at the `[scripts]` section of the Pipfile to see how commands used in this document are defined.

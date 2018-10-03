@@ -5,19 +5,19 @@
     <NoDataValue>255</NoDataValue>
     <ColorInterp>Gray</ColorInterp>
     <ComplexSource>
+      <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/PNW_ExposureIndex_071118.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties BlockXSize="128" BlockYSize="128" DataType="Byte" RasterXSize="15071" RasterYSize="24530" />
+      <SrcRect xOff="0" xSize="15071" yOff="0" ySize="24530" />
+      <DstRect xOff="88448.1" xSize="15071" yOff="68731.3086859112" ySize="24530" />
+      <NODATA>255</NODATA>
+    </ComplexSource>
+    <ComplexSource>
       <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/CA_ExposureIndex_070218.tif</SourceFilename>
       <SourceBand>1</SourceBand>
       <SourceProperties BlockXSize="128" BlockYSize="128" DataType="Byte" RasterXSize="16178" RasterYSize="39593" />
       <SrcRect xOff="0" xSize="16178" yOff="0" ySize="39593" />
       <DstRect xOff="86352.1" xSize="16178" yOff="93034.3086859112" ySize="39593" />
-      <NODATA>255</NODATA>
-    </ComplexSource>
-    <ComplexSource>
-      <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/Gulf_ExposureIndex_062018.tif</SourceFilename>
-      <SourceBand>1</SourceBand>
-      <SourceProperties BlockXSize="128" BlockYSize="128" DataType="Byte" RasterXSize="62832" RasterYSize="24956" />
-      <SrcRect xOff="0" xSize="62832" yOff="0" ySize="24956" />
-      <DstRect xOff="155436.1" xSize="62832" yOff="140661.308685911" ySize="24956" />
       <NODATA>255</NODATA>
     </ComplexSource>
     <ComplexSource>
@@ -29,11 +29,11 @@
       <NODATA>255</NODATA>
     </ComplexSource>
     <ComplexSource>
-      <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/PNW_ExposureIndex_071118.tif</SourceFilename>
+      <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/Gulf_ExposureIndex_062018.tif</SourceFilename>
       <SourceBand>1</SourceBand>
-      <SourceProperties BlockXSize="128" BlockYSize="128" DataType="Byte" RasterXSize="15071" RasterYSize="24530" />
-      <SrcRect xOff="0" xSize="15071" yOff="0" ySize="24530" />
-      <DstRect xOff="88448.1" xSize="15071" yOff="68731.3086859112" ySize="24530" />
+      <SourceProperties BlockXSize="128" BlockYSize="128" DataType="Byte" RasterXSize="62832" RasterYSize="24956" />
+      <SrcRect xOff="0" xSize="62832" yOff="0" ySize="24956" />
+      <DstRect xOff="155436.1" xSize="62832" yOff="140661.308685911" ySize="24956" />
       <NODATA>255</NODATA>
     </ComplexSource>
     <ComplexSource>
@@ -49,19 +49,19 @@
     <NoDataValue>255</NoDataValue>
     <ColorInterp>Gray</ColorInterp>
     <ComplexSource>
+      <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/PNW_AssetIndex_040618.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties BlockXSize="128" BlockYSize="128" DataType="Byte" RasterXSize="15071" RasterYSize="24530" />
+      <SrcRect xOff="0" xSize="15071" yOff="0" ySize="24530" />
+      <DstRect xOff="88448.1" xSize="15071" yOff="68731.3086859112" ySize="24530" />
+      <NODATA>255</NODATA>
+    </ComplexSource>
+    <ComplexSource>
       <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/CA_AssetIndex_111317.tif</SourceFilename>
       <SourceBand>1</SourceBand>
       <SourceProperties BlockXSize="128" BlockYSize="128" DataType="Byte" RasterXSize="16178" RasterYSize="39594" />
       <SrcRect xOff="0" xSize="16178" yOff="0" ySize="39594" />
       <DstRect xOff="86352.1" xSize="16178" yOff="93034.3086859112" ySize="39594" />
-      <NODATA>255</NODATA>
-    </ComplexSource>
-    <ComplexSource>
-      <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/Gulf_AssetIndex_100317.tif</SourceFilename>
-      <SourceBand>1</SourceBand>
-      <SourceProperties BlockXSize="128" BlockYSize="128" DataType="Byte" RasterXSize="62833" RasterYSize="24956" />
-      <SrcRect xOff="0" xSize="62833" yOff="0" ySize="24956" />
-      <DstRect xOff="155436.1" xSize="62833" yOff="140661.308685911" ySize="24956" />
       <NODATA>255</NODATA>
     </ComplexSource>
     <ComplexSource>
@@ -73,11 +73,11 @@
       <NODATA>255</NODATA>
     </ComplexSource>
     <ComplexSource>
-      <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/PNW_AssetIndex_040618.tif</SourceFilename>
+      <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/Gulf_AssetIndex_100317.tif</SourceFilename>
       <SourceBand>1</SourceBand>
-      <SourceProperties BlockXSize="128" BlockYSize="128" DataType="Byte" RasterXSize="15071" RasterYSize="24530" />
-      <SrcRect xOff="0" xSize="15071" yOff="0" ySize="24530" />
-      <DstRect xOff="88448.1" xSize="15071" yOff="68731.3086859112" ySize="24530" />
+      <SourceProperties BlockXSize="128" BlockYSize="128" DataType="Byte" RasterXSize="62833" RasterYSize="24956" />
+      <SrcRect xOff="0" xSize="62833" yOff="0" ySize="24956" />
+      <DstRect xOff="155436.1" xSize="62833" yOff="140661.308685911" ySize="24956" />
       <NODATA>255</NODATA>
     </ComplexSource>
     <ComplexSource>
@@ -93,19 +93,19 @@
     <NoDataValue>255</NoDataValue>
     <ColorInterp>Gray</ColorInterp>
     <ComplexSource>
+      <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/PNW_ThreatIndex_071118.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties BlockXSize="128" BlockYSize="128" DataType="Byte" RasterXSize="15071" RasterYSize="24530" />
+      <SrcRect xOff="0" xSize="15071" yOff="0" ySize="24530" />
+      <DstRect xOff="88448.1" xSize="15071" yOff="68731.3086859112" ySize="24530" />
+      <NODATA>255</NODATA>
+    </ComplexSource>
+    <ComplexSource>
       <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/CA_ThreatIndex_070218.tif</SourceFilename>
       <SourceBand>1</SourceBand>
       <SourceProperties BlockXSize="128" BlockYSize="128" DataType="Byte" RasterXSize="16178" RasterYSize="39593" />
       <SrcRect xOff="0" xSize="16178" yOff="0" ySize="39593" />
       <DstRect xOff="86352.1" xSize="16178" yOff="93034.3086859112" ySize="39593" />
-      <NODATA>255</NODATA>
-    </ComplexSource>
-    <ComplexSource>
-      <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/Gulf_ThreatIndex_062018.tif</SourceFilename>
-      <SourceBand>1</SourceBand>
-      <SourceProperties BlockXSize="128" BlockYSize="128" DataType="Byte" RasterXSize="62832" RasterYSize="24956" />
-      <SrcRect xOff="0" xSize="62832" yOff="0" ySize="24956" />
-      <DstRect xOff="155436.1" xSize="62832" yOff="140661.308685911" ySize="24956" />
       <NODATA>255</NODATA>
     </ComplexSource>
     <ComplexSource>
@@ -117,11 +117,11 @@
       <NODATA>255</NODATA>
     </ComplexSource>
     <ComplexSource>
-      <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/PNW_ThreatIndex_071118.tif</SourceFilename>
+      <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/Gulf_ThreatIndex_062018.tif</SourceFilename>
       <SourceBand>1</SourceBand>
-      <SourceProperties BlockXSize="128" BlockYSize="128" DataType="Byte" RasterXSize="15071" RasterYSize="24530" />
-      <SrcRect xOff="0" xSize="15071" yOff="0" ySize="24530" />
-      <DstRect xOff="88448.1" xSize="15071" yOff="68731.3086859112" ySize="24530" />
+      <SourceProperties BlockXSize="128" BlockYSize="128" DataType="Byte" RasterXSize="62832" RasterYSize="24956" />
+      <SrcRect xOff="0" xSize="62832" yOff="0" ySize="24956" />
+      <DstRect xOff="155436.1" xSize="62832" yOff="140661.308685911" ySize="24956" />
       <NODATA>255</NODATA>
     </ComplexSource>
     <ComplexSource>
@@ -137,19 +137,19 @@
     <NoDataValue>255</NoDataValue>
     <ColorInterp>Gray</ColorInterp>
     <ComplexSource>
+      <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/PNW_HUC10_AquaticIndex_071018.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties BlockXSize="128" BlockYSize="128" DataType="Byte" RasterXSize="15072" RasterYSize="24531" />
+      <SrcRect xOff="0" xSize="15072" yOff="0" ySize="24531" />
+      <DstRect xOff="88448.171674229" xSize="15072" yOff="68730.9517286043" ySize="24531" />
+      <NODATA>255</NODATA>
+    </ComplexSource>
+    <ComplexSource>
       <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/CA_HUC10_AquaticIndex_071018.tif</SourceFilename>
       <SourceBand>1</SourceBand>
       <SourceProperties BlockXSize="128" BlockYSize="128" DataType="Byte" RasterXSize="16178" RasterYSize="39595" />
       <SrcRect xOff="0" xSize="16178" yOff="0" ySize="39595" />
       <DstRect xOff="86352.171674229" xSize="16178" yOff="93032.9517286043" ySize="39595" />
-      <NODATA>255</NODATA>
-    </ComplexSource>
-    <ComplexSource>
-      <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/Gulf_HUC10_AquaticIndex_070918.tif</SourceFilename>
-      <SourceBand>1</SourceBand>
-      <SourceProperties BlockXSize="128" BlockYSize="128" DataType="Byte" RasterXSize="62833" RasterYSize="24956" />
-      <SrcRect xOff="0" xSize="62833" yOff="0" ySize="24956" />
-      <DstRect xOff="155436.171674229" xSize="62833" yOff="140660.951728604" ySize="24956" />
       <NODATA>255</NODATA>
     </ComplexSource>
     <ComplexSource>
@@ -161,11 +161,11 @@
       <NODATA>255</NODATA>
     </ComplexSource>
     <ComplexSource>
-      <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/PNW_HUC10_AquaticIndex_071018.tif</SourceFilename>
+      <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/Gulf_HUC10_AquaticIndex_070918.tif</SourceFilename>
       <SourceBand>1</SourceBand>
-      <SourceProperties BlockXSize="128" BlockYSize="128" DataType="Byte" RasterXSize="15072" RasterYSize="24531" />
-      <SrcRect xOff="0" xSize="15072" yOff="0" ySize="24531" />
-      <DstRect xOff="88448.171674229" xSize="15072" yOff="68730.9517286043" ySize="24531" />
+      <SourceProperties BlockXSize="128" BlockYSize="128" DataType="Byte" RasterXSize="62833" RasterYSize="24956" />
+      <SrcRect xOff="0" xSize="62833" yOff="0" ySize="24956" />
+      <DstRect xOff="155436.171674229" xSize="62833" yOff="140660.951728604" ySize="24956" />
       <NODATA>255</NODATA>
     </ComplexSource>
     <ComplexSource>
@@ -181,19 +181,19 @@
     <NoDataValue>255</NoDataValue>
     <ColorInterp>Gray</ColorInterp>
     <ComplexSource>
+      <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/PNW_HUC10_TerrestrialIndex_071018.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties BlockXSize="128" BlockYSize="128" DataType="Byte" RasterXSize="15072" RasterYSize="24531" />
+      <SrcRect xOff="0" xSize="15072" yOff="0" ySize="24531" />
+      <DstRect xOff="88448.171674229" xSize="15072" yOff="68730.9517286043" ySize="24531" />
+      <NODATA>255</NODATA>
+    </ComplexSource>
+    <ComplexSource>
       <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/CA_HUC10_TerrestrialIndex_071018.tif</SourceFilename>
       <SourceBand>1</SourceBand>
       <SourceProperties BlockXSize="128" BlockYSize="128" DataType="Byte" RasterXSize="16178" RasterYSize="39595" />
       <SrcRect xOff="0" xSize="16178" yOff="0" ySize="39595" />
       <DstRect xOff="86352.171674229" xSize="16178" yOff="93032.9517286043" ySize="39595" />
-      <NODATA>255</NODATA>
-    </ComplexSource>
-    <ComplexSource>
-      <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/Gulf_HUC10_TerrestrialIndex_070918.tif</SourceFilename>
-      <SourceBand>1</SourceBand>
-      <SourceProperties BlockXSize="128" BlockYSize="128" DataType="Byte" RasterXSize="62833" RasterYSize="24956" />
-      <SrcRect xOff="0" xSize="62833" yOff="0" ySize="24956" />
-      <DstRect xOff="155436.171674229" xSize="62833" yOff="140660.951728604" ySize="24956" />
       <NODATA>255</NODATA>
     </ComplexSource>
     <ComplexSource>
@@ -205,11 +205,11 @@
       <NODATA>255</NODATA>
     </ComplexSource>
     <ComplexSource>
-      <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/PNW_HUC10_TerrestrialIndex_071018.tif</SourceFilename>
+      <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/Gulf_HUC10_TerrestrialIndex_070918.tif</SourceFilename>
       <SourceBand>1</SourceBand>
-      <SourceProperties BlockXSize="128" BlockYSize="128" DataType="Byte" RasterXSize="15072" RasterYSize="24531" />
-      <SrcRect xOff="0" xSize="15072" yOff="0" ySize="24531" />
-      <DstRect xOff="88448.171674229" xSize="15072" yOff="68730.9517286043" ySize="24531" />
+      <SourceProperties BlockXSize="128" BlockYSize="128" DataType="Byte" RasterXSize="62833" RasterYSize="24956" />
+      <SrcRect xOff="0" xSize="62833" yOff="0" ySize="24956" />
+      <DstRect xOff="155436.171674229" xSize="62833" yOff="140660.951728604" ySize="24956" />
       <NODATA>255</NODATA>
     </ComplexSource>
     <ComplexSource>
@@ -245,19 +245,19 @@
     <NoDataValue>255</NoDataValue>
     <ColorInterp>Gray</ColorInterp>
     <ComplexSource>
+      <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/asset-inputs/PNW_CritInfrastructure_shift_040618.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties BlockXSize="128" BlockYSize="128" DataType="Byte" RasterXSize="15071" RasterYSize="24530" />
+      <SrcRect xOff="0" xSize="15071" yOff="0" ySize="24530" />
+      <DstRect xOff="88448.1" xSize="15071" yOff="68731.3086859112" ySize="24530" />
+      <NODATA>255</NODATA>
+    </ComplexSource>
+    <ComplexSource>
       <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/asset-inputs/CA_CritInfra_Shift_111317.tif</SourceFilename>
       <SourceBand>1</SourceBand>
       <SourceProperties BlockXSize="128" BlockYSize="128" DataType="Byte" RasterXSize="16178" RasterYSize="39594" />
       <SrcRect xOff="0" xSize="16178" yOff="0" ySize="39594" />
       <DstRect xOff="86352.1" xSize="16178" yOff="93034.3086859112" ySize="39594" />
-      <NODATA>255</NODATA>
-    </ComplexSource>
-    <ComplexSource>
-      <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/asset-inputs/Gulf_CritInfra_shift_100317.tif</SourceFilename>
-      <SourceBand>1</SourceBand>
-      <SourceProperties BlockXSize="128" BlockYSize="128" DataType="Byte" RasterXSize="62833" RasterYSize="24956" />
-      <SrcRect xOff="0" xSize="62833" yOff="0" ySize="24956" />
-      <DstRect xOff="155436.1" xSize="62833" yOff="140661.308685911" ySize="24956" />
       <NODATA>255</NODATA>
     </ComplexSource>
     <ComplexSource>
@@ -269,11 +269,11 @@
       <NODATA>255</NODATA>
     </ComplexSource>
     <ComplexSource>
-      <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/asset-inputs/PNW_CritInfrastructure_shift_040618.tif</SourceFilename>
+      <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/asset-inputs/Gulf_CritInfra_shift_100317.tif</SourceFilename>
       <SourceBand>1</SourceBand>
-      <SourceProperties BlockXSize="128" BlockYSize="128" DataType="Byte" RasterXSize="15071" RasterYSize="24530" />
-      <SrcRect xOff="0" xSize="15071" yOff="0" ySize="24530" />
-      <DstRect xOff="88448.1" xSize="15071" yOff="68731.3086859112" ySize="24530" />
+      <SourceProperties BlockXSize="128" BlockYSize="128" DataType="Byte" RasterXSize="62833" RasterYSize="24956" />
+      <SrcRect xOff="0" xSize="62833" yOff="0" ySize="24956" />
+      <DstRect xOff="155436.1" xSize="62833" yOff="140661.308685911" ySize="24956" />
       <NODATA>255</NODATA>
     </ComplexSource>
     <ComplexSource>
@@ -289,19 +289,19 @@
     <NoDataValue>255</NoDataValue>
     <ColorInterp>Gray</ColorInterp>
     <ComplexSource>
+      <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/asset-inputs/PNW_CriticalFacilities_shift.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties BlockXSize="128" BlockYSize="128" DataType="Byte" RasterXSize="15071" RasterYSize="24530" />
+      <SrcRect xOff="0" xSize="15071" yOff="0" ySize="24530" />
+      <DstRect xOff="88448.1" xSize="15071" yOff="68731.3086859112" ySize="24530" />
+      <NODATA>255</NODATA>
+    </ComplexSource>
+    <ComplexSource>
       <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/asset-inputs/CA_CriticalFacilities_shift_102617.tif</SourceFilename>
       <SourceBand>1</SourceBand>
       <SourceProperties BlockXSize="128" BlockYSize="128" DataType="Byte" RasterXSize="16179" RasterYSize="39595" />
       <SrcRect xOff="0" xSize="16179" yOff="0" ySize="39595" />
       <DstRect xOff="86351.1" xSize="16179" yOff="93033.3086859112" ySize="39595" />
-      <NODATA>255</NODATA>
-    </ComplexSource>
-    <ComplexSource>
-      <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/asset-inputs/Gulf_CritFac5_shift_091817.tif</SourceFilename>
-      <SourceBand>1</SourceBand>
-      <SourceProperties BlockXSize="128" BlockYSize="128" DataType="Byte" RasterXSize="62834" RasterYSize="24957" />
-      <SrcRect xOff="0" xSize="62834" yOff="0" ySize="24957" />
-      <DstRect xOff="155435.1" xSize="62834" yOff="140661.308685911" ySize="24957" />
       <NODATA>255</NODATA>
     </ComplexSource>
     <ComplexSource>
@@ -313,11 +313,11 @@
       <NODATA>255</NODATA>
     </ComplexSource>
     <ComplexSource>
-      <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/asset-inputs/PNW_CriticalFacilities_shift.tif</SourceFilename>
+      <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/asset-inputs/Gulf_CritFac5_shift_091817.tif</SourceFilename>
       <SourceBand>1</SourceBand>
-      <SourceProperties BlockXSize="128" BlockYSize="128" DataType="Byte" RasterXSize="15071" RasterYSize="24530" />
-      <SrcRect xOff="0" xSize="15071" yOff="0" ySize="24530" />
-      <DstRect xOff="88448.1" xSize="15071" yOff="68731.3086859112" ySize="24530" />
+      <SourceProperties BlockXSize="128" BlockYSize="128" DataType="Byte" RasterXSize="62834" RasterYSize="24957" />
+      <SrcRect xOff="0" xSize="62834" yOff="0" ySize="24957" />
+      <DstRect xOff="155435.1" xSize="62834" yOff="140661.308685911" ySize="24957" />
       <NODATA>255</NODATA>
     </ComplexSource>
     <ComplexSource>
@@ -333,19 +333,19 @@
     <NoDataValue>255</NoDataValue>
     <ColorInterp>Gray</ColorInterp>
     <ComplexSource>
+      <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/asset-inputs/PNW_PopDensity_shift_031918.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties BlockXSize="128" BlockYSize="128" DataType="Byte" RasterXSize="15071" RasterYSize="24530" />
+      <SrcRect xOff="0" xSize="15071" yOff="0" ySize="24530" />
+      <DstRect xOff="88448.1" xSize="15071" yOff="68731.3086859112" ySize="24530" />
+      <NODATA>255</NODATA>
+    </ComplexSource>
+    <ComplexSource>
       <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/asset-inputs/CA_PopDensity_shift_071117.tif</SourceFilename>
       <SourceBand>1</SourceBand>
       <SourceProperties BlockXSize="128" BlockYSize="128" DataType="Byte" RasterXSize="16179" RasterYSize="39595" />
       <SrcRect xOff="0" xSize="16179" yOff="0" ySize="39595" />
       <DstRect xOff="86351.1" xSize="16179" yOff="93033.3086859112" ySize="39595" />
-      <NODATA>255</NODATA>
-    </ComplexSource>
-    <ComplexSource>
-      <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/asset-inputs/Gulf_PopDensity_shift_061517.tif</SourceFilename>
-      <SourceBand>1</SourceBand>
-      <SourceProperties BlockXSize="128" BlockYSize="128" DataType="Byte" RasterXSize="62834" RasterYSize="24957" />
-      <SrcRect xOff="0" xSize="62834" yOff="0" ySize="24957" />
-      <DstRect xOff="155435.1" xSize="62834" yOff="140661.308685911" ySize="24957" />
       <NODATA>255</NODATA>
     </ComplexSource>
     <ComplexSource>
@@ -357,11 +357,11 @@
       <NODATA>255</NODATA>
     </ComplexSource>
     <ComplexSource>
-      <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/asset-inputs/PNW_PopDensity_shift_031918.tif</SourceFilename>
+      <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/asset-inputs/Gulf_PopDensity_shift_061517.tif</SourceFilename>
       <SourceBand>1</SourceBand>
-      <SourceProperties BlockXSize="128" BlockYSize="128" DataType="Byte" RasterXSize="15071" RasterYSize="24530" />
-      <SrcRect xOff="0" xSize="15071" yOff="0" ySize="24530" />
-      <DstRect xOff="88448.1" xSize="15071" yOff="68731.3086859112" ySize="24530" />
+      <SourceProperties BlockXSize="128" BlockYSize="128" DataType="Byte" RasterXSize="62834" RasterYSize="24957" />
+      <SrcRect xOff="0" xSize="62834" yOff="0" ySize="24957" />
+      <DstRect xOff="155435.1" xSize="62834" yOff="140661.308685911" ySize="24957" />
       <NODATA>255</NODATA>
     </ComplexSource>
     <ComplexSource>
@@ -377,19 +377,19 @@
     <NoDataValue>255</NoDataValue>
     <ColorInterp>Gray</ColorInterp>
     <ComplexSource>
+      <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/asset-inputs/PNW_SocVulnerability_shift_031918.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties BlockXSize="128" BlockYSize="128" DataType="Byte" RasterXSize="15071" RasterYSize="24530" />
+      <SrcRect xOff="0" xSize="15071" yOff="0" ySize="24530" />
+      <DstRect xOff="88448.1" xSize="15071" yOff="68731.3086859112" ySize="24530" />
+      <NODATA>255</NODATA>
+    </ComplexSource>
+    <ComplexSource>
       <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/asset-inputs/CA_SocVuln_shift_102617.tif</SourceFilename>
       <SourceBand>1</SourceBand>
       <SourceProperties BlockXSize="128" BlockYSize="128" DataType="Byte" RasterXSize="16179" RasterYSize="39595" />
       <SrcRect xOff="0" xSize="16179" yOff="0" ySize="39595" />
       <DstRect xOff="86351.1" xSize="16179" yOff="93033.3086859112" ySize="39595" />
-      <NODATA>255</NODATA>
-    </ComplexSource>
-    <ComplexSource>
-      <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/asset-inputs/Gulf_SoVl_050917.tif</SourceFilename>
-      <SourceBand>1</SourceBand>
-      <SourceProperties BlockXSize="128" BlockYSize="128" DataType="Byte" RasterXSize="62833" RasterYSize="24956" />
-      <SrcRect xOff="0" xSize="62833" yOff="0" ySize="24956" />
-      <DstRect xOff="155436.1" xSize="62833" yOff="140661.308685911" ySize="24956" />
       <NODATA>255</NODATA>
     </ComplexSource>
     <ComplexSource>
@@ -401,11 +401,11 @@
       <NODATA>255</NODATA>
     </ComplexSource>
     <ComplexSource>
-      <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/asset-inputs/PNW_SocVulnerability_shift_031918.tif</SourceFilename>
+      <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/asset-inputs/Gulf_SoVl_050917.tif</SourceFilename>
       <SourceBand>1</SourceBand>
-      <SourceProperties BlockXSize="128" BlockYSize="128" DataType="Byte" RasterXSize="15071" RasterYSize="24530" />
-      <SrcRect xOff="0" xSize="15071" yOff="0" ySize="24530" />
-      <DstRect xOff="88448.1" xSize="15071" yOff="68731.3086859112" ySize="24530" />
+      <SourceProperties BlockXSize="128" BlockYSize="128" DataType="Byte" RasterXSize="62833" RasterYSize="24956" />
+      <SrcRect xOff="0" xSize="62833" yOff="0" ySize="24956" />
+      <DstRect xOff="155436.1" xSize="62833" yOff="140661.308685911" ySize="24956" />
       <NODATA>255</NODATA>
     </ComplexSource>
     <ComplexSource>
@@ -421,19 +421,19 @@
     <NoDataValue>255</NoDataValue>
     <ColorInterp>Gray</ColorInterp>
     <ComplexSource>
+      <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/threat-inputs/PNW_DrainDev_Reclass_NEW.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties BlockXSize="128" BlockYSize="128" DataType="Byte" RasterXSize="15071" RasterYSize="24530" />
+      <SrcRect xOff="0" xSize="15071" yOff="0" ySize="24530" />
+      <DstRect xOff="88448.1" xSize="15071" yOff="68731.3086859112" ySize="24530" />
+      <NODATA>255</NODATA>
+    </ComplexSource>
+    <ComplexSource>
       <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/threat-inputs/CA_DrainageDev_shift_021318.tif</SourceFilename>
       <SourceBand>1</SourceBand>
       <SourceProperties BlockXSize="128" BlockYSize="128" DataType="Byte" RasterXSize="16178" RasterYSize="39594" />
       <SrcRect xOff="0" xSize="16178" yOff="0" ySize="39594" />
       <DstRect xOff="86352.1" xSize="16178" yOff="93033.3086859112" ySize="39594" />
-      <NODATA>255</NODATA>
-    </ComplexSource>
-    <ComplexSource>
-      <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/threat-inputs/Gulf_DrainageDev_Reclass_062018.tif</SourceFilename>
-      <SourceBand>1</SourceBand>
-      <SourceProperties BlockXSize="128" BlockYSize="128" DataType="Byte" RasterXSize="62832" RasterYSize="24956" />
-      <SrcRect xOff="0" xSize="62832" yOff="0" ySize="24956" />
-      <DstRect xOff="155436.1" xSize="62832" yOff="140661.308685911" ySize="24956" />
       <NODATA>255</NODATA>
     </ComplexSource>
     <ComplexSource>
@@ -445,11 +445,11 @@
       <NODATA>255</NODATA>
     </ComplexSource>
     <ComplexSource>
-      <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/threat-inputs/PNW_DrainDev_Reclass_NEW.tif</SourceFilename>
+      <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/threat-inputs/Gulf_DrainageDev_Reclass_062018.tif</SourceFilename>
       <SourceBand>1</SourceBand>
-      <SourceProperties BlockXSize="128" BlockYSize="128" DataType="Byte" RasterXSize="15071" RasterYSize="24530" />
-      <SrcRect xOff="0" xSize="15071" yOff="0" ySize="24530" />
-      <DstRect xOff="88448.1" xSize="15071" yOff="68731.3086859112" ySize="24530" />
+      <SourceProperties BlockXSize="128" BlockYSize="128" DataType="Byte" RasterXSize="62832" RasterYSize="24956" />
+      <SrcRect xOff="0" xSize="62832" yOff="0" ySize="24956" />
+      <DstRect xOff="155436.1" xSize="62832" yOff="140661.308685911" ySize="24956" />
       <NODATA>255</NODATA>
     </ComplexSource>
     <ComplexSource>
@@ -465,19 +465,19 @@
     <NoDataValue>255</NoDataValue>
     <ColorInterp>Gray</ColorInterp>
     <ComplexSource>
+      <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/threat-inputs/PNW_ErosionB_shift_051018.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties BlockXSize="128" BlockYSize="128" DataType="Byte" RasterXSize="15071" RasterYSize="24530" />
+      <SrcRect xOff="0" xSize="15071" yOff="0" ySize="24530" />
+      <DstRect xOff="88448.1" xSize="15071" yOff="68731.3086859112" ySize="24530" />
+      <NODATA>255</NODATA>
+    </ComplexSource>
+    <ComplexSource>
       <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/threat-inputs/CA_ErosionB_shift_051018.tif</SourceFilename>
       <SourceBand>1</SourceBand>
       <SourceProperties BlockXSize="128" BlockYSize="128" DataType="Byte" RasterXSize="16178" RasterYSize="39594" />
       <SrcRect xOff="0" xSize="16178" yOff="0" ySize="39594" />
       <DstRect xOff="86352.1" xSize="16178" yOff="93034.3086859112" ySize="39594" />
-      <NODATA>255</NODATA>
-    </ComplexSource>
-    <ComplexSource>
-      <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/threat-inputs/Gulf_ErosionB_shift_051018.tif</SourceFilename>
-      <SourceBand>1</SourceBand>
-      <SourceProperties BlockXSize="128" BlockYSize="128" DataType="Byte" RasterXSize="62832" RasterYSize="24956" />
-      <SrcRect xOff="0" xSize="62832" yOff="0" ySize="24956" />
-      <DstRect xOff="155436.1" xSize="62832" yOff="140661.308685911" ySize="24956" />
       <NODATA>255</NODATA>
     </ComplexSource>
     <ComplexSource>
@@ -489,11 +489,11 @@
       <NODATA>255</NODATA>
     </ComplexSource>
     <ComplexSource>
-      <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/threat-inputs/PNW_ErosionB_shift_051018.tif</SourceFilename>
+      <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/threat-inputs/Gulf_ErosionB_shift_051018.tif</SourceFilename>
       <SourceBand>1</SourceBand>
-      <SourceProperties BlockXSize="128" BlockYSize="128" DataType="Byte" RasterXSize="15071" RasterYSize="24530" />
-      <SrcRect xOff="0" xSize="15071" yOff="0" ySize="24530" />
-      <DstRect xOff="88448.1" xSize="15071" yOff="68731.3086859112" ySize="24530" />
+      <SourceProperties BlockXSize="128" BlockYSize="128" DataType="Byte" RasterXSize="62832" RasterYSize="24956" />
+      <SrcRect xOff="0" xSize="62832" yOff="0" ySize="24956" />
+      <DstRect xOff="155436.1" xSize="62832" yOff="140661.308685911" ySize="24956" />
       <NODATA>255</NODATA>
     </ComplexSource>
     <ComplexSource>
@@ -509,19 +509,19 @@
     <NoDataValue>255</NoDataValue>
     <ColorInterp>Gray</ColorInterp>
     <ComplexSource>
+      <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/threat-inputs/PNW_FloodproneAreas_shift_041118.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties BlockXSize="128" BlockYSize="128" DataType="Byte" RasterXSize="15071" RasterYSize="24530" />
+      <SrcRect xOff="0" xSize="15071" yOff="0" ySize="24530" />
+      <DstRect xOff="88448.1" xSize="15071" yOff="68731.3086859112" ySize="24530" />
+      <NODATA>255</NODATA>
+    </ComplexSource>
+    <ComplexSource>
       <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/threat-inputs/CA_FloodproneAreas_shift_071417.tif</SourceFilename>
       <SourceBand>1</SourceBand>
       <SourceProperties BlockXSize="128" BlockYSize="128" DataType="Byte" RasterXSize="16179" RasterYSize="39595" />
       <SrcRect xOff="0" xSize="16179" yOff="0" ySize="39595" />
       <DstRect xOff="86351.1" xSize="16179" yOff="93033.3086859112" ySize="39595" />
-      <NODATA>255</NODATA>
-    </ComplexSource>
-    <ComplexSource>
-      <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/threat-inputs/Gulf_Floodprone_shift_062217.tif</SourceFilename>
-      <SourceBand>1</SourceBand>
-      <SourceProperties BlockXSize="128" BlockYSize="128" DataType="Byte" RasterXSize="62833" RasterYSize="24956" />
-      <SrcRect xOff="0" xSize="62833" yOff="0" ySize="24956" />
-      <DstRect xOff="155436.1" xSize="62833" yOff="140661.308685911" ySize="24956" />
       <NODATA>255</NODATA>
     </ComplexSource>
     <ComplexSource>
@@ -533,11 +533,11 @@
       <NODATA>255</NODATA>
     </ComplexSource>
     <ComplexSource>
-      <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/threat-inputs/PNW_FloodproneAreas_shift_041118.tif</SourceFilename>
+      <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/threat-inputs/Gulf_Floodprone_shift_062217.tif</SourceFilename>
       <SourceBand>1</SourceBand>
-      <SourceProperties BlockXSize="128" BlockYSize="128" DataType="Byte" RasterXSize="15071" RasterYSize="24530" />
-      <SrcRect xOff="0" xSize="15071" yOff="0" ySize="24530" />
-      <DstRect xOff="88448.1" xSize="15071" yOff="68731.3086859112" ySize="24530" />
+      <SourceProperties BlockXSize="128" BlockYSize="128" DataType="Byte" RasterXSize="62833" RasterYSize="24956" />
+      <SrcRect xOff="0" xSize="62833" yOff="0" ySize="24956" />
+      <DstRect xOff="155436.1" xSize="62833" yOff="140661.308685911" ySize="24956" />
       <NODATA>255</NODATA>
     </ComplexSource>
     <ComplexSource>
@@ -553,19 +553,19 @@
     <NoDataValue>255</NoDataValue>
     <ColorInterp>Gray</ColorInterp>
     <ComplexSource>
+      <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/threat-inputs/PNW_Geostress_shift_051118.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties BlockXSize="128" BlockYSize="128" DataType="Byte" RasterXSize="15072" RasterYSize="24531" />
+      <SrcRect xOff="0" xSize="15072" yOff="0" ySize="24531" />
+      <DstRect xOff="88448.1" xSize="15072" yOff="68731.3086859112" ySize="24531" />
+      <NODATA>255</NODATA>
+    </ComplexSource>
+    <ComplexSource>
       <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/threat-inputs/CA_Geostress_shift_051118.tif</SourceFilename>
       <SourceBand>1</SourceBand>
       <SourceProperties BlockXSize="128" BlockYSize="128" DataType="Byte" RasterXSize="16178" RasterYSize="39595" />
       <SrcRect xOff="0" xSize="16178" yOff="0" ySize="39595" />
       <DstRect xOff="86352.1" xSize="16178" yOff="93033.3086859112" ySize="39595" />
-      <NODATA>255</NODATA>
-    </ComplexSource>
-    <ComplexSource>
-      <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/threat-inputs/Gulf_Geostress_shift_051118.tif</SourceFilename>
-      <SourceBand>1</SourceBand>
-      <SourceProperties BlockXSize="128" BlockYSize="128" DataType="Byte" RasterXSize="62833" RasterYSize="24957" />
-      <SrcRect xOff="0" xSize="62833" yOff="0" ySize="24957" />
-      <DstRect xOff="155436.1" xSize="62833" yOff="140661.308685911" ySize="24957" />
       <NODATA>255</NODATA>
     </ComplexSource>
     <ComplexSource>
@@ -577,11 +577,11 @@
       <NODATA>255</NODATA>
     </ComplexSource>
     <ComplexSource>
-      <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/threat-inputs/PNW_Geostress_shift_051118.tif</SourceFilename>
+      <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/threat-inputs/Gulf_Geostress_shift_051118.tif</SourceFilename>
       <SourceBand>1</SourceBand>
-      <SourceProperties BlockXSize="128" BlockYSize="128" DataType="Byte" RasterXSize="15072" RasterYSize="24531" />
-      <SrcRect xOff="0" xSize="15072" yOff="0" ySize="24531" />
-      <DstRect xOff="88448.1" xSize="15072" yOff="68731.3086859112" ySize="24531" />
+      <SourceProperties BlockXSize="128" BlockYSize="128" DataType="Byte" RasterXSize="62833" RasterYSize="24957" />
+      <SrcRect xOff="0" xSize="62833" yOff="0" ySize="24957" />
+      <DstRect xOff="155436.1" xSize="62833" yOff="140661.308685911" ySize="24957" />
       <NODATA>255</NODATA>
     </ComplexSource>
   </VRTRasterBand>
@@ -589,19 +589,19 @@
     <NoDataValue>255</NoDataValue>
     <ColorInterp>Gray</ColorInterp>
     <ComplexSource>
+      <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/threat-inputs/PNW_SLR_shift_041318.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties BlockXSize="128" BlockYSize="128" DataType="Byte" RasterXSize="15071" RasterYSize="24533" />
+      <SrcRect xOff="0" xSize="15071" yOff="0" ySize="24533" />
+      <DstRect xOff="88448.1" xSize="15071" yOff="68728.3086859112" ySize="24533" />
+      <NODATA>255</NODATA>
+    </ComplexSource>
+    <ComplexSource>
       <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/threat-inputs/CA_SLR_shift_071717.tif</SourceFilename>
       <SourceBand>1</SourceBand>
       <SourceProperties BlockXSize="128" BlockYSize="128" DataType="Byte" RasterXSize="16179" RasterYSize="39595" />
       <SrcRect xOff="0" xSize="16179" yOff="0" ySize="39595" />
       <DstRect xOff="86351.1" xSize="16179" yOff="93033.3086859112" ySize="39595" />
-      <NODATA>255</NODATA>
-    </ComplexSource>
-    <ComplexSource>
-      <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/threat-inputs/Gulf_SLRshift.tif</SourceFilename>
-      <SourceBand>1</SourceBand>
-      <SourceProperties BlockXSize="128" BlockYSize="128" DataType="Byte" RasterXSize="62832" RasterYSize="24956" />
-      <SrcRect xOff="0" xSize="62832" yOff="0" ySize="24956" />
-      <DstRect xOff="155436.1" xSize="62832" yOff="140661.308685911" ySize="24956" />
       <NODATA>255</NODATA>
     </ComplexSource>
     <ComplexSource>
@@ -613,11 +613,11 @@
       <NODATA>255</NODATA>
     </ComplexSource>
     <ComplexSource>
-      <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/threat-inputs/PNW_SLR_shift_041318.tif</SourceFilename>
+      <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/threat-inputs/Gulf_SLRshift.tif</SourceFilename>
       <SourceBand>1</SourceBand>
-      <SourceProperties BlockXSize="128" BlockYSize="128" DataType="Byte" RasterXSize="15071" RasterYSize="24533" />
-      <SrcRect xOff="0" xSize="15071" yOff="0" ySize="24533" />
-      <DstRect xOff="88448.1" xSize="15071" yOff="68728.3086859112" ySize="24533" />
+      <SourceProperties BlockXSize="128" BlockYSize="128" DataType="Byte" RasterXSize="62832" RasterYSize="24956" />
+      <SrcRect xOff="0" xSize="62832" yOff="0" ySize="24956" />
+      <DstRect xOff="155436.1" xSize="62832" yOff="140661.308685911" ySize="24956" />
       <NODATA>255</NODATA>
     </ComplexSource>
     <ComplexSource>
@@ -633,19 +633,19 @@
     <NoDataValue>255</NoDataValue>
     <ColorInterp>Gray</ColorInterp>
     <ComplexSource>
+      <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/threat-inputs/PNW_Slope_shift_031918.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties BlockXSize="128" BlockYSize="128" DataType="Byte" RasterXSize="15072" RasterYSize="24531" />
+      <SrcRect xOff="0" xSize="15072" yOff="0" ySize="24531" />
+      <DstRect xOff="88447.1" xSize="15072" yOff="68731.3086859112" ySize="24531" />
+      <NODATA>255</NODATA>
+    </ComplexSource>
+    <ComplexSource>
       <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/threat-inputs/CA_Slope_Shift_071117.tif</SourceFilename>
       <SourceBand>1</SourceBand>
       <SourceProperties BlockXSize="128" BlockYSize="128" DataType="Byte" RasterXSize="36980" RasterYSize="46866" />
       <SrcRect xOff="0" xSize="36980" yOff="0" ySize="46866" />
       <DstRect xOff="76181.1" xSize="36980" yOff="88659.3086859112" ySize="46866" />
-      <NODATA>255</NODATA>
-    </ComplexSource>
-    <ComplexSource>
-      <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/threat-inputs/Gulf_Slope_050917.tif</SourceFilename>
-      <SourceBand>1</SourceBand>
-      <SourceProperties BlockXSize="128" BlockYSize="128" DataType="Byte" RasterXSize="62834" RasterYSize="24958" />
-      <SrcRect xOff="0" xSize="62834" yOff="0" ySize="24958" />
-      <DstRect xOff="155436.1" xSize="62834" yOff="140661.308685911" ySize="24958" />
       <NODATA>255</NODATA>
     </ComplexSource>
     <ComplexSource>
@@ -657,11 +657,11 @@
       <NODATA>255</NODATA>
     </ComplexSource>
     <ComplexSource>
-      <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/threat-inputs/PNW_Slope_shift_031918.tif</SourceFilename>
+      <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/threat-inputs/Gulf_Slope_050917.tif</SourceFilename>
       <SourceBand>1</SourceBand>
-      <SourceProperties BlockXSize="128" BlockYSize="128" DataType="Byte" RasterXSize="15072" RasterYSize="24531" />
-      <SrcRect xOff="0" xSize="15072" yOff="0" ySize="24531" />
-      <DstRect xOff="88447.1" xSize="15072" yOff="68731.3086859112" ySize="24531" />
+      <SourceProperties BlockXSize="128" BlockYSize="128" DataType="Byte" RasterXSize="62834" RasterYSize="24958" />
+      <SrcRect xOff="0" xSize="62834" yOff="0" ySize="24958" />
+      <DstRect xOff="155436.1" xSize="62834" yOff="140661.308685911" ySize="24958" />
       <NODATA>255</NODATA>
     </ComplexSource>
     <ComplexSource>
@@ -677,19 +677,19 @@
     <NoDataValue>255</NoDataValue>
     <ColorInterp>Gray</ColorInterp>
     <ComplexSource>
-      <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/threat-inputs/Gulf_StormSurge_shift_121117.tif</SourceFilename>
-      <SourceBand>1</SourceBand>
-      <SourceProperties BlockXSize="128" BlockYSize="128" DataType="Byte" RasterXSize="62832" RasterYSize="24956" />
-      <SrcRect xOff="0" xSize="62832" yOff="0" ySize="24956" />
-      <DstRect xOff="155436.1" xSize="62832" yOff="140661.308685911" ySize="24956" />
-      <NODATA>255</NODATA>
-    </ComplexSource>
-    <ComplexSource>
       <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/threat-inputs/NA_StormSurge_shift_121117.tif</SourceFilename>
       <SourceBand>1</SourceBand>
       <SourceProperties BlockXSize="128" BlockYSize="128" DataType="Byte" RasterXSize="25368" RasterYSize="39569" />
       <SrcRect xOff="0" xSize="25368" yOff="0" ySize="39569" />
       <DstRect xOff="215031.1" xSize="25368" yOff="78822.3086859112" ySize="39569" />
+      <NODATA>255</NODATA>
+    </ComplexSource>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/threat-inputs/Gulf_StormSurge_shift_121117.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties BlockXSize="128" BlockYSize="128" DataType="Byte" RasterXSize="62832" RasterYSize="24956" />
+      <SrcRect xOff="0" xSize="62832" yOff="0" ySize="24956" />
+      <DstRect xOff="155436.1" xSize="62832" yOff="140661.308685911" ySize="24956" />
       <NODATA>255</NODATA>
     </ComplexSource>
     <ComplexSource>
