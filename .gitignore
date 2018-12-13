@@ -2,9 +2,11 @@
 .env
 *.xml
 *.lock
+*.swp
 
 assets/
 notebooks/
+hubs/
 
 # Created by https://www.gitignore.io/api/osx,linux,python,windows,pycharm,visualstudiocode
 

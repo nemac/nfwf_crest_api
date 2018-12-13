@@ -71,7 +71,8 @@ Resources:
   IdentifyFunction:
     Type: AWS::Serverless::Function # More info about Function Resource: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
     Properties:
-      Timeout: 12
+      Timeout: 300
+      MemorySize: 512
       Policies:
         - AmazonS3ReadOnlyAccess
         - IAMReadOnlyAccess
@@ -96,8 +97,8 @@ Resources:
   ZonalStatsFunction:
     Type: AWS::Serverless::Function # More info about Function Resource: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
     Properties:
-      Timeout: 300
-      MemorySize: 1024
+      Timeout: 900
+      MemorySize: 2048
       Policies:
         - AmazonS3ReadOnlyAccess
         - IAMReadOnlyAccess
@@ -122,7 +123,7 @@ Resources:
   UploadShapeFunction:
     Type: AWS::Serverless::Function
     Properties:
-      Timeout: 10
+      Timeout: 200
       Policies:
         - IAMReadOnlyAccess
         - AmazonS3FullAccess

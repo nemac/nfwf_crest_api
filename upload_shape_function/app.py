@@ -43,7 +43,8 @@ def lambda_handler(event, context):
       Body=geobytes,
       Bucket=bucket,
       Key=object_key,
-      ContentType=content_type
+      ContentType=content_type,
+      ACL='public-read'
     )
 
   metadata = {

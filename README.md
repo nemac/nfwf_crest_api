@@ -34,7 +34,7 @@ Resources:
       ... 
       DefinitionBody:
         ... 
-	paths:
+        paths:
           /get_data: # The endpoint URL path
             get: # The HTTP method to use
               produces:
@@ -110,7 +110,8 @@ echo '{ "body": { "type": "FeatureCollection","name": "charleston-poly","feature
 # Get zonal statistics for a MultiPolygon 
 echo '{ "body": { "type": "FeatureCollection", "name": "charleston-multi-poly", "crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } }, "features": [{ "type": "Feature", "properties": { "id": null }, "geometry": { "type": "MultiPolygon", "coordinates": [ [ [ [-79.744316416802718, 32.918307771183919], [-79.758743269652271, 32.880394658156938], [-79.827024159455647, 32.910824100458811], [-79.793686860877372, 32.942719190317831], [-79.744316416802718, 32.918307771183919] ] ], [ [ [-79.662208557128906, 32.920664249232836], [-79.685039520263672, 32.930174118010605], [-79.717311859130845, 32.906541649538447], [-79.691219329833984, 32.895299602872463], [-79.676971435546875, 32.902362080894527], [-79.675083160400391, 32.909568110575655], [-79.662208557128906, 32.920664249232836] ] ] ] } }] }}' | sam local invoke ZonalStatsFunction
 
-# Florida Keys Multipolygon (TIMING OUT) echo '{ "body": {  "type": "FeatureCollection",  "name": "keys_multi",  "crs": {  "type": "name",  "properties": {  "name": "urn:ogc:def:crs:OGC:1.3:CRS84"  }  },  "features": [{  "type": "Feature",  "properties": {  "EZG_ID": 62145,  "prg_name": "Mote Marine Laboratory, Inc.",  "proj_name": "Florida Keys Coral Disease Response & Restoration Initiative",  "region": "Gulf",  "name": "Florida Keys Coral Disease Response & Restoration Initiative",  "id": 62145,  "area": 391374264.7,  "nfwf_proje": null,  "nfwf_pro_1": null,  "asset": null,  "threat": null,  "exposure": null,  "aquatic": null,  "terrestria": null,  "hubs": null,  "crit_infra": null,  "crit_facil": null,  "pop_densit": null,  "social_vul": null,  "drainage": null,  "erosion": null,  "floodprone": null,  "geostress": null,  "sea_level_": null,  "slope": null,  "storm_surg": null  },  "geometry": {  "type": "MultiPolygon",  "coordinates": [  [  [  [-81.302133056890256, 24.60695607607207],  [-81.808877441885357, 24.499532477742999],  [-81.815743897117486, 24.54326248601156],  [-81.306252930209197, 24.650648613252887],  [-81.302133056890256, 24.60695607607207]  ]  ],  [  [  [-80.10747716193147, 25.690925958783847],  [-80.167901966716897, 25.391066939726667],  [-80.209100697211582, 25.410915452360324],  [-80.155542347658283, 25.658745696291859],  [-80.10747716193147, 25.690925958783847]  ]  ]  ]  }  }] }}' | sam local invoke ZonalStatsFunction 
+# Florida Keys Multipolygon (TIMING OUT)
+echo '{ "body": {  "type": "FeatureCollection",  "name": "keys_multi",  "crs": {  "type": "name",  "properties": {  "name": "urn:ogc:def:crs:OGC:1.3:CRS84"  }  },  "features": [{  "type": "Feature",  "properties": {  "EZG_ID": 62145,  "prg_name": "Mote Marine Laboratory, Inc.",  "proj_name": "Florida Keys Coral Disease Response & Restoration Initiative",  "region": "Gulf",  "name": "Florida Keys Coral Disease Response & Restoration Initiative",  "id": 62145,  "area": 391374264.7,  "nfwf_proje": null,  "nfwf_pro_1": null,  "asset": null,  "threat": null,  "exposure": null,  "aquatic": null,  "terrestria": null,  "hubs": null,  "crit_infra": null,  "crit_facil": null,  "pop_densit": null,  "social_vul": null,  "drainage": null,  "erosion": null,  "floodprone": null,  "geostress": null,  "sea_level_": null,  "slope": null,  "storm_surg": null  },  "geometry": {  "type": "MultiPolygon",  "coordinates": [  [  [  [-81.302133056890256, 24.60695607607207],  [-81.808877441885357, 24.499532477742999],  [-81.815743897117486, 24.54326248601156],  [-81.306252930209197, 24.650648613252887],  [-81.302133056890256, 24.60695607607207]  ]  ],  [  [  [-80.10747716193147, 25.690925958783847],  [-80.167901966716897, 25.391066939726667],  [-80.209100697211582, 25.410915452360324],  [-80.155542347658283, 25.658745696291859],  [-80.10747716193147, 25.690925958783847]  ]  ]  ]  }  }] }}' | sam local invoke ZonalStatsFunction 
 
 ```
 
@@ -139,12 +140,6 @@ Instead of manually zipping function folders and uploading to S3, we'll use the 
 * Deploy API updates: `pipenv run deploy <stage>` where `<stage>` is either `dev` or `prod`.
 
 
-### Running Unit Tests
-
-* Build the [Virtual Raster Table](https://www.gdal.org/gdal_vrttut.html) used for local testing: `pipenv run test_prep`
-* Run local tests with [Pytest](https://docs.pytest.org/en/latest/): `pipenv run tests` 
-
-
 ### Testing the Live API
 
 Once we've deployed our API, we can use cURL to quickly see the results of our API functions.
@@ -166,6 +161,13 @@ curl -v -X POST \
 -H 'Content-Type: application/json' \
 -d '{"type": "FeatureCollection","name": "charleston-poly","features": [{ "type": "Feature", "geometry": { "type": "Polygon", "coordinates": [ [ [ -79.662208557128906, 32.920664249232836 ], [ -79.685039520263672, 32.930174118010605 ], [ -79.717311859130845, 32.906541649538447 ], [ -79.691219329833984, 32.895299602872463 ], [ -79.676971435546875, 32.902362080894527 ], [ -79.675083160400391, 32.909568110575655 ], [ -79.662208557128906, 32.920664249232836 ] ] ] } }]}'
 ```
+
+
+### Running Unit Tests
+
+* Build the [Virtual Raster Table](https://www.gdal.org/gdal_vrttut.html) used for local testing: `pipenv run test_prep`
+* Run local tests with [Pytest](https://docs.pytest.org/en/latest/): `pipenv run tests` 
+
 
 ### Notes
 

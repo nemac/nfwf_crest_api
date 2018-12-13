@@ -38,12 +38,8 @@ def lambda_handler(event, context):
   }
 
 
-def get_zonal_stat(arr, statistic):
-  if statistic == 'mean':
-    result = arr.mean()
-  elif statistic == 'sum':
-    result = arr.sum()
-
+def get_zonal_stat(arr):
+  result = arr.mean()
   if isnan([result]):
     result = "NaN"
   else:
@@ -55,7 +51,6 @@ def get_response(geojson, stage):
 
   config = lib.get_config(stage)
   data_source = lib.get_vrt_path(stage)
-  print(data_source)
 
   dataset_names = lib.get_dataset_names(config)
 
@@ -70,13 +65,10 @@ def get_response(geojson, stage):
         if 'properties' not in feature:
           feature['properties'] = {}
         feature['properties']['mean'] = {}
-        feature['properties']['sum'] = {}
         for i in range(0, len(arr)):
           index_name = dataset_names[i]
-          mean = get_zonal_stat(arr[i], 'mean')
-          total = get_zonal_stat(arr[i], 'sum')
+          mean = get_zonal_stat(arr[i])
           feature['properties']['mean'][index_name] = mean
-          feature['properties']['sum'][index_name] = total
 
   return geojson
 
