@@ -50,6 +50,8 @@ def build_full_vrt(stage, te, b, vrtnodata, vsi):
   bands_config = config['datasets']
   main_tree = None
   main_root = None
+  if stage == 'test':
+    vsi = None
   for i in range(0, len(bands_config)):
     band_num = str(i+1)
     band_config = bands_config[i]

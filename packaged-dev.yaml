@@ -94,7 +94,7 @@ Resources:
     Type: AWS::Serverless::Api
   IdentifyFunction:
     Properties:
-      CodeUri: s3://nemac-cloudformation/a1bf64061d8221ff859bea9893c43be7
+      CodeUri: s3://nemac-cloudformation/5fa7fa39f45b1d9fa70cda7f5a68fc75
       Events:
         GetApi:
           Properties:
@@ -116,11 +116,11 @@ Resources:
         Project: NfwfTool
         Stage:
           Ref: Stage
-      Timeout: 12
+      Timeout: 300
     Type: AWS::Serverless::Function
   UploadShapeFunction:
     Properties:
-      CodeUri: s3://nemac-cloudformation/f854ac5f720403058cda21f8d24e20ef
+      CodeUri: s3://nemac-cloudformation/858b78910406cc874f0a6a830bed74f8
       Events:
         PostApi:
           Properties:
@@ -141,11 +141,11 @@ Resources:
         Project: NfwfTool
         Stage:
           Ref: Stage
-      Timeout: 10
+      Timeout: 200
     Type: AWS::Serverless::Function
   ZonalStatsFunction:
     Properties:
-      CodeUri: s3://nemac-cloudformation/cac06afe2785735fdce4acfb6014eb7e
+      CodeUri: s3://nemac-cloudformation/2d1a0540dbe5de77eeb9fcda527f5b11
       Events:
         PostApi:
           Properties:
@@ -155,7 +155,7 @@ Resources:
               Ref: ApiGatewayApi
           Type: Api
       Handler: app.lambda_handler
-      MemorySize: 1024
+      MemorySize: 2048
       Policies:
       - AmazonS3ReadOnlyAccess
       - IAMReadOnlyAccess
@@ -167,6 +167,6 @@ Resources:
         Project: NfwfTool
         Stage:
           Ref: Stage
-      Timeout: 300
+      Timeout: 900
     Type: AWS::Serverless::Function
 Transform: AWS::Serverless-2016-10-31

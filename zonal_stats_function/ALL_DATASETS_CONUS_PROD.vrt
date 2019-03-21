@@ -65,19 +65,11 @@
     <NoDataValue>255</NoDataValue>
     <ColorInterp>Gray</ColorInterp>
     <ComplexSource>
-      <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/WestCoastHubs_081718.tif</SourceFilename>
+      <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/CONUS_ResilienceHubs_121918.tif</SourceFilename>
       <SourceBand>1</SourceBand>
-      <SourceProperties BlockXSize="128" BlockYSize="128" DataType="Byte" RasterXSize="15789" RasterYSize="63370" />
-      <SrcRect xOff="0" xSize="15789" yOff="0" ySize="63370" />
-      <DstRect xOff="86614.3088433333" xSize="15789" yOff="69184.50313" ySize="63370" />
-      <NODATA>255</NODATA>
-    </ComplexSource>
-    <ComplexSource>
-      <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/EastCoastHubs_081718.tif</SourceFilename>
-      <SourceBand>1</SourceBand>
-      <SourceProperties BlockXSize="128" BlockYSize="128" DataType="Byte" RasterXSize="82903" RasterYSize="83276" />
-      <SrcRect xOff="0" xSize="82903" yOff="0" ySize="83276" />
-      <DstRect xOff="157020.701303333" xSize="82903" yOff="82139.8742059112" ySize="83276" />
+      <SourceProperties BlockXSize="128" BlockYSize="128" DataType="Byte" RasterXSize="154048" RasterYSize="96886" />
+      <SrcRect xOff="0" xSize="154048" yOff="0" ySize="96886" />
+      <DstRect xOff="86352.171674229" xSize="154048" yOff="68731.0009009887" ySize="96886" />
       <NODATA>255</NODATA>
     </ComplexSource>
   </VRTRasterBand>

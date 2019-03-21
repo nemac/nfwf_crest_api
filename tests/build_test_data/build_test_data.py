@@ -48,10 +48,10 @@ geometry = {
 }
 
 
-with open('config-prod.yml', 'r') as stream:
+with open('config-dev.yml', 'r') as stream:
   config = yaml.safe_load(stream)
 
-data_source = './ALL_DATASETS_CONUS_PROD.vrt'
+data_source = './ALL_DATASETS_CONUS_DEV.vrt'
 
 dataset_names = lib.get_dataset_names(config)
 

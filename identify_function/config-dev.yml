@@ -26,8 +26,7 @@ datasets:
 
   - name: hubs
     input_files:
-      - WestCoastHubs_081718.tif
-      - EastCoastHubs_081718.tif
+      - CONUS_ResilienceHubs_121918.tif
 
   - name: crit_infra
     folder: asset-inputs

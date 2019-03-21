@@ -1,11 +1,12 @@
 [scripts]
 # Install dependencies, configuration, and function code to each build folder
 build_packages = "bash -c \"docker run --rm -v ${PWD}:/var/task -it lambci/lambda:build-python3.6 /bin/bash -c './build.sh'\""
+# Build the VRT used by API functions
+build_vrt_dev = "bash -c \"./build_vrt/build_vrt.py -stage dev -vsi s3 -te '-4954548.0 -2178809.0 4771843.0 3632558.0' \" "
+build_vrt_prod = "bash -c \"./build_vrt/build_vrt.py -stage prod -vsi s3 -te '-4954548.0 -2178809.0 4771843.0 3632558.0' \" "
 # Generate micro-datasets used by unit tests and build the accompanying VRT
 test_prep = "bash -c \"./tests/build_test_data/build_test_data.py && ./build_vrt/build_vrt.py -stage test\" " 
-# Build the VRT used by API functions
-# Requires one argument (either 'dev' or 'prod')
-build_vrt = "bash -c \"./build_vrt/build_vrt.py -stage $0 -vsi s3 -te \"-4954548.0 -2178809.0 4771843.0 3632558.0\" \" "
+#Run tests
 tests = "bash -c \"docker run --rm -v ${PWD}:/var/task -it lambci/lambda:build-python3.6 /bin/bash -c './scripts/run-tests.sh'\""
 # Package and deploy changes to API
 # Requires one argument: 'dev' or 'prod'
