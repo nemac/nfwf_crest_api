@@ -2,12 +2,12 @@
 # Install dependencies, configuration, and function code to each build folder
 build_packages = "bash -c \"docker run --rm -v ${PWD}:/var/task -it lambci/lambda:build-python3.6 /bin/bash -c './build.sh'\""
 # Build the VRT used by API functions
-build_vrt_dev = "bash -c \"./build_vrt/build_vrt.py -stage dev -vsi s3 -te '-4954548.0 -2178809.0 4771843.0 3632558.0' \" "
-build_vrt_prod = "bash -c \"./build_vrt/build_vrt.py -stage prod -vsi s3 -te '-4954548.0 -2178809.0 4771843.0 3632558.0' \" "
+build_vrt_dev = "bash -c \"./scripts/build_vrt/build_vrt.py\""
+build_vrt_prod = "bash -c \"./scripts/build_vrt/build_vrt.py -stage prod\""
 # Generate micro-datasets used by unit tests and build the accompanying VRT
-test_prep = "bash -c \"./tests/build_test_data/build_test_data.py && ./build_vrt/build_vrt.py -stage test\" " 
+test_prep = "bash -c \"./scripts/make_test_data/make_test_data.py && ./scripts/build_vrt/build_vrt.py -stage test\" " 
 #Run tests
-tests = "bash -c \"docker run --rm -v ${PWD}:/var/task -it lambci/lambda:build-python3.6 /bin/bash -c './scripts/run-tests.sh'\""
+tests = "bash -c \"docker run --rm -v ${PWD}:/var/task -it lambci/lambda:build-python3.6 /bin/bash -c './run-tests.sh'\""
 # Package and deploy changes to API
 # Requires one argument: 'dev' or 'prod'
 deploy = "bash -c \" ./deploy.sh $0 \" "
@@ -22,17 +22,16 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
-rasterio = { version = "*", extras = ["s3"] }
+rasterio = { version = "==1.0", extras = ["s3"] }
 pyproj = "*"
 pyyaml = "*"
 
 [dev-packages]
-pytest = "*"
-click = "*"
-fiona = "*"
-shapely = "*"
-requests = "*"
-
+#click = "*"
+#pytest = "*"
+fiona = "==1.8.4"
+shapely = "==1.6.4"
+#requests = "*"
 
 [requires]
 python_version = "3.6"

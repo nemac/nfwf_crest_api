@@ -75,7 +75,10 @@ with rio.Env(GDAL_DISABLE_READDIR_ON_OPEN=True):
       index_name = dataset_names[i]
       out = src.read(indexes=band_num, window=window)
       file_handle = os.path.join(DATA_DIR, '{0}_sample.tif'.format(index_name))
-      os.remove(file_handle)
+      try:
+        os.remove(file_handle)
+      except:
+        pass
       with rio.open(file_handle, 'w', **out_meta) as dest:
         dest.write(out, indexes=1)
 

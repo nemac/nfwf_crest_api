@@ -7,13 +7,13 @@ BUCKET_NAME='nemac-cloudformation'
 TEMPLATE_NAME='template.yaml'
 
 case $1 in "dev")
-  STACK_NAME='nfwf-tool-api-dev'
+  STACK_NAME='nfwf-tool-api-natureserve-dev'
   STAGE_NAME='Dev'
   PACKAGED_TEMPLATE='packaged-dev.yaml'
   VRT_FILE=$VRT_FILE_DEV
   ;;
 "prod")
-  STACK_NAME='nfwf-tool-api'
+  STACK_NAME='nfwf-tool-api-natureserve'
   STAGE_NAME='Prod'
   PACKAGED_TEMPLATE='packaged-prod.yaml'
   VRT_FILE=$VRT_FILE_PROD
@@ -40,5 +40,5 @@ aws cloudformation deploy \
   --parameter-overrides Stage=$STAGE_NAME
 
 # Upload the VRT to S3
-aws s3 cp $VRT_FILE s3://$DATA_BUCKET/$VRT_FILE
+aws s3 cp $VRT_FILE s3://$DATA_BUCKET/natureserve/$VRT_FILE
 

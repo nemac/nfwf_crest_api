@@ -3,6 +3,8 @@
 '''
 A CLI utility for building the VRT raster that points to S3-hosted NFWF model datasets.
 
+Run from the project root directory.
+
 Relies on a config file in the root directory.
 '''
 
@@ -18,7 +20,7 @@ extent_arg = '-te {0}'
 band_arg = '-b {0}'
 
 def get_config(stage):
-  with open('config-{0}.yml'.format(stage)) as f:
+  with open('./config-{0}.yml'.format(stage)) as f:
     config = yaml.safe_load(f)
   return config
 
@@ -31,6 +33,8 @@ def get_config(stage):
 )
 @click.option('-te',
   type=click.STRING,
+  default='-4954548.0 -2178809.0 4771843.0 3632558.0',
+  show_default=True,
   help=(
     'Extent of VRT mosaic. To cover the continental US, use "-4954548.0 -2178809.0 4771843.0 3632558.0" (albers equal area). '
     'String of the form xmin ymin xmax ymax. '
