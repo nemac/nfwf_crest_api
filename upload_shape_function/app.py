@@ -11,7 +11,7 @@ def lambda_handler(event, context):
   """
     AWS Lambda handler
 
-    This method is invoked by the API Gateway: /zonal_stats/{proxy+} endpoint.
+    This method is invoked by the API Gateway: /upload_shape endpoint.
   """
 
   # The event body is either str or dict depending on runtime context
@@ -32,11 +32,16 @@ def lambda_handler(event, context):
   content_type = 'application/json'
 
   bucket = config['user_shapes_bucket']
+  try:
+      folder = config['user_shapes_folder']
+  except:
+      folder = ''
 
   geobytes = geojson.encode('utf-8')
 
   hash_id = hashlib.md5(geobytes).hexdigest()
-  object_key = os.path.join(stage, hash_id)
+  object_key = os.path.join(stage, folder, hash_id)
+  print(object_key)
 
   if stage != 'test':
     s3_client.put_object(

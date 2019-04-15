@@ -1,7 +1,19 @@
-<VRTDataset rasterXSize="972650" rasterYSize="581143">
+<VRTDataset rasterXSize="972639" rasterYSize="581137">
   <SRS>PROJCS["USA_Contiguous_Albers_Equal_Area_Conic",GEOGCS["NAD83",DATUM["North_American_Datum_1983",SPHEROID["GRS 1980",6378137,298.2572221010042,AUTHORITY["EPSG","7019"]],AUTHORITY["EPSG","6269"]],PRIMEM["Greenwich",0],UNIT["degree",0.0174532925199433],AUTHORITY["EPSG","4269"]],PROJECTION["Albers_Conic_Equal_Area"],PARAMETER["standard_parallel_1",29.5],PARAMETER["standard_parallel_2",45.5],PARAMETER["latitude_of_center",37.5],PARAMETER["longitude_of_center",-96],PARAMETER["false_easting",0],PARAMETER["false_northing",0],UNIT["metre",1,AUTHORITY["EPSG","9001"]]]</SRS>
-  <GeoTransform> -4.9545480000000000e+06,  9.9998911187349826e+00,  0.0000000000000000e+00,  3.6325580000000000e+06,  0.0000000000000000e+00, -9.9998911187349826e+00</GeoTransform>
+  <GeoTransform> -4.9545480000000000e+06,  1.0000000000000000e+01,  0.0000000000000000e+00,  3.6325580000000000e+06,  0.0000000000000000e+00, -1.0000000000000000e+01</GeoTransform>
   <VRTRasterBand band="1" dataType="Byte">
+    <NoDataValue>255</NoDataValue>
+    <ColorInterp>Gray</ColorInterp>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/natureserve/TargetedWatershedThreat8.10x10.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties BlockXSize="128" BlockYSize="128" DataType="Byte" RasterXSize="443751" RasterYSize="192396" />
+      <SrcRect xOff="0" xSize="443751" yOff="0" ySize="192396" />
+      <DstRect xOff="263532.3" xSize="443751" yOff="254469.926057733" ySize="192396" />
+      <NODATA>255</NODATA>
+    </ComplexSource>
+  </VRTRasterBand>
+<VRTRasterBand band="2" dataType="Byte">
     <NoDataValue>255</NoDataValue>
     <ColorInterp>Gray</ColorInterp>
     <ComplexSource>
@@ -13,7 +25,7 @@
       <NODATA>255</NODATA>
     </ComplexSource>
   </VRTRasterBand>
-<VRTRasterBand band="2" dataType="Byte">
+<VRTRasterBand band="3" dataType="Byte">
     <NoDataValue>255</NoDataValue>
     <ColorInterp>Gray</ColorInterp>
     <ComplexSource>
@@ -22,18 +34,6 @@
       <SourceProperties BlockXSize="128" BlockYSize="128" DataType="Byte" RasterXSize="443623" RasterYSize="194027" />
       <SrcRect xOff="0" xSize="443623" yOff="0" ySize="194027" />
       <DstRect xOff="263539.313157865" xSize="443623" yOff="254482.279168621" ySize="194027" />
-      <NODATA>255</NODATA>
-    </ComplexSource>
-  </VRTRasterBand>
-<VRTRasterBand band="3" dataType="Byte">
-    <NoDataValue>255</NoDataValue>
-    <ColorInterp>Gray</ColorInterp>
-    <ComplexSource>
-      <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/natureserve/TargetedWatershedThreat8.tif</SourceFilename>
-      <SourceBand>1</SourceBand>
-      <SourceProperties BlockXSize="128" BlockYSize="128" DataType="Byte" RasterXSize="147917" RasterYSize="64132" />
-      <SrcRect xOff="0" xSize="147917" yOff="0" ySize="64132" />
-      <DstRect xOff="87844.1" xSize="147917" yOff="84823.3086859111" ySize="64132" />
       <NODATA>255</NODATA>
     </ComplexSource>
   </VRTRasterBand>

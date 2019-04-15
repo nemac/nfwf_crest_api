@@ -1,18 +1,23 @@
 [scripts]
 # Install dependencies, configuration, and function code to each build folder
-build_packages = "bash -c \"docker run --rm -v ${PWD}:/var/task -it lambci/lambda:build-python3.6 /bin/bash -c './build.sh'\""
+# Add "--deps" flag to re-install dependencies: pipenv run build --deps
+# Note: may need to run as root if not running with --deps
+# NOTE!!! For some reason the /lib folder is not being copied into
+#  the identify_function/build/ folder... Check this! Do it manually if you need to.
+#  Haven't found a fix yet
+build = "bash ./build.sh "
 # Build the VRT used by API functions
-build_vrt_dev = "bash -c \"./scripts/build_vrt/build_vrt.py\""
-build_vrt_prod = "bash -c \"./scripts/build_vrt/build_vrt.py -stage prod\""
+# Run with argument 'dev' or 'prod'
+build_vrt = "python ./scripts/build_vrt/build_vrt.py -stage "
 # Generate micro-datasets used by unit tests and build the accompanying VRT
-test_prep = "bash -c \"./scripts/make_test_data/make_test_data.py && ./scripts/build_vrt/build_vrt.py -stage test\" " 
+test_prep = "bash ./scripts/make_test_data/make_test_data.py && ./scripts/build_vrt/build_vrt.py -stage test" 
 #Run tests
-tests = "bash -c \"docker run --rm -v ${PWD}:/var/task -it lambci/lambda:build-python3.6 /bin/bash -c './run-tests.sh'\""
+tests = "docker run --rm -v ${PWD}:/var/task -it lambci/lambda:build-python3.6 /bin/bash -c './run-tests.sh'"
 # Package and deploy changes to API
 # Requires one argument: 'dev' or 'prod'
-deploy = "bash -c \" ./deploy.sh $0 \" "
+deploy = "bash ./deploy.sh"
 # Display CloudFormation stack outputs (see template.yaml Outputs section)
-outputs = "aws cloudformation describe-stacks --stack-name nfwf-tool-api --query 'Stacks[].Outputs'"
+outputs = "aws cloudformation describe-stacks --stack-name nfwf-tool-api-natureserve --query 'Stacks[].Outputs'"
 
 cp_dataset = "bash -c \"aws s3 cp $0 s3://${DATA_BUCKET} \" "
 

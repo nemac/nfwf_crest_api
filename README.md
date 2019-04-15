@@ -123,7 +123,15 @@ Now that our local API is running we can test our `getData` function by hitting 
 
 For POST requests, we can use cURL to pass function parameters via the body of the HTTP request:
 
-```bash
+```bnd 1 Block=128x128 Type=Byte, ColorInterp=Gray
+  Min=1.000 Max=5.000
+  Minimum=1.000, Maximum=5.000, Mean=1.441, StdDev=0.671
+  NoData Value=255
+  Metadata:
+    STATISTICS_MAXIMUM=5
+    STATISTICS_MEAN=1.4409758871493
+    STATISTICS_MINIMUM=1
+ ash
 # Send a POST request to get zonal stats for geojson features.
  
 curl -v -X POST \

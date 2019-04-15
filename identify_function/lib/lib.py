@@ -22,7 +22,7 @@ def transform_polygon(coords):
   new_coords = []
   proj = get_proj()
   for coord in coords:
-    coord = list(proj(*coord))
+    coord = list(proj(coord[0], coord[1]))
     new_coords.append(coord)
   return new_coords
 

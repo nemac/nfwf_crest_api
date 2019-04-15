@@ -1,9 +1,14 @@
 
 dataset_bucket: nfwf-tool/natureserve
 
-user_shapes_bucket: nfwf-tool-user-shapes/natureserve
+user_shapes_bucket: nfwf-tool-user-shapes
+user_shapes_folder: natureserve
 
 datasets:
+  - name: threat
+    input_files:
+      - TargetedWatershedThreat8.10x10.tif
+
   - name: exposure
     input_files:
       - TargetedWatershedExposure8.tif
@@ -11,10 +16,6 @@ datasets:
   - name: asset
     input_files:
       - TargetedWatershedAsset8.tif
-
-  - name: threat
-    input_files:
-      - TargetedWatershedThreat8.tif
 
   - name: fishandwildlife
     input_files:

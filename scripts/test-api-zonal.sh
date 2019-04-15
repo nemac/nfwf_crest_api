@@ -15,8 +15,6 @@ case $1 in "dev")
 esac
 
 ZONAL_STATS_OUTPUT_VALUE='ZonalStatsApigwURL'
-IDENTIFY_OUTPUT_VALUE='IdentifyApigwURL'
-UPLOAD_SHAPE_OUTPUT_VALUE='UploadShapeApigwURL'
 
 get_endpoint () {
 	echo $(aws cloudformation describe-stacks \
@@ -26,20 +24,19 @@ get_endpoint () {
 }
 
 ZONAL_STATS_ENDPOINT=$(get_endpoint $ZONAL_STATS_OUTPUT_VALUE)
-IDENTIFY_ENDPOINT=$(get_endpoint $IDENTIFY_OUTPUT_VALUE)
-UPLOAD_SHAPE_ENDPOINT=$(get_endpoint $UPLOAD_SHAPE_OUTPUT_VALUE)
+
+echo $ZONAL_STATS_ENDPOINT
 
 IDENTIFY_PARAMS="?lat=80&lng=33"
 IDENTIFY_REQUEST="$IDENTIFY_ENDPOINT$IDENTIFY_PARAMS"
 
 GEOJSON='{"type": "FeatureCollection","name": "charleston-poly","features": [{ "type": "Feature", "geometry": { "type": "Polygon", "coordinates": [ [ [ -79.662208557128906, 32.920664249232836 ], [ -79.685039520263672, 32.930174118010605 ], [ -79.717311859130845, 32.906541649538447 ], [ -79.691219329833984, 32.895299602872463 ], [ -79.676971435546875, 32.902362080894527 ], [ -79.675083160400391, 32.909568110575655 ], [ -79.662208557128906, 32.920664249232836 ] ] ] } }]}'
 
-ZONAL_STATS_STATUS_CODE=$(curl -s -X POST \
+ZONAL_STATS_STATUS_CODE=$(curl -X POST \
 	$ZONAL_STATS_ENDPOINT \
 	-H 'Content-Type: application/json' \
 	-d "$GEOJSON" \
 	-o /dev/null \
-	-w "%{http_code}" \
 )
 
 IDENTIFY_STATUS_CODE=$(curl -s \
