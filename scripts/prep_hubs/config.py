@@ -1,7 +1,7 @@
 from collections import OrderedDict
 from fiona.crs import from_epsg
 
-ID_FIELD = 'OBJECTID'
+ID_FIELD = 'hub_id'
 
 HUBS_DONE_DIR = '/home/mgeiger/Projects/nfwf-meta/nfwf-tool-api/assets/natureserve/hubs_done_03272019/'
 
@@ -10,10 +10,8 @@ ZONAL_STATS_ENDPOINT = 'https://dm3kiccxv2.execute-api.us-east-1.amazonaws.com/P
 SCHEMA_FOR_NEW_SHPFILE = OrderedDict({
     'geometry': 'Polygon',
     'properties': {
-        'id': 'str',
         'TARGET_FID': 'int',
         'hub_rnk': 'int',
-        'acres': 'float',
         'exposure': 'float',
         'asset': 'float',
         'threat': 'float',
@@ -23,8 +21,8 @@ SCHEMA_FOR_NEW_SHPFILE = OrderedDict({
 })
 
 FIELD_MAPS = {
-    'OBJECTID' : 'TARGET_FID',
-    'ns_rank' : 'hub_rnk',
+    'hub_id' : 'TARGET_FID',
+    'hub_rank' : 'hub_rnk',
     'fishandwildlife': 'fishwild',
 }
 

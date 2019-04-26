@@ -23,7 +23,6 @@ def lambda_handler(event, context):
   s3_client = boto3.client('s3')
 
   geojson = json.dumps(request_body)
-  print(geojson)
 
   arn = context.invoked_function_arn
   stage = lib.get_stage(arn)

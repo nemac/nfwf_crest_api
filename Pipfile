@@ -19,6 +19,9 @@ deploy = "bash ./deploy.sh"
 # Display CloudFormation stack outputs (see template.yaml Outputs section)
 outputs = "aws cloudformation describe-stacks --stack-name nfwf-tool-api-natureserve --query 'Stacks[].Outputs'"
 
+# Make a new hubs shapefile with appended stats
+prep_hubs = "python ./scripts/prep_hubs/prep_hubs.py "
+
 cp_dataset = "bash -c \"aws s3 cp $0 s3://${DATA_BUCKET} \" "
 
 [[source]]
