@@ -9,9 +9,9 @@ into lambda function folders by a build script. Do not edit these copies!
 import os
 import os.path
 import boto3
-import yaml
 import pyproj
-
+import json
+import yaml
 
 def get_proj():
   proj = pyproj.Proj(proj='aea', lat_1=29.5, lat_2=45.5, lat_0=37.5, lon_0=-96, x_0=0, y_0=0, datum='NAD83', units='m')
@@ -22,7 +22,7 @@ def transform_polygon(coords):
   new_coords = []
   proj = get_proj()
   for coord in coords:
-    coord = list(proj(*coord))
+    coord = list(proj(coord[0], coord[1]))
     new_coords.append(coord)
   return new_coords
 
@@ -70,6 +70,8 @@ def get_vrt_path(stage):
     filename = os.environ['VRT_FILE_DEV']
   elif stage == 'test':
     filename = os.environ['VRT_FILE_TEST']
+  elif stage == 'local':
+    filename = os.environ['VRT_FILE_LOCAL']
   else:
     filename = os.environ['VRT_FILE_PROD']
   return os.path.abspath(filename)
@@ -80,6 +82,8 @@ def get_config(stage):
     file_path = os.environ['CONFIG_FILE_DEV']
   elif stage == 'test':
     file_path = os.environ['CONFIG_FILE_TEST']
+  elif stage == 'local':
+    file_path = os.environ['CONFIG_FILE_LOCAL']
   else:
     file_path = os.environ['CONFIG_FILE_PROD']
   with open(file_path, 'r') as stream:

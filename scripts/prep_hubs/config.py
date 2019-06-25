@@ -1,17 +1,12 @@
 from collections import OrderedDict
 from fiona.crs import from_epsg
 
-ID_FIELD = 'OBJECTID'
-
-HUBS_DONE_DIR = '/home/mgeiger/Projects/nfwf-meta/nfwf-tool-api/assets/hubs_done_01022019/'
-
-ZONAL_STATS_ENDPOINT = 'https://lg0njzoglg.execute-api.us-east-1.amazonaws.com/Prod/zonal_stats'
+ID_FIELD_IN = 'OBJECTID'
+ID_FIELD_OUT = 'TARGET_FID'
 
 SCHEMA_FOR_NEW_SHPFILE = OrderedDict({
     'geometry': 'Polygon',
     'properties': {
-        'id': 'str',
-        'Join_Count': 'int',
         'TARGET_FID': 'int',
         'hub_rnk': 'int',
         'acres': 'float',
@@ -36,6 +31,7 @@ SCHEMA_FOR_NEW_SHPFILE = OrderedDict({
 })
 
 FIELD_MAPS = {
+    'OBJECTID': 'TARGET_FID',
     'terrestrial': 'terrestri',
     'crit_facilities': 'crit_fac',
     'pop_density': 'pop_dens',

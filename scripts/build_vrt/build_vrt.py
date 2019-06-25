@@ -26,7 +26,7 @@ def get_config(stage):
 @click.option('-stage',
   default='dev',
   show_default=True,
-  type=click.Choice(['dev', 'test', 'prod']),
+  type=click.Choice(['dev', 'test', 'prod', 'local']),
   help='The stage to generate.'
 )
 @click.option('-te',
@@ -41,8 +41,12 @@ def get_config(stage):
 @click.option('-vsi', default='s3', type=click.Choice(['s3', 'tar', 'curl']),
   help=('Prepend a GDAL Virtual File System identifier to component dataset paths (vsis3, vsicurl, etc) -- see https://www.gdal.org/gdal_virtual_file_systems.html')
 )
-def build_full_vrt(stage, te, b, vrtnodata, vsi):
+@click.option('-loc', type=click.Path(),
+  help='If building a VRT for local datasets, use this option to supply the location of the data')
+def build_full_vrt(stage, te, b, vrtnodata, vsi, loc):
   config = get_config(stage)
+  if loc and stage != 'local':
+    raise 'The -loc option can only be used when creating a local stage VRT'
   if 'dataset_bucket' in config:
     dataset_bucket = config['dataset_bucket']
   else:
@@ -50,12 +54,12 @@ def build_full_vrt(stage, te, b, vrtnodata, vsi):
   bands_config = config['datasets']
   main_tree = None
   main_root = None
-  if stage == 'test':
+  if stage == 'test' or stage == 'local':
     vsi = None
   for i in range(0, len(bands_config)):
     band_num = str(i+1)
     band_config = bands_config[i]
-    vrt_path = build_intermediate_vrt(band_config, te, b, vrtnodata, vsi, dataset_bucket)
+    vrt_path = build_intermediate_vrt(band_config, te, b, vrtnodata, vsi, dataset_bucket, loc)
     if band_num == '1':
       main_tree = ET.parse(vrt_path)
       main_root = main_tree.getroot()
@@ -74,10 +78,12 @@ def build_full_vrt(stage, te, b, vrtnodata, vsi):
     os.rename(big_vrt_name, './{0}'.format(big_vrt_name))
 
 
-def build_intermediate_vrt(band_config, te, b, vrtnodata, vsi, dataset_bucket):
+def build_intermediate_vrt(band_config, te, b, vrtnodata, vsi, dataset_bucket, loc):
   print(band_config)
   path = []
-  if vsi:
+  if loc:
+    path.append(loc)
+  elif vsi:
     path.append('/vsi{0}'.format(vsi))
     if dataset_bucket:
       path.append('{0}'.format(dataset_bucket))
