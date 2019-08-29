@@ -12,6 +12,8 @@ import click
 import yaml
 import sys
 import xml.etree.ElementTree as ET
+# import locale
+# locale.setlocale(locale.LC_ALL, 'en_US.UTF-8')
 
 vrtnodata_arg = '-vrtnodata {0}'
 extent_arg = '-te {0}'

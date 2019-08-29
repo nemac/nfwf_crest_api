@@ -20,6 +20,6 @@ do
   sudo cp $CONFIG_FILE_DEV $CONFIG_FILE_PROD $CONFIG_FILE_LOCAL $i/
   sudo cp $VRT_FILE_DEV $VRT_FILE_PROD $i/
   sudo cp $i/* $i/build/
-  sudo cp -R lib/ $i/
-  sudo cp -R lib/ $i/build/
+  sudo cp -a lib/ $i/lib
+  sudo cp -a lib/ $i/build/lib
 done

@@ -1,6 +1,6 @@
-<VRTDataset rasterXSize="154048" rasterYSize="96886">
+<VRTDataset rasterXSize="324213" rasterYSize="193712">
   <SRS>PROJCS["USA_Contiguous_Albers_Equal_Area_Conic",GEOGCS["NAD83",DATUM["North_American_Datum_1983",SPHEROID["GRS 1980",6378137,298.2572221010042,AUTHORITY["EPSG","7019"]],AUTHORITY["EPSG","6269"]],PRIMEM["Greenwich",0],UNIT["degree",0.0174532925199433],AUTHORITY["EPSG","4269"]],PROJECTION["Albers_Conic_Equal_Area"],PARAMETER["standard_parallel_1",29.5],PARAMETER["standard_parallel_2",45.5],PARAMETER["latitude_of_center",37.5],PARAMETER["longitude_of_center",-96],PARAMETER["false_easting",0],PARAMETER["false_northing",0],UNIT["metre",1,AUTHORITY["EPSG","9001"]]]</SRS>
-  <GeoTransform> -2.3639850000000000e+06,  3.0000000000000000e+01,  0.0000000000000000e+00,  1.5706187394226668e+06,  0.0000000000000000e+00, -3.0000000000000000e+01</GeoTransform>
+  <GeoTransform> -4.9545480000000000e+06,  3.0000000000000000e+01,  0.0000000000000000e+00,  3.6325580000000000e+06,  0.0000000000000000e+00, -3.0000000000000000e+01</GeoTransform>
   <VRTRasterBand band="1" dataType="Byte">
     <NoDataValue>255</NoDataValue>
     <ColorInterp>Gray</ColorInterp>
@@ -9,7 +9,7 @@
       <SourceBand>1</SourceBand>
       <SourceProperties BlockXSize="128" BlockYSize="128" DataType="Byte" RasterXSize="154048" RasterYSize="96886" />
       <SrcRect xOff="0" xSize="154048" yOff="0" ySize="96886" />
-      <DstRect xOff="0" xSize="154048" yOff="0" ySize="96886" />
+      <DstRect xOff="86352.1" xSize="154048" yOff="68731.3086859111" ySize="96886" />
       <NODATA>255</NODATA>
     </ComplexSource>
   </VRTRasterBand>
@@ -21,7 +21,7 @@
       <SourceBand>1</SourceBand>
       <SourceProperties BlockXSize="128" BlockYSize="128" DataType="Byte" RasterXSize="154048" RasterYSize="96886" />
       <SrcRect xOff="0" xSize="154048" yOff="0" ySize="96886" />
-      <DstRect xOff="0" xSize="154048" yOff="0" ySize="96886" />
+      <DstRect xOff="86352.1" xSize="154048" yOff="68731.3086859112" ySize="96886" />
       <NODATA>255</NODATA>
     </ComplexSource>
   </VRTRasterBand>
@@ -33,7 +33,7 @@
       <SourceBand>1</SourceBand>
       <SourceProperties BlockXSize="128" BlockYSize="128" DataType="Byte" RasterXSize="154048" RasterYSize="96886" />
       <SrcRect xOff="0" xSize="154048" yOff="0" ySize="96886" />
-      <DstRect xOff="0" xSize="154048" yOff="0" ySize="96886" />
+      <DstRect xOff="86352.1" xSize="154048" yOff="68731.3086859111" ySize="96886" />
       <NODATA>255</NODATA>
     </ComplexSource>
   </VRTRasterBand>
@@ -45,7 +45,7 @@
       <SourceBand>1</SourceBand>
       <SourceProperties BlockXSize="128" BlockYSize="128" DataType="Byte" RasterXSize="156310" RasterYSize="98524" />
       <SrcRect xOff="0" xSize="156310" yOff="0" ySize="98524" />
-      <DstRect xOff="0" xSize="156310" yOff="0" ySize="98524" />
+      <DstRect xOff="86352.1" xSize="156310" yOff="67489.7666666667" ySize="98524" />
       <NODATA>255</NODATA>
     </ComplexSource>
   </VRTRasterBand>
@@ -57,7 +57,7 @@
       <SourceBand>1</SourceBand>
       <SourceProperties BlockXSize="128" BlockYSize="128" DataType="Byte" RasterXSize="156310" RasterYSize="98524" />
       <SrcRect xOff="0" xSize="156310" yOff="0" ySize="98524" />
-      <DstRect xOff="0" xSize="156310" yOff="0" ySize="98524" />
+      <DstRect xOff="86352.1" xSize="156310" yOff="67489.7666666667" ySize="98524" />
       <NODATA>255</NODATA>
     </ComplexSource>
   </VRTRasterBand>
@@ -69,7 +69,7 @@
       <SourceBand>1</SourceBand>
       <SourceProperties BlockXSize="128" BlockYSize="128" DataType="Byte" RasterXSize="154048" RasterYSize="96886" />
       <SrcRect xOff="0" xSize="154048" yOff="0" ySize="96886" />
-      <DstRect xOff="0" xSize="154048" yOff="0" ySize="96886" />
+      <DstRect xOff="86352.171674229" xSize="154048" yOff="68731.0009009887" ySize="96886" />
       <NODATA>255</NODATA>
     </ComplexSource>
   </VRTRasterBand>
@@ -81,7 +81,7 @@
       <SourceBand>1</SourceBand>
       <SourceProperties BlockXSize="128" BlockYSize="128" DataType="Byte" RasterXSize="154048" RasterYSize="96886" />
       <SrcRect xOff="0" xSize="154048" yOff="0" ySize="96886" />
-      <DstRect xOff="0" xSize="154048" yOff="0" ySize="96886" />
+      <DstRect xOff="86352.1" xSize="154048" yOff="68731.3086859112" ySize="96886" />
       <NODATA>255</NODATA>
     </ComplexSource>
   </VRTRasterBand>
@@ -93,7 +93,7 @@
       <SourceBand>1</SourceBand>
       <SourceProperties BlockXSize="128" BlockYSize="128" DataType="Byte" RasterXSize="195252" RasterYSize="101662" />
       <SrcRect xOff="0" xSize="195252" yOff="0" ySize="101662" />
-      <DstRect xOff="0" xSize="195252" yOff="0" ySize="101662" />
+      <DstRect xOff="67823.4005902729" xSize="195252" yOff="67490.0087976776" ySize="101662" />
       <NODATA>255</NODATA>
     </ComplexSource>
   </VRTRasterBand>
@@ -105,7 +105,7 @@
       <SourceBand>1</SourceBand>
       <SourceProperties BlockXSize="128" BlockYSize="128" DataType="Byte" RasterXSize="195252" RasterYSize="101662" />
       <SrcRect xOff="0" xSize="195252" yOff="0" ySize="101662" />
-      <DstRect xOff="0" xSize="195252" yOff="0" ySize="101662" />
+      <DstRect xOff="67823.4005902729" xSize="195252" yOff="67490.0087976776" ySize="101662" />
       <NODATA>255</NODATA>
     </ComplexSource>
   </VRTRasterBand>
@@ -117,7 +117,7 @@
       <SourceBand>1</SourceBand>
       <SourceProperties BlockXSize="128" BlockYSize="128" DataType="Byte" RasterXSize="195252" RasterYSize="101662" />
       <SrcRect xOff="0" xSize="195252" yOff="0" ySize="101662" />
-      <DstRect xOff="0" xSize="195252" yOff="0" ySize="101662" />
+      <DstRect xOff="67823.4005902729" xSize="195252" yOff="67490.0087976776" ySize="101662" />
       <NODATA>255</NODATA>
     </ComplexSource>
   </VRTRasterBand>
@@ -129,7 +129,7 @@
       <SourceBand>1</SourceBand>
       <SourceProperties BlockXSize="128" BlockYSize="128" DataType="Byte" RasterXSize="154049" RasterYSize="96886" />
       <SrcRect xOff="0" xSize="154049" yOff="0" ySize="96886" />
-      <DstRect xOff="0" xSize="154049" yOff="0" ySize="96886" />
+      <DstRect xOff="86352.1" xSize="154049" yOff="68731.3086859112" ySize="96886" />
       <NODATA>255</NODATA>
     </ComplexSource>
   </VRTRasterBand>
@@ -141,7 +141,7 @@
       <SourceBand>1</SourceBand>
       <SourceProperties BlockXSize="128" BlockYSize="128" DataType="Byte" RasterXSize="154048" RasterYSize="96886" />
       <SrcRect xOff="0" xSize="154048" yOff="0" ySize="96886" />
-      <DstRect xOff="0" xSize="154048" yOff="0" ySize="96886" />
+      <DstRect xOff="86352.1" xSize="154048" yOff="68731.3086859112" ySize="96886" />
       <NODATA>255</NODATA>
     </ComplexSource>
   </VRTRasterBand>
@@ -153,7 +153,7 @@
       <SourceBand>1</SourceBand>
       <SourceProperties BlockXSize="128" BlockYSize="128" DataType="Byte" RasterXSize="154049" RasterYSize="96886" />
       <SrcRect xOff="0" xSize="154049" yOff="0" ySize="96886" />
-      <DstRect xOff="0" xSize="154049" yOff="0" ySize="96886" />
+      <DstRect xOff="86351.1" xSize="154049" yOff="68731.3086859112" ySize="96886" />
       <NODATA>255</NODATA>
     </ComplexSource>
   </VRTRasterBand>
@@ -165,7 +165,7 @@
       <SourceBand>1</SourceBand>
       <SourceProperties BlockXSize="128" BlockYSize="128" DataType="Byte" RasterXSize="154048" RasterYSize="96886" />
       <SrcRect xOff="0" xSize="154048" yOff="0" ySize="96886" />
-      <DstRect xOff="0" xSize="154048" yOff="0" ySize="96886" />
+      <DstRect xOff="86352.1" xSize="154048" yOff="68731.3086859112" ySize="96886" />
       <NODATA>255</NODATA>
     </ComplexSource>
   </VRTRasterBand>
@@ -177,7 +177,7 @@
       <SourceBand>1</SourceBand>
       <SourceProperties BlockXSize="128" BlockYSize="128" DataType="Byte" RasterXSize="154048" RasterYSize="96887" />
       <SrcRect xOff="0" xSize="154048" yOff="0" ySize="96887" />
-      <DstRect xOff="0" xSize="154048" yOff="0" ySize="96887" />
+      <DstRect xOff="86352.1" xSize="154048" yOff="68730.3086859113" ySize="96887" />
       <NODATA>255</NODATA>
     </ComplexSource>
   </VRTRasterBand>
@@ -189,7 +189,7 @@
       <SourceBand>1</SourceBand>
       <SourceProperties BlockXSize="128" BlockYSize="128" DataType="Byte" RasterXSize="154049" RasterYSize="96886" />
       <SrcRect xOff="0" xSize="154049" yOff="0" ySize="96886" />
-      <DstRect xOff="0" xSize="154049" yOff="0" ySize="96886" />
+      <DstRect xOff="86352.1" xSize="154049" yOff="68731.3086859111" ySize="96886" />
       <NODATA>255</NODATA>
     </ComplexSource>
   </VRTRasterBand>
@@ -201,7 +201,7 @@
       <SourceBand>1</SourceBand>
       <SourceProperties BlockXSize="128" BlockYSize="128" DataType="Byte" RasterXSize="154049" RasterYSize="96886" />
       <SrcRect xOff="0" xSize="154049" yOff="0" ySize="96886" />
-      <DstRect xOff="0" xSize="154049" yOff="0" ySize="96886" />
+      <DstRect xOff="86352.1" xSize="154049" yOff="68731.3086859111" ySize="96886" />
       <NODATA>255</NODATA>
     </ComplexSource>
   </VRTRasterBand>

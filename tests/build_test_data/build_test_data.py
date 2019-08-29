@@ -78,4 +78,3 @@ with rio.Env(GDAL_DISABLE_READDIR_ON_OPEN=True):
       os.remove(file_handle)
       with rio.open(file_handle, 'w', **out_meta) as dest:
         dest.write(out, indexes=1)
-

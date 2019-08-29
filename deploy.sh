@@ -6,6 +6,8 @@ BUCKET_NAME='nemac-cloudformation'
 
 TEMPLATE_NAME='template.yaml'
 
+DATA_BUCKET='nfwf-tool'
+
 case $1 in "dev")
   STACK_NAME='nfwf-tool-api-dev'
   STAGE_NAME='Dev'
@@ -41,4 +43,3 @@ aws cloudformation deploy \
 
 # Upload the VRT to S3
 aws s3 cp $VRT_FILE s3://$DATA_BUCKET/$VRT_FILE
-

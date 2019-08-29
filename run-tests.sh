@@ -2,7 +2,7 @@
 
 set -ev
 
-cd ..
+# cd ..
 
 pip install -U pip pipenv
 pipenv install --dev

@@ -1,6 +1,6 @@
 # NFWF Tool API
 
-GIS microservices built on the [AWS Serverless Application Model](https://docs.aws.amazon.com/lambda/latest/dg/serverless_app.html). 
+GIS microservices built on the [AWS Serverless Application Model](https://docs.aws.amazon.com/lambda/latest/dg/serverless_app.html).
 
 ### Requirements
 
@@ -9,13 +9,16 @@ GIS microservices built on the [AWS Serverless Application Model](https://docs.a
 * [Pipenv installed](https://github.com/pypa/pipenv)
     - `pip install pipenv`
 * [Docker installed](https://www.docker.com/community-edition)
-* [SAM Local installed](https://github.com/awslabs/aws-sam-local) 
+* [SAM Local installed](https://github.com/awslabs/aws-sam-local)
 
 
 ### Getting Started
 
-* Clone or fork this repository 
+* Clone or fork this repository
 * Make a copy of the file `sample.env` called `.env`.  
+* Update `.env` with your AWS api keys to the .env file
+* You may have to change the certs to the Operating System specific cert directory
+* You may have to update the `LC_ALL` and `LANG` to `en_US.UTF-8` depending on OS (mac vs linux)
 * Initialize a local development environment: `pipenv install --dev`
 
 
@@ -31,9 +34,9 @@ Let's say we have a function called `getData`.
 Resources:
   ApiGatewayApi:
     Properties:
-      ... 
+      ...
       DefinitionBody:
-        ... 
+        ...
         paths:
           /get_data: # The endpoint URL path
             get: # The HTTP method to use
@@ -41,12 +44,12 @@ Resources:
               - application/json
               responses: {}
               x-amazon-apigateway-integration:
-                uri: 
+                uri:
                   !Sub "arn:aws:apigateway:${AWS::Region}:lambda:path/2015-03-31/functions/${GetData.Arn}/invocations"
                 httpMethod: GET
                 type: aws_proxy
- 
-``` 
+
+```
 
 * Add function settings to `template.yaml`
 
@@ -57,13 +60,13 @@ Resources:
   GetData: # Note that this identifier is referenced in the uri entry of the API settings above
     Type: AWS::Serverless::Function
     Properties:
-  
+
       Policies:
         - AmazonS3ReadOnlyAccess
         - IAMReadOnlyAccess
       CodeUri: get_data_function/build/
       Handler: app.lambda_handler # This assumes there is a file called app.py with a function lambda_handler
-      Runtime: python3.6 
+      Runtime: python3.6
       Events:
         PostApi:
           Type: Api
@@ -89,16 +92,16 @@ Resources:
 
 ### Packaging Functions  
 
-Before we can run our function locally, we need to bundle all of its code and dependencies into the function's `build` folder. 
+Before we can run our function locally, we need to bundle all of its code and dependencies into the function's `build` folder.
 
-* Build all function packages: `pipenv run build_packages`
+* Build all function packages: `pipenv run build --deps`
 
 You don't need to re-package a function every time you change its `app.py` file. Simply copy `app.py` to the function's `build` folder when you are ready to test any changes.
 
 
 ### Invoke a Function Locally
 
-We can use the SAM CLI to invoke a function in a docker container that mimics a Python Lambda execution environment. 
+We can use the SAM CLI to invoke a function in a docker container that mimics a Python Lambda execution environment.
 
 For example, we can mimic a POST method requesting zonal statistics for a polygonal region by supplying a geojson feature collection as a string through standard input:
 
@@ -107,11 +110,11 @@ For example, we can mimic a POST method requesting zonal statistics for a polygo
 # Get zonal statistics for a Polygon
 echo '{ "body": { "type": "FeatureCollection","name": "charleston-poly","features": [{ "type": "Feature", "properties": { "id": null }, "geometry": { "type": "Polygon", "coordinates": [ [ [ -79.662208557128906, 32.920664249232836 ], [ -79.685039520263672, 32.930174118010605 ], [ -79.717311859130845, 32.906541649538447 ], [ -79.691219329833984, 32.895299602872463 ], [ -79.676971435546875, 32.902362080894527 ], [ -79.675083160400391, 32.909568110575655 ], [ -79.662208557128906, 32.920664249232836 ] ] ] } }]} }' | sam local invoke ZonalStatsFunction
 
-# Get zonal statistics for a MultiPolygon 
+# Get zonal statistics for a MultiPolygon
 echo '{ "body": { "type": "FeatureCollection", "name": "charleston-multi-poly", "crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } }, "features": [{ "type": "Feature", "properties": { "id": null }, "geometry": { "type": "MultiPolygon", "coordinates": [ [ [ [-79.744316416802718, 32.918307771183919], [-79.758743269652271, 32.880394658156938], [-79.827024159455647, 32.910824100458811], [-79.793686860877372, 32.942719190317831], [-79.744316416802718, 32.918307771183919] ] ], [ [ [-79.662208557128906, 32.920664249232836], [-79.685039520263672, 32.930174118010605], [-79.717311859130845, 32.906541649538447], [-79.691219329833984, 32.895299602872463], [-79.676971435546875, 32.902362080894527], [-79.675083160400391, 32.909568110575655], [-79.662208557128906, 32.920664249232836] ] ] ] } }] }}' | sam local invoke ZonalStatsFunction
 
 # Florida Keys Multipolygon (TIMING OUT)
-echo '{ "body": {  "type": "FeatureCollection",  "name": "keys_multi",  "crs": {  "type": "name",  "properties": {  "name": "urn:ogc:def:crs:OGC:1.3:CRS84"  }  },  "features": [{  "type": "Feature",  "properties": {  "EZG_ID": 62145,  "prg_name": "Mote Marine Laboratory, Inc.",  "proj_name": "Florida Keys Coral Disease Response & Restoration Initiative",  "region": "Gulf",  "name": "Florida Keys Coral Disease Response & Restoration Initiative",  "id": 62145,  "area": 391374264.7,  "nfwf_proje": null,  "nfwf_pro_1": null,  "asset": null,  "threat": null,  "exposure": null,  "aquatic": null,  "terrestria": null,  "hubs": null,  "crit_infra": null,  "crit_facil": null,  "pop_densit": null,  "social_vul": null,  "drainage": null,  "erosion": null,  "floodprone": null,  "geostress": null,  "sea_level_": null,  "slope": null,  "storm_surg": null  },  "geometry": {  "type": "MultiPolygon",  "coordinates": [  [  [  [-81.302133056890256, 24.60695607607207],  [-81.808877441885357, 24.499532477742999],  [-81.815743897117486, 24.54326248601156],  [-81.306252930209197, 24.650648613252887],  [-81.302133056890256, 24.60695607607207]  ]  ],  [  [  [-80.10747716193147, 25.690925958783847],  [-80.167901966716897, 25.391066939726667],  [-80.209100697211582, 25.410915452360324],  [-80.155542347658283, 25.658745696291859],  [-80.10747716193147, 25.690925958783847]  ]  ]  ]  }  }] }}' | sam local invoke ZonalStatsFunction 
+echo '{ "body": {  "type": "FeatureCollection",  "name": "keys_multi",  "crs": {  "type": "name",  "properties": {  "name": "urn:ogc:def:crs:OGC:1.3:CRS84"  }  },  "features": [{  "type": "Feature",  "properties": {  "EZG_ID": 62145,  "prg_name": "Mote Marine Laboratory, Inc.",  "proj_name": "Florida Keys Coral Disease Response & Restoration Initiative",  "region": "Gulf",  "name": "Florida Keys Coral Disease Response & Restoration Initiative",  "id": 62145,  "area": 391374264.7,  "nfwf_proje": null,  "nfwf_pro_1": null,  "asset": null,  "threat": null,  "exposure": null,  "aquatic": null,  "terrestria": null,  "hubs": null,  "crit_infra": null,  "crit_facil": null,  "pop_densit": null,  "social_vul": null,  "drainage": null,  "erosion": null,  "floodprone": null,  "geostress": null,  "sea_level_": null,  "slope": null,  "storm_surg": null  },  "geometry": {  "type": "MultiPolygon",  "coordinates": [  [  [  [-81.302133056890256, 24.60695607607207],  [-81.808877441885357, 24.499532477742999],  [-81.815743897117486, 24.54326248601156],  [-81.306252930209197, 24.650648613252887],  [-81.302133056890256, 24.60695607607207]  ]  ],  [  [  [-80.10747716193147, 25.690925958783847],  [-80.167901966716897, 25.391066939726667],  [-80.209100697211582, 25.410915452360324],  [-80.155542347658283, 25.658745696291859],  [-80.10747716193147, 25.690925958783847]  ]  ]  ]  }  }] }}' | sam local invoke ZonalStatsFunction
 
 ```
 
@@ -125,7 +128,7 @@ For POST requests, we can use cURL to pass function parameters via the body of t
 
 ```bash
 # Send a POST request to get zonal stats for geojson features.
- 
+
 curl -v -X POST \
 'http://localhost:3000/zonal_stats' \
 -H 'Content-Type: application/json' \
@@ -136,6 +139,15 @@ curl -v -X POST \
 ### Deployment
 
 Instead of manually zipping function folders and uploading to S3, we'll use the SAM CLI `package` command to do it for us and generate a final "packaged" template. The packaged template is then used by [AWS CloudFormation](https://aws.amazon.com/cloudformation/) to create or update AWS resources for the API.
+
+* Note when deploying you **must** build the vrt, build the the dependencies, and finish with the deploy.  The order is important
+
+* example for building and deploying the api to dev: **The order is important!**
+```bash
+pipenv run build_vrt -stage dev
+pipenv run build --deps
+pipenv run deploy dev
+```
 
 * Deploy API updates: `pipenv run deploy <stage>` where `<stage>` is either `dev` or `prod`.
 
@@ -166,7 +178,7 @@ curl -v -X POST \
 ### Running Unit Tests
 
 * Build the [Virtual Raster Table](https://www.gdal.org/gdal_vrttut.html) used for local testing: `pipenv run test_prep`
-* Run local tests with [Pytest](https://docs.pytest.org/en/latest/): `pipenv run tests` 
+* Run local tests with [Pytest](https://docs.pytest.org/en/latest/): `pipenv run tests`
 
 
 ### Notes
