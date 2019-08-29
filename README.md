@@ -81,6 +81,8 @@ Resources:
 
 * Add any new python dependencies to the Pipfile
 
+* consider installing [pyenv](https://github.com/pyenv/pyenv#installation) and installing a [local](https://github.com/pyenv/pyenv/blob/master/COMMANDS.md#pyenv-local) version of [python](https://github.com/pyenv/pyenv/blob/master/COMMANDS.md#pyenv-install) 
+
 * Add a subdirectory called `build` to the function folder
 
 * Make a new file `app.py` in the `get_data_function` folder
