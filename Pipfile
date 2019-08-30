@@ -12,7 +12,7 @@ build = "bash ./build.sh"
 build_vrt = "python ./scripts/build_vrt/build_vrt.py -te '-4954548.0 -2178809.0 4771843.0 3632558.0' "
 
 # Generate micro-datasets used by unit tests and build the accompanying VRT
-test_prep = "bash ./tests/build_test_data/build_test_data.py && ./tests/build_test_data/build_test_data.py -stage test"
+test_prep = "python ./tests/build_test_data/build_test_data.py && ./tests/build_test_data/build_test_data.py -stage test"
 
 #Run tests
 tests = "docker run --rm -v ${PWD}:/var/task -it lambci/lambda:build-python3.6 /bin/bash -c './run-tests.sh'"
