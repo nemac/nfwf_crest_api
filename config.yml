@@ -1,0 +1,126 @@
+
+dataset_bucket: nfwf-tool
+
+user_shapes_bucket: nfwf-tool-user-shapes
+
+test:
+  conus: [35.89, -79.45]
+  puerto_rico: [18.28, -66.42]
+  cnmi:
+  virgin_islands:
+
+vrt:
+  conus: conus.vrt
+  puerto_rico: puerto_rico.vrt
+  cnmi: cnmi.vrt
+  virgin_islands: virgin_islands.vrt
+
+datasets:
+
+  virgin_islands:
+    - name: exposure
+      path: us-virgin-islands/USVI_ExposureIndex_10class_021220_clip.tif
+    - name: threat
+      path: us-virgin-islands/USVI_ThreatIndex_10class_021220_clip.tif
+    - name: asset
+      path: us-virgin-islands/USVI_AssetIndex_10class_021020_clip.tif
+    - name: wildlife
+      path: us-virgin-islands/USVI_CombinedWildlife_6class_040320.tif
+    - name: crit_facilities
+      path: us-virgin-islands/USVI_CriticalFacilities_v2_clip.tif
+    - name: crit_infra
+      path: us-virgin-islands/USVI_CriticalInfrastructure_v2_clip.tif
+    - name: erosion
+      path: us-virgin-islands/USVI_ErodibleSoils_v2_clip.tif
+    - name: floodprone_areas
+      path: us-virgin-islands/USVI_FloodproneAreas_v2_clip.tif
+    - name: impermeable
+      path: us-virgin-islands/USVI_Impermeable_v2_clip.tif
+    - name: low_areas
+      path: us-virgin-islands/USVI_LowLyingAreas_v2_clip.tif
+    - name: marine
+      path: us-virgin-islands/USVI_MarineIndex_4class.tif
+    - name: pop_density
+      path: us-virgin-islands/USVI_PopulationDensity_v2_clip.tif
+    - name: sea_level_rise
+      path: us-virgin-islands/USVI_SLR_v2_clip.tif
+    - name: social_vuln
+      path: us-virgin-islands/USVI_SocialVulnerability_v2_clip.tif
+    - name: storm_surge
+      path: us-virgin-islands/USVI_StormSurge_v2_clip.tif
+    - name: terrestrial
+      path: us-virgin-islands/USVI_TerrestrialIndex_4class.tif
+
+  puerto_rico:
+    - name: exposure
+      path: puerto-rico/PR_ExposureIndex_10class_021120_clip.tif
+    - name: asset
+      path: puerto-rico/PR_AssetIndex_10class_021020_clip.tif
+    - name: wildlife
+      path: puerto-rico/PR_CombinedWildlife_6class_040320.tif
+    - name: crit_facilities
+      path: puerto-rico/PR_CriticalFacilities_v2_clip.tif
+    - name: crit_infra
+      path: puerto-rico/PR_CriticalInfrastructure_v2_clip.tif
+    - name: erosion
+      path: puerto-rico/PR_ErodibleSoils_v2_clip.tif
+    - name: floodprone_areas
+      path: puerto-rico/PR_FloodproneAreas_v2_clip.tif
+    - name: impermeable
+      path: puerto-rico/PR_Impermeable_v2_clip.tif
+    - name: landslides
+      path: puerto-rico/PR_Landslides_v2_clip.tif
+    - name: low_areas
+      path: puerto-rico/PR_LowLyingAreas_v2_clip.tif
+    - name: marine
+      path: puerto-rico/PR_MarineIndex_4class.tif
+    - name: pop_density
+      path: puerto-rico/PR_PopulationDensity_v2_clip.tif
+    - name: sea_level_rise
+      path: puerto-rico/PR_SLR_v2_clip.tif
+    - name: social_vuln
+      path: puerto-rico/PR_SocialVulnerability_v2_clip.tif
+    - name: storm_surge
+      path: puerto-rico/PR_StormSurge_v2_clip.tif
+    - name: terrestrial
+      path: puerto-rico/PR_TerrestrialIndex_4class.tif
+    - name: threat
+      path: puerto-rico/PR_ThreatIndex_10class_021120_clip.tif
+    - name: tsunami
+      path: puerto-rico/PR_Tsunami_v2_clip.tif
+
+  conus:
+    - name: exposure
+      path: CONUS_ExposureIndex_10class_111918.tif
+    - name: asset
+      path: CONUS_AssetIndex_10class_111918.tif
+    - name: threat
+      path: CONUS_ThreatIndex_10class_111918.tif
+    - name: aquatic
+      path: CONUS_AquaticIndex_clip_111218.tif
+    - name: terrestrial
+      path: CONUS_TerrestrialIndex_clip_111218.tif
+    - name: hubs
+      path: CONUS_ResilienceHubs_121918.tif
+    - name: crit_infra
+      path: asset-inputs/CONUS_CritInfra_shift_111518.tif
+    - name: crit_facilities
+      path: asset-inputs/CONUS_CritFac_shift_111918.tif
+    - name: pop_density
+      path: asset-inputs/CONUS_Population_shift_110718.tif
+    - name: social_vuln
+      path: asset-inputs/CONUS_SocVul_shift_110718.tif
+    - name: drainage
+      path: threat-inputs/CONUS_DrainDev_shift_111418.tif
+    - name: erosion
+      path: threat-inputs/CONUS_Erosion_111418.tif
+    - name: floodprone_areas
+      path: threat-inputs/CONUS_Floodprone_shift_111418.tif
+    - name: geostress
+      path: threat-inputs/CONUS_Geostress_shift_111518.tif
+    - name: sea_level_rise
+      path: threat-inputs/CONUS_SLR_shift_110918.tif
+    - name: slope
+      path: threat-inputs/CONUS_Slope_shift_111918.tif
+    - name: storm_surge
+      path: threat-inputs/CONUS_StormSurge_shift_111618.tif

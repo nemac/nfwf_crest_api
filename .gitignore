@@ -7,6 +7,7 @@
 assets/
 notebooks/
 hubs/
+node_modules/
 
 # Created by https://www.gitignore.io/api/osx,linux,python,windows,pycharm,visualstudiocode
 

@@ -1,0 +1,53 @@
+service: crest-api
+
+plugins:
+  - serverless-python-requirements
+  - serverless-offline
+custom:
+  pythonRequirements:
+    dockerizePip: true
+
+provider:
+  name: aws
+  runtime: python3.8
+  memorySize: 2048
+  timeout: 30
+
+  # you can add statements to the Lambda function's IAM Role here
+  iamRoleStatements:
+    - Effect: 'Allow'
+      Action:
+        - 's3:*'
+      Resource: "arn:aws:s3:::nfwf-tool/*"
+    - Effect: "Allow"
+      Action:
+        - "s3:ListBucket"
+      Resource: { "Fn::Join" : ["", ["arn:aws:s3:::", { "Ref" : "ServerlessDeploymentBucket" } ] ]  }
+
+functions:
+  identify:
+    handler: identify.lambda_handler
+    events: 
+      - http: 
+          path: identify
+          method: get
+          cors: true
+          request:
+            parameters:
+              querystrings:
+                region: true
+                lng: true
+                lat: true
+
+  zonal_stats:
+    handler: zonal_stats.handler
+    events: 
+      - http: 
+          path: zonal_stats
+          method: post
+          cors: true
+          request:
+            parameters:
+              querystrings:
+                region: true
+
