@@ -28,12 +28,13 @@ import click
     'Optional nodata value to use instead of default nodata for src_dataset.'))
 @click.option('-tmpdir', help=(
     'Optional directory to place temporary files. Defaults to directory of src_dataset'))
-@click.option('-blocksize', show_default=True, default=128, type=click.INT, help=(
+@click.option('-blocksize', show_default=True, default=256, type=click.INT, help=(
     'Blocksize to use when converting dataset.'))
 @click.option('--convert_nodata', is_flag=True, help=(
     'Convert pixel values equal to the nodata value of src_dataset to -a_nodata.'))
+@click.option('--copy_overviews', is_flag=True, help='Copy the source dataset overviews.')
 @click.argument('src_dataset', required=True, type=click.Path(exists=True, resolve_path=True))
-def convert_to_cogeotiff(of, ot, r, a_nodata, tmpdir, blocksize, convert_nodata, src_dataset):
+def convert_to_cogeotiff(of, ot, r, a_nodata, tmpdir, blocksize, convert_nodata, copy_overviews, src_dataset):
   
   path_pair = os.path.split(src_dataset)
   filename_with_ext = path_pair[1]
@@ -48,7 +49,7 @@ def convert_to_cogeotiff(of, ot, r, a_nodata, tmpdir, blocksize, convert_nodata,
     '-co TILED=YES',
     '-co BLOCKXSIZE={0}'.format(str(blocksize)),
     '-co BLOCKYSIZE={0}'.format(str(blocksize)),
-    '-co COPY_SRC_OVERVIEWS=YES',
+    '-co COPY_SRC_OVERVIEWS={}'.format('YES' if copy_overviews else 'NO'),
     '--config GDAL_TIFF_OVR_BLOCKSIZE {0}'.format(str(blocksize))
   ]
 
@@ -90,7 +91,7 @@ def convert_to_cogeotiff(of, ot, r, a_nodata, tmpdir, blocksize, convert_nodata,
     pass
 
   try:
-    os.remove(src_dataset)
+    os.rename(src_dataset, '{}.old'.format(src_dataset))
     os.rename(dst_dataset, src_dataset)
     click.echo('Done!')
   except:
