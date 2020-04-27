@@ -1,31 +1,23 @@
-import boto3
-import os
-import json
-import hashlib
-import os.path
-from lib import lib
+import boto3, os, json, hashlib, os.path
+import util
 
-session = boto3.Session()
-
-def lambda_handler(event, context):
+def handler(event, context):
   # The event body is either str or dict depending on runtime context
   try:
     request_body = json.loads(event['body'])
   except:
     request_body = event['body']
 
+  session = boto3.Session()
   s3_client = boto3.client('s3')
-
   geojson = json.dumps(request_body)
   config = util.get_config()
-
   content_type = 'application/json'
   bucket = config['user_shapes_bucket']
-
   geobytes = geojson.encode('utf-8')
-
   hash_id = hashlib.md5(geobytes).hexdigest()
-  object_key = os.path.join('prod', hash_id)
+  stage = os.environ['STAGE']
+  object_key = os.path.join(stage, hash_id)
 
   s3_client.put_object(
     Body=geobytes,

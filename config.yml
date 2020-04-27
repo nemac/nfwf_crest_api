@@ -7,7 +7,7 @@ test:
   conus: [35.89, -79.45]
   puerto_rico: [18.28, -66.42]
   virgin_islands: [17.77, -64.79]
-  cnmi:
+  cnmi: []
 
 vrt:
   conus: conus.vrt
