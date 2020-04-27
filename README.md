@@ -101,12 +101,6 @@ curl \
   http://localhost:3000/beta/upload_shape
 ```
 
-You should get a response that looks something like:
-
-```
-["20000108,54", "20000116,53", "20000124,52", "20000201,51", "20000209,50", ...
-```
-
 ## Deploy the API
 
 We use two API stages: *beta* and *prod*. When you're ready to deploy, run `serverless deploy --stage stage-name`.
