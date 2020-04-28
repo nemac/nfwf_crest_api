@@ -27,7 +27,7 @@ def get_config(file_path):
   help=('Path to the config file')
 )
 @click.option('-region',
-  default='conus',
+  default='continental_us',
   type=click.STRING,
   help=('Region to build VRT for')
 )

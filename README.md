@@ -17,12 +17,12 @@ We recommend using pyenv to manage Python installations.
 
 - Restart your terminal.
 
-- Run `pyenv install 3.8.2` in your terminal to install Python 3.8. Now when you run `pyenv versions` you should see `3.8.2` in your list of Python installations. Try `pyenv install -l` to see a full list of versions you can install. Check out the full pyenv README for more information about using pyenv.
+- Run `pyenv install 3.8.2` in your terminal to install Python 3.8.2. Now when you run `pyenv versions` you should see `3.8.2` in your list of Python installations. Try `pyenv install -l` to see a full list of versions you can install. Check out the full pyenv README for more information.
 
 
 ### Set up a virtual environment (Recommended)
 
-A virtual environment is a Python abstraction that allows you to create an isolated Python environment. There are many different ways to set up virtual environments.
+A virtual environment is a Python abstraction that allows you to create an isolated Python environment.
 
 There are several ways to set up virtual environments. Here are a few options:
 
@@ -30,9 +30,9 @@ There are several ways to set up virtual environments. Here are a few options:
 
 - If you're using pyenv on Linux or macOS, you can use the [pyenv-virtualenv](https://github.com/pyenv/pyenv-virtualenv#pyenv-virtualenv) pyenv plugin.
 
-- Python's built-in module [venv](https://docs.python.org/3/library/venv.html). If you're using pyenv you will want to run `pyenv global 3.8.2` before setting up your virtualenv.
+- Python 3's built-in module [venv](https://docs.python.org/3/library/venv.html).
 
-- There's also the classic [virtualenv](https://virtualenv.pypa.io/en/latest/) library. If you go this route you might want to check out the popular tool [virtualenvwrapper](https://virtualenvwrapper.readthedocs.io/en/stable/).
+- There's always the classic [virtualenv](https://virtualenv.pypa.io/en/latest/) library. If you go this route you might want to check out the popular tool [virtualenvwrapper](https://virtualenvwrapper.readthedocs.io/en/stable/).
 
 
 ### Install dependencies
