@@ -1,6 +1,6 @@
 <VRTDataset rasterXSize="176723" rasterYSize="98127">
   <SRS>PROJCS["USA_Contiguous_Albers_Equal_Area_Conic",GEOGCS["NAD83",DATUM["North_American_Datum_1983",SPHEROID["GRS 1980",6378137,298.2572221010042,AUTHORITY["EPSG","7019"]],AUTHORITY["EPSG","6269"]],PRIMEM["Greenwich",0],UNIT["degree",0.0174532925199433],AUTHORITY["EPSG","4269"]],PROJECTION["Albers_Conic_Equal_Area"],PARAMETER["standard_parallel_1",29.5],PARAMETER["standard_parallel_2",45.5],PARAMETER["latitude_of_center",37.5],PARAMETER["longitude_of_center",-96],PARAMETER["false_easting",0],PARAMETER["false_northing",0],UNIT["metre",1,AUTHORITY["EPSG","9001"]]]</SRS>
-  <GeoTransform> -2.3639828497731304e+06,  3.0000000000000000e+01,  0.0000000000000000e+00,  1.6078650000000000e+06,  0.0000000000000000e+00, -3.0000000000000000e+01</GeoTransform>
+  <GeoTransform> -2.3639828497731294e+06,  3.0000000000000000e+01,  0.0000000000000000e+00,  1.6078650000000000e+06,  0.0000000000000000e+00, -3.0000000000000000e+01</GeoTransform>
   <VRTRasterBand dataType="Byte" band="1">
     <NoDataValue>255</NoDataValue>
     <ColorInterp>Gray</ColorInterp>
@@ -8,7 +8,7 @@
       <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/CONUS_ExposureIndex_10class_111918.tif</SourceFilename>
       <SourceBand>1</SourceBand>
       <SourceProperties RasterXSize="154048" RasterYSize="96886" DataType="Byte" BlockXSize="128" BlockYSize="128" />
-      <SrcRect xOff="0.0716742289873461" yOff="0" xSize="154048" ySize="96886" />
+      <SrcRect xOff="0.0716742290183902" yOff="0" xSize="154048" ySize="96886" />
       <DstRect xOff="0" yOff="1241.54201924444" xSize="154048" ySize="96886" />
       <NODATA>255</NODATA>
     </ComplexSource>
@@ -20,7 +20,7 @@
       <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/CONUS_AssetIndex_10class_111918.tif</SourceFilename>
       <SourceBand>1</SourceBand>
       <SourceProperties RasterXSize="154048" RasterYSize="96886" DataType="Byte" BlockXSize="128" BlockYSize="128" />
-      <SrcRect xOff="0.0716742290028681" yOff="0" xSize="154048" ySize="96886" />
+      <SrcRect xOff="0.0716742290339122" yOff="0" xSize="154048" ySize="96886" />
       <DstRect xOff="0" yOff="1241.54201924452" xSize="154048" ySize="96886" />
       <NODATA>255</NODATA>
     </ComplexSource>
@@ -32,7 +32,7 @@
       <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/CONUS_ThreatIndex_10class_111918.tif</SourceFilename>
       <SourceBand>1</SourceBand>
       <SourceProperties RasterXSize="154048" RasterYSize="96886" DataType="Byte" BlockXSize="128" BlockYSize="128" />
-      <SrcRect xOff="0.0716742289873461" yOff="0" xSize="154048" ySize="96886" />
+      <SrcRect xOff="0.0716742290183902" yOff="0" xSize="154048" ySize="96886" />
       <DstRect xOff="0" yOff="1241.54201924444" xSize="154048" ySize="96886" />
       <NODATA>255</NODATA>
     </ComplexSource>
@@ -41,11 +41,11 @@
     <NoDataValue>255</NoDataValue>
     <ColorInterp>Gray</ColorInterp>
     <ComplexSource>
-      <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/CONUS_AquaticIndex_clip_111218.tif</SourceFilename>
+      <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/CONUS_CombinedFW_reclassCREST.tif</SourceFilename>
       <SourceBand>1</SourceBand>
-      <SourceProperties RasterXSize="156310" RasterYSize="98524" DataType="Byte" BlockXSize="128" BlockYSize="128" />
-      <SrcRect xOff="0.0716742289873461" yOff="0" xSize="156310" ySize="98524" />
-      <DstRect xOff="0" yOff="0" xSize="156310" ySize="98524" />
+      <SourceProperties RasterXSize="156309" RasterYSize="98523" DataType="Byte" BlockXSize="128" BlockYSize="128" />
+      <SrcRect xOff="0" yOff="0" xSize="156309" ySize="98523" />
+      <DstRect xOff="0" yOff="0.185061937601616" xSize="156309" ySize="98523" />
       <NODATA>255</NODATA>
     </ComplexSource>
   </VRTRasterBand>
@@ -53,15 +53,27 @@
     <NoDataValue>255</NoDataValue>
     <ColorInterp>Gray</ColorInterp>
     <ComplexSource>
-      <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/CONUS_TerrestrialIndex_clip_111218.tif</SourceFilename>
+      <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/CONUS_AquaticIndex_clip_111218.tif</SourceFilename>
       <SourceBand>1</SourceBand>
       <SourceProperties RasterXSize="156310" RasterYSize="98524" DataType="Byte" BlockXSize="128" BlockYSize="128" />
-      <SrcRect xOff="0.0716742289873461" yOff="0" xSize="156310" ySize="98524" />
+      <SrcRect xOff="0.0716742290183902" yOff="0" xSize="156310" ySize="98524" />
       <DstRect xOff="0" yOff="0" xSize="156310" ySize="98524" />
       <NODATA>255</NODATA>
     </ComplexSource>
   </VRTRasterBand>
 <VRTRasterBand dataType="Byte" band="6">
+    <NoDataValue>255</NoDataValue>
+    <ColorInterp>Gray</ColorInterp>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/CONUS_TerrestrialIndex_clip_111218.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="156310" RasterYSize="98524" DataType="Byte" BlockXSize="128" BlockYSize="128" />
+      <SrcRect xOff="0.0716742290183902" yOff="0" xSize="156310" ySize="98524" />
+      <DstRect xOff="0" yOff="0" xSize="156310" ySize="98524" />
+      <NODATA>255</NODATA>
+    </ComplexSource>
+  </VRTRasterBand>
+<VRTRasterBand dataType="Byte" band="7">
     <NoDataValue>255</NoDataValue>
     <ColorInterp>Gray</ColorInterp>
     <ComplexSource>
@@ -73,19 +85,19 @@
       <NODATA>255</NODATA>
     </ComplexSource>
   </VRTRasterBand>
-<VRTRasterBand dataType="Byte" band="7">
+<VRTRasterBand dataType="Byte" band="8">
     <NoDataValue>255</NoDataValue>
     <ColorInterp>Gray</ColorInterp>
     <ComplexSource>
       <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/asset-inputs/CONUS_CritInfra_shift_111518.tif</SourceFilename>
       <SourceBand>1</SourceBand>
       <SourceProperties RasterXSize="154048" RasterYSize="96886" DataType="Byte" BlockXSize="128" BlockYSize="128" />
-      <SrcRect xOff="0.0716742290028681" yOff="0" xSize="154048" ySize="96886" />
+      <SrcRect xOff="0.0716742290339122" yOff="0" xSize="154048" ySize="96886" />
       <DstRect xOff="0" yOff="1241.54201924452" xSize="154048" ySize="96886" />
       <NODATA>255</NODATA>
     </ComplexSource>
   </VRTRasterBand>
-<VRTRasterBand dataType="Byte" band="8">
+<VRTRasterBand dataType="Byte" band="9">
     <NoDataValue>255</NoDataValue>
     <ColorInterp>Gray</ColorInterp>
     <ComplexSource>
@@ -97,7 +109,7 @@
       <NODATA>255</NODATA>
     </ComplexSource>
   </VRTRasterBand>
-<VRTRasterBand dataType="Byte" band="9">
+<VRTRasterBand dataType="Byte" band="10">
     <NoDataValue>255</NoDataValue>
     <ColorInterp>Gray</ColorInterp>
     <ComplexSource>
@@ -109,7 +121,7 @@
       <NODATA>255</NODATA>
     </ComplexSource>
   </VRTRasterBand>
-<VRTRasterBand dataType="Byte" band="10">
+<VRTRasterBand dataType="Byte" band="11">
     <NoDataValue>255</NoDataValue>
     <ColorInterp>Gray</ColorInterp>
     <ComplexSource>
@@ -121,27 +133,15 @@
       <NODATA>255</NODATA>
     </ComplexSource>
   </VRTRasterBand>
-<VRTRasterBand dataType="Byte" band="11">
+<VRTRasterBand dataType="Byte" band="12">
     <NoDataValue>255</NoDataValue>
     <ColorInterp>Gray</ColorInterp>
     <ComplexSource>
       <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/threat-inputs/CONUS_DrainDev_shift_111418.tif</SourceFilename>
       <SourceBand>1</SourceBand>
       <SourceProperties RasterXSize="154049" RasterYSize="96886" DataType="Byte" BlockXSize="128" BlockYSize="128" />
-      <SrcRect xOff="0.0716742290028681" yOff="0" xSize="154049" ySize="96886" />
+      <SrcRect xOff="0.0716742290339122" yOff="0" xSize="154049" ySize="96886" />
       <DstRect xOff="0" yOff="1241.54201924452" xSize="154049" ySize="96886" />
-      <NODATA>255</NODATA>
-    </ComplexSource>
-  </VRTRasterBand>
-<VRTRasterBand dataType="Byte" band="12">
-    <NoDataValue>255</NoDataValue>
-    <ColorInterp>Gray</ColorInterp>
-    <ComplexSource>
-      <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/threat-inputs/CONUS_Erosion_111418.tif</SourceFilename>
-      <SourceBand>1</SourceBand>
-      <SourceProperties RasterXSize="154048" RasterYSize="96886" DataType="Byte" BlockXSize="128" BlockYSize="128" />
-      <SrcRect xOff="0.0716742290028681" yOff="0" xSize="154048" ySize="96886" />
-      <DstRect xOff="0" yOff="1241.54201924452" xSize="154048" ySize="96886" />
       <NODATA>255</NODATA>
     </ComplexSource>
   </VRTRasterBand>
@@ -149,11 +149,11 @@
     <NoDataValue>255</NoDataValue>
     <ColorInterp>Gray</ColorInterp>
     <ComplexSource>
-      <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/threat-inputs/CONUS_Floodprone_shift_111418.tif</SourceFilename>
+      <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/threat-inputs/CONUS_Erosion_111418.tif</SourceFilename>
       <SourceBand>1</SourceBand>
-      <SourceProperties RasterXSize="154049" RasterYSize="96886" DataType="Byte" BlockXSize="128" BlockYSize="128" />
-      <SrcRect xOff="1.07167422900287" yOff="0" xSize="154049" ySize="96886" />
-      <DstRect xOff="0" yOff="1241.54201924452" xSize="154049" ySize="96886" />
+      <SourceProperties RasterXSize="154048" RasterYSize="96886" DataType="Byte" BlockXSize="128" BlockYSize="128" />
+      <SrcRect xOff="0.0716742290339122" yOff="0" xSize="154048" ySize="96886" />
+      <DstRect xOff="0" yOff="1241.54201924452" xSize="154048" ySize="96886" />
       <NODATA>255</NODATA>
     </ComplexSource>
   </VRTRasterBand>
@@ -161,11 +161,11 @@
     <NoDataValue>255</NoDataValue>
     <ColorInterp>Gray</ColorInterp>
     <ComplexSource>
-      <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/threat-inputs/CONUS_Geostress_shift_111518.tif</SourceFilename>
+      <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/threat-inputs/CONUS_Floodprone_shift_111418.tif</SourceFilename>
       <SourceBand>1</SourceBand>
-      <SourceProperties RasterXSize="154048" RasterYSize="96886" DataType="Byte" BlockXSize="128" BlockYSize="128" />
-      <SrcRect xOff="0.0716742290028681" yOff="0" xSize="154048" ySize="96886" />
-      <DstRect xOff="0" yOff="1241.54201924452" xSize="154048" ySize="96886" />
+      <SourceProperties RasterXSize="154049" RasterYSize="96886" DataType="Byte" BlockXSize="128" BlockYSize="128" />
+      <SrcRect xOff="1.07167422903391" yOff="0" xSize="154049" ySize="96886" />
+      <DstRect xOff="0" yOff="1241.54201924452" xSize="154049" ySize="96886" />
       <NODATA>255</NODATA>
     </ComplexSource>
   </VRTRasterBand>
@@ -173,11 +173,11 @@
     <NoDataValue>255</NoDataValue>
     <ColorInterp>Gray</ColorInterp>
     <ComplexSource>
-      <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/threat-inputs/CONUS_SLR_shift_110918.tif</SourceFilename>
+      <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/threat-inputs/CONUS_Geostress_shift_111518.tif</SourceFilename>
       <SourceBand>1</SourceBand>
-      <SourceProperties RasterXSize="154048" RasterYSize="96887" DataType="Byte" BlockXSize="128" BlockYSize="128" />
-      <SrcRect xOff="0.0716742290028681" yOff="0" xSize="154048" ySize="96887" />
-      <DstRect xOff="0" yOff="1240.54201924459" xSize="154048" ySize="96887" />
+      <SourceProperties RasterXSize="154048" RasterYSize="96886" DataType="Byte" BlockXSize="128" BlockYSize="128" />
+      <SrcRect xOff="0.0716742290339122" yOff="0" xSize="154048" ySize="96886" />
+      <DstRect xOff="0" yOff="1241.54201924452" xSize="154048" ySize="96886" />
       <NODATA>255</NODATA>
     </ComplexSource>
   </VRTRasterBand>
@@ -185,11 +185,11 @@
     <NoDataValue>255</NoDataValue>
     <ColorInterp>Gray</ColorInterp>
     <ComplexSource>
-      <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/threat-inputs/CONUS_Slope_shift_111918.tif</SourceFilename>
+      <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/threat-inputs/CONUS_SLR_shift_110918.tif</SourceFilename>
       <SourceBand>1</SourceBand>
-      <SourceProperties RasterXSize="154049" RasterYSize="96886" DataType="Byte" BlockXSize="128" BlockYSize="128" />
-      <SrcRect xOff="0.0716742289873461" yOff="0" xSize="154049" ySize="96886" />
-      <DstRect xOff="0" yOff="1241.54201924444" xSize="154049" ySize="96886" />
+      <SourceProperties RasterXSize="154048" RasterYSize="96887" DataType="Byte" BlockXSize="128" BlockYSize="128" />
+      <SrcRect xOff="0.0716742290339122" yOff="0" xSize="154048" ySize="96887" />
+      <DstRect xOff="0" yOff="1240.54201924459" xSize="154048" ySize="96887" />
       <NODATA>255</NODATA>
     </ComplexSource>
   </VRTRasterBand>
@@ -197,10 +197,22 @@
     <NoDataValue>255</NoDataValue>
     <ColorInterp>Gray</ColorInterp>
     <ComplexSource>
+      <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/threat-inputs/CONUS_Slope_shift_111918.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="154049" RasterYSize="96886" DataType="Byte" BlockXSize="128" BlockYSize="128" />
+      <SrcRect xOff="0.0716742290183902" yOff="0" xSize="154049" ySize="96886" />
+      <DstRect xOff="0" yOff="1241.54201924444" xSize="154049" ySize="96886" />
+      <NODATA>255</NODATA>
+    </ComplexSource>
+  </VRTRasterBand>
+<VRTRasterBand dataType="Byte" band="18">
+    <NoDataValue>255</NoDataValue>
+    <ColorInterp>Gray</ColorInterp>
+    <ComplexSource>
       <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/threat-inputs/CONUS_StormSurge_shift_111618.tif</SourceFilename>
       <SourceBand>1</SourceBand>
       <SourceProperties RasterXSize="154049" RasterYSize="96886" DataType="Byte" BlockXSize="128" BlockYSize="128" />
-      <SrcRect xOff="0.0716742289873461" yOff="0" xSize="154049" ySize="96886" />
+      <SrcRect xOff="0.0716742290183902" yOff="0" xSize="154049" ySize="96886" />
       <DstRect xOff="0" yOff="1241.54201924444" xSize="154049" ySize="96886" />
       <NODATA>255</NODATA>
     </ComplexSource>

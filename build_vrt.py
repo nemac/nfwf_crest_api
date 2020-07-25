@@ -6,8 +6,8 @@ A CLI utility for building the VRT raster that points to S3-hosted NFWF model da
 Relies on a config file in the root directory.
 '''
 
-import os, os.path, sys
-import click, yaml
+import os, os.path, sys, argparse
+import yaml
 import rasterio as rio
 import xml.etree.ElementTree as ET
 
@@ -15,29 +15,13 @@ vrtnodata_arg = '-vrtnodata {0}'
 extent_arg = '-te {0}'
 band_arg = '-b {0}'
 
+
 def get_config(file_path):
   with open(file_path) as f:
     config = yaml.safe_load(f)
   return config
 
-@click.command()
-@click.option('-f',
-  default='config.yml',
-  type=click.STRING,
-  help=('Path to the config file')
-)
-@click.option('-region',
-  default='continental_us',
-  type=click.STRING,
-  help=('Region to build VRT for')
-)
-@click.option('-b', default='1', show_default=True, type=click.STRING, help='Band number to fetch for each dataset.')
-@click.option('-vrtnodata', default='255', show_default=True, help=('Value to set for NODATA on vrt band.'))
-@click.option('-vsi', default='s3', type=click.Choice(['s3', 'tar', 'curl']),
-  help=('Prepend a GDAL Virtual File System identifier to component dataset paths (vsis3, vsicurl, etc) -- see https://www.gdal.org/gdal_virtual_file_systems.html')
-)
-@click.option('-loc', type=click.Path(),
-  help='If building a VRT for local datasets, use this option to supply the location of the data')
+
 def build_full_vrt(f, region, b, vrtnodata, vsi, loc):
   config = get_config(f)
   if 'dataset_bucket' in config:
@@ -90,7 +74,8 @@ def get_largest_extent(bands_config, vsi, dataset_bucket, loc):
   max_bounds = [ max_by_key(bounds, key) for key in ('left', 'bottom', 'right', 'top') ]
   return max_bounds
 
-
+# loc is active here
+# vsi is active here
 def get_dataset_path(band_config, vsi, dataset_bucket, loc):
   path_pieces = []
   if loc:
@@ -118,10 +103,50 @@ def build_intermediate_vrt(band_config, bounds, b, vrtnodata, vsi, dataset_bucke
   command_pieces.append("{0}".format(temp_vrt))
   command_pieces.append(dataset_path)
   c = ' '.join(command_pieces)
-  click.echo(c)
+  print(c)
   os.system(c)
   return temp_vrt
 
 
+def setup_arg_parser():
+  parser = argparse.ArgumentParser()
+  parser.add_argument('-c', '--config',
+    metavar='config.yml', default='config.yml',
+    help="Path to the config file"
+  )
+  parser.add_argument('-b', '--band',
+    dest='target_raster_band', metavar='1', default='1',
+    help='Band number to use for each raster'
+  )
+  parser.add_argument('--vrtnodata', default='255',
+    help='Value to set for NODATA in the VRT'
+  )
+  parser.add_argument('--vsi', default='s3')
+  parser.add_argument('--region', '-r',
+    help='Region to build VRT for as defined in config file.'
+  )
+  # TODO change to direct prepending of a driver string 
+  #parser.add_argument('--vsistring', default='vsis3',
+  #  help=('Chain of GDAL VSI drivers to use for accessing source data.\n',
+  #        'See https://www.gdal.org/gdal_virtual_file_systems.html')
+  
+  # TODO make sure this works for cloud and disk
+  #  - vrt driver string needs to come first in cloud case
+  parser.add_argument('--path', '-p',
+    help='Folder path to prepend to any file paths defined in the config file.'
+  )
+  return parser
+
+# TODO tests
+# TODO don't overwrite files unless told to
+# TODO license
 if __name__ == '__main__':
-  build_full_vrt()
+  parser = setup_arg_parser()
+  args = parser.parse_args()
+  f = args.config
+  region = args.region
+  b = args.target_raster_band
+  vrtnodata = args.vrtnodata
+  vsi = args.vsi
+  loc = args.path
+  build_full_vrt(f, region, b, vrtnodata, vsi, loc)

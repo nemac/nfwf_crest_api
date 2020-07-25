@@ -36,6 +36,6 @@ def get_dataset_names(config, region):
 
 
 def get_config():
-  with open('config.yml', 'r') as stream:
+  with open(os.path.join(os.path.dirname(__file__), 'config.yml'), 'r') as stream:
     config = yaml.safe_load(stream)
   return config

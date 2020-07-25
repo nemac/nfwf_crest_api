@@ -3,12 +3,6 @@ dataset_bucket: nfwf-tool
 
 user_shapes_bucket: nfwf-tool-user-shapes
 
-test:
-  continental_us: [35.89, -79.45]
-  puerto_rico: [18.28, -66.42]
-  us_virgin_islands: [17.77, -64.79]
-  northern_mariana_islands: []
-
 vrt:
   continental_us: continental_us.vrt
   puerto_rico: puerto_rico.vrt
@@ -24,6 +18,8 @@ datasets:
       path: CONUS_AssetIndex_10class_111918.tif
     - name: threat
       path: CONUS_ThreatIndex_10class_111918.tif
+    - name: wildlife
+      path: CONUS_CombinedFW_reclassCREST.tif
     - name: aquatic
       path: CONUS_AquaticIndex_clip_111218.tif
     - name: terrestrial
@@ -90,6 +86,8 @@ datasets:
       path: puerto-rico/byte/PR_ThreatIndex_10class_021120_clip.tif
     - name: tsunami
       path: puerto-rico/byte/PR_Tsunami_v2_clip.tif
+    - name: hubs
+      path: puerto-rico/byte/pr_combined_hub_group_070120_8bit.tif
 
   us_virgin_islands:
     - name: exposure
@@ -124,5 +122,65 @@ datasets:
       path: us-virgin-islands/byte/USVI_StormSurge_v2_clip.tif
     - name: terrestrial
       path: us-virgin-islands/byte/USVI_TerrestrialIndex_4class.tif
+    - name: hubs
+      path: us-virgin-islands/byte/vi_combined_hub_group_070120_8bit.tif
+
+  northern_mariana_islands:
+    - name: asset
+      path: cnmi/CNMI_Asset_Index_10class.tif
+    - name: crit_facilities
+      path: cnmi/CNMI_Critical_Facilities.tif
+    - name: crit_infra
+      path: cnmi/CNMI_Critical_Infrastructure.tif
+    - name: erosion
+      path: cnmi/CNMI_Erodible_Soils.tif
+    - name: exposure
+      path: cnmi/CNMI_Exposure_Index.tif
+    - name: floodprone_areas
+      path: cnmi/CNMI_Floodprone_Areas.tif
+    - name: impermeable
+      path: cnmi/CNMI_Impermeable_Soils.tif
+    - name: low_areas
+      path: cnmi/CNMI_Low_Lying_Areas.tif
+    - name: marine
+      path: cnmi/CNMI_Marine_Index.tif
+    - name: pop_density
+      path: cnmi/CNMI_Population_Density.tif
+    - name: sea_level_rise
+      path: cnmi/CNMI_Sea_Level_Rise.tif
+    - name: social_vuln
+      path: cnmi/CNMI_Social_Vulnerability.tif
+    - name: terrestrial
+      path: cnmi/CNMI_Terrestrial_Index.tif
+    - name: threat
+      path: cnmi/CNMI_Threat_Index_10class.tif
+    - name: wave_flooding
+      path: cnmi/CNMI_Wave_Driven_Flooding.tif
+    - name: wildlife
+      path: cnmi/CNMI_Wildlife_Index.tif
+    - name: hubs
+      path: cnmi/cnmi_combined_hub_group_070120_8bit.tif
+
+
+test:
+  points:
+    continental_us:
+      lat: 35.89
+      lng: -79.45
+    puerto_rico:
+      lat: 18.28
+      lng: -66.42
+    us_virgin_islands:
+      lat: 17.77
+      lng: -64.79
+    northern_mariana_islands:
+      lat: 15.203017
+      lng: 145.72
+  polygons:
+    continental_us: '{"type":"FeatureCollection","name":"test-ar","features":[{"type":"Feature","properties":{"id":"conus_poly"},"geometry":{"type":"Polygon","coordinates":[[[-80.01149654388428,32.887677980874706],[-80.01911401748657,32.88337138447869],[-80.01553058624268,32.87764094428261],[-80.00417947769165,32.882578515468],[-80.01149654388428,32.887677980874706]]]}}]}'
+    puerto_rico: '{"type":"FeatureCollection","features":[{"type":"Feature","properties":{"id":"puerto_rico_poly"},"geometry":{"type":"Polygon","coordinates":[[[-66.19537353515625,18.374075820054482],[-66.2750244140625,18.312810846425442],[-66.15966796875,18.272390159624983],[-66.08963012695312,18.380592091462194],[-66.2091064453125,18.4209874751591],[-66.19537353515625,18.374075820054482]]]}}]}'
+    us_virgin_islands: '{"type":"FeatureCollection","features":[{"type":"Feature","properties":{"id":"us_virgin_islands_poly"},"geometry":{"type":"Polygon","coordinates":[[[-64.78466033935547,17.768958359342278],[-64.80199813842773,17.73854993679923],[-64.75187301635742,17.729230192705025],[-64.7398567199707,17.756534036838417],[-64.78260040283203,17.77402592723689],[-64.78466033935547,17.768958359342278]]]}}]}'
+    northern_mariana_islands: '{"type":"FeatureCollection","features":[{"type":"Feature","properties":{"id":"cnmi_poly"},"geometry":{"type":"Polygon","coordinates":[[[145.77878952026367,15.228125499059319],[145.77394008636475,15.225475339228003],[145.7759141921997,15.221707085774053],[145.78372478485107,15.222328231095478],[145.78308105468747,15.226013655644088],[145.77878952026367,15.228125499059319]]]}}]}'
+
 
 

@@ -80,12 +80,28 @@ Test your local API with curl:
 # Identify example
 curl http://localhost:3000/dev/identify/\?lng\=-82.8\&lat\=35.8\&region=conus
 
+# CNMI
+curl http://localhost:3000/dev/identify/\?lng\=-145.72\&lat\=15.2\&region=cnmi
+
+
+
+
 # Zonal stats example (polygon)
 curl \
   --header "Content-Type: application/json" \
   --request POST \
   --data '{"type": "FeatureCollection","name": "test-ar","features": [{"type": "Feature","properties": {"id": null},"geometry": {"type": "Polygon","coordinates": [[[-80.01149654388428, 32.887677980874706],[-80.01911401748657, 32.88337138447869],[-80.01553058624268, 32.87764094428261],[-80.00417947769165, 32.882578515468],[-80.01149654388428, 32.887677980874706]]]}}]}' \
-  http://localhost:3000/dev/zonal_stats?region=conus
+  http://localhost:3000/dev/zonal_stats?region=continental_us
+
+# Northern Mariana Islands (CNMI)
+curl \
+  --header "Content-Type: application/json" \
+  --request POST \
+  --data '{"type":"FeatureCollection","features":[{"type":"Feature","properties":{},"geometry":{"type":"Polygon","coordinates":[[[145.77878952026367,15.228125499059319],[145.77394008636475,15.225475339228003],[145.7759141921997,15.221707085774053],[145.78372478485107,15.222328231095478],[145.78308105468747,15.226013655644088],[145.77878952026367,15.228125499059319]]]}}]}' \
+  http://localhost:3000/dev/zonal_stats?region=northern_mariana_islands
+
+
+
 
 # Zonal stats example (multipolygon)
 curl \

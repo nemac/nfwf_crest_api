@@ -1,4 +1,4 @@
-<VRTDataset rasterXSize="6913" rasterYSize="12442">
+<VRTDataset rasterXSize="7023" rasterYSize="12442">
   <SRS>PROJCS["NAD83 / Puerto Rico &amp; Virgin Is.",GEOGCS["NAD83",DATUM["North_American_Datum_1983",SPHEROID["GRS 1980",6378137,298.257222101,AUTHORITY["EPSG","7019"]],TOWGS84[0,0,0,0,0,0,0],AUTHORITY["EPSG","6269"]],PRIMEM["Greenwich",0,AUTHORITY["EPSG","8901"]],UNIT["degree",0.0174532925199433,AUTHORITY["EPSG","9122"]],AUTHORITY["EPSG","4269"]],PROJECTION["Lambert_Conformal_Conic_2SP"],PARAMETER["standard_parallel_1",18.43333333333333],PARAMETER["standard_parallel_2",18.03333333333333],PARAMETER["latitude_of_origin",17.83333333333333],PARAMETER["central_meridian",-66.43333333333334],PARAMETER["false_easting",200000],PARAMETER["false_northing",200000],UNIT["metre",1,AUTHORITY["EPSG","9001"]],AXIS["X",EAST],AXIS["Y",NORTH],AUTHORITY["EPSG","32161"]]</SRS>
   <GeoTransform>  3.4234567314063711e+05,  1.0000000000000000e+01,  0.0000000000000000e+00,  3.0513457449999824e+05,  0.0000000000000000e+00, -1.0000000000000000e+01</GeoTransform>
   <VRTRasterBand dataType="Byte" band="1">
@@ -190,6 +190,18 @@
       <SourceProperties RasterXSize="6915" RasterYSize="12635" DataType="Byte" BlockXSize="256" BlockYSize="256" />
       <SrcRect xOff="2.25187406386249" yOff="0" xSize="6915" ySize="12635" />
       <DstRect xOff="0" yOff="0" xSize="6915" ySize="12635" />
+      <NODATA>255</NODATA>
+    </ComplexSource>
+  </VRTRasterBand>
+<VRTRasterBand dataType="Byte" band="17">
+    <NoDataValue>255</NoDataValue>
+    <ColorInterp>Gray</ColorInterp>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/us-virgin-islands/byte/vi_combined_hub_group_070120_8bit.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="7640" RasterYSize="10575" DataType="Byte" BlockXSize="256" BlockYSize="256" />
+      <SrcRect xOff="616.80482406388" yOff="0" xSize="7640" ySize="10575" />
+      <DstRect xOff="0" yOff="3772.78768999986" xSize="7640" ySize="10575" />
       <NODATA>255</NODATA>
     </ComplexSource>
   </VRTRasterBand>
