@@ -81,7 +81,7 @@ def get_dataset_path(band_config, vsi, dataset_bucket, loc):
   if loc:
     path_pieces.append(loc)
   elif vsi:
-    path_pieces.append('/vsi{0}'.format(vsi))
+    path_pieces.append('{0}'.format(vsi))
     if dataset_bucket:
       path_pieces.append('{0}'.format(dataset_bucket))
   path_pieces.append(band_config['path'])
@@ -121,21 +121,20 @@ def setup_arg_parser():
   parser.add_argument('--vrtnodata', default='255',
     help='Value to set for NODATA in the VRT'
   )
-  parser.add_argument('--vsi', default='s3')
   parser.add_argument('--region', '-r',
     help='Region to build VRT for as defined in config file.'
   )
-  # TODO change to direct prepending of a driver string 
-  #parser.add_argument('--vsistring', default='vsis3',
-  #  help=('Chain of GDAL VSI drivers to use for accessing source data.\n',
-  #        'See https://www.gdal.org/gdal_virtual_file_systems.html')
-  
+  parser.add_argument('--vsistring', default='/vsis3/',
+    help=('Chain of GDAL VSI drivers to use for accessing source data.\n',
+          'See https://www.gdal.org/gdal_virtual_file_systems.html')
+  )
   # TODO make sure this works for cloud and disk
   #  - vrt driver string needs to come first in cloud case
   parser.add_argument('--path', '-p',
     help='Folder path to prepend to any file paths defined in the config file.'
   )
   return parser
+
 
 # TODO tests
 # TODO don't overwrite files unless told to
@@ -147,6 +146,6 @@ if __name__ == '__main__':
   region = args.region
   b = args.target_raster_band
   vrtnodata = args.vrtnodata
-  vsi = args.vsi
+  vsi = args.vsistring
   loc = args.path
   build_full_vrt(f, region, b, vrtnodata, vsi, loc)

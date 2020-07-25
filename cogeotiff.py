@@ -7,33 +7,14 @@ https://trac.osgeo.org/gdal/wiki/CloudOptimizedGeoTIFF
 
 Assumes gdal tools (gdal_translate, gdalbuildvrt) are in PATH.
 
-Install the click library before use.
-
 Use the --help option for more information:
 
 python convert_to_cogeo.py --help
 
 '''
 
-import sys, os, os.path
-import click
+import sys, os, os.path, argparse
 
-@click.command()
-@click.option('-of', default='GTiff', show_default=True, type=click.STRING, help='Output format.')
-@click.option('-ot', default='Byte', show_default=True, type=click.STRING, help='Data type of output bands.')
-@click.option('-r', default='average', show_default=True, help=(
-    'Resampling algorithm to use'),
-    type=click.Choice(['nearest','bilinear','cubic','cubicspline','lanczos','average','mode']))
-@click.option('-a_nodata', default=255, show_default=True, help=(
-    'Optional nodata value to use instead of default nodata for src_dataset.'))
-@click.option('-tmpdir', help=(
-    'Optional directory to place temporary files. Defaults to directory of src_dataset'))
-@click.option('-blocksize', show_default=True, default=256, type=click.INT, help=(
-    'Blocksize to use when converting dataset.'))
-@click.option('--convert_nodata', is_flag=True, help=(
-    'Convert pixel values equal to the nodata value of src_dataset to -a_nodata.'))
-@click.option('--copy_overviews', is_flag=True, help='Copy the source dataset overviews.')
-@click.argument('src_dataset', required=True, type=click.Path(exists=True, resolve_path=True))
 def convert_to_cogeotiff(of, ot, r, a_nodata, tmpdir, blocksize, convert_nodata, copy_overviews, src_dataset):
   
   path_pair = os.path.split(src_dataset)
@@ -63,11 +44,11 @@ def convert_to_cogeotiff(of, ot, r, a_nodata, tmpdir, blocksize, convert_nodata,
       gdalbuildvrt.append('-vrtnodata {0}'.format(a_nodata))
       gdalbuildvrt.append('"{0}" "{1}"'.format(vrtpath, src_dataset))
       gdalbuildvrt_command = ' '.join(gdalbuildvrt)
-      click.echo(gdalbuildvrt_command)
+      print(gdalbuildvrt_command)
       try:
         os.system(gdalbuildvrt_command)
       except:
-        click.echo("Something went wrong when building the intermediate vrt file!")
+        print("Something went wrong when building the intermediate vrt file!")
         sys.exit(1)
     else:
       vrtpath = ''
@@ -77,11 +58,11 @@ def convert_to_cogeotiff(of, ot, r, a_nodata, tmpdir, blocksize, convert_nodata,
   gdal_translate.append('"{0}"'.format(dst_dataset))
   
   gdal_translate_command = ' '.join(gdal_translate)
-  click.echo(gdal_translate_command)
+  print(gdal_translate_command)
   try:
     os.system(gdal_translate_command)
   except:
-    click.echo("Something went wrong while trying to run gdal_translate!")
+    print("Something went wrong while trying to run gdal_translate!")
     sys.exit(1)
 
   # Cleanup
@@ -93,10 +74,60 @@ def convert_to_cogeotiff(of, ot, r, a_nodata, tmpdir, blocksize, convert_nodata,
   try:
     os.rename(src_dataset, '{}.old'.format(src_dataset))
     os.rename(dst_dataset, src_dataset)
-    click.echo('Done!')
+    print('Done!')
   except:
-    click.echo("Error while attempting to rename intermediate translated dataset!")
+    print("Error while attempting to rename intermediate translated dataset!")
     sys.exit(1)
 
+
+def setup_arg_parser():
+  parser = argparse.ArgumentParser()
+  parser.add_argument('-of', '--output_format',
+    default='GTiff',
+    help='Output format (a gdal driver).'
+  )
+  parser.add_argument('-ot', '--output_type',
+    default='Byte',
+    help='Output data type'
+  )
+  parser.add_argument('-r',  '--resample',
+    default='average',
+    help='Resampling algorithm to use.'
+  )
+  parser.add_argument('-nd', '-a_nodata', '--nodata',
+    default=255,
+    help='Override nodata value with this value'
+  )
+  parser.add_argument('--tmpdir',
+    help='Directory in which to store temporary files.'
+  )
+  parser.add_argument('-bs', '--blocksize', '-blocksize',
+    default=256,
+    help='Blocksize to use for new dataset.'
+  )
+  parser.add_argument('-cn', '--convert_nodata',
+    action='store_true',
+    help='Use a VRT trick to convert the value of nodata from src_dataset to the nodata value given to this script with the -nd argument.'
+  )
+  parser.add_argument('--copy_overviews',
+    action='store_true',
+    help='Copy the source dataset overviews.'
+  )
+  parser.add_argument('src_dataset')
+  return parser
+
+
 if __name__ == '__main__':
-  convert_to_cogeotiff()
+  parser = setup_arg_parser()
+  args = parser.parse_args()
+  print(args)
+  convert_to_cogeotiff(
+    args.output_format,
+    args.output_type,
+    args.resample,
+    args.nodata,
+    args.tmpdir,
+    args.blocksize,
+    args.convert_nodata, args.copy_overviews, args.src_dataset
+  )
+
