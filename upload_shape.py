@@ -18,11 +18,10 @@ def handler(event, context):
 
 	bucket = config['user_shapes_bucket']
 	params = event['queryStringParameters']
-	region = params['region']
 
 	hash_id = hashlib.md5(geobytes).hexdigest()
 	stage = os.environ['STAGE']
-	object_key = os.path.join(stage, region, hash_id)
+	object_key = os.path.join(stage, hash_id)
 
 	s3_client.put_object(
 		Body=geobytes,

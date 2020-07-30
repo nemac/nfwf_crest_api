@@ -221,7 +221,7 @@
     <NoDataValue>255</NoDataValue>
     <ColorInterp>Gray</ColorInterp>
     <ComplexSource>
-      <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/puerto-rico/byte/pr_combined_hub_group_070120_8bit.tif</SourceFilename>
+      <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/puerto-rico/byte/PR_Combined_Hub_group_July2020.tif</SourceFilename>
       <SourceBand>1</SourceBand>
       <SourceProperties RasterXSize="24461" RasterYSize="19092" DataType="Byte" BlockXSize="256" BlockYSize="256" />
       <SrcRect xOff="1847.54614996274" yOff="0" xSize="24461" ySize="19092" />

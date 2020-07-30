@@ -77,9 +77,9 @@
     <NoDataValue>255</NoDataValue>
     <ColorInterp>Gray</ColorInterp>
     <ComplexSource>
-      <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/CONUS_ResilienceHubs_121918.tif</SourceFilename>
+      <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/CONUS_ResilienceHubs_073020.tif</SourceFilename>
       <SourceBand>1</SourceBand>
-      <SourceProperties RasterXSize="154048" RasterYSize="96886" DataType="Byte" BlockXSize="128" BlockYSize="128" />
+      <SourceProperties RasterXSize="154048" RasterYSize="96886" DataType="Byte" BlockXSize="256" BlockYSize="256" />
       <SrcRect xOff="0" yOff="0" xSize="154048" ySize="96886" />
       <DstRect xOff="0" yOff="1241.23423432206" xSize="154048" ySize="96886" />
       <NODATA>255</NODATA>

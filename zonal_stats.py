@@ -36,8 +36,11 @@ def get_zonal_stat(arr):
   return result
 
 
-def get_response(geojson, region):
-  config = util.get_config()
+def get_response(geojson, region, local=False):
+  if local:
+    config = util.get_config('config.local.yml') 
+  else:   
+    config = util.get_config()
   data_source = config['vrt'][region]
   dataset_names = util.get_dataset_names(config, region)
 
