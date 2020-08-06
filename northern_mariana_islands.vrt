@@ -1,0 +1,208 @@
+<VRTDataset rasterXSize="25884" rasterYSize="43531">
+  <SRS>PROJCS["WGS 84 / UTM zone 55N",GEOGCS["WGS 84",DATUM["WGS_1984",SPHEROID["WGS 84",6378137,298.257223563,AUTHORITY["EPSG","7030"]],AUTHORITY["EPSG","6326"]],PRIMEM["Greenwich",0,AUTHORITY["EPSG","8901"]],UNIT["degree",0.0174532925199433,AUTHORITY["EPSG","9122"]],AUTHORITY["EPSG","4326"]],PROJECTION["Transverse_Mercator"],PARAMETER["latitude_of_origin",0],PARAMETER["central_meridian",147],PARAMETER["scale_factor",0.9996],PARAMETER["false_easting",500000],PARAMETER["false_northing",0],UNIT["metre",1,AUTHORITY["EPSG","9001"]],AXIS["Easting",EAST],AXIS["Northing",NORTH],AUTHORITY["EPSG","32655"]]</SRS>
+  <GeoTransform>  2.9710000000000000e+05,  3.0000000000000000e+00,  0.0000000000000000e+00,  1.6909559663213692e+06,  0.0000000000000000e+00, -3.0000000000000000e+00</GeoTransform>
+  <VRTRasterBand dataType="Byte" band="1">
+    <NoDataValue>255</NoDataValue>
+    <ColorInterp>Gray</ColorInterp>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/cnmi/CNMI_Asset_Index_10class.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="25888" RasterYSize="43535" DataType="Byte" BlockXSize="256" BlockYSize="256" />
+      <SrcRect xOff="5" yOff="0" xSize="25888" ySize="43535" />
+      <DstRect xOff="0" yOff="0.316140456590801" xSize="25888" ySize="43535" />
+      <NODATA>255</NODATA>
+    </ComplexSource>
+  </VRTRasterBand>
+<VRTRasterBand dataType="Byte" band="2">
+    <NoDataValue>255</NoDataValue>
+    <ColorInterp>Gray</ColorInterp>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/cnmi/CNMI_Critical_Facilities.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="25888" RasterYSize="43535" DataType="Byte" BlockXSize="256" BlockYSize="256" />
+      <SrcRect xOff="5" yOff="0" xSize="25888" ySize="43535" />
+      <DstRect xOff="0" yOff="0.316141880272577" xSize="25888" ySize="43535" />
+      <NODATA>255</NODATA>
+    </ComplexSource>
+  </VRTRasterBand>
+<VRTRasterBand dataType="Byte" band="3">
+    <NoDataValue>255</NoDataValue>
+    <ColorInterp>Gray</ColorInterp>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/cnmi/CNMI_Critical_Infrastructure.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="25888" RasterYSize="43535" DataType="Byte" BlockXSize="256" BlockYSize="256" />
+      <SrcRect xOff="5" yOff="0" xSize="25888" ySize="43535" />
+      <DstRect xOff="0" yOff="0.316140456590801" xSize="25888" ySize="43535" />
+      <NODATA>255</NODATA>
+    </ComplexSource>
+  </VRTRasterBand>
+<VRTRasterBand dataType="Byte" band="4">
+    <NoDataValue>255</NoDataValue>
+    <ColorInterp>Gray</ColorInterp>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/cnmi/CNMI_Erodible_Soils.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="25888" RasterYSize="43535" DataType="Byte" BlockXSize="256" BlockYSize="256" />
+      <SrcRect xOff="5" yOff="0" xSize="25888" ySize="43535" />
+      <DstRect xOff="0" yOff="0.316140456590801" xSize="25888" ySize="43535" />
+      <NODATA>255</NODATA>
+    </ComplexSource>
+  </VRTRasterBand>
+<VRTRasterBand dataType="Byte" band="5">
+    <NoDataValue>255</NoDataValue>
+    <ColorInterp>Gray</ColorInterp>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/cnmi/CNMI_Exposure_Index.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="25879" RasterYSize="43526" DataType="Byte" BlockXSize="256" BlockYSize="256" />
+      <SrcRect xOff="0" yOff="0" xSize="25879" ySize="43526" />
+      <DstRect xOff="0" yOff="5.3161404565908" xSize="25879" ySize="43526" />
+      <NODATA>255</NODATA>
+    </ComplexSource>
+  </VRTRasterBand>
+<VRTRasterBand dataType="Byte" band="6">
+    <NoDataValue>255</NoDataValue>
+    <ColorInterp>Gray</ColorInterp>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/cnmi/CNMI_Floodprone_Areas.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="25888" RasterYSize="43535" DataType="Byte" BlockXSize="256" BlockYSize="256" />
+      <SrcRect xOff="5" yOff="0" xSize="25888" ySize="43535" />
+      <DstRect xOff="0" yOff="0.316140456590801" xSize="25888" ySize="43535" />
+      <NODATA>255</NODATA>
+    </ComplexSource>
+  </VRTRasterBand>
+<VRTRasterBand dataType="Byte" band="7">
+    <NoDataValue>255</NoDataValue>
+    <ColorInterp>Gray</ColorInterp>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/cnmi/CNMI_Impermeable_Soils.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="25888" RasterYSize="43535" DataType="Byte" BlockXSize="256" BlockYSize="256" />
+      <SrcRect xOff="5" yOff="0" xSize="25888" ySize="43535" />
+      <DstRect xOff="0" yOff="0.316140456590801" xSize="25888" ySize="43535" />
+      <NODATA>255</NODATA>
+    </ComplexSource>
+  </VRTRasterBand>
+<VRTRasterBand dataType="Byte" band="8">
+    <NoDataValue>255</NoDataValue>
+    <ColorInterp>Gray</ColorInterp>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/cnmi/CNMI_Low_Lying_Areas.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="25879" RasterYSize="43526" DataType="Byte" BlockXSize="256" BlockYSize="256" />
+      <SrcRect xOff="0" yOff="0" xSize="25879" ySize="43526" />
+      <DstRect xOff="0" yOff="5.3161404565908" xSize="25879" ySize="43526" />
+      <NODATA>255</NODATA>
+    </ComplexSource>
+  </VRTRasterBand>
+<VRTRasterBand dataType="Byte" band="9">
+    <NoDataValue>255</NoDataValue>
+    <ColorInterp>Gray</ColorInterp>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/cnmi/CNMI_Marine_Index.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="25888" RasterYSize="43535" DataType="Byte" BlockXSize="256" BlockYSize="256" />
+      <SrcRect xOff="5" yOff="0" xSize="25888" ySize="43535" />
+      <DstRect xOff="0" yOff="0.316140456590801" xSize="25888" ySize="43535" />
+      <NODATA>255</NODATA>
+    </ComplexSource>
+  </VRTRasterBand>
+<VRTRasterBand dataType="Byte" band="10">
+    <NoDataValue>255</NoDataValue>
+    <ColorInterp>Gray</ColorInterp>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/cnmi/CNMI_Population_Density.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="25888" RasterYSize="43535" DataType="Byte" BlockXSize="256" BlockYSize="256" />
+      <SrcRect xOff="5" yOff="0" xSize="25888" ySize="43535" />
+      <DstRect xOff="0" yOff="0.316140456590801" xSize="25888" ySize="43535" />
+      <NODATA>255</NODATA>
+    </ComplexSource>
+  </VRTRasterBand>
+<VRTRasterBand dataType="Byte" band="11">
+    <NoDataValue>255</NoDataValue>
+    <ColorInterp>Gray</ColorInterp>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/cnmi/CNMI_Sea_Level_Rise.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="25888" RasterYSize="43535" DataType="Byte" BlockXSize="256" BlockYSize="256" />
+      <SrcRect xOff="5" yOff="0" xSize="25888" ySize="43535" />
+      <DstRect xOff="0" yOff="0.316140456590801" xSize="25888" ySize="43535" />
+      <NODATA>255</NODATA>
+    </ComplexSource>
+  </VRTRasterBand>
+<VRTRasterBand dataType="Byte" band="12">
+    <NoDataValue>255</NoDataValue>
+    <ColorInterp>Gray</ColorInterp>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/cnmi/CNMI_Social_Vulnerability.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="25888" RasterYSize="43535" DataType="Byte" BlockXSize="256" BlockYSize="256" />
+      <SrcRect xOff="5" yOff="0" xSize="25888" ySize="43535" />
+      <DstRect xOff="0" yOff="0.316140456590801" xSize="25888" ySize="43535" />
+      <NODATA>255</NODATA>
+    </ComplexSource>
+  </VRTRasterBand>
+<VRTRasterBand dataType="Byte" band="13">
+    <NoDataValue>255</NoDataValue>
+    <ColorInterp>Gray</ColorInterp>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/cnmi/CNMI_Terrestrial_Index.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="25888" RasterYSize="43535" DataType="Byte" BlockXSize="256" BlockYSize="256" />
+      <SrcRect xOff="5" yOff="0" xSize="25888" ySize="43535" />
+      <DstRect xOff="0" yOff="0.316140456590801" xSize="25888" ySize="43535" />
+      <NODATA>255</NODATA>
+    </ComplexSource>
+  </VRTRasterBand>
+<VRTRasterBand dataType="Byte" band="14">
+    <NoDataValue>255</NoDataValue>
+    <ColorInterp>Gray</ColorInterp>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/cnmi/CNMI_Threat_Index_10class.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="25879" RasterYSize="43526" DataType="Byte" BlockXSize="256" BlockYSize="256" />
+      <SrcRect xOff="0" yOff="0" xSize="25879" ySize="43526" />
+      <DstRect xOff="0" yOff="5.3161404565908" xSize="25879" ySize="43526" />
+      <NODATA>255</NODATA>
+    </ComplexSource>
+  </VRTRasterBand>
+<VRTRasterBand dataType="Byte" band="15">
+    <NoDataValue>255</NoDataValue>
+    <ColorInterp>Gray</ColorInterp>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/cnmi/CNMI_Wave_Driven_Flooding.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="25888" RasterYSize="43535" DataType="Byte" BlockXSize="256" BlockYSize="256" />
+      <SrcRect xOff="5" yOff="0" xSize="25888" ySize="43535" />
+      <DstRect xOff="0" yOff="0.316140456590801" xSize="25888" ySize="43535" />
+      <NODATA>255</NODATA>
+    </ComplexSource>
+  </VRTRasterBand>
+<VRTRasterBand dataType="Byte" band="16">
+    <NoDataValue>255</NoDataValue>
+    <ColorInterp>Gray</ColorInterp>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/cnmi/CNMI_Wildlife_Index.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="25888" RasterYSize="43535" DataType="Byte" BlockXSize="256" BlockYSize="256" />
+      <SrcRect xOff="5" yOff="0" xSize="25888" ySize="43535" />
+      <DstRect xOff="0" yOff="0.316140456590801" xSize="25888" ySize="43535" />
+      <NODATA>255</NODATA>
+    </ComplexSource>
+  </VRTRasterBand>
+<VRTRasterBand dataType="Byte" band="17">
+    <NoDataValue>255</NoDataValue>
+    <ColorInterp>Gray</ColorInterp>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/cnmi/CNMI_Combined_Hub_Group_July2020.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="25890" RasterYSize="43536" DataType="Byte" BlockXSize="256" BlockYSize="256" />
+      <SrcRect xOff="5.98742343885048" yOff="0" xSize="25890" ySize="43536" />
+      <DstRect xOff="0" yOff="0" xSize="25890" ySize="43536" />
+      <NODATA>255</NODATA>
+    </ComplexSource>
+  </VRTRasterBand>
+</VRTDataset>

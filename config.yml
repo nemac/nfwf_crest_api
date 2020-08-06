@@ -1,0 +1,184 @@
+
+dataset_bucket: nfwf-tool
+
+user_shapes_bucket: nfwf-tool-user-shapes
+
+vrt:
+  continental_us: continental_us.vrt
+  puerto_rico: puerto_rico.vrt
+  us_virgin_islands: virgin_islands.vrt
+  northern_mariana_islands: northern_mariana_islands.vrt
+
+datasets:
+
+  continental_us:
+    - name: exposure
+      path: CONUS_ExposureIndex_10class_111918.tif
+    - name: asset
+      path: CONUS_AssetIndex_10class_111918.tif
+    - name: threat
+      path: CONUS_ThreatIndex_10class_111918.tif
+    - name: wildlife
+      path: CONUS_CombinedFW_reclassCREST.tif
+    - name: aquatic
+      path: CONUS_AquaticIndex_clip_111218.tif
+    - name: terrestrial
+      path: CONUS_TerrestrialIndex_clip_111218.tif
+    - name: hubs
+      path: CONUS_ResilienceHubs_073020.tif
+    - name: crit_infra
+      path: asset-inputs/CONUS_CritInfra_shift_111518.tif
+    - name: crit_facilities
+      path: asset-inputs/CONUS_CritFac_shift_111918.tif
+    - name: pop_density
+      path: asset-inputs/CONUS_Population_shift_110718.tif
+    - name: social_vuln
+      path: asset-inputs/CONUS_SocVul_shift_110718.tif
+    - name: drainage
+      path: threat-inputs/CONUS_DrainDev_shift_111418.tif
+    - name: erosion
+      path: threat-inputs/CONUS_Erosion_111418.tif
+    - name: floodprone_areas
+      path: threat-inputs/CONUS_Floodprone_shift_111418.tif
+    - name: geostress
+      path: threat-inputs/CONUS_Geostress_shift_111518.tif
+    - name: sea_level_rise
+      path: threat-inputs/CONUS_SLR_shift_110918.tif
+    - name: slope
+      path: threat-inputs/CONUS_Slope_shift_111918.tif
+    - name: storm_surge
+      path: threat-inputs/CONUS_StormSurge_shift_111618.tif
+
+  puerto_rico:
+    - name: exposure
+      path: puerto-rico/byte/PR_ExposureIndex_10class_021120_clip.tif
+    - name: asset
+      path: puerto-rico/byte/PR_AssetIndex_10class_021020_clip.tif
+    - name: wildlife
+      path: puerto-rico/byte/PR_CombinedWildlife_6class_040320.tif
+    - name: crit_facilities
+      path: puerto-rico/byte/PR_CriticalFacilities_v2_clip.tif
+    - name: crit_infra
+      path: puerto-rico/byte/PR_CriticalInfrastructure_v2_clip.tif
+    - name: erosion
+      path: puerto-rico/byte/PR_ErodibleSoils_v2_clip.tif
+    - name: floodprone_areas
+      path: puerto-rico/byte/PR_FloodproneAreas_v2_clip.tif
+    - name: impermeable
+      path: puerto-rico/byte/PR_Impermeable_v2_clip.tif
+    - name: landslides
+      path: puerto-rico/byte/PR_Landslides_v2_clip.tif
+    - name: low_areas
+      path: puerto-rico/byte/PR_LowLyingAreas_v2_clip.tif
+    - name: marine
+      path: puerto-rico/byte/PR_MarineIndex_4class.tif
+    - name: pop_density
+      path: puerto-rico/byte/PR_PopulationDensity_v2_clip.tif
+    - name: sea_level_rise
+      path: puerto-rico/byte/PR_SLR_v2_clip.tif
+    - name: social_vuln
+      path: puerto-rico/byte/PR_SocialVulnerability_v2_clip.tif
+    - name: storm_surge
+      path: puerto-rico/byte/PR_StormSurge_v2_clip.tif
+    - name: terrestrial
+      path: puerto-rico/byte/PR_TerrestrialIndex_4class.tif
+    - name: threat
+      path: puerto-rico/byte/PR_ThreatIndex_10class_021120_clip.tif
+    - name: tsunami
+      path: puerto-rico/byte/PR_Tsunami_v2_clip.tif
+    - name: hubs
+      path: puerto-rico/byte/PR_Combined_Hub_group_July2020.tif
+
+  us_virgin_islands:
+    - name: exposure
+      path: us-virgin-islands/byte/USVI_ExposureIndex_10class_021220_clip.tif
+    - name: threat
+      path: us-virgin-islands/byte/USVI_ThreatIndex_10class_021220_clip.tif
+    - name: asset
+      path: us-virgin-islands/byte/USVI_AssetIndex_10class_021020_clip.tif
+    - name: wildlife
+      path: us-virgin-islands/byte/USVI_CombinedWildlife_6class_040320.tif
+    - name: crit_facilities
+      path: us-virgin-islands/byte/USVI_CriticalFacilities_v2_clip.tif
+    - name: crit_infra
+      path: us-virgin-islands/byte/USVI_CriticalInfrastructure_v2_clip.tif
+    - name: erosion
+      path: us-virgin-islands/byte/USVI_ErodibleSoils_v2_clip.tif
+    - name: floodprone_areas
+      path: us-virgin-islands/byte/USVI_FloodproneAreas_v2_clip.tif
+    - name: impermeable
+      path: us-virgin-islands/byte/USVI_Impermeable_v2_clip.tif
+    - name: low_areas
+      path: us-virgin-islands/byte/USVI_LowLyingAreas_v2_clip.tif
+    - name: marine
+      path: us-virgin-islands/byte/USVI_MarineIndex_4class.tif
+    - name: pop_density
+      path: us-virgin-islands/byte/USVI_PopulationDensity_v2_clip.tif
+    - name: sea_level_rise
+      path: us-virgin-islands/byte/USVI_SLR_v2_clip.tif
+    - name: social_vuln
+      path: us-virgin-islands/byte/USVI_SocialVulnerability_v2_clip.tif
+    - name: storm_surge
+      path: us-virgin-islands/byte/USVI_StormSurge_v2_clip.tif
+    - name: terrestrial
+      path: us-virgin-islands/byte/USVI_TerrestrialIndex_4class.tif
+    - name: hubs
+      path: us-virgin-islands/byte/USVI_Combined_Hub_Groups_July2020.tif
+
+  northern_mariana_islands:
+    - name: asset
+      path: cnmi/CNMI_Asset_Index_10class.tif
+    - name: crit_facilities
+      path: cnmi/CNMI_Critical_Facilities.tif
+    - name: crit_infra
+      path: cnmi/CNMI_Critical_Infrastructure.tif
+    - name: erosion
+      path: cnmi/CNMI_Erodible_Soils.tif
+    - name: exposure
+      path: cnmi/CNMI_Exposure_Index.tif
+    - name: floodprone_areas
+      path: cnmi/CNMI_Floodprone_Areas.tif
+    - name: impermeable
+      path: cnmi/CNMI_Impermeable_Soils.tif
+    - name: low_areas
+      path: cnmi/CNMI_Low_Lying_Areas.tif
+    - name: marine
+      path: cnmi/CNMI_Marine_Index.tif
+    - name: pop_density
+      path: cnmi/CNMI_Population_Density.tif
+    - name: sea_level_rise
+      path: cnmi/CNMI_Sea_Level_Rise.tif
+    - name: social_vuln
+      path: cnmi/CNMI_Social_Vulnerability.tif
+    - name: terrestrial
+      path: cnmi/CNMI_Terrestrial_Index.tif
+    - name: threat
+      path: cnmi/CNMI_Threat_Index_10class.tif
+    - name: wave_flooding
+      path: cnmi/CNMI_Wave_Driven_Flooding.tif
+    - name: wildlife
+      path: cnmi/CNMI_Wildlife_Index.tif
+    - name: hubs
+      path: cnmi/CNMI_Combined_Hub_Group_July2020.tif
+
+
+test:
+  points:
+    continental_us:
+      lat: 35.89
+      lng: -79.45
+    puerto_rico:
+      lat: 18.28
+      lng: -66.42
+    us_virgin_islands:
+      lat: 17.77
+      lng: -64.79
+    northern_mariana_islands:
+      lat: 15.203017
+      lng: 145.72
+  polygons:
+    continental_us: '{"type":"FeatureCollection","name":"test-ar","features":[{"type":"Feature","properties":{"id":"conus_poly"},"geometry":{"type":"Polygon","coordinates":[[[-80.01149654388428,32.887677980874706],[-80.01911401748657,32.88337138447869],[-80.01553058624268,32.87764094428261],[-80.00417947769165,32.882578515468],[-80.01149654388428,32.887677980874706]]]}}]}'
+    puerto_rico: '{"type":"FeatureCollection","features":[{"type":"Feature","properties":{"id":"puerto_rico_poly"},"geometry":{"type":"Polygon","coordinates":[[[-66.19537353515625,18.374075820054482],[-66.2750244140625,18.312810846425442],[-66.15966796875,18.272390159624983],[-66.08963012695312,18.380592091462194],[-66.2091064453125,18.4209874751591],[-66.19537353515625,18.374075820054482]]]}}]}'
+    us_virgin_islands: '{"type":"FeatureCollection","features":[{"type":"Feature","properties":{"id":"us_virgin_islands_poly"},"geometry":{"type":"Polygon","coordinates":[[[-64.78466033935547,17.768958359342278],[-64.80199813842773,17.73854993679923],[-64.75187301635742,17.729230192705025],[-64.7398567199707,17.756534036838417],[-64.78260040283203,17.77402592723689],[-64.78466033935547,17.768958359342278]]]}}]}'
+    northern_mariana_islands: '{"type":"FeatureCollection","features":[{"type":"Feature","properties":{"id":"cnmi_poly"},"geometry":{"type":"Polygon","coordinates":[[[145.77878952026367,15.228125499059319],[145.77394008636475,15.225475339228003],[145.7759141921997,15.221707085774053],[145.78372478485107,15.222328231095478],[145.78308105468747,15.226013655644088],[145.77878952026367,15.228125499059319]]]}}]}'
+
