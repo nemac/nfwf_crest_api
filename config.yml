@@ -165,13 +165,13 @@ datasets:
 
   hawaii:
     - name: asset
-      path: Hawaii/HI_Asset_Index_10class_100220.tif
+      path: Hawaii/HI_Asset_Index_10class_102720.tif
     - name: crit_facilities
-      path: Hawaii/HI_Crit_Facilities_091020.tif
+      path: Hawaii/HI_Crit_Facilities_102720.tif
     - name: crit_infra
       path: Hawaii/HI_Crit_Infrastructure_091020.tif
     - name: exposure
-      path: Hawaii/HI_Exposure_Index_10class_100220.tif
+      path: Hawaii/HI_Exposure_Index_10class_102820.tif
     - name: floodprone_areas
       path: Hawaii/HI_Floodprone_Areas_091120.tif
     - name: impermeable
@@ -181,7 +181,7 @@ datasets:
     - name: low_areas
       path: Hawaii/HI_LowLyingAreas_091120.tif
     - name: marine
-      path: Hawaii/HI_Marine_Index_4class_092520.tif
+      path: Hawaii/HI_Marine_Index_4class_102820.tif
     - name: pop_density
       path: Hawaii/HI_Pop_Density_091020.tif
     - name: sea_level_rise
@@ -193,13 +193,15 @@ datasets:
     - name: storm_surge
       path: Hawaii/HI_Storm_Surge_091120.tif
     - name: terrestrial
-      path: Hawaii/HI_Terrestrial_Index_4class_092520.tif
+      path: Hawaii/HI_Terrestrial_Index_4class_102720.tif
     - name: threat
       path: Hawaii/HI_Threat_Index_10class_091120.tif
     - name: tsunami
       path: Hawaii/HI_Tsunami_Evac_091120.tif
     - name: wildlife
-      path: Hawaii/HI_Wildlife_Index_6class_092520.tif
+      path: Hawaii/HI_Wildlife_Index_6class_102820.tif
+    - name: hubs
+      path: Hawaii/hi_cores_hubs_111920.tif
 
 
 test:
