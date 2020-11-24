@@ -127,7 +127,7 @@ def setup_arg_parser():
     help='Chain of GDAL VSI drivers to use for accessing source data.'
   )
   parser.add_argument('--local', action='store_true',
-    help='Use local datasets instead of cloud-hosted datasets. The value of --vsistring will not be used if this flag is used.'
+    help='Use local datasets instead of cloud-hosted datasets. The value of --vsistring will not be used if this flag is used. The default config file will change to config.local.yml, which can be overridden by the -c flag.'
   )
   # TODO make sure this works for cloud and disk
   #  - vrt driver string needs to come first in cloud case
@@ -143,14 +143,7 @@ def setup_arg_parser():
 if __name__ == '__main__':
   parser = setup_arg_parser()
   args = parser.parse_args()
-  f = args.config
-  region = args.region
+  f = args.config if not args.local else 'config.local.yml'
   b = args.target_raster_band
-  vrtnodata = args.vrtnodata
-  is_local = args.local
-  vsi = args.vsistring if not is_local else None
-  dir_path = args.path
-  if is_local and not dir_path:
-    print('Error: --dir_path is required when using --local')
-    sys.exit()
-  build_full_vrt(f, region, b, vrtnodata, vsi, dir_path, is_local)
+  vsi = args.vsistring if not args.local else None
+  build_full_vrt(f, args.region, b, args.vrtnodata, vsi, args.path, args.local)

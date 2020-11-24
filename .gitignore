@@ -1,4 +1,16 @@
 
+*.tif
+*.zip
+
+# Shapefile
+
+*.cpg
+*.dbf
+*.prj
+*.qpj
+*.shp
+*.shx
+
 # Ignore local VRTs
 *.local.vrt
 
