@@ -1,0 +1,232 @@
+<VRTDataset rasterXSize="57269" rasterYSize="36764">
+  <SRS dataAxisToSRSAxisMapping="1,2">PROJCS["NAD_1983_UTM_Zone_4N",GEOGCS["NAD83",DATUM["North_American_Datum_1983",SPHEROID["GRS 1980",6378137,298.257222101004,AUTHORITY["EPSG","7019"]],AUTHORITY["EPSG","6269"]],PRIMEM["Greenwich",0],UNIT["degree",0.0174532925199433,AUTHORITY["EPSG","9122"]],AUTHORITY["EPSG","4269"]],PROJECTION["Transverse_Mercator"],PARAMETER["latitude_of_origin",0],PARAMETER["central_meridian",-159],PARAMETER["scale_factor",0.9996],PARAMETER["false_easting",500000],PARAMETER["false_northing",0],UNIT["metre",1,AUTHORITY["EPSG","9001"]],AXIS["Easting",EAST],AXIS["Northing",NORTH],AUTHORITY["EPSG","26904"]]</SRS>
+  <GeoTransform>  3.7009485333059006e+05,  1.0000000000000000e+01,  0.0000000000000000e+00,  2.4609830429999996e+06,  0.0000000000000000e+00, -1.0000000000000000e+01</GeoTransform>
+  <VRTRasterBand dataType="Byte" band="1">
+    <NoDataValue>255</NoDataValue>
+    <ColorInterp>Gray</ColorInterp>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/Hawaii/HI_Asset_Index_10class_102720.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="57044" RasterYSize="36760" DataType="Byte" BlockXSize="128" BlockYSize="128" />
+      <SrcRect xOff="0.102019845531322" yOff="0" xSize="57043.8979801545" ySize="36759" />
+      <DstRect xOff="0" yOff="5" xSize="57043.8979801545" ySize="36759" />
+      <NODATA>255</NODATA>
+    </ComplexSource>
+  </VRTRasterBand>
+<VRTRasterBand dataType="Byte" band="2">
+    <NoDataValue>255</NoDataValue>
+    <ColorInterp>Gray</ColorInterp>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/Hawaii/HI_Crit_Facilities_102720.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="57045" RasterYSize="36760" DataType="Byte" BlockXSize="128" BlockYSize="128" />
+      <SrcRect xOff="0.102019845531322" yOff="0" xSize="57044.8979801545" ySize="36759" />
+      <DstRect xOff="0" yOff="5" xSize="57044.8979801545" ySize="36759" />
+      <NODATA>255</NODATA>
+    </ComplexSource>
+  </VRTRasterBand>
+<VRTRasterBand dataType="Byte" band="3">
+    <NoDataValue>255</NoDataValue>
+    <ColorInterp>Gray</ColorInterp>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/Hawaii/HI_Crit_Infrastructure_091020.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="57045" RasterYSize="36760" DataType="Byte" BlockXSize="128" BlockYSize="128" />
+      <SrcRect xOff="1.10201305898372" yOff="0" xSize="57043.897986941" ySize="36759" />
+      <DstRect xOff="0" yOff="5" xSize="57043.897986941" ySize="36759" />
+      <NODATA>255</NODATA>
+    </ComplexSource>
+  </VRTRasterBand>
+<VRTRasterBand dataType="Byte" band="4">
+    <NoDataValue>255</NoDataValue>
+    <ColorInterp>Gray</ColorInterp>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/Hawaii/HI_Exposure_Index_10class_102820.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="57043" RasterYSize="36746" DataType="Byte" BlockXSize="128" BlockYSize="128" />
+      <SrcRect xOff="0" yOff="0" xSize="57043" ySize="36745.6864207191" />
+      <DstRect xOff="0" yOff="18.3135792808607" xSize="57043" ySize="36745.6864207191" />
+      <NODATA>255</NODATA>
+    </ComplexSource>
+  </VRTRasterBand>
+<VRTRasterBand dataType="Byte" band="5">
+    <NoDataValue>255</NoDataValue>
+    <ColorInterp>Gray</ColorInterp>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/Hawaii/HI_Floodprone_Areas_091120.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="57045" RasterYSize="36760" DataType="Byte" BlockXSize="128" BlockYSize="128" />
+      <SrcRect xOff="0" yOff="0" xSize="57045" ySize="36759.6864199927" />
+      <DstRect xOff="0" yOff="4.31358000729233" xSize="57045" ySize="36759.6864199927" />
+      <NODATA>255</NODATA>
+    </ComplexSource>
+  </VRTRasterBand>
+<VRTRasterBand dataType="Byte" band="6">
+    <NoDataValue>255</NoDataValue>
+    <ColorInterp>Gray</ColorInterp>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/Hawaii/HI_Impermeable_Soils_091120.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="57045" RasterYSize="36760" DataType="Byte" BlockXSize="128" BlockYSize="128" />
+      <SrcRect xOff="0" yOff="0" xSize="57045" ySize="36759.6864199927" />
+      <DstRect xOff="0" yOff="4.31358000729233" xSize="57045" ySize="36759.6864199927" />
+      <NODATA>255</NODATA>
+    </ComplexSource>
+  </VRTRasterBand>
+<VRTRasterBand dataType="Byte" band="7">
+    <NoDataValue>255</NoDataValue>
+    <ColorInterp>Gray</ColorInterp>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/Hawaii/HI_LandslideSuscept_091120.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="57045" RasterYSize="36760" DataType="Byte" BlockXSize="128" BlockYSize="128" />
+      <SrcRect xOff="0" yOff="0" xSize="57045" ySize="36759.6864199927" />
+      <DstRect xOff="0" yOff="4.31358000729233" xSize="57045" ySize="36759.6864199927" />
+      <NODATA>255</NODATA>
+    </ComplexSource>
+  </VRTRasterBand>
+<VRTRasterBand dataType="Byte" band="8">
+    <NoDataValue>255</NoDataValue>
+    <ColorInterp>Gray</ColorInterp>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/Hawaii/HI_LowLyingAreas_091120.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="57045" RasterYSize="36747" DataType="Byte" BlockXSize="128" BlockYSize="128" />
+      <SrcRect xOff="0" yOff="0" xSize="57045" ySize="36745.6864199927" />
+      <DstRect xOff="0" yOff="18.3135800072923" xSize="57045" ySize="36745.6864199927" />
+      <NODATA>255</NODATA>
+    </ComplexSource>
+  </VRTRasterBand>
+<VRTRasterBand dataType="Byte" band="9">
+    <NoDataValue>255</NoDataValue>
+    <ColorInterp>Gray</ColorInterp>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/Hawaii/HI_Marine_Index_4class_102820.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="57045" RasterYSize="36760" DataType="Byte" BlockXSize="128" BlockYSize="128" />
+      <SrcRect xOff="0.657851478317752" yOff="0" xSize="57044.3421485217" ySize="36759.0265804392" />
+      <DstRect xOff="0" yOff="4.97341956077144" xSize="57044.3421485217" ySize="36759.0265804392" />
+      <NODATA>255</NODATA>
+    </ComplexSource>
+  </VRTRasterBand>
+<VRTRasterBand dataType="Byte" band="10">
+    <NoDataValue>255</NoDataValue>
+    <ColorInterp>Gray</ColorInterp>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/Hawaii/HI_Pop_Density_091020.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="57052" RasterYSize="36767" DataType="Byte" BlockXSize="128" BlockYSize="128" />
+      <SrcRect xOff="3.10201305898372" yOff="0" xSize="57048.897986941" ySize="36764" />
+      <DstRect xOff="0" yOff="0" xSize="57048.897986941" ySize="36764" />
+      <NODATA>255</NODATA>
+    </ComplexSource>
+  </VRTRasterBand>
+<VRTRasterBand dataType="Byte" band="11">
+    <NoDataValue>255</NoDataValue>
+    <ColorInterp>Gray</ColorInterp>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/Hawaii/HI_SLRXA_091120.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="57045" RasterYSize="36760" DataType="Byte" BlockXSize="128" BlockYSize="128" />
+      <SrcRect xOff="0" yOff="0" xSize="57045" ySize="36759.6864207191" />
+      <DstRect xOff="0" yOff="4.31357928086072" xSize="57045" ySize="36759.6864207191" />
+      <NODATA>255</NODATA>
+    </ComplexSource>
+  </VRTRasterBand>
+<VRTRasterBand dataType="Byte" band="12">
+    <NoDataValue>255</NoDataValue>
+    <ColorInterp>Gray</ColorInterp>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/Hawaii/HI_Soc_Vulnerability_091020.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="57052" RasterYSize="36767" DataType="Byte" BlockXSize="128" BlockYSize="128" />
+      <SrcRect xOff="3.10201984553132" yOff="0" xSize="57048.8979801545" ySize="36764" />
+      <DstRect xOff="0" yOff="0" xSize="57048.8979801545" ySize="36764" />
+      <NODATA>255</NODATA>
+    </ComplexSource>
+  </VRTRasterBand>
+<VRTRasterBand dataType="Byte" band="13">
+    <NoDataValue>255</NoDataValue>
+    <ColorInterp>Gray</ColorInterp>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/Hawaii/HI_Soil_Erodibility_091120.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="57045" RasterYSize="36760" DataType="Byte" BlockXSize="128" BlockYSize="128" />
+      <SrcRect xOff="0" yOff="0" xSize="57045" ySize="36759.6864199927" />
+      <DstRect xOff="0" yOff="4.31358000729233" xSize="57045" ySize="36759.6864199927" />
+      <NODATA>255</NODATA>
+    </ComplexSource>
+  </VRTRasterBand>
+<VRTRasterBand dataType="Byte" band="14">
+    <NoDataValue>255</NoDataValue>
+    <ColorInterp>Gray</ColorInterp>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/Hawaii/HI_Storm_Surge_091120.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="57045" RasterYSize="36760" DataType="Byte" BlockXSize="128" BlockYSize="128" />
+      <SrcRect xOff="0" yOff="0" xSize="57045" ySize="36759.6864199927" />
+      <DstRect xOff="0" yOff="4.31358000729233" xSize="57045" ySize="36759.6864199927" />
+      <NODATA>255</NODATA>
+    </ComplexSource>
+  </VRTRasterBand>
+<VRTRasterBand dataType="Byte" band="15">
+    <NoDataValue>255</NoDataValue>
+    <ColorInterp>Gray</ColorInterp>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/Hawaii/HI_Terrestrial_Index_4class_102720.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="57045" RasterYSize="36760" DataType="Byte" BlockXSize="128" BlockYSize="128" />
+      <SrcRect xOff="0.657851478317752" yOff="0" xSize="57044.3421485217" ySize="36759.0265804392" />
+      <DstRect xOff="0" yOff="4.97341956077144" xSize="57044.3421485217" ySize="36759.0265804392" />
+      <NODATA>255</NODATA>
+    </ComplexSource>
+  </VRTRasterBand>
+<VRTRasterBand dataType="Byte" band="16">
+    <NoDataValue>255</NoDataValue>
+    <ColorInterp>Gray</ColorInterp>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/Hawaii/HI_Threat_Index_10class_091120.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="57045" RasterYSize="36746" DataType="Byte" BlockXSize="128" BlockYSize="128" />
+      <SrcRect xOff="0" yOff="0" xSize="57045" ySize="36745.6864207191" />
+      <DstRect xOff="0" yOff="18.3135792808607" xSize="57045" ySize="36745.6864207191" />
+      <NODATA>255</NODATA>
+    </ComplexSource>
+  </VRTRasterBand>
+<VRTRasterBand dataType="Byte" band="17">
+    <NoDataValue>255</NoDataValue>
+    <ColorInterp>Gray</ColorInterp>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/Hawaii/HI_Tsunami_Evac_091120.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="57045" RasterYSize="36760" DataType="Byte" BlockXSize="128" BlockYSize="128" />
+      <SrcRect xOff="0" yOff="0" xSize="57045" ySize="36759.6864199927" />
+      <DstRect xOff="0" yOff="4.31358000729233" xSize="57045" ySize="36759.6864199927" />
+      <NODATA>255</NODATA>
+    </ComplexSource>
+  </VRTRasterBand>
+<VRTRasterBand dataType="Byte" band="18">
+    <NoDataValue>255</NoDataValue>
+    <ColorInterp>Gray</ColorInterp>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/Hawaii/HI_Wildlife_Index_6class_102820.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="57045" RasterYSize="36760" DataType="Byte" BlockXSize="128" BlockYSize="128" />
+      <SrcRect xOff="0.657851478317752" yOff="0" xSize="57044.3421485217" ySize="36759.0265804392" />
+      <DstRect xOff="0" yOff="4.97341956077144" xSize="57044.3421485217" ySize="36759.0265804392" />
+      <NODATA>255</NODATA>
+    </ComplexSource>
+  </VRTRasterBand>
+<VRTRasterBand dataType="Byte" band="19">
+    <NoDataValue>255</NoDataValue>
+    <ColorInterp>Gray</ColorInterp>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/Hawaii/hi_cores_hubs_111920.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="57837" RasterYSize="36627" DataType="Byte" BlockXSize="128" BlockYSize="128" />
+      <SrcRect xOff="568.085333091103" yOff="0" xSize="57268.9146669089" ySize="36566.0956934643" />
+      <DstRect xOff="0" yOff="197.904306535702" xSize="57268.9146669089" ySize="36566.0956934643" />
+      <NODATA>255</NODATA>
+    </ComplexSource>
+  </VRTRasterBand>
+</VRTDataset>

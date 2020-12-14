@@ -160,6 +160,48 @@ config = {
       'wave_flooding': 'wave_flood',
       'rank_val': 'hub_rnk'
     }
+  },
+
+  'hawaii': {
+    'id': { 'in': 'TARGET_FID', 'out': 'TARGET_FID' },
+    'schema': OrderedDict({
+      'geometry': 'Polygon',
+      'properties': {
+        'TARGET_FID': 'int',
+        'wildlife': 'float',
+        'hub_rnk': 'int',
+        'acres': 'float',
+        'exposure': 'float',
+        'asset': 'float',
+        'threat': 'float',
+        'terrestri': 'float',
+        'crit_infra': 'float',
+        'crit_fac': 'float',
+        'pop_dens': 'float',
+        'soc_vuln': 'float',
+        'erosion': 'float',
+        'floodprone': 'float',
+        'slr': 'float',
+        'impermeabl': 'float',
+        'low_areas': 'float',
+        'marine': 'float',
+        'tsunami': 'float',
+        'landslides': 'float',
+        'stormsurge': 'float'
+      }
+    }),
+    'field_maps': {
+      'storm_surge': 'stormsurge',
+      'terrestrial': 'terrestri',
+      'crit_facilities': 'crit_fac',
+      'pop_density': 'pop_dens',
+      'social_vuln': 'soc_vuln',
+      'floodprone_areas': 'floodprone',
+      'sea_level_rise': 'slr',
+      'impermeable': 'impermeabl',
+      'hub_rank': 'hub_rnk'
+    }
   }
+
 
 }

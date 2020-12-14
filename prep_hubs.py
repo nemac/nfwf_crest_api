@@ -13,15 +13,17 @@ from hubs_config import config
 from zonal_stats import get_response
 from util import transform_geom
 
+from traceback import print_tb
 
-def get_stats_for(feature, region):
+
+def get_stats_for(feature, region, local):
   id_in = config[region]['id']['in']
   ID = str(feature['properties'][id_in])
   f_str = json.dumps(feature)
   fc = { "type": "FeatureCollection", "features": [ feature ] }
   try:
     # Set local to true to use config.local.yml
-    geojson = get_response(fc, region, True)
+    geojson = get_response(fc, region, local)
     return geojson['features'][0]
   except Exception as e:
     print('Failed:', ID)
@@ -35,6 +37,7 @@ def getFieldMappedKey(key, region):
 
 
 def conform_feature(feature, region):
+  print(feature)
   new_feature = feature.copy()
   props = new_feature['properties']
   means = props['mean'].copy()
@@ -62,16 +65,16 @@ def get_shp_out_at(shp_path, crs, region, append=False):
     return fiona.open(shp_path, 'w', crs=crs, driver='ESRI Shapefile', schema=config[region]['schema'])
 
 
-def main(shpfile_path_in, shpfile_path_out, region, epsg, proj_string):
+def main(shpfile_path_in, shpfile_path_out, region, epsg, proj_string, local):
 
   with fiona.Env():
     with fiona.open(shpfile_path_in) as shpfile_read:
       id_in = config[region]['id']['in']
       id_out = config[region]['id']['out']
       crs = shpfile_read.crs
-      if epsg and crs == {}:
+      if epsg:
         crs = from_epsg(int(epsg))
-      elif proj_string and crs == {}:
+      elif proj_string:
         crs = from_string(proj_string)
       elif not epsg and not proj_string and crs == {}:
         print('Error: the shapefile is reporting an empty CRS. You\'ll need to use the --epsg flag in order to process the provided shapefile, or retool your file.')
@@ -112,14 +115,16 @@ def main(shpfile_path_in, shpfile_path_out, region, epsg, proj_string):
             transformer = Transformer.from_crs(proj_string, 'epsg:4326', always_xy=True)
             new_geom = transform_geom(copy.deepcopy(native_geom), transformer)
             feature['geometry'] = new_geom
-            stats_feature = get_stats_for(feature, region)
+            stats_feature = get_stats_for(feature, region, local)
+            print(f'Stats feature: {stats_feature}')
             new_feature = conform_feature(stats_feature, region)
             new_feature['geometry'] = native_geom 
             shp_out.write(new_feature)
             print('Success:', new_feature['properties'][id_out])
           except Exception as e:
             print('Failed to write', f_id)
-            print(e)
+            print_tb(e.__traceback__)
+            
 
 
 def setup_argparser():
@@ -129,6 +134,7 @@ def setup_argparser():
   parser.add_argument('--region', required=True)
   parser.add_argument('--epsg')
   parser.add_argument('--proj_string')
+  parser.add_argument('--local', action='store_true', help='Use config.local.yml for local datasets')
   return parser
 
 
@@ -140,7 +146,8 @@ if __name__ == '__main__':
   region = args.region
   epsg = args.epsg
   proj_string = args.proj_string
+  local = args.local
   if epsg and proj_string:
     print('Error: you may use either --epsg or --proj_string, but not both.')
-  main(shp_path_in, shp_path_out, region, epsg, proj_string)
+  main(shp_path_in, shp_path_out, region, epsg, proj_string, local)
 
