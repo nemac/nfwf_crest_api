@@ -201,6 +201,45 @@ config = {
       'impermeable': 'impermeabl',
       'hub_rank': 'hub_rnk'
     }
+  },
+
+  'american_samoa': {
+    'id': { 'in': 'TARGET_ID', 'out': 'TARGET_FID' },
+    'schema': OrderedDict({
+      'geometry': 'Polygon',
+      'properties': {
+        'TARGET_FID': 'int',
+        'wildlife': 'float',
+        'hub_rnk': 'int',
+        #'acres': 'float',
+        'exposure': 'float',
+        'asset': 'float',
+        'threat': 'float',
+        'crit_infra': 'float',
+        'crit_fac': 'float',
+        'pop_dens': 'float',
+        'soc_vuln': 'float',
+        'floodprone': 'float',
+        'slr': 'float',
+        'impermeabl': 'float',
+        'marine': 'float',
+        'tsunami': 'float',
+        'wave_flooding': 'float',
+        'slope': 'float',
+        'terrestri': 'float'
+      }
+    }),
+    'field_maps': {
+      'TARGET_ID': 'TARGET_FID',
+      'terrestrial': 'terrestri',
+      'crit_facilities': 'crit_fac',
+      'pop_density': 'pop_dens',
+      'social_vuln': 'soc_vuln',
+      'floodprone_areas': 'floodprone',
+      'sea_level_rise': 'slr',
+      'impermeable': 'impermeabl',
+      'Rank': 'hub_rnk'
+    }
   }
 
 

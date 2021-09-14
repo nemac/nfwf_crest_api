@@ -37,7 +37,6 @@ def getFieldMappedKey(key, region):
 
 
 def conform_feature(feature, region):
-  print(feature)
   new_feature = feature.copy()
   props = new_feature['properties']
   means = props['mean'].copy()
@@ -94,8 +93,6 @@ def main(shpfile_path_in, shpfile_path_out, region, epsg, proj_string, local):
         # Start getting stats for unprocessed features
         shp_out = get_shp_out_at(shpfile_path_out, crs, region)
 
-      # A boolean to suppress logging excessive "skip" notifications
-      #  for features that have already been processed (they exist in shp_out already)
       skipped_recently = False
       for feature in shpfile_read:
         f_id = feature['properties'][id_in]
@@ -116,13 +113,14 @@ def main(shpfile_path_in, shpfile_path_out, region, epsg, proj_string, local):
             new_geom = transform_geom(copy.deepcopy(native_geom), transformer)
             feature['geometry'] = new_geom
             stats_feature = get_stats_for(feature, region, local)
-            print(f'Stats feature: {stats_feature}')
             new_feature = conform_feature(stats_feature, region)
             new_feature['geometry'] = native_geom 
             shp_out.write(new_feature)
             print('Success:', new_feature['properties'][id_out])
           except Exception as e:
+            import pdb; pdb.set_trace()
             print('Failed to write', f_id)
+            print(e)
             print_tb(e.__traceback__)
             
 

@@ -7,7 +7,6 @@ The serverless API powering the National Fish and Wildlife Foundation's [Coastal
 This repository uses the Serverless Framework to build, run, and test a serverless HTTP API that runs on AWS Lambda on the Python 3.8 runtime. In order to test locally you will need to install Python 3.8.
 
 
-
 ### Installing Python 3.8 using pyenv (Optional)
 
 We recommend using pyenv to manage Python installations.
@@ -28,13 +27,11 @@ There are several ways to set up virtual environments. Here are a few options:
 
 - [Pipenv](https://pipenv.pypa.io/en/latest/) is a well-supported environment manager. It plays nicely with pyenv as well. Once Pipenv is installed run `pipenv install -r requirements.txt` to set up your virtual environment and install dependencies.
 
-
 - If you're using pyenv on Linux or macOS, you can use the [pyenv-virtualenv](https://github.com/pyenv/pyenv-virtualenv#pyenv-virtualenv) pyenv plugin.
 
 - Python 3's built-in module [venv](https://docs.python.org/3/library/venv.html).
 
 - There's always the classic [virtualenv](https://virtualenv.pypa.io/en/latest/) library. If you go this route you might want to check out the popular tool [virtualenvwrapper](https://virtualenvwrapper.readthedocs.io/en/stable/).
-
 
 
 ### Install dependencies
@@ -47,6 +44,18 @@ There are several ways to set up virtual environments. Here are a few options:
 
 - Install serverless dependencies: `npm install`
 
+
+## Updating raster datasets
+
+Virtual Raster Tables are used for the raster API, mostly to speed up operations. Use `config.yml` to specify groups of rasters by region. Raster files for each region  must be in the same format, have the same data type and projection, and be hosted in the same S3 bucket. 
+
+To update or add a new dataset, upload the file to the S3 bucket and update `config.yml`. Then run `./build_vrt.py --region MY_REGION` where `MY_REGION` is the key in `config.yml` for the region affected by the changes. This will output a new VRT file for the updated region. At this point when you deploy a new API stage it will use the new VRT.
+
+## Preparing a hubs shapefile
+
+To prepare a new hubs shapefile, you will need an entry in `hubs_config.py` for the region you are preparing. The 'schema' key is used directly as the schema argument to fiona's `open` function when creating the output shapefile. Remember that field names in shapefiles cannot exceed 8 characters in length. You can use the `field_maps` key to define a set of mappings from the input shapefile and the zonal stats API to the final shapefile. Each entry in `field_maps` is a key/value pair where the key is either the name of a key in `['properties']['mean']` returned by the zonal stats API or a field in the input shapefile, and the value is the name of the corresponding field in the output shapefile (which must be defined in 'schema' to work).
+
+Once the new hubs file is ready, all you have to do is upload it to ArcGIS Online and host it as a new Feature Service. Remember to adjust the sharing settings to "Public" on the feature service once it completes.
 
 ## Run a local API
 

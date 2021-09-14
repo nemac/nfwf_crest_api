@@ -144,7 +144,7 @@ def run_all():
 		test_identify(config, verbose)
 		test_zonal_stats(config, verbose)
 		test_upload_shape(config, verbose)
-		test_nodata()
+		#test_nodata()
 
 
 if __name__ == '__main__':
