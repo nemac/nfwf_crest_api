@@ -7,6 +7,9 @@ import hashlib
 import rasterio as rio
 from util import get_config
 
+# Note: you'll need to run `sls offline` to start a local API
+# for this script to work correctly
+
 offline_api = 'http://localhost:3000/dev/'
 
 
@@ -144,7 +147,7 @@ def run_all():
 		test_identify(config, verbose)
 		test_zonal_stats(config, verbose)
 		test_upload_shape(config, verbose)
-		test_nodata()
+		#test_nodata()
 
 
 if __name__ == '__main__':

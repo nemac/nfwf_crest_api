@@ -1,3 +1,7 @@
+try:
+  import unzip_requirements
+except ImportError:
+  pass
 import boto3, os, json, hashlib, os.path
 import util
 

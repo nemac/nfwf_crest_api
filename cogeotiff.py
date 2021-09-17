@@ -15,7 +15,7 @@ python convert_to_cogeo.py --help
 
 import sys, os, os.path, argparse
 
-def convert_to_cogeotiff(of, ot, r, a_nodata, tmpdir, blocksize, convert_nodata, copy_overviews, src_dataset):
+def convert_to_cogeotiff(of, ot, r, a_nodata, tmpdir, blocksize, convert_nodata, srcnodata, copy_overviews, src_dataset):
   
   path_pair = os.path.split(src_dataset)
   filename_with_ext = path_pair[1]
@@ -42,6 +42,8 @@ def convert_to_cogeotiff(of, ot, r, a_nodata, tmpdir, blocksize, convert_nodata,
       vrtpath = os.path.join(tmpdir, filename_with_ext) + '.vrt'
       gdalbuildvrt = ['gdalbuildvrt']
       gdalbuildvrt.append('-vrtnodata {0}'.format(a_nodata))
+      if srcnodata:
+        gdalbuildvrt.append('-srcnodata {}'.format(srcnodata))
       gdalbuildvrt.append('"{0}" "{1}"'.format(vrtpath, src_dataset))
       gdalbuildvrt_command = ' '.join(gdalbuildvrt)
       print(gdalbuildvrt_command)
@@ -98,6 +100,7 @@ def setup_arg_parser():
     default=255,
     help='Override nodata value with this value'
   )
+  parser.add_argument('-srcnodata', default=None, help='Value to use for the -srcnodata flag in the intermediate VRT file.')
   parser.add_argument('--tmpdir',
     help='Directory in which to store temporary files.'
   )
@@ -128,6 +131,6 @@ if __name__ == '__main__':
     args.nodata,
     args.tmpdir,
     args.blocksize,
-    args.convert_nodata, args.copy_overviews, args.src_dataset
+    args.convert_nodata, args.srcnodata, args.copy_overviews, args.src_dataset
   )
 
