@@ -1,3 +1,7 @@
+try:
+  import unzip_requirements
+except ImportError:
+  pass
 import os, json
 from pyproj import Transformer
 from rasterio import Env, open
@@ -62,6 +66,5 @@ def get_response(geojson, region, local=False):
           index_name = dataset_names[i]
           mean = get_zonal_stat(arr[i])
           feature['properties']['mean'][index_name] = mean
-
   return geojson
 

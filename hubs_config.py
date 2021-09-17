@@ -25,7 +25,8 @@ config = {
         'geostress': 'float',
         'slr': 'float',
         'slope': 'float',
-        'stormsurge': 'float'
+        'stormsurge': 'float',
+        'erosion': 'float'
       }
     }),
     'field_maps': {
@@ -211,7 +212,6 @@ config = {
         'TARGET_FID': 'int',
         'wildlife': 'float',
         'hub_rnk': 'int',
-        #'acres': 'float',
         'exposure': 'float',
         'asset': 'float',
         'threat': 'float',
@@ -226,7 +226,8 @@ config = {
         'tsunami': 'float',
         'wave_flooding': 'float',
         'slope': 'float',
-        'terrestri': 'float'
+        'terrestri': 'float',
+        'erosion': 'float'
       }
     }),
     'field_maps': {

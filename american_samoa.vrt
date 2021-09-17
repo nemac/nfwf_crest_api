@@ -7,10 +7,10 @@
     <ComplexSource>
       <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/AmericanSamoa/AS_Asset_Index_10class_shift_v2-2_LZW.tif</SourceFilename>
       <SourceBand>1</SourceBand>
-      <SourceProperties RasterXSize="51528" RasterYSize="8259" DataType="Byte" BlockXSize="51528" BlockYSize="1" />
+      <SourceProperties RasterXSize="51528" RasterYSize="8259" DataType="Byte" BlockXSize="256" BlockYSize="256" />
       <SrcRect xOff="0" yOff="0" xSize="51528" ySize="8259" />
       <DstRect xOff="0" yOff="114519.666668111" xSize="51528" ySize="8259" />
-      <NODATA>-128</NODATA>
+      <NODATA>255</NODATA>
     </ComplexSource>
   </VRTRasterBand>
 <VRTRasterBand dataType="Byte" band="2">
@@ -19,10 +19,10 @@
     <ComplexSource>
       <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/AmericanSamoa/AS_C_Facilities_v1_LZW.tif</SourceFilename>
       <SourceBand>1</SourceBand>
-      <SourceProperties RasterXSize="51528" RasterYSize="8259" DataType="Byte" BlockXSize="51528" BlockYSize="1" />
+      <SourceProperties RasterXSize="51528" RasterYSize="8259" DataType="Byte" BlockXSize="256" BlockYSize="256" />
       <SrcRect xOff="0.5138049836969" yOff="0" xSize="51527.4861950163" ySize="8258.79072759177" />
       <DstRect xOff="0" yOff="114520.209272408" xSize="51527.4861950163" ySize="8258.79072759177" />
-      <NODATA>-128</NODATA>
+      <NODATA>255</NODATA>
     </ComplexSource>
   </VRTRasterBand>
 <VRTRasterBand dataType="Byte" band="3">
@@ -31,10 +31,10 @@
     <ComplexSource>
       <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/AmericanSamoa/AS_C_Infrastructure_v2-2_LZW.tif</SourceFilename>
       <SourceBand>1</SourceBand>
-      <SourceProperties RasterXSize="51528" RasterYSize="8259" DataType="Byte" BlockXSize="51528" BlockYSize="1" />
+      <SourceProperties RasterXSize="51528" RasterYSize="8259" DataType="Byte" BlockXSize="256" BlockYSize="256" />
       <SrcRect xOff="0.333333333333333" yOff="0" xSize="51527.6666666667" ySize="8259" />
       <DstRect xOff="0" yOff="114520" xSize="51527.6666666667" ySize="8259" />
-      <NODATA>-128</NODATA>
+      <NODATA>255</NODATA>
     </ComplexSource>
   </VRTRasterBand>
 <VRTRasterBand dataType="Byte" band="4">
@@ -43,10 +43,10 @@
     <ComplexSource>
       <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/AmericanSamoa/AS_Exposure_Index_10class_v2-2_LZW.tif</SourceFilename>
       <SourceBand>1</SourceBand>
-      <SourceProperties RasterXSize="51528" RasterYSize="8259" DataType="Byte" BlockXSize="51528" BlockYSize="1" />
+      <SourceProperties RasterXSize="51528" RasterYSize="8259" DataType="Byte" BlockXSize="256" BlockYSize="256" />
       <SrcRect xOff="0.333333333507956" yOff="0" xSize="51527.6666666665" ySize="8259" />
       <DstRect xOff="0" yOff="114520" xSize="51527.6666666665" ySize="8259" />
-      <NODATA>-128</NODATA>
+      <NODATA>255</NODATA>
     </ComplexSource>
   </VRTRasterBand>
 <VRTRasterBand dataType="Byte" band="5">
@@ -55,10 +55,10 @@
     <ComplexSource>
       <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/AmericanSamoa/AS_Floodprone_Areas_shift_v1_LZW.tif</SourceFilename>
       <SourceBand>1</SourceBand>
-      <SourceProperties RasterXSize="106234" RasterYSize="130230" DataType="Byte" BlockXSize="106234" BlockYSize="1" />
+      <SourceProperties RasterXSize="106234" RasterYSize="130230" DataType="Byte" BlockXSize="256" BlockYSize="256" />
       <SrcRect xOff="8806.33333333333" yOff="0" xSize="97427.6666666667" ySize="122779" />
       <DstRect xOff="0" yOff="0" xSize="97427.6666666667" ySize="122779" />
-      <NODATA>-128</NODATA>
+      <NODATA>255</NODATA>
     </ComplexSource>
   </VRTRasterBand>
 <VRTRasterBand dataType="Byte" band="6">
@@ -67,10 +67,10 @@
     <ComplexSource>
       <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/AmericanSamoa/AS_Impermeable_Surfaces_shift_v1_LZW.tif</SourceFilename>
       <SourceBand>1</SourceBand>
-      <SourceProperties RasterXSize="106234" RasterYSize="130230" DataType="Byte" BlockXSize="106234" BlockYSize="1" />
+      <SourceProperties RasterXSize="106234" RasterYSize="130230" DataType="Byte" BlockXSize="256" BlockYSize="256" />
       <SrcRect xOff="8806.33333333333" yOff="0" xSize="97427.6666666667" ySize="122779" />
       <DstRect xOff="0" yOff="0" xSize="97427.6666666667" ySize="122779" />
-      <NODATA>-128</NODATA>
+      <NODATA>255</NODATA>
     </ComplexSource>
   </VRTRasterBand>
 <VRTRasterBand dataType="Byte" band="7">
@@ -79,10 +79,10 @@
     <ComplexSource>
       <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/AmericanSamoa/AS_Slope_resample_v1_LZW.tif</SourceFilename>
       <SourceBand>1</SourceBand>
-      <SourceProperties RasterXSize="54050" RasterYSize="9493" DataType="Byte" BlockXSize="54050" BlockYSize="1" />
+      <SourceProperties RasterXSize="54050" RasterYSize="9493" DataType="Byte" BlockXSize="256" BlockYSize="256" />
       <SrcRect xOff="972.333333333333" yOff="0" xSize="53077.6666666667" ySize="8994" />
       <DstRect xOff="0" yOff="113785" xSize="53077.6666666667" ySize="8994" />
-      <NODATA>-128</NODATA>
+      <NODATA>255</NODATA>
     </ComplexSource>
   </VRTRasterBand>
 <VRTRasterBand dataType="Byte" band="8">
@@ -91,10 +91,10 @@
     <ComplexSource>
       <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/AmericanSamoa/AS_Marine_Index_4class_v2_LZW.tif</SourceFilename>
       <SourceBand>1</SourceBand>
-      <SourceProperties RasterXSize="51528" RasterYSize="8259" DataType="Byte" BlockXSize="51528" BlockYSize="1" />
+      <SourceProperties RasterXSize="51528" RasterYSize="8259" DataType="Byte" BlockXSize="256" BlockYSize="256" />
       <SrcRect xOff="0.5138049836969" yOff="0" xSize="51527.4861950163" ySize="8258.79072759177" />
       <DstRect xOff="0" yOff="114520.209272408" xSize="51527.4861950163" ySize="8258.79072759177" />
-      <NODATA>-128</NODATA>
+      <NODATA>255</NODATA>
     </ComplexSource>
   </VRTRasterBand>
 <VRTRasterBand dataType="Byte" band="9">
@@ -103,34 +103,34 @@
     <ComplexSource>
       <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/AmericanSamoa/AS_PopDensity_v1_LZW.tif</SourceFilename>
       <SourceBand>1</SourceBand>
-      <SourceProperties RasterXSize="51528" RasterYSize="8259" DataType="Byte" BlockXSize="51528" BlockYSize="1" />
+      <SourceProperties RasterXSize="51528" RasterYSize="8259" DataType="Byte" BlockXSize="256" BlockYSize="256" />
       <SrcRect xOff="0.333333333333333" yOff="0" xSize="51527.6666666667" ySize="8259" />
       <DstRect xOff="0" yOff="114520" xSize="51527.6666666667" ySize="8259" />
-      <NODATA>-128</NODATA>
+      <NODATA>255</NODATA>
     </ComplexSource>
   </VRTRasterBand>
 <VRTRasterBand dataType="Byte" band="10">
     <NoDataValue>255</NoDataValue>
     <ColorInterp>Gray</ColorInterp>
     <ComplexSource>
-      <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/AmericanSamoa/AS_SLR_shift_v1LZW.tif</SourceFilename>
+      <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/AmericanSamoa/AS_SLR_shift_v1_LZW.tif</SourceFilename>
       <SourceBand>1</SourceBand>
-      <SourceProperties RasterXSize="106234" RasterYSize="130230" DataType="Byte" BlockXSize="106234" BlockYSize="1" />
+      <SourceProperties RasterXSize="106234" RasterYSize="130230" DataType="Byte" BlockXSize="256" BlockYSize="256" />
       <SrcRect xOff="8806.33333333333" yOff="0" xSize="97427.6666666667" ySize="122779" />
       <DstRect xOff="0" yOff="0" xSize="97427.6666666667" ySize="122779" />
-      <NODATA>-128</NODATA>
+      <NODATA>255</NODATA>
     </ComplexSource>
   </VRTRasterBand>
 <VRTRasterBand dataType="Byte" band="11">
     <NoDataValue>255</NoDataValue>
     <ColorInterp>Gray</ColorInterp>
     <ComplexSource>
-      <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/AmericanSamoa/As_SocVul_v1_LZW.tif</SourceFilename>
+      <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/AmericanSamoa/AS_SocVul_v1_LZW.tif</SourceFilename>
       <SourceBand>1</SourceBand>
-      <SourceProperties RasterXSize="51528" RasterYSize="8259" DataType="Byte" BlockXSize="51528" BlockYSize="1" />
+      <SourceProperties RasterXSize="51528" RasterYSize="8259" DataType="Byte" BlockXSize="256" BlockYSize="256" />
       <SrcRect xOff="0.333333333333333" yOff="0" xSize="51527.6666666667" ySize="8259" />
       <DstRect xOff="0" yOff="114520" xSize="51527.6666666667" ySize="8259" />
-      <NODATA>-128</NODATA>
+      <NODATA>255</NODATA>
     </ComplexSource>
   </VRTRasterBand>
 <VRTRasterBand dataType="Byte" band="12">
@@ -139,10 +139,10 @@
     <ComplexSource>
       <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/AmericanSamoa/AS_Terrestrial_Index_4class_v2_LZW.tif</SourceFilename>
       <SourceBand>1</SourceBand>
-      <SourceProperties RasterXSize="51529" RasterYSize="8259" DataType="Byte" BlockXSize="51529" BlockYSize="1" />
+      <SourceProperties RasterXSize="51529" RasterYSize="8259" DataType="Byte" BlockXSize="256" BlockYSize="256" />
       <SrcRect xOff="0.513804082758725" yOff="0" xSize="51528.4861959172" ySize="8258.79073378816" />
       <DstRect xOff="0" yOff="114520.209266212" xSize="51528.4861959172" ySize="8258.79073378816" />
-      <NODATA>-128</NODATA>
+      <NODATA>255</NODATA>
     </ComplexSource>
   </VRTRasterBand>
 <VRTRasterBand dataType="Byte" band="13">
@@ -151,10 +151,10 @@
     <ComplexSource>
       <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/AmericanSamoa/AS_WaveDriven_Flooding_shift_v1_LZW.tif</SourceFilename>
       <SourceBand>1</SourceBand>
-      <SourceProperties RasterXSize="106234" RasterYSize="130230" DataType="Byte" BlockXSize="106234" BlockYSize="1" />
+      <SourceProperties RasterXSize="106234" RasterYSize="130230" DataType="Byte" BlockXSize="256" BlockYSize="256" />
       <SrcRect xOff="8806.33333333333" yOff="0" xSize="97427.6666666667" ySize="122779" />
       <DstRect xOff="0" yOff="0" xSize="97427.6666666667" ySize="122779" />
-      <NODATA>-128</NODATA>
+      <NODATA>255</NODATA>
     </ComplexSource>
   </VRTRasterBand>
 <VRTRasterBand dataType="Byte" band="14">
@@ -163,10 +163,10 @@
     <ComplexSource>
       <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/AmericanSamoa/AS_Threat_Index_10class_v2_LZW.tif</SourceFilename>
       <SourceBand>1</SourceBand>
-      <SourceProperties RasterXSize="51530" RasterYSize="8260" DataType="Byte" BlockXSize="51530" BlockYSize="1" />
+      <SourceProperties RasterXSize="51530" RasterYSize="8260" DataType="Byte" BlockXSize="256" BlockYSize="256" />
       <SrcRect xOff="1.33333333333333" yOff="0" xSize="51528.6666666667" ySize="8259" />
       <DstRect xOff="0" yOff="114520" xSize="51528.6666666667" ySize="8259" />
-      <NODATA>-128</NODATA>
+      <NODATA>255</NODATA>
     </ComplexSource>
   </VRTRasterBand>
 <VRTRasterBand dataType="Byte" band="15">
@@ -175,7 +175,7 @@
     <ComplexSource>
       <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/AmericanSamoa/AS_Tsunami_LZW.tif</SourceFilename>
       <SourceBand>1</SourceBand>
-      <SourceProperties RasterXSize="54051" RasterYSize="9493" DataType="Byte" BlockXSize="54051" BlockYSize="1" />
+      <SourceProperties RasterXSize="54051" RasterYSize="9493" DataType="Byte" BlockXSize="256" BlockYSize="256" />
       <SrcRect xOff="972.333333333333" yOff="0" xSize="53078.6666666667" ySize="8994" />
       <DstRect xOff="0" yOff="113785" xSize="53078.6666666667" ySize="8994" />
       <NODATA>255</NODATA>
@@ -187,10 +187,10 @@
     <ComplexSource>
       <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/AmericanSamoa/AS_Wildlife_Index_6class_v2_LZW.tif</SourceFilename>
       <SourceBand>1</SourceBand>
-      <SourceProperties RasterXSize="51528" RasterYSize="8259" DataType="Byte" BlockXSize="51528" BlockYSize="1" />
+      <SourceProperties RasterXSize="51528" RasterYSize="8259" DataType="Byte" BlockXSize="256" BlockYSize="256" />
       <SrcRect xOff="0.513804083825865" yOff="0" xSize="51527.4861959162" ySize="8258.79073378816" />
       <DstRect xOff="0" yOff="114520.209266212" xSize="51527.4861959162" ySize="8258.79073378816" />
-      <NODATA>-128</NODATA>
+      <NODATA>255</NODATA>
     </ComplexSource>
   </VRTRasterBand>
 <VRTRasterBand dataType="Byte" band="17">
@@ -199,9 +199,21 @@
     <ComplexSource>
       <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/AmericanSamoa/as_hubs_hexes_dissolve_8.tif</SourceFilename>
       <SourceBand>1</SourceBand>
-      <SourceProperties RasterXSize="31870" RasterYSize="39069" DataType="Byte" BlockXSize="31870" BlockYSize="1" />
-      <SrcRect xOff="2641.90000145026" yOff="0" xSize="29228" ySize="36834" />
-      <DstRect xOff="0" yOff="0" xSize="29228" ySize="36834" />
+      <SourceProperties RasterXSize="106234" RasterYSize="130230" DataType="Byte" BlockXSize="256" BlockYSize="256" />
+      <SrcRect xOff="8806.33333816752" yOff="0" xSize="97427.6666618325" ySize="122779" />
+      <DstRect xOff="0" yOff="0" xSize="97427.6666618325" ySize="122779" />
+      <NODATA>255</NODATA>
+    </ComplexSource>
+  </VRTRasterBand>
+<VRTRasterBand dataType="Byte" band="18">
+    <NoDataValue>255</NoDataValue>
+    <ColorInterp>Gray</ColorInterp>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/AmericanSamoa/AS_Erodible_Soils_shift_v1_LZW.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="106234" RasterYSize="130230" DataType="Byte" BlockXSize="256" BlockYSize="256" />
+      <SrcRect xOff="8806.33333333333" yOff="0" xSize="97427.6666666667" ySize="122779" />
+      <DstRect xOff="0" yOff="0" xSize="97427.6666666667" ySize="122779" />
       <NODATA>255</NODATA>
     </ComplexSource>
   </VRTRasterBand>
