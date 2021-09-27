@@ -118,7 +118,6 @@ def main(shpfile_path_in, shpfile_path_out, region, epsg, proj_string, local):
             shp_out.write(new_feature)
             print('Success:', new_feature['properties'][id_out])
           except Exception as e:
-            import pdb; pdb.set_trace()
             print('Failed to write', f_id)
             print(e)
             print_tb(e.__traceback__)

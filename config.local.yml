@@ -6,6 +6,8 @@ vrt:
   us_virgin_islands: virgin_islands.local.vrt
   northern_mariana_islands: northern_mariana_islands.local.vrt
   hawaii: hawaii.local.vrt
+  american_samoa: american_samoa.local.vrt
+  guam: guam.local.vrt
 
 datasets:
 
@@ -198,6 +200,86 @@ datasets:
       path: HI_Wildlife_Index_6class_102820.tif
     - name: hubs
       path: hi_cores_hubs_111920.tif
+
+  american_samoa:
+    - name: asset
+      path: AS_Asset_Index_10class_shift_v2-2_LZW.tif
+    - name: crit_facilities
+      path: AS_C_Facilities_v1_LZW.tif
+    - name: crit_infra
+      path: AS_C_Infrastructure_v2-2_LZW.tif
+    - name: exposure
+      path: AS_Exposure_Index_10class_v2-2_LZW.tif
+    - name: floodprone_areas
+      path: AS_Floodprone_Areas_shift_v1_LZW.tif
+    - name: impermeable
+      path: AS_Impermeable_Surfaces_shift_v1_LZW.tif
+    - name: slope
+      path: AS_Slope_resample_v1_LZW.tif
+    - name: marine
+      path: AS_Marine_Index_4class_v2_LZW.tif
+    - name: pop_density
+      path: AS_PopDensity_v1_LZW.tif
+    - name: sea_level_rise
+      path: AS_SLR_shift_v1_LZW.tif
+    - name: social_vuln
+      path: AS_SocVul_v1_LZW.tif
+    - name: terrestrial
+      path: AS_Terrestrial_Index_4class_v2_LZW.tif
+    - name: wave_flooding
+      path: AS_WaveDriven_Flooding_shift_v1_LZW.tif
+    - name: threat
+      path: AS_Threat_Index_10class_v2_LZW.tif
+    - name: tsunami
+      path: AS_Tsunami_LZW.tif
+    - name: wildlife
+      path: AS_Wildlife_Index_6class_v2_LZW.tif
+    - name: hubs
+      path: as_hubs_hexes_dissolve_8.tif
+    - name: erosion
+      path: AS_Erodible_Soils_shift_v1_LZW.tif
+
+  guam:
+    - name: asset
+      path: GU_Asset_Index_10class_v2.tif
+    - name: crit_facilities
+      path: GU_C_Facilities_v2.tif
+    - name: crit_infra
+      path: GU_C_Infrastructure_v2.tif
+    - name: erosion
+      path: GU_Erodible_Soils_shift_v1.tif
+    - name: exposure
+      path: GU_Exposure_Index_10class_v2.tif
+    - name: floodprone_areas
+      path: GU_Floodprone_Areas_shift_v1.tif
+    - name: hubs
+      path: gu_hubs_hexes_dissolve.tif
+    - name: impermeable
+      path: GU_Impermeable_Soils_shift_v1.tif 
+    - name: landslides
+      path: GU_Landslides_merge.tif
+    - name: marine
+      path: GU_Marine_Index_4class_v2.tif
+    - name: pop_density
+      path: GU_PopDensity_v1.tif
+    - name: sea_level_rise
+      path: GU_SLR_shift_v1.tif
+    - name: slope
+      path: GU_Slope_v1.tif
+    - name: social_vuln
+      path: GU_Social_Vulnerability_v1.tif
+    - name: terrestrial
+      path: GU_Terrestrial_index_4class_v3.tif
+    - name: threat
+      path: GU_Threat_Index_10class_v2.tif
+    - name: wave_flooding
+      path: GU_WaveDrivenFlooding_shift_v1.tif 
+    - name: wildlife
+      path: GU_Wildlife_Index_6class_.tif
+    - name: tsunami
+      path: GU_tsunami.tif
+    - name: wave_exposure
+      path: wave_exposure_5class_proj.tif
 
 
 test:
