@@ -9,6 +9,8 @@ vrt:
   us_virgin_islands: virgin_islands.vrt
   northern_mariana_islands: northern_mariana_islands.vrt
   hawaii: hawaii.vrt
+  american_samoa: american_samoa.vrt
+  guam: guam.vrt
 
 datasets:
 
@@ -71,7 +73,7 @@ datasets:
       path: puerto-rico/byte/PR_Landslides_v2_clip.tif
     - name: low_areas
       path: puerto-rico/byte/PR_LowLyingAreas_v2_clip.tif
-    - name:   marine
+    - name: marine
       path: puerto-rico/byte/PR_MarineIndex_4class.tif
     - name: pop_density
       path: puerto-rico/byte/PR_PopulationDensity_v2_clip.tif
@@ -162,7 +164,6 @@ datasets:
     - name: hubs
       path: cnmi/CNMI_Combined_Hub_Group_July2020.tif
 
-
   hawaii:
     - name: asset
       path: Hawaii/HI_Asset_Index_10class_102720.tif
@@ -203,6 +204,85 @@ datasets:
     - name: hubs
       path: Hawaii/hi_cores_hubs_111920.tif
 
+  american_samoa:
+    - name: asset
+      path: AmericanSamoa/AS_Asset_Index_10class_shift_v2-2_LZW.tif
+    - name: crit_facilities
+      path: AmericanSamoa/AS_C_Facilities_v1_LZW.tif
+    - name: crit_infra
+      path: AmericanSamoa/AS_C_Infrastructure_v2-2_LZW.tif
+    - name: exposure
+      path: AmericanSamoa/AS_Exposure_Index_10class_v2-2_LZW.tif
+    - name: floodprone_areas
+      path: AmericanSamoa/AS_Floodprone_Areas_shift_v1_LZW.tif
+    - name: impermeable
+      path: AmericanSamoa/AS_Impermeable_Surfaces_shift_v1_LZW.tif
+    - name: slope
+      path: AmericanSamoa/AS_Slope_resample_v1_LZW.tif
+    - name: marine
+      path: AmericanSamoa/AS_Marine_Index_4class_v2_LZW.tif
+    - name: pop_density
+      path: AmericanSamoa/AS_PopDensity_v1_LZW.tif
+    - name: sea_level_rise
+      path: AmericanSamoa/AS_SLR_shift_v1_LZW.tif
+    - name: social_vuln
+      path: AmericanSamoa/AS_SocVul_v1_LZW.tif
+    - name: terrestrial
+      path: AmericanSamoa/AS_Terrestrial_Index_4class_v2_LZW.tif
+    - name: wave_flooding
+      path: AmericanSamoa/AS_WaveDriven_Flooding_shift_v1_LZW.tif
+    - name: threat
+      path: AmericanSamoa/AS_Threat_Index_10class_v2_LZW.tif
+    - name: tsunami
+      path: AmericanSamoa/AS_Tsunami_LZW.tif
+    - name: wildlife
+      path: AmericanSamoa/AS_Wildlife_Index_6class_v2_LZW.tif
+    - name: hubs
+      path: AmericanSamoa/as_hubs_hexes_dissolve_8.tif
+    - name: erosion
+      path: AmericanSamoa/AS_Erodible_Soils_shift_v1_LZW.tif
+
+  guam:
+    - name: asset
+      path: guam/GU_Asset_Index_10class_v2.tif
+    - name: crit_facilities
+      path: guam/GU_C_Facilities_v2.tif
+    - name: crit_infra
+      path: guam/GU_C_Infrastructure_v2.tif
+    - name: erosion
+      path: guam/GU_Erodible_Soils_shift_v1.tif
+    - name: exposure
+      path: guam/GU_Exposure_Index_10class_v2.tif
+    - name: floodprone_areas
+      path: guam/GU_Floodprone_Areas_shift_v1.tif
+    - name: hubs
+      path: guam/gu_hubs_hexes_dissolve.tif
+    - name: impermeable
+      path: guam/GU_Impermeable_Soils_shift_v1.tif 
+    - name: landslides
+      path: guam/GU_Landslides_merge.tif
+    - name: marine
+      path: guam/GU_Marine_Index_4class_v2.tif
+    - name: pop_density
+      path: guam/GU_PopDensity_v1.tif
+    - name: sea_level_rise
+      path: guam/GU_SLR_shift_v1.tif
+    - name: slope
+      path: guam/GU_Slope_v1.tif
+    - name: social_vuln
+      path: guam/GU_Social_Vulnerability_v1.tif
+    - name: terrestrial
+      path: guam/GU_Terrestrial_index_4class_v3.tif
+    - name: threat
+      path: guam/GU_Threat_Index_10class_v2.tif
+    - name: wave_flooding
+      path: guam/GU_WaveDrivenFlooding_shift_v1.tif 
+    - name: wildlife
+      path: guam/GU_Wildlife_Index_6class_.tif
+    - name: tsunami
+      path: guam/GU_tsunami.tif
+    - name: wave_exposure
+      path: guam/wave_exposure_5class_proj.tif
 
 test:
   points:
@@ -221,10 +301,17 @@ test:
     hawaii:
       lat: 19.63
       lng: -155.52
+    american_samoa:
+      lat: -14.29
+      lng: -170.74
+    guam:
+      lat: 13.41
+      lng: 144.72
   polygons:
     continental_us: '{"type":"FeatureCollection","name":"test-ar","features":[{"type":"Feature","properties":{"id":"conus_poly"},"geometry":{"type":"Polygon","coordinates":[[[-80.01149654388428,32.887677980874706],[-80.01911401748657,32.88337138447869],[-80.01553058624268,32.87764094428261],[-80.00417947769165,32.882578515468],[-80.01149654388428,32.887677980874706]]]}}]}'
     puerto_rico: '{"type":"FeatureCollection","features":[{"type":"Feature","properties":{"id":"puerto_rico_poly"},"geometry":{"type":"Polygon","coordinates":[[[-66.19537353515625,18.374075820054482],[-66.2750244140625,18.312810846425442],[-66.15966796875,18.272390159624983],[-66.08963012695312,18.380592091462194],[-66.2091064453125,18.4209874751591],[-66.19537353515625,18.374075820054482]]]}}]}'
     us_virgin_islands: '{"type":"FeatureCollection","features":[{"type":"Feature","properties":{"id":"us_virgin_islands_poly"},"geometry":{"type":"Polygon","coordinates":[[[-64.78466033935547,17.768958359342278],[-64.80199813842773,17.73854993679923],[-64.75187301635742,17.729230192705025],[-64.7398567199707,17.756534036838417],[-64.78260040283203,17.77402592723689],[-64.78466033935547,17.768958359342278]]]}}]}'
     northern_mariana_islands: '{"type":"FeatureCollection","features":[{"type":"Feature","properties":{"id":"cnmi_poly"},"geometry":{"type":"Polygon","coordinates":[[[145.77878952026367,15.228125499059319],[145.77394008636475,15.225475339228003],[145.7759141921997,15.221707085774053],[145.78372478485107,15.222328231095478],[145.78308105468747,15.226013655644088],[145.77878952026367,15.228125499059319]]]}}]}'
     hawaii: '{"type":"FeatureCollection","features":[{"type":"Feature","properties":{},"geometry":{"type":"Polygon","coordinates":[[[-155.65567016601562,19.685263273173724],[-155.71334838867188,19.394067895396613],[-155.10772705078122,19.41608763433028],[-155.46615600585935,19.568848176163588],[-155.17501831054688,19.837768218373313],[-155.50735473632812,19.956568926352745],[-155.76690673828125,19.82355782477137],[-155.65567016601562,19.685263273173724]]]}}]}'
-
+    american_samoa: '{"type": "FeatureCollection","features": [{"type": "Feature","properties": {},"geometry": {"type": "Polygon","coordinates": [[[-170.74453353881836,-14.296573168852175],[-170.74710845947266,-14.304058574190604],[-170.73492050170896,-14.303434799934035],[-170.7322597503662,-14.295325577063075],[-170.74453353881836,-14.296573168852175]]]}}]}'
+    guam: '{"type":"FeatureCollection","features":[{"type":"Feature","properties":{},"geometry":{"type":"Polygon","coordinates":[[[144.74343538284302,13.392604613355415],[144.74077463150024,13.38932734988023],[144.74549531936646,13.386300538244093],[144.7498512268066,13.391414784005304],[144.7441864013672,13.392813354740085],[144.74343538284302,13.392604613355415]]]}}]}'

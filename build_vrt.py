@@ -60,6 +60,10 @@ def check_same_proj(bands_config, vsi, dataset_bucket, dir_path, is_local):
   proj_last = proj_strings[0]
   for proj in proj_strings:
     if proj_last != proj:
+      print('Datasets are not all the same projection! Here are the details for each path:')
+      for i, p in enumerate(paths):
+        print(p + ':')
+        print(proj_strings[i])
       raise TypeError('All datasets must have the exact same projection!')
 
 

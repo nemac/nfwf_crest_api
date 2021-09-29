@@ -25,7 +25,8 @@ config = {
         'geostress': 'float',
         'slr': 'float',
         'slope': 'float',
-        'stormsurge': 'float'
+        'stormsurge': 'float',
+        'erosion': 'float'
       }
     }),
     'field_maps': {
@@ -201,7 +202,90 @@ config = {
       'impermeable': 'impermeabl',
       'hub_rank': 'hub_rnk'
     }
+  },
+
+  'american_samoa': {
+    'id': { 'in': 'TARGET_FID', 'out': 'TARGET_FID' },
+    'schema': OrderedDict({
+      'geometry': 'Polygon',
+      'properties': {
+        'TARGET_FID': 'int',
+        'wildlife': 'float',
+        'hub_rnk': 'int',
+        'exposure': 'float',
+        'asset': 'float',
+        'threat': 'float',
+        'crit_infra': 'float',
+        'crit_fac': 'float',
+        'pop_dens': 'float',
+        'soc_vuln': 'float',
+        'floodprone': 'float',
+        'slr': 'float',
+        'impermeabl': 'float',
+        'marine': 'float',
+        'tsunami': 'float',
+        'wave_fld': 'float',
+        'slope': 'float',
+        'terrestri': 'float',
+        'erosion': 'float'
+      }
+    }),
+    'field_maps': {
+      'TARGET_ID': 'TARGET_FID',
+      'terrestrial': 'terrestri',
+      'crit_facilities': 'crit_fac',
+      'pop_density': 'pop_dens',
+      'social_vuln': 'soc_vuln',
+      'floodprone_areas': 'floodprone',
+      'sea_level_rise': 'slr',
+      'impermeable': 'impermeabl',
+      'wave_flooding' : 'wave_fld',
+      'Rank': 'hub_rnk'
+    }
+  },
+
+  'guam': {
+    'id': { 'in': 'TARGET_FID', 'out': 'TARGET_FID' },
+    'schema': OrderedDict({
+      'geometry': 'Polygon',
+      'properties': {
+        'TARGET_FID': 'int',
+        'wildlife': 'float',
+        'hub_rnk': 'int',
+        'exposure': 'float',
+        'asset': 'float',
+        'threat': 'float',
+        'crit_infra': 'float',
+        'crit_fac': 'float',
+        'pop_dens': 'float',
+        'soc_vuln': 'float',
+        'floodprone': 'float',
+        'slr': 'float',
+        'impermeabl': 'float',
+        'marine': 'float',
+        'tsunami': 'float',
+        'wave_fld': 'float',
+        'wave_exp': 'float',
+        'slope': 'float',
+        'terrestri': 'float',
+        'erosion': 'float',
+        'landslides': 'float',
+      }
+    }),
+    'field_maps': {
+      'terrestrial': 'terrestri',
+      'crit_facilities': 'crit_fac',
+      'pop_density': 'pop_dens',
+      'social_vuln': 'soc_vuln',
+      'floodprone_areas': 'floodprone',
+      'sea_level_rise': 'slr',
+      'impermeable': 'impermeabl',
+      'Rank': 'hub_rnk',
+      'wave_exposure': 'wave_exp',
+      'wave_flooding': 'wave_fld'
+    }
   }
+
 
 
 }

@@ -1,8 +1,11 @@
+try:
+  import unzip_requirements
+except ImportError:
+  pass
 import json
 import util
 import rasterio as rio
 from pyproj import Transformer
-
 
 def lambda_handler(event, context):
 

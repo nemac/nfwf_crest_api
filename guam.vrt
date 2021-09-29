@@ -1,0 +1,244 @@
+<VRTDataset rasterXSize="13327" rasterYSize="17018">
+  <SRS dataAxisToSRSAxisMapping="1,2">PROJCS["NAD_1983_StatePlane_Guam_FIPS_5400",GEOGCS["NAD83",DATUM["North_American_Datum_1983",SPHEROID["GRS 1980",6378137,298.257222101004,AUTHORITY["EPSG","7019"]],AUTHORITY["EPSG","6269"]],PRIMEM["Greenwich",0],UNIT["degree",0.0174532925199433,AUTHORITY["EPSG","9122"]],AUTHORITY["EPSG","4269"]],PROJECTION["Polyconic"],PARAMETER["latitude_of_origin",13.4724663527778],PARAMETER["central_meridian",144.748750705556],PARAMETER["false_easting",50000],PARAMETER["false_northing",50000],UNIT["metre",1,AUTHORITY["EPSG","9001"]],AXIS["Easting",EAST],AXIS["Northing",NORTH]]</SRS>
+  <GeoTransform>  3.5752226700002080e+04,  3.0000000000000000e+00,  0.0000000000000000e+00,  7.4056367888104302e+04,  0.0000000000000000e+00, -3.0000000000000000e+00</GeoTransform>
+  <VRTRasterBand dataType="Byte" band="1">
+    <NoDataValue>255</NoDataValue>
+    <ColorInterp>Gray</ColorInterp>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/guam/GU_Asset_Index_10class_v2.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="12462" RasterYSize="15963" DataType="Byte" BlockXSize="256" BlockYSize="256" />
+      <SrcRect xOff="0" yOff="0" xSize="12462" ySize="15962.7941352812" />
+      <DstRect xOff="0" yOff="1055.20586471885" xSize="12462" ySize="15962.7941352812" />
+      <NODATA>255</NODATA>
+    </ComplexSource>
+  </VRTRasterBand>
+<VRTRasterBand dataType="Byte" band="2">
+    <NoDataValue>255</NoDataValue>
+    <ColorInterp>Gray</ColorInterp>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/guam/GU_C_Facilities_v2.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="12462" RasterYSize="15963" DataType="Byte" BlockXSize="256" BlockYSize="256" />
+      <SrcRect xOff="0" yOff="0" xSize="12462" ySize="15962.7941373005" />
+      <DstRect xOff="0" yOff="1055.20586269954" xSize="12462" ySize="15962.7941373005" />
+      <NODATA>255</NODATA>
+    </ComplexSource>
+  </VRTRasterBand>
+<VRTRasterBand dataType="Byte" band="3">
+    <NoDataValue>255</NoDataValue>
+    <ColorInterp>Gray</ColorInterp>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/guam/GU_C_Infrastructure_v2.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="12462" RasterYSize="15963" DataType="Byte" BlockXSize="256" BlockYSize="256" />
+      <SrcRect xOff="0.0663255195201297" yOff="0" xSize="12461.9336744805" ySize="15962.629442357" />
+      <DstRect xOff="0" yOff="1055.37055764304" xSize="12461.9336744805" ySize="15962.629442357" />
+      <NODATA>255</NODATA>
+    </ComplexSource>
+  </VRTRasterBand>
+<VRTRasterBand dataType="Byte" band="4">
+    <NoDataValue>255</NoDataValue>
+    <ColorInterp>Gray</ColorInterp>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/guam/GU_Erodible_Soils_shift_v1.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="12462" RasterYSize="15963" DataType="Byte" BlockXSize="256" BlockYSize="256" />
+      <SrcRect xOff="0.0663255195201297" yOff="0" xSize="12461.9336744805" ySize="15962.629442357" />
+      <DstRect xOff="0" yOff="1055.37055764304" xSize="12461.9336744805" ySize="15962.629442357" />
+      <NODATA>255</NODATA>
+    </ComplexSource>
+  </VRTRasterBand>
+<VRTRasterBand dataType="Byte" band="5">
+    <NoDataValue>255</NoDataValue>
+    <ColorInterp>Gray</ColorInterp>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/guam/GU_Exposure_Index_10class_v2.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="12462" RasterYSize="15963" DataType="Byte" BlockXSize="256" BlockYSize="256" />
+      <SrcRect xOff="0" yOff="0" xSize="12462" ySize="15962.7941352812" />
+      <DstRect xOff="0" yOff="1055.20586471885" xSize="12462" ySize="15962.7941352812" />
+      <NODATA>255</NODATA>
+    </ComplexSource>
+  </VRTRasterBand>
+<VRTRasterBand dataType="Byte" band="6">
+    <NoDataValue>255</NoDataValue>
+    <ColorInterp>Gray</ColorInterp>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/guam/GU_Floodprone_Areas_shift_v1.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="12462" RasterYSize="15963" DataType="Byte" BlockXSize="256" BlockYSize="256" />
+      <SrcRect xOff="0.0663255195201297" yOff="0" xSize="12461.9336744805" ySize="15962.629442357" />
+      <DstRect xOff="0" yOff="1055.37055764304" xSize="12461.9336744805" ySize="15962.629442357" />
+      <NODATA>255</NODATA>
+    </ComplexSource>
+  </VRTRasterBand>
+<VRTRasterBand dataType="Byte" band="7">
+    <NoDataValue>255</NoDataValue>
+    <ColorInterp>Gray</ColorInterp>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/guam/gu_hubs_hexes_dissolve.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="12462" RasterYSize="15963" DataType="Byte" BlockXSize="256" BlockYSize="256" />
+      <SrcRect xOff="0.0663333340271492" yOff="0" xSize="12461.933666666" ySize="15962.6294372986" />
+      <DstRect xOff="0" yOff="1055.37056270143" xSize="12461.933666666" ySize="15962.6294372986" />
+      <NODATA>255</NODATA>
+    </ComplexSource>
+  </VRTRasterBand>
+<VRTRasterBand dataType="Byte" band="8">
+    <NoDataValue>255</NoDataValue>
+    <ColorInterp>Gray</ColorInterp>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/guam/GU_Impermeable_Soils_shift_v1.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="12462" RasterYSize="15963" DataType="Byte" BlockXSize="256" BlockYSize="256" />
+      <SrcRect xOff="0.0663255195201297" yOff="0" xSize="12461.9336744805" ySize="15962.629442357" />
+      <DstRect xOff="0" yOff="1055.37055764304" xSize="12461.9336744805" ySize="15962.629442357" />
+      <NODATA>255</NODATA>
+    </ComplexSource>
+  </VRTRasterBand>
+<VRTRasterBand dataType="Byte" band="9">
+    <NoDataValue>255</NoDataValue>
+    <ColorInterp>Gray</ColorInterp>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/guam/GU_Landslides_merge.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="12462" RasterYSize="15963" DataType="Byte" BlockXSize="256" BlockYSize="256" />
+      <SrcRect xOff="0.0663255195201297" yOff="0" xSize="12461.9336744805" ySize="15962.629442357" />
+      <DstRect xOff="0" yOff="1055.37055764304" xSize="12461.9336744805" ySize="15962.629442357" />
+      <NODATA>255</NODATA>
+    </ComplexSource>
+  </VRTRasterBand>
+<VRTRasterBand dataType="Byte" band="10">
+    <NoDataValue>255</NoDataValue>
+    <ColorInterp>Gray</ColorInterp>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/guam/GU_Marine_Index_4class_v2.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="12462" RasterYSize="15963" DataType="Byte" BlockXSize="256" BlockYSize="256" />
+      <SrcRect xOff="0" yOff="0" xSize="12462" ySize="15962.7941373005" />
+      <DstRect xOff="0" yOff="1055.20586269954" xSize="12462" ySize="15962.7941373005" />
+      <NODATA>255</NODATA>
+    </ComplexSource>
+  </VRTRasterBand>
+<VRTRasterBand dataType="Byte" band="11">
+    <NoDataValue>255</NoDataValue>
+    <ColorInterp>Gray</ColorInterp>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/guam/GU_PopDensity_v1.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="12462" RasterYSize="15963" DataType="Byte" BlockXSize="256" BlockYSize="256" />
+      <SrcRect xOff="0" yOff="0" xSize="12462" ySize="15962.7941352812" />
+      <DstRect xOff="0" yOff="1055.20586471885" xSize="12462" ySize="15962.7941352812" />
+      <NODATA>255</NODATA>
+    </ComplexSource>
+  </VRTRasterBand>
+<VRTRasterBand dataType="Byte" band="12">
+    <NoDataValue>255</NoDataValue>
+    <ColorInterp>Gray</ColorInterp>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/guam/GU_SLR_shift_v1.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="12462" RasterYSize="15963" DataType="Byte" BlockXSize="256" BlockYSize="256" />
+      <SrcRect xOff="0.0663255195201297" yOff="0" xSize="12461.9336744805" ySize="15962.629442357" />
+      <DstRect xOff="0" yOff="1055.37055764304" xSize="12461.9336744805" ySize="15962.629442357" />
+      <NODATA>255</NODATA>
+    </ComplexSource>
+  </VRTRasterBand>
+<VRTRasterBand dataType="Byte" band="13">
+    <NoDataValue>255</NoDataValue>
+    <ColorInterp>Gray</ColorInterp>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/guam/GU_Slope_v1.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="15005" RasterYSize="18291" DataType="Byte" BlockXSize="256" BlockYSize="256" />
+      <SrcRect xOff="1678.15284257724" yOff="0" xSize="13326.8471574228" ySize="17018" />
+      <DstRect xOff="0" yOff="0" xSize="13326.8471574228" ySize="17018" />
+      <NODATA>255</NODATA>
+    </ComplexSource>
+  </VRTRasterBand>
+<VRTRasterBand dataType="Byte" band="14">
+    <NoDataValue>255</NoDataValue>
+    <ColorInterp>Gray</ColorInterp>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/guam/GU_Social_Vulnerability_v1.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="12462" RasterYSize="15963" DataType="Byte" BlockXSize="256" BlockYSize="256" />
+      <SrcRect xOff="0" yOff="0" xSize="12462" ySize="15962.7941352812" />
+      <DstRect xOff="0" yOff="1055.20586471885" xSize="12462" ySize="15962.7941352812" />
+      <NODATA>255</NODATA>
+    </ComplexSource>
+  </VRTRasterBand>
+<VRTRasterBand dataType="Byte" band="15">
+    <NoDataValue>255</NoDataValue>
+    <ColorInterp>Gray</ColorInterp>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/guam/GU_Terrestrial_index_4class_v3.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="15005" RasterYSize="18291" DataType="Byte" BlockXSize="256" BlockYSize="256" />
+      <SrcRect xOff="1678.15284257724" yOff="0" xSize="13326.8471574228" ySize="17018" />
+      <DstRect xOff="0" yOff="0" xSize="13326.8471574228" ySize="17018" />
+      <NODATA>255</NODATA>
+    </ComplexSource>
+  </VRTRasterBand>
+<VRTRasterBand dataType="Byte" band="16">
+    <NoDataValue>255</NoDataValue>
+    <ColorInterp>Gray</ColorInterp>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/guam/GU_Threat_Index_10class_v2.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="12462" RasterYSize="15963" DataType="Byte" BlockXSize="256" BlockYSize="256" />
+      <SrcRect xOff="0.0663255195201297" yOff="0" xSize="12461.9336744805" ySize="15962.629442357" />
+      <DstRect xOff="0" yOff="1055.37055764304" xSize="12461.9336744805" ySize="15962.629442357" />
+      <NODATA>255</NODATA>
+    </ComplexSource>
+  </VRTRasterBand>
+<VRTRasterBand dataType="Byte" band="17">
+    <NoDataValue>255</NoDataValue>
+    <ColorInterp>Gray</ColorInterp>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/guam/GU_WaveDrivenFlooding_shift_v1.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="12462" RasterYSize="15963" DataType="Byte" BlockXSize="256" BlockYSize="256" />
+      <SrcRect xOff="0.0663255195201297" yOff="0" xSize="12461.9336744805" ySize="15962.629442357" />
+      <DstRect xOff="0" yOff="1055.37055764304" xSize="12461.9336744805" ySize="15962.629442357" />
+      <NODATA>255</NODATA>
+    </ComplexSource>
+  </VRTRasterBand>
+<VRTRasterBand dataType="Byte" band="18">
+    <NoDataValue>255</NoDataValue>
+    <ColorInterp>Gray</ColorInterp>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/guam/GU_Wildlife_Index_6class_.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="12462" RasterYSize="15963" DataType="Byte" BlockXSize="256" BlockYSize="256" />
+      <SrcRect xOff="0" yOff="0" xSize="12462" ySize="15962.7941373005" />
+      <DstRect xOff="0" yOff="1055.20586269953" xSize="12462" ySize="15962.7941373005" />
+      <NODATA>255</NODATA>
+    </ComplexSource>
+  </VRTRasterBand>
+<VRTRasterBand dataType="Byte" band="19">
+    <NoDataValue>255</NoDataValue>
+    <ColorInterp>Gray</ColorInterp>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/guam/GU_tsunami.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="12462" RasterYSize="15963" DataType="Byte" BlockXSize="256" BlockYSize="256" />
+      <SrcRect xOff="0.0663255195201297" yOff="0" xSize="12461.9336744805" ySize="15962.629442357" />
+      <DstRect xOff="0" yOff="1055.37055764304" xSize="12461.9336744805" ySize="15962.629442357" />
+      <NODATA>255</NODATA>
+    </ComplexSource>
+  </VRTRasterBand>
+<VRTRasterBand dataType="Byte" band="20">
+    <NoDataValue>255</NoDataValue>
+    <ColorInterp>Gray</ColorInterp>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/guam/wave_exposure_5class_proj.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="15005" RasterYSize="18291" DataType="Byte" BlockXSize="256" BlockYSize="256" />
+      <SrcRect xOff="1678.15284257724" yOff="0" xSize="13326.8471574228" ySize="17018" />
+      <DstRect xOff="0" yOff="0" xSize="13326.8471574228" ySize="17018" />
+      <NODATA>255</NODATA>
+    </ComplexSource>
+  </VRTRasterBand>
+</VRTDataset>

@@ -7,6 +7,9 @@ import hashlib
 import rasterio as rio
 from util import get_config
 
+# Note: you'll need to run `sls offline` to start a local API
+# for this script to work correctly
+
 offline_api = 'http://localhost:3000/dev/'
 
 
@@ -127,7 +130,8 @@ def test_nodata(expected=255):
 def setup_argparser():
 	parser = argparse.ArgumentParser()
 	parser.add_argument('--verbose', '-v', action='store_true', help='Display the result of each test')
-	parser.add_argument('--local', action='store_true', help='Use local VRTs')
+  # Not implemented
+	#parser.add_argument('--local', action='store_true', help='Use local VRTs')
 	return parser
 
 
@@ -135,16 +139,11 @@ def run_all():
 		parser = setup_argparser()
 		args = parser.parse_args()
 		verbose = args.verbose
-		local = args.local
-		# This doesn't actually cause the functions to use the local VRTs at the moment
-		if local:
-			config = get_config('config.local.yml')
-		else:
-			config = get_config()
+		config = get_config()
 		test_identify(config, verbose)
 		test_zonal_stats(config, verbose)
 		test_upload_shape(config, verbose)
-		test_nodata()
+		#test_nodata()
 
 
 if __name__ == '__main__':
