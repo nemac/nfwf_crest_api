@@ -279,7 +279,7 @@ datasets:
     - name: tsunami
       path: GU_tsunami.tif
     - name: wave_exposure
-      path: wave_exposure_5class_proj.tif
+      path: wave_exposure_5class_proj_extract_fill.tif
 
 
 test:
