@@ -77,11 +77,11 @@
     <NoDataValue>255</NoDataValue>
     <ColorInterp>Gray</ColorInterp>
     <ComplexSource>
-      <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/guam/gu_hubs_hexes_dissolve.tif</SourceFilename>
+      <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/guam/GU_Cores_Hubs_Sep2021.tif</SourceFilename>
       <SourceBand>1</SourceBand>
       <SourceProperties RasterXSize="12462" RasterYSize="15963" DataType="Byte" BlockXSize="256" BlockYSize="256" />
-      <SrcRect xOff="0.0663333340271492" yOff="0" xSize="12461.933666666" ySize="15962.6294372986" />
-      <DstRect xOff="0" yOff="1055.37056270143" xSize="12461.933666666" ySize="15962.6294372986" />
+      <SrcRect xOff="0.0663255195201297" yOff="0" xSize="12461.9336744805" ySize="15962.629442357" />
+      <DstRect xOff="0" yOff="1055.37055764304" xSize="12461.9336744805" ySize="15962.629442357" />
       <NODATA>255</NODATA>
     </ComplexSource>
   </VRTRasterBand>

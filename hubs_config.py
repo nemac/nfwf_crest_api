@@ -210,6 +210,8 @@ config = {
       'geometry': 'Polygon',
       'properties': {
         'TARGET_FID': 'int',
+        'acres': 'float',
+        'core_type': 'str',
         'wildlife': 'float',
         'hub_rnk': 'int',
         'exposure': 'float',
@@ -245,10 +247,11 @@ config = {
   },
 
   'guam': {
-    'id': { 'in': 'TARGET_FID', 'out': 'TARGET_FID' },
+    'id': { 'in': 'hub_id', 'out': 'TARGET_FID' },
     'schema': OrderedDict({
       'geometry': 'Polygon',
       'properties': {
+        'acres': 'float',
         'TARGET_FID': 'int',
         'wildlife': 'float',
         'hub_rnk': 'int',
@@ -282,7 +285,8 @@ config = {
       'impermeable': 'impermeabl',
       'Rank': 'hub_rnk',
       'wave_exposure': 'wave_exp',
-      'wave_flooding': 'wave_fld'
+      'wave_flooding': 'wave_fld',
+      'hub_id': 'TARGET_FID'
     }
   }
 
