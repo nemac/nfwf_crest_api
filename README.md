@@ -53,7 +53,19 @@ To update or add a new dataset, upload the file to the S3 bucket and update `con
 
 ## Preparing a hubs shapefile
 
-To prepare a new hubs shapefile, you will need an entry in `hubs_config.py` for the region you are preparing. The 'schema' key is used directly as the schema argument to fiona's `open` function when creating the output shapefile. Remember that field names in shapefiles cannot exceed 8 characters in length. You can use the `field_maps` key to define a set of mappings from the input shapefile and the zonal stats API to the final shapefile. Each entry in `field_maps` is a key/value pair where the key is either the name of a key in `['properties']['mean']` returned by the zonal stats API or a field in the input shapefile, and the value is the name of the corresponding field in the output shapefile (which must be defined in 'schema' to work).
+Hubs data generally comes in the form of a shapefile from someone on the GIS team. The dataset MUST have some kind of ID field with unique values. It's likely that an existing field that looks like it has unique values that would be well-suited actually does not have unique values! So be careful. A simple way to accomplish this is to use the Field Calculator in QGIS and generate a new field called OBJECTID with the value of `@row_number`.
+
+The process of preparing hubs data involves retrieving zonal stats for each dataset. A new shapefile is created with extra fields to hold the zonal stats data for each hub shape. This new shapefile is then uploaded to ArcGIS Online as a Hosted Layer. This new AGOL Layer is then queried as part of the functionality of the Where Should I Do A Resilience Project tab of CREST.
+
+Hub data is organized by region. To prepare a new hubs shapefile, you will need an entry for the region you're preparing in `hubs_config.py`. Each region's configuration has three keys: `id`, `schema`, and `field_maps`.
+
+- `id`: a dictionary with keys "in" and "out" which indicate the ID field for the incoming and outgoing shapefile, respectively. The value of "in" should be the ID field of the original shapefile described above. The value of "out" is the name of the ID field in the processed hubs shapefile and the hosted layer. I suggest you use `TARGET_FID`.
+
+- `schema`: a dictionary representing the schema for the new hubs shapefile, which includes fields for zonal stats. This dictionary is given to fiona's `open` function as the `schema` argument when creating the output shapefile.
+
+- `field_maps`: shapefile field names cannot exceed 8 characters in length. This is a set of mappings from the input shapefile and the zonal stats API to the final shapefile. Each entry in `field_maps` is a key/value pair where the key is either the name of a key in `['properties']['mean']` returned by the zonal stats API or a field in the input shapefile, and the value is the name of the corresponding field in the output shapefile (which must be defined in the schema above).
+
+When the configuration is ready, run `prep_hubs.py`. You can use the `--epsg` or `--proj_string` flags to indicate the CRS of the input shapefile if necessary. The `--region` flag should be the key associated with the region's config in `hubs_config.py`. It is safe to stop this script and restart it with the same parameters - it will work with a partially completed output file.
 
 Once the new hubs file is ready, all you have to do is upload it to ArcGIS Online and host it as a new Feature Service. Remember to adjust the sharing settings to "Public" on the feature service once it completes.
 
