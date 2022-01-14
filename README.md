@@ -65,7 +65,7 @@ Hub data is organized by region. To prepare a new hubs shapefile, you will need 
 
 - `schema`: a dictionary representing the schema for the new hubs shapefile, which includes fields for zonal stats. This dictionary is given to fiona's `open` function as the `schema` argument when creating the output shapefile.
 
-- `field_maps`: shapefile field names cannot exceed 8 characters in length. This is a set of mappings from the input shapefile and the zonal stats API to the final shapefile. Each entry in `field_maps` is a key/value pair where the key is either the name of a key in `['properties']['mean']` returned by the zonal stats API or a field in the input shapefile, and the value is the name of the corresponding field in the output shapefile (which must be defined in the schema above).
+- `field_maps`: shapefile field names cannot exceed 10 characters in length. This is a set of mappings from the input shapefile and the zonal stats API to the final shapefile. Each entry in `field_maps` is a key/value pair where the key is either the name of a key in `['properties']['mean']` returned by the zonal stats API or a field in the input shapefile, and the value is the name of the corresponding field in the output shapefile (which must be defined in the schema above).
 
 When the configuration is ready, run `prep_hubs.py`. You can use the `--epsg` or `--proj_string` flags to indicate the CRS of the input shapefile if necessary. The `--region` flag should be the key associated with the region's config in `hubs_config.py`. It is safe to stop this script and restart it with the same parameters - it will work with a partially completed output file.
 
