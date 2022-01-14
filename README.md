@@ -49,6 +49,8 @@ There are several ways to set up virtual environments. Here are a few options:
 
 Virtual Raster Tables are used for the raster API, mostly to speed up operations. Use `config.yml` to specify groups of rasters by region. Raster files for each region  must be in the same format, have the same data type and projection, and be hosted in the same S3 bucket. 
 
+You can use `cogeotiff.py` to optimize a raster before uploading it to S3.
+
 To update or add a new dataset, upload the file to the S3 bucket and update `config.yml`. Then run `./build_vrt.py --region MY_REGION` where `MY_REGION` is the key in `config.yml` for the region affected by the changes. This will output a new VRT file for the updated region. At this point when you deploy a new API stage it will use the new VRT.
 
 ## Preparing a hubs shapefile
@@ -102,11 +104,11 @@ Test your local API with curl:
 
 ```bash
 # Identify example
-curl http://localhost:3000/dev/identify/\?lng\=-82.8\&lat\=35.8\&region=conus
+curl http://localhost:3000/dev/identify/\?lng\=-82.8\&lat\=35.8\&region=continental_us
 
 
 # CNMI
-curl http://localhost:3000/dev/identify/\?lng\=-145.72\&lat\=15.2\&region=cnmi
+curl http://localhost:3000/dev/identify/\?lng\=-145.72\&lat\=15.2\&region=northern_mariana_islands
 
 
 
@@ -133,7 +135,7 @@ curl \
   --header "Content-Type: application/json" \
   --request POST \
   --data '{"type": "FeatureCollection","name": "test-ar","features": [{"type": "Feature","properties": {"id": null},"geometry": {"type": "Polygon","coordinates": [[[-80.01149654388428, 32.887677980874706],[-80.01911401748657, 32.88337138447869],[-80.01553058624268, 32.87764094428261],[-80.00417947769165, 32.882578515468],[-80.01149654388428, 32.887677980874706]]]}}]}' \
-  http://localhost:3000/dev/zonal_stats?region=conus
+  http://localhost:3000/dev/zonal_stats?region=continental_us
 
 # Upload shape example
 curl \
