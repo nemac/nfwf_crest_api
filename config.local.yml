@@ -8,6 +8,7 @@ vrt:
   hawaii: hawaii.local.vrt
   american_samoa: american_samoa.local.vrt
   guam: guam.local.vrt
+  alaska: alaska.local.vrt
 
 datasets:
 
@@ -280,6 +281,40 @@ datasets:
       path: GU_tsunami.tif
     - name: wave_exposure
       path: wave_exposure_5class_proj_extract_fill.tif
+
+  alaska:
+    - name: aquatic
+      path: AK_Aquatic_Index_10class_v2_8BitUnsigned.tif
+    - name: asset
+      path: AK_Asset_Index_All_v3_clip_reclassify_8BitUnsigned.tif
+    - name: crit_facilities
+      path: AK_Critical_Facilities_v2_8BitUnsigned.tif
+    - name: community_infra
+      path: AK_Community_Infra_v2_8BitUnsigned.tif
+    - name: erosion
+      path: AK_erosion_v3_8BitUnsigned.tif
+    - name: exposure
+      path: AK_Exposure_Index_v9_reclassify_8BitUnsigned.tif
+    - name: floodprone_areas
+      path: AK_floodprone_v3_8BitUnsigned.tif
+    - name: hubs
+      path: ak_hubs_cores_030722.tif
+    - name: low_areas
+      path: AK_Low_Lying_Areas_v2_8BitUnsigned.tif
+    - name: permafrost
+      path: AK_permafrost20220208_clip_8BitUnsigned.tif
+    - name: social_vuln
+      path: AK_Social_Vulnerability_v2_8BitUnsigned.tif
+    - name: terrestrial
+      path: AK_Terrestrial_Index_10class_v2_8BitUnsigned.tif
+    - name: threat
+      path: AK_Threat_Index_v6_clip_B_Reclassify_8BitUnsigned.tif
+    - name: transportation
+      path: AK_Transportation_Infra_v3_8BitUnsigned.tif
+    - name: tsunami
+      path: AK_Tsunami_v1_8BitUnsigned.tif
+    - name: wildlife
+      path: AK_Wildlife_Index_10class_v2_8BitUnsigned.tif
 
 
 test:
