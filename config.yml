@@ -287,37 +287,37 @@ datasets:
 
   alaska:
     - name: aquatic
-      path: alaska/AK_Aquatic_Index_10class_v2_8BitUnsigned.tif
+      path: Alaska/AK_Aquatic_Index_10class_v2_8BitUnsigned.tif
     - name: asset
-      path: alaska/AK_Asset_Index_All_v3_clip_reclassify_8BitUnsigned.tif
+      path: Alaska/AK_Asset_Index_All_v3_clip_reclassify_8BitUnsigned.tif
     - name: crit_facilities
-      path: alaska/AK_Critical_Facilities_v2_8BitUnsigned.tif
-    - name: community_infra
-      path: alaska/AK_Community_Infra_v2_8BitUnsigned.tif
+      path: Alaska/AK_Critical_Facilities_v2_8BitUnsigned.tif
+    - name: communityg_infra
+      path: Alaska/AK_Community_Infra_v2_8BitUnsigned.tif
     - name: erosion
-      path: alaska/AK_erosion_v3_8BitUnsigned.tif
+      path: Alaska/AK_erosion_v3_8BitUnsigned.tif
     - name: exposure
-      path: alaska/AK_Exposure_Index_v9_reclassify_8BitUnsigned.tif
+      path: Alaska/AK_Exposure_Index_v9_reclassify_8BitUnsigned.tif
     - name: floodprone_areas
-      path: alaska/AK_floodprone_v3_8BitUnsigned.tif
+      path: Alaska/AK_floodprone_v3_8BitUnsigned.tif
     - name: hubs
-      path: alaska/ak_hubs_cores_030722.tif
+      path: Alaska/ak_hubs_cores_030722.tif
     - name: low_areas
-      path: alaska/AK_Low_Lying_Areas_v2_8BitUnsigned.tif
+      path: Alaska/AK_Low_Lying_Areas_v2_8BitUnsigned.tif
     - name: permafrost
-      path: alaska/AK_permafrost20220208_clip_8BitUnsigned.tif
+      path: Alaska/AK_permafrost20220208_clip_8BitUnsigned.tif
     - name: social_vuln
-      path: alaska/AK_Social_Vulnerability_v2_8BitUnsigned.tif
+      path: Alaska/AK_Social_Vulnerability_v2_8BitUnsigned.tif
     - name: terrestrial
-      path: alaska/AK_Terrestrial_Index_10class_v2_8BitUnsigned.tif
+      path: Alaska/AK_Terrestrial_Index_10class_v2_8BitUnsigned.tif
     - name: threat
-      path: alaska/AK_Threat_Index_v6_clip_B_Reclassify_8BitUnsigned.tif
+      path: Alaska/AK_Threat_Index_v6_clip_B_Reclassify_8BitUnsigned.tif
     - name: transportation
-      path: alaska/AK_Transportation_Infra_v3_8BitUnsigned.tif
+      path: Alaska/AK_Transportation_Infra_v3_8BitUnsigned.tif
     - name: tsunami
-      path: alaska/AK_Tsunami_v1_8BitUnsigned.tif
+      path: Alaska/AK_Tsunami_v1_8BitUnsigned.tif
     - name: wildlife
-      path: alaska/AK_Wildlife_Index_10class_v2_8BitUnsigned.tif
+      path: Alaska/AK_Wildlife_Index_10class_v2_8BitUnsigned.tif
 
 test:
   points:
