@@ -1,0 +1,196 @@
+<VRTDataset rasterXSize="122023" rasterYSize="65458">
+  <SRS dataAxisToSRSAxisMapping="1,2">PROJCS["NAD83 / Alaska Albers",GEOGCS["NAD83",DATUM["North_American_Datum_1983",SPHEROID["GRS 1980",6378137,298.257222101,AUTHORITY["EPSG","7019"]],AUTHORITY["EPSG","6269"]],PRIMEM["Greenwich",0,AUTHORITY["EPSG","8901"]],UNIT["degree",0.0174532925199433,AUTHORITY["EPSG","9122"]],AUTHORITY["EPSG","4269"]],PROJECTION["Albers_Conic_Equal_Area"],PARAMETER["latitude_of_center",50],PARAMETER["longitude_of_center",-154],PARAMETER["standard_parallel_1",55],PARAMETER["standard_parallel_2",65],PARAMETER["false_easting",0],PARAMETER["false_northing",0],UNIT["metre",1,AUTHORITY["EPSG","9001"]],AXIS["Easting",EAST],AXIS["Northing",NORTH],AUTHORITY["EPSG","3338"]]</SRS>
+  <GeoTransform> -2.1689944402999999e+06,  3.0000000000000000e+01,  0.0000000000000000e+00,  2.3873250000118301e+06,  0.0000000000000000e+00, -3.0000000000000000e+01</GeoTransform>
+  <VRTRasterBand dataType="Byte" band="1">
+    <NoDataValue>255</NoDataValue>
+    <ColorInterp>Gray</ColorInterp>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/Alaska/AK_Aquatic_Index_10class_v2_8BitUnsigned.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="122070" RasterYSize="74961" DataType="Byte" BlockXSize="256" BlockYSize="256" />
+      <SrcRect xOff="48.5926411937612" yOff="0" xSize="122021.407358806" ySize="65456.0721252378" />
+      <DstRect xOff="0" yOff="1.92787476223893" xSize="122021.407358806" ySize="65456.0721252378" />
+      <NODATA>255</NODATA>
+    </ComplexSource>
+  </VRTRasterBand>
+<VRTRasterBand dataType="Byte" band="2">
+    <NoDataValue>255</NoDataValue>
+    <ColorInterp>Gray</ColorInterp>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/Alaska/AK_Asset_Index_All_v3_clip_reclassify_8BitUnsigned.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="122055" RasterYSize="65496" DataType="Byte" BlockXSize="256" BlockYSize="256" />
+      <SrcRect xOff="33.5926399999919" yOff="0" xSize="122021.40736" ySize="65176.0721262723" />
+      <DstRect xOff="0" yOff="281.927873727695" xSize="122021.40736" ySize="65176.0721262723" />
+      <NODATA>255</NODATA>
+    </ComplexSource>
+  </VRTRasterBand>
+<VRTRasterBand dataType="Byte" band="3">
+    <NoDataValue>255</NoDataValue>
+    <ColorInterp>Gray</ColorInterp>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/Alaska/AK_Critical_Facilities_v2_8BitUnsigned.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="122070" RasterYSize="74961" DataType="Byte" BlockXSize="256" BlockYSize="256" />
+      <SrcRect xOff="48.5926399999919" yOff="0" xSize="122021.40736" ySize="65456.0721262723" />
+      <DstRect xOff="0" yOff="1.92787372769477" xSize="122021.40736" ySize="65456.0721262723" />
+      <NODATA>255</NODATA>
+    </ComplexSource>
+  </VRTRasterBand>
+<VRTRasterBand dataType="Byte" band="4">
+    <NoDataValue>255</NoDataValue>
+    <ColorInterp>Gray</ColorInterp>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/Alaska/AK_Community_Infra_v2_8BitUnsigned.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="122070" RasterYSize="74961" DataType="Byte" BlockXSize="256" BlockYSize="256" />
+      <SrcRect xOff="48.5926399999919" yOff="0" xSize="122021.40736" ySize="65456.0721262723" />
+      <DstRect xOff="0" yOff="1.92787372769477" xSize="122021.40736" ySize="65456.0721262723" />
+      <NODATA>255</NODATA>
+    </ComplexSource>
+  </VRTRasterBand>
+<VRTRasterBand dataType="Byte" band="5">
+    <NoDataValue>255</NoDataValue>
+    <ColorInterp>Gray</ColorInterp>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/Alaska/AK_erosion_v3_8BitUnsigned.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="122072" RasterYSize="74963" DataType="Byte" BlockXSize="256" BlockYSize="256" />
+      <SrcRect xOff="48.6853242966502" yOff="0" xSize="122023" ySize="65458" />
+      <DstRect xOff="0" yOff="0" xSize="122023" ySize="65458" />
+      <NODATA>255</NODATA>
+    </ComplexSource>
+  </VRTRasterBand>
+<VRTRasterBand dataType="Byte" band="6">
+    <NoDataValue>255</NoDataValue>
+    <ColorInterp>Gray</ColorInterp>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/Alaska/AK_Exposure_Index_v9_reclassify_8BitUnsigned.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="122055" RasterYSize="65496" DataType="Byte" BlockXSize="256" BlockYSize="256" />
+      <SrcRect xOff="33.5926399999919" yOff="0" xSize="122021.40736" ySize="65176.0721262723" />
+      <DstRect xOff="0" yOff="281.927873727695" xSize="122021.40736" ySize="65176.0721262723" />
+      <NODATA>255</NODATA>
+    </ComplexSource>
+  </VRTRasterBand>
+<VRTRasterBand dataType="Byte" band="7">
+    <NoDataValue>255</NoDataValue>
+    <ColorInterp>Gray</ColorInterp>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/Alaska/AK_floodprone_v3_8BitUnsigned.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="122072" RasterYSize="74963" DataType="Byte" BlockXSize="256" BlockYSize="256" />
+      <SrcRect xOff="48.6853242966502" yOff="0" xSize="122023" ySize="65458" />
+      <DstRect xOff="0" yOff="0" xSize="122023" ySize="65458" />
+      <NODATA>255</NODATA>
+    </ComplexSource>
+  </VRTRasterBand>
+<VRTRasterBand dataType="Byte" band="8">
+    <NoDataValue>255</NoDataValue>
+    <ColorInterp>Gray</ColorInterp>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/Alaska/ak_hubs_cores_030722.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="121224" RasterYSize="65190" DataType="Byte" BlockXSize="256" BlockYSize="256" />
+      <SrcRect xOff="0" yOff="0" xSize="121224" ySize="65189.539212939" />
+      <DstRect xOff="0" yOff="268.460787060996" xSize="121224" ySize="65189.539212939" />
+      <NODATA>255</NODATA>
+    </ComplexSource>
+  </VRTRasterBand>
+<VRTRasterBand dataType="Byte" band="9">
+    <NoDataValue>255</NoDataValue>
+    <ColorInterp>Gray</ColorInterp>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/Alaska/AK_Low_Lying_Areas_v2_8BitUnsigned.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="122022" RasterYSize="65609" DataType="Byte" BlockXSize="256" BlockYSize="256" />
+      <SrcRect xOff="0.13381997696124" yOff="0" xSize="122021.866180023" ySize="65158.0812396058" />
+      <DstRect xOff="0" yOff="299.918760394212" xSize="122021.866180023" ySize="65158.0812396058" />
+      <NODATA>255</NODATA>
+    </ComplexSource>
+  </VRTRasterBand>
+<VRTRasterBand dataType="Byte" band="10">
+    <NoDataValue>255</NoDataValue>
+    <ColorInterp>Gray</ColorInterp>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/Alaska/AK_permafrost20220208_clip_8BitUnsigned.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="122022" RasterYSize="74962" DataType="Byte" BlockXSize="256" BlockYSize="256" />
+      <SrcRect xOff="0.685324296650166" yOff="0" xSize="122021.314675703" ySize="65457" />
+      <DstRect xOff="0" yOff="1" xSize="122021.314675703" ySize="65457" />
+      <NODATA>255</NODATA>
+    </ComplexSource>
+  </VRTRasterBand>
+<VRTRasterBand dataType="Byte" band="11">
+    <NoDataValue>255</NoDataValue>
+    <ColorInterp>Gray</ColorInterp>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/Alaska/AK_Social_Vulnerability_v2_8BitUnsigned.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="122070" RasterYSize="74961" DataType="Byte" BlockXSize="256" BlockYSize="256" />
+      <SrcRect xOff="48.5926399999919" yOff="0" xSize="122021.40736" ySize="65456.0721262723" />
+      <DstRect xOff="0" yOff="1.92787372769477" xSize="122021.40736" ySize="65456.0721262723" />
+      <NODATA>255</NODATA>
+    </ComplexSource>
+  </VRTRasterBand>
+<VRTRasterBand dataType="Byte" band="12">
+    <NoDataValue>255</NoDataValue>
+    <ColorInterp>Gray</ColorInterp>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/Alaska/AK_Terrestrial_Index_10class_v2_8BitUnsigned.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="122072" RasterYSize="74962" DataType="Byte" BlockXSize="256" BlockYSize="256" />
+      <SrcRect xOff="49.1338199999494" yOff="0" xSize="122022.86618" ySize="65457.0721252378" />
+      <DstRect xOff="0" yOff="0.927874762238935" xSize="122022.86618" ySize="65457.0721252378" />
+      <NODATA>255</NODATA>
+    </ComplexSource>
+  </VRTRasterBand>
+<VRTRasterBand dataType="Byte" band="13">
+    <NoDataValue>255</NoDataValue>
+    <ColorInterp>Gray</ColorInterp>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/Alaska/AK_Threat_Index_v6_clip_B_Reclassify_8BitUnsigned.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="122055" RasterYSize="65496" DataType="Byte" BlockXSize="256" BlockYSize="256" />
+      <SrcRect xOff="33.6853242966502" yOff="0" xSize="122021.314675703" ySize="65176" />
+      <DstRect xOff="0" yOff="282" xSize="122021.314675703" ySize="65176" />
+      <NODATA>255</NODATA>
+    </ComplexSource>
+  </VRTRasterBand>
+<VRTRasterBand dataType="Byte" band="14">
+    <NoDataValue>255</NoDataValue>
+    <ColorInterp>Gray</ColorInterp>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/Alaska/AK_Transportation_Infra_v3_8BitUnsigned.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="122070" RasterYSize="74961" DataType="Byte" BlockXSize="256" BlockYSize="256" />
+      <SrcRect xOff="48.5926399999919" yOff="0" xSize="122021.40736" ySize="65456.0721262723" />
+      <DstRect xOff="0" yOff="1.92787372769477" xSize="122021.40736" ySize="65456.0721262723" />
+      <NODATA>255</NODATA>
+    </ComplexSource>
+  </VRTRasterBand>
+<VRTRasterBand dataType="Byte" band="15">
+    <NoDataValue>255</NoDataValue>
+    <ColorInterp>Gray</ColorInterp>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/Alaska/AK_Tsunami_v1_8BitUnsigned.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="122072" RasterYSize="74963" DataType="Byte" BlockXSize="256" BlockYSize="256" />
+      <SrcRect xOff="48.6853242966502" yOff="0" xSize="122023" ySize="65458" />
+      <DstRect xOff="0" yOff="0" xSize="122023" ySize="65458" />
+      <NODATA>255</NODATA>
+    </ComplexSource>
+  </VRTRasterBand>
+<VRTRasterBand dataType="Byte" band="16">
+    <NoDataValue>255</NoDataValue>
+    <ColorInterp>Gray</ColorInterp>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/Alaska/AK_Wildlife_Index_10class_v2_8BitUnsigned.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="122070" RasterYSize="74961" DataType="Byte" BlockXSize="256" BlockYSize="256" />
+      <SrcRect xOff="48.5926411937612" yOff="0" xSize="122021.407358806" ySize="65456.0721252378" />
+      <DstRect xOff="0" yOff="1.92787476223893" xSize="122021.407358806" ySize="65456.0721252378" />
+      <NODATA>255</NODATA>
+    </ComplexSource>
+  </VRTRasterBand>
+</VRTDataset>
