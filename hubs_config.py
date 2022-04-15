@@ -288,6 +288,45 @@ config = {
       'wave_flooding': 'wave_fld',
       'hub_id': 'TARGET_FID'
     }
+  },
+  'alaska': {
+    'id': { 'in': 'hub_id', 'out': 'TARGET_FID' },
+    'schema': OrderedDict({
+      'geometry': 'Polygon', 
+      'properties': {
+        'acres': 'float',
+        'TARGET_FID': 'int',
+        'aquatic': 'float', # in config.yml
+        'low_areas': 'float', # in config.yml
+        'permafrost': 'float', # in config.yml
+        'transportation': 'float', # in config.yml
+        'wildlife': 'float', # in config.yml
+        'hub_rnk': 'int', # in config.yml
+        'exposure': 'float', # in config.yml
+        'asset': 'float', # in config.yml
+        'threat': 'float', # in config.yml
+        'crit_infra': 'float', # in config.yml
+        'crit_fac': 'float', # in config.yml
+        'soc_vuln': 'float', # in config.yml
+        'floodprone': 'float', # in config.yml
+        'tsunami': 'float', # in config.yml
+        'terrestri': 'float', # in config.yml
+        'erosion': 'float', # in config.yml
+      }
+    }),
+    'field_maps': {
+      'terrestrial': 'terrestri',
+      'crit_facilities': 'crit_fac',
+      'pop_density': 'pop_dens',
+      'social_vuln': 'soc_vuln',
+      'floodprone_areas': 'floodprone',
+      'sea_level_rise': 'slr',
+      'impermeable': 'impermeabl',
+      'Rank': 'hub_rnk',
+      'wave_exposure': 'wave_exp',
+      'wave_flooding': 'wave_fld',
+      'hub_id': 'TARGET_FID'
+    }
   }
 
 
