@@ -298,8 +298,8 @@ config = {
         'TARGET_FID': 'int',
         'aquatic': 'float', # in config.yml
         'low_areas': 'float', # in config.yml
-        'permafrost': 'float', # in config.yml
-        'transportation': 'float', # in config.yml
+        'permafrst': 'float', # in config.yml
+        'trsnpoton': 'float', # in config.yml
         'wildlife': 'float', # in config.yml
         'hub_rnk': 'int', # in config.yml
         'exposure': 'float', # in config.yml
@@ -315,16 +315,12 @@ config = {
       }
     }),
     'field_maps': {
-      'terrestrial': 'terrestri',
       'crit_facilities': 'crit_fac',
-      'pop_density': 'pop_dens',
       'social_vuln': 'soc_vuln',
       'floodprone_areas': 'floodprone',
-      'sea_level_rise': 'slr',
-      'impermeable': 'impermeabl',
       'Rank': 'hub_rnk',
-      'wave_exposure': 'wave_exp',
-      'wave_flooding': 'wave_fld',
+      'permaforst': 'permafrst',
+      'transportation': 'trsnpoton',
       'hub_id': 'TARGET_FID'
     }
   }
