@@ -11,6 +11,7 @@ vrt:
   hawaii: hawaii.vrt
   american_samoa: american_samoa.vrt
   guam: guam.vrt
+  alaska: alaska.vrt
 
 datasets:
 
@@ -284,6 +285,40 @@ datasets:
     - name: wave_exposure
       path: guam/wave_exposure_5class_proj.tif
 
+  alaska:
+    - name: aquatic
+      path: Alaska/AK_Aquatic_Index_10class_v2_8BitUnsigned.tif
+    - name: asset
+      path: Alaska/AK_Asset_Index_All_v3_clip_reclassify_8BitUnsigned.tif
+    - name: crit_facilities
+      path: Alaska/AK_Critical_Facilities_v2_8BitUnsigned.tif
+    - name: crit_infra
+      path: Alaska/AK_Community_Infra_v2_8BitUnsigned.tif
+    - name: erosion
+      path: Alaska/AK_erosion_v3_8BitUnsigned.tif
+    - name: exposure
+      path: Alaska/AK_Exposure_Index_v9_reclassify_8BitUnsigned.tif
+    - name: floodprone_areas
+      path: Alaska/AK_floodprone_v3_8BitUnsigned.tif
+    - name: hubs
+      path: Alaska/ak_hubs_cores_030722.tif
+    - name: low_areas
+      path: Alaska/AK_Low_Lying_Areas_v2_8BitUnsigned.tif
+    - name: permafrost
+      path: Alaska/AK_permafrost20220208_clip_8BitUnsigned.tif
+    - name: social_vuln
+      path: Alaska/AK_Social_Vulnerability_v2_8BitUnsigned.tif
+    - name: terrestrial
+      path: Alaska/AK_Terrestrial_Index_10class_v2_8BitUnsigned.tif
+    - name: threat
+      path: Alaska/AK_Threat_Index_v6_clip_B_Reclassify_8BitUnsigned.tif
+    - name: transportation
+      path: Alaska/AK_Transportation_Infra_v3_8BitUnsigned.tif
+    - name: tsunami
+      path: Alaska/AK_Tsunami_v1_8BitUnsigned.tif
+    - name: wildlife
+      path: Alaska/AK_Wildlife_Index_10class_v2_8BitUnsigned.tif
+
 test:
   points:
     continental_us:
@@ -307,6 +342,9 @@ test:
     guam:
       lat: 13.41
       lng: 144.72
+    alaska:
+      lat: 58.30
+      lng: -134.42
   polygons:
     continental_us: '{"type":"FeatureCollection","name":"test-ar","features":[{"type":"Feature","properties":{"id":"conus_poly"},"geometry":{"type":"Polygon","coordinates":[[[-80.01149654388428,32.887677980874706],[-80.01911401748657,32.88337138447869],[-80.01553058624268,32.87764094428261],[-80.00417947769165,32.882578515468],[-80.01149654388428,32.887677980874706]]]}}]}'
     puerto_rico: '{"type":"FeatureCollection","features":[{"type":"Feature","properties":{"id":"puerto_rico_poly"},"geometry":{"type":"Polygon","coordinates":[[[-66.19537353515625,18.374075820054482],[-66.2750244140625,18.312810846425442],[-66.15966796875,18.272390159624983],[-66.08963012695312,18.380592091462194],[-66.2091064453125,18.4209874751591],[-66.19537353515625,18.374075820054482]]]}}]}'
@@ -315,3 +353,4 @@ test:
     hawaii: '{"type": "FeatureCollection","features": [{"type": "Feature","properties": {},"geometry": {"type": "Polygon","coordinates": [[[-155.51548719406128,19.132761962196447],[-155.51735401153564,19.13199160974006],[-155.51750421524048,19.13081580169501],[-155.51602363586426,19.130126531018448],[-155.51490783691406,19.130734711176473],[-155.51467180252075,19.131890247307247],[-155.51548719406128,19.132761962196447]]]}}]}'
     american_samoa: '{"type": "FeatureCollection","features": [{"type": "Feature","properties": {},"geometry": {"type": "Polygon","coordinates": [[[-170.74453353881836,-14.296573168852175],[-170.74710845947266,-14.304058574190604],[-170.73492050170896,-14.303434799934035],[-170.7322597503662,-14.295325577063075],[-170.74453353881836,-14.296573168852175]]]}}]}'
     guam: '{"type":"FeatureCollection","features":[{"type":"Feature","properties":{},"geometry":{"type":"Polygon","coordinates":[[[144.74343538284302,13.392604613355415],[144.74077463150024,13.38932734988023],[144.74549531936646,13.386300538244093],[144.7498512268066,13.391414784005304],[144.7441864013672,13.392813354740085],[144.74343538284302,13.392604613355415]]]}}]}'
+    alaska: '{"type":"FeatureCollection","features":[{"type":"Feature","properties":{},"geometry":{"type":"Polygon","coordinates":[[[-159.38140869140625,58.63121664342478],[-159.26055908203125,58.37435815266593],[-158.60137939453122,58.39163652523205],[-158.6865234375,58.68122094860888],[-159.38140869140625,58.63121664342478]]]}}]}'
