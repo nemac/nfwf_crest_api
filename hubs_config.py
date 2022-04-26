@@ -296,22 +296,22 @@ config = {
       'properties': {
         'acres': 'float',
         'TARGET_FID': 'int',
-        'aquatic': 'float', # in config.yml #
-        'low_areas': 'float', # in config.yml #
-        'permafrst': 'float', # in config.yml #
-        'trsnpoton': 'float', # in config.yml #
-        'wildlife': 'float', # in config.yml #
-        'hub_rnk': 'int', # in config.yml #
-        'exposure': 'float', # in config.yml #
-        'asset': 'float', # in config.yml #
-        'threat': 'float', # in config.yml #
-        'crit_infra': 'float', # in config.yml #
-        'crit_fac': 'float', # in config.yml #
-        'soc_vuln': 'float', # in config.yml #
-        'floodprone': 'float', # in config.yml #
-        'tsunami': 'float', # in config.yml #
-        'terrestri': 'float', # in config.yml #
-        'erosion': 'float', # in config.yml #
+        'aquatic': 'float', 
+        'low_areas': 'float',
+        'permafrst': 'float', 
+        'trsnpoton': 'float',
+        'wildlife': 'float',
+        'hub_rnk': 'int',
+        'exposure': 'float',
+        'asset': 'float',
+        'threat': 'float',
+        'crit_infra': 'float',
+        'crit_fac': 'float',
+        'soc_vuln': 'float',
+        'floodprone': 'float',
+        'tsunami': 'float',
+        'terrestri': 'float',
+        'erosion': 'float',
       }
     }),
     'field_maps': {

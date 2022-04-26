@@ -289,7 +289,7 @@ datasets:
       path: AK_Asset_Index_All_v3_clip_reclassify_8BitUnsigned.tif
     - name: crit_facilities
       path: AK_Critical_Facilities_v2_8BitUnsigned.tif
-    - name: community_infra
+    - name: crit_infra
       path: AK_Community_Infra_v2_8BitUnsigned.tif
     - name: erosion
       path: AK_erosion_v3_8BitUnsigned.tif
