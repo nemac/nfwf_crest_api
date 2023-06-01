@@ -324,6 +324,42 @@ config = {
       'transportation': 'trsnpoton',
       'hub_id': 'TARGET_FID'
     }
+  },
+  'great_lakes': {
+    'id': { 'in': 'hub_id', 'out': 'TARGET_FID' },
+    'schema': OrderedDict({
+      'geometry': 'Polygon',
+      'properties': {
+        'acres': 'float',
+        'TARGET_FID': 'int',
+        'aquatic': 'float',
+        'wildlife': 'float',
+        'hub_rnk': 'int',
+        'exposure': 'float',
+        'asset': 'float',
+        'threat': 'float',
+        'crit_infra': 'float',
+        'crit_fac': 'float',
+        'soc_vuln': 'float',
+        'floodprone': 'float',
+        'terrestri': 'float',
+        'slope': 'float',
+        'erosion': 'float',
+        'highwater': 'float', 
+        'impermeabl': 'float',
+        'pop_dens': 'float'
+      }
+    }),
+    'field_maps': {
+      'terrestrial': 'terrestri',
+      'crit_facilities': 'crit_fac',
+      'social_vuln': 'soc_vuln',
+      'floodprone_areas': 'floodprone',
+      'hub_rank': 'hub_rnk',
+      'impermeable': 'impermeabl',
+      'pop_density': 'pop_dens',
+      'hub_id': 'TARGET_FID'
+    }
   }
 
 

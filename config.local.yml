@@ -9,6 +9,7 @@ vrt:
   american_samoa: american_samoa.local.vrt
   guam: guam.local.vrt
   alaska: alaska.local.vrt
+  great_lakes: great_lakes.local.vrt
 
 datasets:
 
@@ -315,6 +316,40 @@ datasets:
       path: AK_Tsunami_v1_8BitUnsigned.tif
     - name: wildlife
       path: AK_Wildlife_Index_10class_v2_8BitUnsigned.tif
+
+  great_lakes:
+    - name: aquatic
+      path: GL_Aquatic_Index_CREST_20230504.tif
+    - name: asset
+      path: GL_Asset_Index_CREST_20230504.tif
+    - name: crit_facilities
+      path: GL_Critical_Facilities_CREST_20230504.tif
+    - name: crit_infra
+      path: GL_Critical_Infrastructure_CREST_20230504.tif
+    - name: erosion
+      path: GL_Soil_Erodibility_CREST_20230504.tif
+    - name: exposure
+      path: GL_Community_Exposure_Index_CREST_20230504.tif
+    - name: floodprone_areas
+      path: GL_Flood_Prone_Areas_CREST_20230504.tif
+    - name: high_water
+      path: GL_High_Water_Levels_CREST_20230504.tif
+    - name: hubs
+      path: gl_hubs_cores_052323_102003_CREST.tif
+    - name: impermeable
+      path: GL_Impermeability_CREST_20230504.tif
+    - name: pop_density
+      path: GL_Population_Density_CREST_20230504.tif
+    - name: slope
+      path: GL_Areas_of_Low_Slope_CREST_20230504.tif
+    - name: social_vuln
+      path: GL_Social_Vulnerability_CREST_20230504.tif
+    - name: terrestrial
+      path: GL_Terrestrial_Index_CREST_20230504.tif
+    - name: threat
+      path: GL_Threat_Index_CREST_20230504.tif
+    - name: wildlife
+      path: GL_Fish_and_Wildlife_Index_CREST_20230504.tif
 
 
 test:
