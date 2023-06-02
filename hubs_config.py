@@ -355,7 +355,7 @@ config = {
       'crit_facilities': 'crit_fac',
       'social_vuln': 'soc_vuln',
       'floodprone_areas': 'floodprone',
-      'hub_rank': 'hub_rnk',
+      'rank_val': 'hub_rnk',
       'impermeable': 'impermeabl',
       'pop_density': 'pop_dens',
       'hub_id': 'TARGET_FID'
