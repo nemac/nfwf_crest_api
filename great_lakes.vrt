@@ -1,0 +1,196 @@
+<VRTDataset rasterXSize="49918" rasterYSize="27987">
+  <SRS dataAxisToSRSAxisMapping="1,2">PROJCS["USA_Contiguous_Albers_Equal_Area_Conic",GEOGCS["NAD83",DATUM["North_American_Datum_1983",SPHEROID["GRS 1980",6378137,298.257222101004,AUTHORITY["EPSG","7019"]],AUTHORITY["EPSG","6269"]],PRIMEM["Greenwich",0],UNIT["degree",0.0174532925199433,AUTHORITY["EPSG","9122"]],AUTHORITY["EPSG","4269"]],PROJECTION["Albers_Conic_Equal_Area"],PARAMETER["latitude_of_center",37.5],PARAMETER["longitude_of_center",-96],PARAMETER["standard_parallel_1",29.5],PARAMETER["standard_parallel_2",45.5],PARAMETER["false_easting",0],PARAMETER["false_northing",0],UNIT["metre",1,AUTHORITY["EPSG","9001"]],AXIS["Easting",EAST],AXIS["Northing",NORTH]]</SRS>
+  <GeoTransform>  2.1324303510000001e+05,  3.0000000000000000e+01,  0.0000000000000000e+00,  1.2234251458000001e+06,  0.0000000000000000e+00, -3.0000000000000000e+01</GeoTransform>
+  <VRTRasterBand dataType="Byte" band="1">
+    <NoDataValue>255</NoDataValue>
+    <ColorInterp>Gray</ColorInterp>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/Great_Lakes/GL_Aquatic_Index_CREST_20230504.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="49917" RasterYSize="27988" DataType="Byte" BlockXSize="128" BlockYSize="128" />
+      <SrcRect xOff="0.319930000045376" yOff="0" xSize="49916.68007" ySize="27987" />
+      <DstRect xOff="0" yOff="0" xSize="49916.68007" ySize="27987" />
+      <NODATA>255</NODATA>
+    </ComplexSource>
+  </VRTRasterBand>
+<VRTRasterBand dataType="Byte" band="2">
+    <NoDataValue>255</NoDataValue>
+    <ColorInterp>Gray</ColorInterp>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/Great_Lakes/GL_Asset_Index_CREST_20230504.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="49917" RasterYSize="27911" DataType="Byte" BlockXSize="128" BlockYSize="128" />
+      <SrcRect xOff="0.319930000045376" yOff="0" xSize="49916.68007" ySize="27910" />
+      <DstRect xOff="0" yOff="77" xSize="49916.68007" ySize="27910" />
+      <NODATA>255</NODATA>
+    </ComplexSource>
+  </VRTRasterBand>
+<VRTRasterBand dataType="Byte" band="3">
+    <NoDataValue>255</NoDataValue>
+    <ColorInterp>Gray</ColorInterp>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/Great_Lakes/GL_Critical_Facilities_CREST_20230504.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="49917" RasterYSize="27988" DataType="Byte" BlockXSize="128" BlockYSize="128" />
+      <SrcRect xOff="0.319930000045376" yOff="0" xSize="49916.68007" ySize="27987" />
+      <DstRect xOff="0" yOff="0" xSize="49916.68007" ySize="27987" />
+      <NODATA>255</NODATA>
+    </ComplexSource>
+  </VRTRasterBand>
+<VRTRasterBand dataType="Byte" band="4">
+    <NoDataValue>255</NoDataValue>
+    <ColorInterp>Gray</ColorInterp>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/Great_Lakes/GL_Critical_Infrastructure_CREST_20230504.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="49917" RasterYSize="27988" DataType="Byte" BlockXSize="128" BlockYSize="128" />
+      <SrcRect xOff="0.319930000045376" yOff="0" xSize="49916.68007" ySize="27987" />
+      <DstRect xOff="0" yOff="0" xSize="49916.68007" ySize="27987" />
+      <NODATA>255</NODATA>
+    </ComplexSource>
+  </VRTRasterBand>
+<VRTRasterBand dataType="Byte" band="5">
+    <NoDataValue>255</NoDataValue>
+    <ColorInterp>Gray</ColorInterp>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/Great_Lakes/GL_Soil_Erodibility_CREST_20230504.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="49917" RasterYSize="27988" DataType="Byte" BlockXSize="128" BlockYSize="128" />
+      <SrcRect xOff="0.319930000045376" yOff="0" xSize="49916.68007" ySize="27987" />
+      <DstRect xOff="0" yOff="0" xSize="49916.68007" ySize="27987" />
+      <NODATA>255</NODATA>
+    </ComplexSource>
+  </VRTRasterBand>
+<VRTRasterBand dataType="Byte" band="6">
+    <NoDataValue>255</NoDataValue>
+    <ColorInterp>Gray</ColorInterp>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/Great_Lakes/GL_Community_Exposure_Index_CREST_20230504.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="49917" RasterYSize="27911" DataType="Byte" BlockXSize="128" BlockYSize="128" />
+      <SrcRect xOff="0.319930000045376" yOff="0" xSize="49916.68007" ySize="27910" />
+      <DstRect xOff="0" yOff="77" xSize="49916.68007" ySize="27910" />
+      <NODATA>255</NODATA>
+    </ComplexSource>
+  </VRTRasterBand>
+<VRTRasterBand dataType="Byte" band="7">
+    <NoDataValue>255</NoDataValue>
+    <ColorInterp>Gray</ColorInterp>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/Great_Lakes/GL_Flood_Prone_Areas_CREST_20230504.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="49917" RasterYSize="27988" DataType="Byte" BlockXSize="128" BlockYSize="128" />
+      <SrcRect xOff="0.319930000045376" yOff="0" xSize="49916.68007" ySize="27987" />
+      <DstRect xOff="0" yOff="0" xSize="49916.68007" ySize="27987" />
+      <NODATA>255</NODATA>
+    </ComplexSource>
+  </VRTRasterBand>
+<VRTRasterBand dataType="Byte" band="8">
+    <NoDataValue>255</NoDataValue>
+    <ColorInterp>Gray</ColorInterp>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/Great_Lakes/GL_High_Water_Levels_CREST_20230504.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="49917" RasterYSize="27988" DataType="Byte" BlockXSize="128" BlockYSize="128" />
+      <SrcRect xOff="0.319930000045376" yOff="0" xSize="49916.68007" ySize="27987" />
+      <DstRect xOff="0" yOff="0" xSize="49916.68007" ySize="27987" />
+      <NODATA>255</NODATA>
+    </ComplexSource>
+  </VRTRasterBand>
+<VRTRasterBand dataType="Byte" band="9">
+    <NoDataValue>255</NoDataValue>
+    <ColorInterp>Gray</ColorInterp>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/Great_Lakes/gl_hubs_cores_052323_102003_CREST.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="49916" RasterYSize="27987" DataType="Byte" BlockXSize="49916" BlockYSize="1" />
+      <SrcRect xOff="0" yOff="0" xSize="49916" ySize="27986.9018633333" />
+      <DstRect xOff="0" yOff="0.0981366666654746" xSize="49916" ySize="27986.9018633333" />
+      <NODATA>255</NODATA>
+    </ComplexSource>
+  </VRTRasterBand>
+<VRTRasterBand dataType="Byte" band="10">
+    <NoDataValue>255</NoDataValue>
+    <ColorInterp>Gray</ColorInterp>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/Great_Lakes/GL_Impermeability_CREST_20230504.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="49917" RasterYSize="27988" DataType="Byte" BlockXSize="128" BlockYSize="128" />
+      <SrcRect xOff="0.319930000045376" yOff="0" xSize="49916.68007" ySize="27987" />
+      <DstRect xOff="0" yOff="0" xSize="49916.68007" ySize="27987" />
+      <NODATA>255</NODATA>
+    </ComplexSource>
+  </VRTRasterBand>
+<VRTRasterBand dataType="Byte" band="11">
+    <NoDataValue>255</NoDataValue>
+    <ColorInterp>Gray</ColorInterp>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/Great_Lakes/GL_Population_Density_CREST_20230504.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="49918" RasterYSize="27988" DataType="Byte" BlockXSize="128" BlockYSize="128" />
+      <SrcRect xOff="0.319930000045376" yOff="0" xSize="49917.68007" ySize="27987" />
+      <DstRect xOff="0" yOff="0" xSize="49917.68007" ySize="27987" />
+      <NODATA>255</NODATA>
+    </ComplexSource>
+  </VRTRasterBand>
+<VRTRasterBand dataType="Byte" band="12">
+    <NoDataValue>255</NoDataValue>
+    <ColorInterp>Gray</ColorInterp>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/Great_Lakes/GL_Areas_of_Low_Slope_CREST_20230504.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="49917" RasterYSize="27988" DataType="Byte" BlockXSize="128" BlockYSize="128" />
+      <SrcRect xOff="0.319930000045376" yOff="0" xSize="49916.68007" ySize="27987" />
+      <DstRect xOff="0" yOff="0" xSize="49916.68007" ySize="27987" />
+      <NODATA>255</NODATA>
+    </ComplexSource>
+  </VRTRasterBand>
+<VRTRasterBand dataType="Byte" band="13">
+    <NoDataValue>255</NoDataValue>
+    <ColorInterp>Gray</ColorInterp>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/Great_Lakes/GL_Social_Vulnerability_CREST_20230504.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="49917" RasterYSize="27988" DataType="Byte" BlockXSize="128" BlockYSize="128" />
+      <SrcRect xOff="0.319930000045376" yOff="0" xSize="49916.68007" ySize="27987" />
+      <DstRect xOff="0" yOff="0" xSize="49916.68007" ySize="27987" />
+      <NODATA>255</NODATA>
+    </ComplexSource>
+  </VRTRasterBand>
+<VRTRasterBand dataType="Byte" band="14">
+    <NoDataValue>255</NoDataValue>
+    <ColorInterp>Gray</ColorInterp>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/Great_Lakes/GL_Terrestrial_Index_CREST_20230504.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="49916" RasterYSize="27987" DataType="Byte" BlockXSize="128" BlockYSize="128" />
+      <SrcRect xOff="0.319930000045376" yOff="0" xSize="49915.68007" ySize="27987" />
+      <DstRect xOff="0" yOff="0" xSize="49915.68007" ySize="27987" />
+      <NODATA>255</NODATA>
+    </ComplexSource>
+  </VRTRasterBand>
+<VRTRasterBand dataType="Byte" band="15">
+    <NoDataValue>255</NoDataValue>
+    <ColorInterp>Gray</ColorInterp>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/Great_Lakes/GL_Threat_Index_CREST_20230504.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="49917" RasterYSize="27911" DataType="Byte" BlockXSize="128" BlockYSize="128" />
+      <SrcRect xOff="0.319930000045376" yOff="0" xSize="49916.68007" ySize="27910" />
+      <DstRect xOff="0" yOff="77" xSize="49916.68007" ySize="27910" />
+      <NODATA>255</NODATA>
+    </ComplexSource>
+  </VRTRasterBand>
+<VRTRasterBand dataType="Byte" band="16">
+    <NoDataValue>255</NoDataValue>
+    <ColorInterp>Gray</ColorInterp>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/Great_Lakes/GL_Fish_and_Wildlife_Index_CREST_20230504.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="49916" RasterYSize="27987" DataType="Byte" BlockXSize="128" BlockYSize="128" />
+      <SrcRect xOff="0.319930000045376" yOff="0" xSize="49915.68007" ySize="27987" />
+      <DstRect xOff="0" yOff="0" xSize="49915.68007" ySize="27987" />
+      <NODATA>255</NODATA>
+    </ComplexSource>
+  </VRTRasterBand>
+</VRTDataset>

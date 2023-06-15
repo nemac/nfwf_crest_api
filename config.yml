@@ -12,6 +12,7 @@ vrt:
   american_samoa: american_samoa.vrt
   guam: guam.vrt
   alaska: alaska.vrt
+  great_lakes: great_lakes.vrt
 
 datasets:
 
@@ -319,6 +320,40 @@ datasets:
     - name: wildlife
       path: Alaska/AK_Wildlife_Index_10class_v2_8BitUnsigned.tif
 
+  great_lakes:
+    - name: aquatic
+      path: Great_Lakes/GL_Aquatic_Index_CREST_20230504.tif
+    - name: asset
+      path: Great_Lakes/GL_Asset_Index_CREST_20230504.tif
+    - name: crit_facilities
+      path: Great_Lakes/GL_Critical_Facilities_CREST_20230504.tif
+    - name: crit_infra
+      path: Great_Lakes/GL_Critical_Infrastructure_CREST_20230504.tif
+    - name: erosion
+      path: Great_Lakes/GL_Soil_Erodibility_CREST_20230504.tif
+    - name: exposure
+      path: Great_Lakes/GL_Community_Exposure_Index_CREST_20230504.tif
+    - name: floodprone_areas
+      path: Great_Lakes/GL_Flood_Prone_Areas_CREST_20230504.tif
+    - name: highwater
+      path: Great_Lakes/GL_High_Water_Levels_CREST_20230504.tif
+    - name: hubs
+      path: Great_Lakes/gl_hubs_cores_052323_102003_CREST.tif
+    - name: impermeable
+      path: Great_Lakes/GL_Impermeability_CREST_20230504.tif
+    - name: pop_density
+      path: Great_Lakes/GL_Population_Density_CREST_20230504.tif
+    - name: slope
+      path: Great_Lakes/GL_Areas_of_Low_Slope_CREST_20230504.tif
+    - name: social_vuln
+      path: Great_Lakes/GL_Social_Vulnerability_CREST_20230504.tif
+    - name: terrestrial
+      path: Great_Lakes/GL_Terrestrial_Index_CREST_20230504.tif
+    - name: threat
+      path: Great_Lakes/GL_Threat_Index_CREST_20230504.tif
+    - name: wildlife
+      path: Great_Lakes/GL_Fish_and_Wildlife_Index_CREST_20230504.tif
+
 test:
   points:
     continental_us:
@@ -345,6 +380,9 @@ test:
     alaska:
       lat: 58.30
       lng: -134.42
+    great_lakes:
+      lat: 44.76776
+      lng: -85.56272
   polygons:
     continental_us: '{"type":"FeatureCollection","name":"test-ar","features":[{"type":"Feature","properties":{"id":"conus_poly"},"geometry":{"type":"Polygon","coordinates":[[[-80.01149654388428,32.887677980874706],[-80.01911401748657,32.88337138447869],[-80.01553058624268,32.87764094428261],[-80.00417947769165,32.882578515468],[-80.01149654388428,32.887677980874706]]]}}]}'
     puerto_rico: '{"type":"FeatureCollection","features":[{"type":"Feature","properties":{"id":"puerto_rico_poly"},"geometry":{"type":"Polygon","coordinates":[[[-66.19537353515625,18.374075820054482],[-66.2750244140625,18.312810846425442],[-66.15966796875,18.272390159624983],[-66.08963012695312,18.380592091462194],[-66.2091064453125,18.4209874751591],[-66.19537353515625,18.374075820054482]]]}}]}'
@@ -354,3 +392,4 @@ test:
     american_samoa: '{"type": "FeatureCollection","features": [{"type": "Feature","properties": {},"geometry": {"type": "Polygon","coordinates": [[[-170.74453353881836,-14.296573168852175],[-170.74710845947266,-14.304058574190604],[-170.73492050170896,-14.303434799934035],[-170.7322597503662,-14.295325577063075],[-170.74453353881836,-14.296573168852175]]]}}]}'
     guam: '{"type":"FeatureCollection","features":[{"type":"Feature","properties":{},"geometry":{"type":"Polygon","coordinates":[[[144.74343538284302,13.392604613355415],[144.74077463150024,13.38932734988023],[144.74549531936646,13.386300538244093],[144.7498512268066,13.391414784005304],[144.7441864013672,13.392813354740085],[144.74343538284302,13.392604613355415]]]}}]}'
     alaska: '{"type":"FeatureCollection","features":[{"type":"Feature","properties":{},"geometry":{"type":"Polygon","coordinates":[[[-159.38140869140625,58.63121664342478],[-159.26055908203125,58.37435815266593],[-158.60137939453122,58.39163652523205],[-158.6865234375,58.68122094860888],[-159.38140869140625,58.63121664342478]]]}}]}'
+    great_lakes: '{"type":"FeatureCollection","features":[{"type":"Feature","properties":{},"geometry":{"type":"Polygon","coordinates":[[[-85.63179,44.75796],[-85.60149,44.75326],[-85.59717,44.77625],[-85.63557,44.77048],[-85.63179,44.75796]]]}}]}'
