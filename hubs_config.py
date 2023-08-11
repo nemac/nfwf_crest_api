@@ -2,14 +2,16 @@ from collections import OrderedDict
 
 config = {
   'continental_us': {
-    'id': { 'in': 'OBJECTID', 'out': 'TARGET_FID' },
+    'id': { 'in': 'NAME', 'out': 'areaName' },
     'schema': OrderedDict({
       'geometry': 'Polygon',
       'properties': {
-        'TARGET_FID': 'int',
-        'hub_rnk': 'int',
+        'areaName': 'str',
+        'GEOID': 'int',
+        'STATEFP': 'str',
+        'COUNTYNS': 'str',
+        'hubs': 'float',
         'wildlife': 'float',
-        'acres': 'float',
         'exposure': 'float',
         'asset': 'float',
         'threat': 'float',
@@ -30,7 +32,7 @@ config = {
       }
     }),
     'field_maps': {
-      'OBJECTID': 'TARGET_FID',
+      'NAME': 'areaName',
       'terrestrial': 'terrestri',
       'crit_facilities': 'crit_fac',
       'pop_density': 'pop_dens',

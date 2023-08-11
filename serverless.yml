@@ -1,6 +1,7 @@
 service: crest-api
 
 plugins:
+  - serverless-ignore
   - serverless-python-requirements
   - serverless-offline
 
@@ -14,8 +15,8 @@ provider:
   runtime: python3.8
   lambdaHashingVersion: '20201221'
   stage: ${opt:stage, 'dev'}
-  memorySize: 2048
-  timeout: 30
+  memorySize: 1024
+  timeout: 90
   iamRoleStatements:
     - Effect: "Allow"
       Action:
@@ -67,3 +68,41 @@ functions:
           path: upload_shape
           method: post
           cors: true
+
+  read_geojson:
+    handler: read_geojson.lambda_handler
+    events:
+      - http:
+          path: read_geojson
+          method: get
+          cors: true
+          request:
+            parameters:
+              querystrings:
+                region: true
+                name: true
+
+#  read_s3:
+#    handler: read_s3.lambda_handler
+#    events:
+#      - http:
+#          path: read_s3
+#          method: get
+#          cors: true
+#          request:
+#            parameters:
+#              querystrings:
+#                shareUrl: true
+
+#  write_s3:
+#    handler: write_s3.lambda_handler
+#    events:
+#      - http:
+#          path: write_s3
+#          method: post
+#          cors: true
+#          # request:
+#           # parameters:
+#            #  querystrings:
+#            #    region: true
+#            #    name: true
