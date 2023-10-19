@@ -1,5 +1,5 @@
-<VRTDataset rasterXSize="22613" rasterYSize="12375">
-  <SRS>PROJCS["NAD83 / Puerto Rico &amp; Virgin Is.",GEOGCS["NAD83",DATUM["North_American_Datum_1983",SPHEROID["GRS 1980",6378137,298.257222101,AUTHORITY["EPSG","7019"]],TOWGS84[0,0,0,0,0,0,0],AUTHORITY["EPSG","6269"]],PRIMEM["Greenwich",0,AUTHORITY["EPSG","8901"]],UNIT["degree",0.0174532925199433,AUTHORITY["EPSG","9122"]],AUTHORITY["EPSG","4269"]],PROJECTION["Lambert_Conformal_Conic_2SP"],PARAMETER["standard_parallel_1",18.43333333333333],PARAMETER["standard_parallel_2",18.03333333333333],PARAMETER["latitude_of_origin",17.83333333333333],PARAMETER["central_meridian",-66.43333333333334],PARAMETER["false_easting",200000],PARAMETER["false_northing",200000],UNIT["metre",1,AUTHORITY["EPSG","9001"]],AXIS["X",EAST],AXIS["Y",NORTH],AUTHORITY["EPSG","32161"]]</SRS>
+<VRTDataset rasterXSize="29269" rasterYSize="12375">
+  <SRS dataAxisToSRSAxisMapping="1,2">PROJCS["NAD83 / Puerto Rico &amp; Virgin Is.",GEOGCS["NAD83",DATUM["North_American_Datum_1983",SPHEROID["GRS 1980",6378137,298.257222101,AUTHORITY["EPSG","7019"]],AUTHORITY["EPSG","6269"]],PRIMEM["Greenwich",0,AUTHORITY["EPSG","8901"]],UNIT["degree",0.0174532925199433,AUTHORITY["EPSG","9122"]],AUTHORITY["EPSG","4269"]],PROJECTION["Lambert_Conformal_Conic_2SP"],PARAMETER["latitude_of_origin",17.8333333333333],PARAMETER["central_meridian",-66.4333333333333],PARAMETER["standard_parallel_1",18.4333333333333],PARAMETER["standard_parallel_2",18.0333333333333],PARAMETER["false_easting",200000],PARAMETER["false_northing",200000],UNIT["metre",1,AUTHORITY["EPSG","9001"]],AXIS["Easting",EAST],AXIS["Northing",NORTH],AUTHORITY["EPSG","32161"]]</SRS>
   <GeoTransform>  1.1100364653526992e+05,  1.0000000000000000e+01,  0.0000000000000000e+00,  3.3238881081655249e+05,  0.0000000000000000e+00, -1.0000000000000000e+01</GeoTransform>
   <VRTRasterBand dataType="Byte" band="1">
     <NoDataValue>255</NoDataValue>
@@ -8,8 +8,8 @@
       <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/puerto-rico/byte/PR_ExposureIndex_10class_021120_clip.tif</SourceFilename>
       <SourceBand>1</SourceBand>
       <SourceProperties RasterXSize="21775" RasterYSize="6792" DataType="Byte" BlockXSize="256" BlockYSize="256" />
-      <SrcRect xOff="0" yOff="0" xSize="21775" ySize="6792" />
-      <DstRect xOff="0" yOff="5583.4830793038" xSize="21775" ySize="6792" />
+      <SrcRect xOff="0" yOff="0" xSize="21775" ySize="6791.5169206962" />
+      <DstRect xOff="0" yOff="5583.4830793038" xSize="21775" ySize="6791.5169206962" />
       <NODATA>255</NODATA>
     </ComplexSource>
   </VRTRasterBand>
@@ -20,8 +20,8 @@
       <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/puerto-rico/byte/PR_AssetIndex_10class_021020_clip.tif</SourceFilename>
       <SourceBand>1</SourceBand>
       <SourceProperties RasterXSize="21775" RasterYSize="6792" DataType="Byte" BlockXSize="256" BlockYSize="256" />
-      <SrcRect xOff="0.102023527026176" yOff="0" xSize="21775" ySize="6792" />
-      <DstRect xOff="0" yOff="5583.16950165518" xSize="21775" ySize="6792" />
+      <SrcRect xOff="0.102023527026176" yOff="0" xSize="21774.897976473" ySize="6791.83049834482" />
+      <DstRect xOff="0" yOff="5583.16950165518" xSize="21774.897976473" ySize="6791.83049834482" />
       <NODATA>255</NODATA>
     </ComplexSource>
   </VRTRasterBand>
@@ -32,8 +32,8 @@
       <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/puerto-rico/byte/PR_CombinedWildlife_6class_040320.tif</SourceFilename>
       <SourceBand>1</SourceBand>
       <SourceProperties RasterXSize="23621" RasterYSize="7839" DataType="Byte" BlockXSize="256" BlockYSize="256" />
-      <SrcRect xOff="1643" yOff="0" xSize="23621" ySize="7839" />
-      <DstRect xOff="0" yOff="5418.4830816552" xSize="23621" ySize="7839" />
+      <SrcRect xOff="1643" yOff="0" xSize="21978" ySize="6956.5169183448" />
+      <DstRect xOff="0" yOff="5418.4830816552" xSize="21978" ySize="6956.5169183448" />
       <NODATA>255</NODATA>
     </ComplexSource>
   </VRTRasterBand>
@@ -44,8 +44,8 @@
       <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/puerto-rico/byte/PR_CriticalFacilities_v2_clip.tif</SourceFilename>
       <SourceBand>1</SourceBand>
       <SourceProperties RasterXSize="21775" RasterYSize="6792" DataType="Byte" BlockXSize="256" BlockYSize="256" />
-      <SrcRect xOff="0.102023527026176" yOff="0" xSize="21775" ySize="6792" />
-      <DstRect xOff="0" yOff="5583.16950165518" xSize="21775" ySize="6792" />
+      <SrcRect xOff="0.102023527026176" yOff="0" xSize="21774.897976473" ySize="6791.83049834482" />
+      <DstRect xOff="0" yOff="5583.16950165518" xSize="21774.897976473" ySize="6791.83049834482" />
       <NODATA>255</NODATA>
     </ComplexSource>
   </VRTRasterBand>
@@ -56,8 +56,8 @@
       <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/puerto-rico/byte/PR_CriticalInfrastructure_v2_clip.tif</SourceFilename>
       <SourceBand>1</SourceBand>
       <SourceProperties RasterXSize="21775" RasterYSize="6792" DataType="Byte" BlockXSize="256" BlockYSize="256" />
-      <SrcRect xOff="0.102023527231358" yOff="0" xSize="21775" ySize="6792" />
-      <DstRect xOff="0" yOff="5583.16950165518" xSize="21775" ySize="6792" />
+      <SrcRect xOff="0.102023527231358" yOff="0" xSize="21774.8979764728" ySize="6791.83049834482" />
+      <DstRect xOff="0" yOff="5583.16950165518" xSize="21774.8979764728" ySize="6791.83049834482" />
       <NODATA>255</NODATA>
     </ComplexSource>
   </VRTRasterBand>
@@ -68,8 +68,8 @@
       <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/puerto-rico/byte/PR_ErodibleSoils_v2_clip.tif</SourceFilename>
       <SourceBand>1</SourceBand>
       <SourceProperties RasterXSize="21775" RasterYSize="6792" DataType="Byte" BlockXSize="256" BlockYSize="256" />
-      <SrcRect xOff="0" yOff="0" xSize="21775" ySize="6792" />
-      <DstRect xOff="0" yOff="5583.48308298364" xSize="21775" ySize="6792" />
+      <SrcRect xOff="0" yOff="0" xSize="21775" ySize="6791.51691701636" />
+      <DstRect xOff="0" yOff="5583.48308298364" xSize="21775" ySize="6791.51691701636" />
       <NODATA>255</NODATA>
     </ComplexSource>
   </VRTRasterBand>
@@ -80,8 +80,8 @@
       <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/puerto-rico/byte/PR_FloodproneAreas_v2_clip.tif</SourceFilename>
       <SourceBand>1</SourceBand>
       <SourceProperties RasterXSize="21775" RasterYSize="6792" DataType="Byte" BlockXSize="256" BlockYSize="256" />
-      <SrcRect xOff="0" yOff="0" xSize="21775" ySize="6792" />
-      <DstRect xOff="0" yOff="5583.48308298364" xSize="21775" ySize="6792" />
+      <SrcRect xOff="0" yOff="0" xSize="21775" ySize="6791.51691701636" />
+      <DstRect xOff="0" yOff="5583.48308298364" xSize="21775" ySize="6791.51691701636" />
       <NODATA>255</NODATA>
     </ComplexSource>
   </VRTRasterBand>
@@ -92,8 +92,8 @@
       <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/puerto-rico/byte/PR_Impermeable_v2_clip.tif</SourceFilename>
       <SourceBand>1</SourceBand>
       <SourceProperties RasterXSize="21775" RasterYSize="6792" DataType="Byte" BlockXSize="256" BlockYSize="256" />
-      <SrcRect xOff="0" yOff="0" xSize="21775" ySize="6792" />
-      <DstRect xOff="0" yOff="5583.4830793038" xSize="21775" ySize="6792" />
+      <SrcRect xOff="0" yOff="0" xSize="21775" ySize="6791.5169206962" />
+      <DstRect xOff="0" yOff="5583.4830793038" xSize="21775" ySize="6791.5169206962" />
       <NODATA>255</NODATA>
     </ComplexSource>
   </VRTRasterBand>
@@ -104,8 +104,8 @@
       <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/puerto-rico/byte/PR_Landslides_v2_clip.tif</SourceFilename>
       <SourceBand>1</SourceBand>
       <SourceProperties RasterXSize="21775" RasterYSize="6792" DataType="Byte" BlockXSize="256" BlockYSize="256" />
-      <SrcRect xOff="0" yOff="0" xSize="21775" ySize="6792" />
-      <DstRect xOff="0" yOff="5583.4830793038" xSize="21775" ySize="6792" />
+      <SrcRect xOff="0" yOff="0" xSize="21775" ySize="6791.5169206962" />
+      <DstRect xOff="0" yOff="5583.4830793038" xSize="21775" ySize="6791.5169206962" />
       <NODATA>255</NODATA>
     </ComplexSource>
   </VRTRasterBand>
@@ -116,8 +116,8 @@
       <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/puerto-rico/byte/PR_LowLyingAreas_v2_clip.tif</SourceFilename>
       <SourceBand>1</SourceBand>
       <SourceProperties RasterXSize="21775" RasterYSize="6792" DataType="Byte" BlockXSize="256" BlockYSize="256" />
-      <SrcRect xOff="0" yOff="0" xSize="21775" ySize="6792" />
-      <DstRect xOff="0" yOff="5583.48308298364" xSize="21775" ySize="6792" />
+      <SrcRect xOff="0" yOff="0" xSize="21775" ySize="6791.51691701636" />
+      <DstRect xOff="0" yOff="5583.48308298364" xSize="21775" ySize="6791.51691701636" />
       <NODATA>255</NODATA>
     </ComplexSource>
   </VRTRasterBand>
@@ -128,8 +128,8 @@
       <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/puerto-rico/byte/PR_MarineIndex_4class.tif</SourceFilename>
       <SourceBand>1</SourceBand>
       <SourceProperties RasterXSize="23621" RasterYSize="7839" DataType="Byte" BlockXSize="256" BlockYSize="256" />
-      <SrcRect xOff="1643" yOff="0" xSize="23621" ySize="7839" />
-      <DstRect xOff="0" yOff="5418.4830816552" xSize="23621" ySize="7839" />
+      <SrcRect xOff="1643" yOff="0" xSize="21978" ySize="6956.5169183448" />
+      <DstRect xOff="0" yOff="5418.4830816552" xSize="21978" ySize="6956.5169183448" />
       <NODATA>255</NODATA>
     </ComplexSource>
   </VRTRasterBand>
@@ -140,8 +140,8 @@
       <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/puerto-rico/byte/PR_PopulationDensity_v2_clip.tif</SourceFilename>
       <SourceBand>1</SourceBand>
       <SourceProperties RasterXSize="21775" RasterYSize="6792" DataType="Byte" BlockXSize="256" BlockYSize="256" />
-      <SrcRect xOff="0.102023527026176" yOff="0" xSize="21775" ySize="6792" />
-      <DstRect xOff="0" yOff="5583.16950165518" xSize="21775" ySize="6792" />
+      <SrcRect xOff="0.102023527026176" yOff="0" xSize="21774.897976473" ySize="6791.83049834482" />
+      <DstRect xOff="0" yOff="5583.16950165518" xSize="21774.897976473" ySize="6791.83049834482" />
       <NODATA>255</NODATA>
     </ComplexSource>
   </VRTRasterBand>
@@ -152,8 +152,8 @@
       <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/puerto-rico/byte/PR_SLR_v2_clip.tif</SourceFilename>
       <SourceBand>1</SourceBand>
       <SourceProperties RasterXSize="21775" RasterYSize="6792" DataType="Byte" BlockXSize="256" BlockYSize="256" />
-      <SrcRect xOff="0" yOff="0" xSize="21775" ySize="6792" />
-      <DstRect xOff="0" yOff="5583.4830793038" xSize="21775" ySize="6792" />
+      <SrcRect xOff="0" yOff="0" xSize="21775" ySize="6791.5169206962" />
+      <DstRect xOff="0" yOff="5583.4830793038" xSize="21775" ySize="6791.5169206962" />
       <NODATA>255</NODATA>
     </ComplexSource>
   </VRTRasterBand>
@@ -164,8 +164,8 @@
       <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/puerto-rico/byte/PR_SocialVulnerability_v2_clip.tif</SourceFilename>
       <SourceBand>1</SourceBand>
       <SourceProperties RasterXSize="21775" RasterYSize="6792" DataType="Byte" BlockXSize="256" BlockYSize="256" />
-      <SrcRect xOff="0.102023527026176" yOff="0" xSize="21775" ySize="6792" />
-      <DstRect xOff="0" yOff="5583.16950165518" xSize="21775" ySize="6792" />
+      <SrcRect xOff="0.102023527026176" yOff="0" xSize="21774.897976473" ySize="6791.83049834482" />
+      <DstRect xOff="0" yOff="5583.16950165518" xSize="21774.897976473" ySize="6791.83049834482" />
       <NODATA>255</NODATA>
     </ComplexSource>
   </VRTRasterBand>
@@ -176,8 +176,8 @@
       <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/puerto-rico/byte/PR_StormSurge_v2_clip.tif</SourceFilename>
       <SourceBand>1</SourceBand>
       <SourceProperties RasterXSize="21775" RasterYSize="6792" DataType="Byte" BlockXSize="256" BlockYSize="256" />
-      <SrcRect xOff="0" yOff="0" xSize="21775" ySize="6792" />
-      <DstRect xOff="0" yOff="5583.4830793038" xSize="21775" ySize="6792" />
+      <SrcRect xOff="0" yOff="0" xSize="21775" ySize="6791.5169206962" />
+      <DstRect xOff="0" yOff="5583.4830793038" xSize="21775" ySize="6791.5169206962" />
       <NODATA>255</NODATA>
     </ComplexSource>
   </VRTRasterBand>
@@ -188,8 +188,8 @@
       <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/puerto-rico/byte/PR_TerrestrialIndex_4class.tif</SourceFilename>
       <SourceBand>1</SourceBand>
       <SourceProperties RasterXSize="23621" RasterYSize="7839" DataType="Byte" BlockXSize="256" BlockYSize="256" />
-      <SrcRect xOff="1643" yOff="0" xSize="23621" ySize="7839" />
-      <DstRect xOff="0" yOff="5418.4830816552" xSize="23621" ySize="7839" />
+      <SrcRect xOff="1643" yOff="0" xSize="21978" ySize="6956.5169183448" />
+      <DstRect xOff="0" yOff="5418.4830816552" xSize="21978" ySize="6956.5169183448" />
       <NODATA>255</NODATA>
     </ComplexSource>
   </VRTRasterBand>
@@ -200,8 +200,8 @@
       <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/puerto-rico/byte/PR_ThreatIndex_10class_021120_clip.tif</SourceFilename>
       <SourceBand>1</SourceBand>
       <SourceProperties RasterXSize="21775" RasterYSize="6792" DataType="Byte" BlockXSize="256" BlockYSize="256" />
-      <SrcRect xOff="0" yOff="0" xSize="21775" ySize="6792" />
-      <DstRect xOff="0" yOff="5583.4830793038" xSize="21775" ySize="6792" />
+      <SrcRect xOff="0" yOff="0" xSize="21775" ySize="6791.5169206962" />
+      <DstRect xOff="0" yOff="5583.4830793038" xSize="21775" ySize="6791.5169206962" />
       <NODATA>255</NODATA>
     </ComplexSource>
   </VRTRasterBand>
@@ -212,8 +212,8 @@
       <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/puerto-rico/byte/PR_Tsunami_v2_clip.tif</SourceFilename>
       <SourceBand>1</SourceBand>
       <SourceProperties RasterXSize="21775" RasterYSize="6792" DataType="Byte" BlockXSize="256" BlockYSize="256" />
-      <SrcRect xOff="0" yOff="0" xSize="21775" ySize="6792" />
-      <DstRect xOff="0" yOff="5583.48308298364" xSize="21775" ySize="6792" />
+      <SrcRect xOff="0" yOff="0" xSize="21775" ySize="6791.51691701636" />
+      <DstRect xOff="0" yOff="5583.48308298364" xSize="21775" ySize="6791.51691701636" />
       <NODATA>255</NODATA>
     </ComplexSource>
   </VRTRasterBand>
@@ -224,8 +224,278 @@
       <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/puerto-rico/byte/PR_Combined_Hub_group_July2020.tif</SourceFilename>
       <SourceBand>1</SourceBand>
       <SourceProperties RasterXSize="24461" RasterYSize="19092" DataType="Byte" BlockXSize="256" BlockYSize="256" />
-      <SrcRect xOff="1847.54614996274" yOff="0" xSize="24461" ySize="19092" />
-      <DstRect xOff="0" yOff="0" xSize="24461" ySize="19092" />
+      <SrcRect xOff="1847.54614996274" yOff="0" xSize="22613.4538500373" ySize="12375" />
+      <DstRect xOff="0" yOff="0" xSize="22613.4538500373" ySize="12375" />
+      <NODATA>255</NODATA>
+    </ComplexSource>
+  </VRTRasterBand>
+<VRTRasterBand dataType="Byte" band="20">
+    <NoDataValue>255</NoDataValue>
+    <ColorInterp>Palette</ColorInterp>
+    <ColorTable>
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="237" c2="237" c3="237" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="186" c2="194" c3="51" c4="255" />
+      <Entry c1="79" c2="28" c3="0" c4="255" />
+      <Entry c1="189" c2="153" c3="74" c4="255" />
+      <Entry c1="242" c2="186" c3="138" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="1" c2="130" c3="0" c4="255" />
+      <Entry c1="102" c2="102" c3="0" c4="255" />
+      <Entry c1="0" c2="89" c3="89" c4="255" />
+      <Entry c1="237" c2="102" c3="0" c4="255" />
+      <Entry c1="237" c2="0" c3="237" c4="255" />
+      <Entry c1="59" c2="0" c3="59" c4="255" />
+      <Entry c1="102" c2="0" c3="102" c4="255" />
+      <Entry c1="171" c2="0" c3="171" c4="255" />
+      <Entry c1="0" c2="237" c3="237" c4="255" />
+      <Entry c1="237" c2="237" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="117" c4="255" />
+      <Entry c1="0" c2="0" c3="242" c4="255" />
+      <Entry c1="102" c2="117" c3="219" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="0" />
+    </ColorTable>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/puerto-rico/byte/pr_ccap_10m_clip.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="36986" RasterYSize="10386" DataType="Byte" BlockXSize="128" BlockYSize="128" />
+      <SrcRect xOff="7716.64673812314" yOff="0" xSize="29269" ySize="7269.59404734829" />
+      <DstRect xOff="0" yOff="5106.40595265171" xSize="29269" ySize="7269.59404734829" />
       <NODATA>255</NODATA>
     </ComplexSource>
   </VRTRasterBand>

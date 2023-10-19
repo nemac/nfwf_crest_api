@@ -1,6 +1,6 @@
-<VRTDataset rasterXSize="57269" rasterYSize="36764">
+<VRTDataset rasterXSize="57269" rasterYSize="38706">
   <SRS dataAxisToSRSAxisMapping="1,2">PROJCS["NAD83 / UTM zone 4N",GEOGCS["NAD83",DATUM["North_American_Datum_1983",SPHEROID["GRS 1980",6378137,298.257222101,AUTHORITY["EPSG","7019"]],AUTHORITY["EPSG","6269"]],PRIMEM["Greenwich",0,AUTHORITY["EPSG","8901"]],UNIT["degree",0.0174532925199433,AUTHORITY["EPSG","9122"]],AUTHORITY["EPSG","4269"]],PROJECTION["Transverse_Mercator"],PARAMETER["latitude_of_origin",0],PARAMETER["central_meridian",-159],PARAMETER["scale_factor",0.9996],PARAMETER["false_easting",500000],PARAMETER["false_northing",0],UNIT["metre",1,AUTHORITY["EPSG","9001"]],AXIS["Easting",EAST],AXIS["Northing",NORTH],AUTHORITY["EPSG","26904"]]</SRS>
-  <GeoTransform>  3.7009485333059006e+05,  1.0000000000000000e+01,  0.0000000000000000e+00,  2.4609830429999996e+06,  0.0000000000000000e+00, -1.0000000000000000e+01</GeoTransform>
+  <GeoTransform>  3.7009485333059006e+05,  1.0000000000000000e+01,  0.0000000000000000e+00,  2.4803999072071910e+06,  0.0000000000000000e+00, -1.0000000000000000e+01</GeoTransform>
   <VRTRasterBand dataType="Byte" band="1">
     <NoDataValue>255</NoDataValue>
     <ColorInterp>Gray</ColorInterp>
@@ -8,8 +8,8 @@
       <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/Hawaii/HI_Asset_Index_10class_102720.tif</SourceFilename>
       <SourceBand>1</SourceBand>
       <SourceProperties RasterXSize="57044" RasterYSize="36760" DataType="Byte" BlockXSize="256" BlockYSize="256" />
-      <SrcRect xOff="0.102019845531322" yOff="0" xSize="57043.8979801545" ySize="36759" />
-      <DstRect xOff="0" yOff="5" xSize="57043.8979801545" ySize="36759" />
+      <SrcRect xOff="0.102019845531322" yOff="0" xSize="57043.8979801545" ySize="36759.3135704424" />
+      <DstRect xOff="0" yOff="1946.68642955758" xSize="57043.8979801545" ySize="36759.3135704424" />
       <NODATA>255</NODATA>
     </ComplexSource>
   </VRTRasterBand>
@@ -20,8 +20,8 @@
       <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/Hawaii/HI_Crit_Facilities_102720.tif</SourceFilename>
       <SourceBand>1</SourceBand>
       <SourceProperties RasterXSize="57045" RasterYSize="36760" DataType="Byte" BlockXSize="256" BlockYSize="256" />
-      <SrcRect xOff="0.102019845531322" yOff="0" xSize="57044.8979801545" ySize="36759" />
-      <DstRect xOff="0" yOff="5" xSize="57044.8979801545" ySize="36759" />
+      <SrcRect xOff="0.102019845531322" yOff="0" xSize="57044.8979801545" ySize="36759.3135704424" />
+      <DstRect xOff="0" yOff="1946.68642955758" xSize="57044.8979801545" ySize="36759.3135704424" />
       <NODATA>255</NODATA>
     </ComplexSource>
   </VRTRasterBand>
@@ -32,8 +32,8 @@
       <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/Hawaii/HI_Crit_Infrastructure_091020.tif</SourceFilename>
       <SourceBand>1</SourceBand>
       <SourceProperties RasterXSize="57045" RasterYSize="36760" DataType="Byte" BlockXSize="256" BlockYSize="256" />
-      <SrcRect xOff="1.10201305898372" yOff="0" xSize="57043.897986941" ySize="36759" />
-      <DstRect xOff="0" yOff="5" xSize="57043.897986941" ySize="36759" />
+      <SrcRect xOff="1.10201305898372" yOff="0" xSize="57043.897986941" ySize="36759.3135792809" />
+      <DstRect xOff="0" yOff="1946.68642071914" xSize="57043.897986941" ySize="36759.3135792809" />
       <NODATA>255</NODATA>
     </ComplexSource>
   </VRTRasterBand>
@@ -44,8 +44,8 @@
       <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/Hawaii/HI_Exposure_Index_10class_102820.tif</SourceFilename>
       <SourceBand>1</SourceBand>
       <SourceProperties RasterXSize="57043" RasterYSize="36746" DataType="Byte" BlockXSize="256" BlockYSize="256" />
-      <SrcRect xOff="0" yOff="0" xSize="57043" ySize="36745.6864207191" />
-      <DstRect xOff="0" yOff="18.3135792808607" xSize="57043" ySize="36745.6864207191" />
+      <SrcRect xOff="0" yOff="0" xSize="57043" ySize="36746" />
+      <DstRect xOff="0" yOff="1960" xSize="57043" ySize="36746" />
       <NODATA>255</NODATA>
     </ComplexSource>
   </VRTRasterBand>
@@ -56,8 +56,8 @@
       <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/Hawaii/HI_Floodprone_Areas_091120.tif</SourceFilename>
       <SourceBand>1</SourceBand>
       <SourceProperties RasterXSize="57045" RasterYSize="36760" DataType="Byte" BlockXSize="256" BlockYSize="256" />
-      <SrcRect xOff="0" yOff="0" xSize="57045" ySize="36759.6864199927" />
-      <DstRect xOff="0" yOff="4.31358000729233" xSize="57045" ySize="36759.6864199927" />
+      <SrcRect xOff="0" yOff="0" xSize="57045" ySize="36760" />
+      <DstRect xOff="0" yOff="1946" xSize="57045" ySize="36760" />
       <NODATA>255</NODATA>
     </ComplexSource>
   </VRTRasterBand>
@@ -68,20 +68,278 @@
       <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/Hawaii/HI_Impermeable_Soils_091120.tif</SourceFilename>
       <SourceBand>1</SourceBand>
       <SourceProperties RasterXSize="57045" RasterYSize="36760" DataType="Byte" BlockXSize="256" BlockYSize="256" />
-      <SrcRect xOff="0" yOff="0" xSize="57045" ySize="36759.6864199927" />
-      <DstRect xOff="0" yOff="4.31358000729233" xSize="57045" ySize="36759.6864199927" />
+      <SrcRect xOff="0" yOff="0" xSize="57045" ySize="36760" />
+      <DstRect xOff="0" yOff="1946" xSize="57045" ySize="36760" />
       <NODATA>255</NODATA>
     </ComplexSource>
   </VRTRasterBand>
 <VRTRasterBand dataType="Byte" band="7">
     <NoDataValue>255</NoDataValue>
-    <ColorInterp>Gray</ColorInterp>
+    <ColorInterp>Palette</ColorInterp>
+    <ColorTable>
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="255" c2="0" c3="0" c4="255" />
+      <Entry c1="242" c2="242" c3="242" c4="255" />
+      <Entry c1="168" c2="153" c3="168" c4="255" />
+      <Entry c1="142" c2="117" c3="124" c4="255" />
+      <Entry c1="193" c2="204" c3="56" c4="255" />
+      <Entry c1="84" c2="33" c3="0" c4="255" />
+      <Entry c1="193" c2="160" c3="79" c4="255" />
+      <Entry c1="242" c2="186" c3="135" c4="255" />
+      <Entry c1="0" c2="242" c3="0" c4="255" />
+      <Entry c1="0" c2="58" c3="0" c4="255" />
+      <Entry c1="6" c2="160" c3="58" c4="255" />
+      <Entry c1="109" c2="109" c3="0" c4="255" />
+      <Entry c1="0" c2="91" c3="91" c4="255" />
+      <Entry c1="242" c2="109" c3="0" c4="255" />
+      <Entry c1="242" c2="0" c3="242" c4="255" />
+      <Entry c1="61" c2="0" c3="61" c4="255" />
+      <Entry c1="109" c2="0" c3="109" c4="255" />
+      <Entry c1="175" c2="0" c3="175" c4="255" />
+      <Entry c1="0" c2="242" c3="242" c4="255" />
+      <Entry c1="242" c2="242" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="119" c4="255" />
+      <Entry c1="0" c2="0" c3="242" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="0" />
+    </ColorTable>
     <ComplexSource>
-      <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/Hawaii/HI_LandslideSuscept_091120.tif</SourceFilename>
+      <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/Hawaii/HI_CCAP_CREST.tif</SourceFilename>
       <SourceBand>1</SourceBand>
-      <SourceProperties RasterXSize="57045" RasterYSize="36760" DataType="Byte" BlockXSize="256" BlockYSize="256" />
-      <SrcRect xOff="0" yOff="0" xSize="57045" ySize="36759.6864199927" />
-      <DstRect xOff="0" yOff="4.31358000729233" xSize="57045" ySize="36759.6864199927" />
+      <SourceProperties RasterXSize="57804" RasterYSize="40234" DataType="Byte" BlockXSize="128" BlockYSize="128" />
+      <SrcRect xOff="537" yOff="0" xSize="57267" ySize="38706" />
+      <DstRect xOff="0" yOff="0" xSize="57267" ySize="38706" />
       <NODATA>255</NODATA>
     </ComplexSource>
   </VRTRasterBand>
@@ -89,11 +347,11 @@
     <NoDataValue>255</NoDataValue>
     <ColorInterp>Gray</ColorInterp>
     <ComplexSource>
-      <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/Hawaii/HI_LowLyingAreas_091120.tif</SourceFilename>
+      <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/Hawaii/HI_LandslideSuscept_091120.tif</SourceFilename>
       <SourceBand>1</SourceBand>
-      <SourceProperties RasterXSize="57045" RasterYSize="36747" DataType="Byte" BlockXSize="256" BlockYSize="256" />
-      <SrcRect xOff="0" yOff="0" xSize="57045" ySize="36745.6864199927" />
-      <DstRect xOff="0" yOff="18.3135800072923" xSize="57045" ySize="36745.6864199927" />
+      <SourceProperties RasterXSize="57045" RasterYSize="36760" DataType="Byte" BlockXSize="256" BlockYSize="256" />
+      <SrcRect xOff="0" yOff="0" xSize="57045" ySize="36760" />
+      <DstRect xOff="0" yOff="1946" xSize="57045" ySize="36760" />
       <NODATA>255</NODATA>
     </ComplexSource>
   </VRTRasterBand>
@@ -101,11 +359,11 @@
     <NoDataValue>255</NoDataValue>
     <ColorInterp>Gray</ColorInterp>
     <ComplexSource>
-      <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/Hawaii/HI_Marine_Index_4class_102820.tif</SourceFilename>
+      <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/Hawaii/HI_LowLyingAreas_091120.tif</SourceFilename>
       <SourceBand>1</SourceBand>
-      <SourceProperties RasterXSize="57045" RasterYSize="36760" DataType="Byte" BlockXSize="256" BlockYSize="256" />
-      <SrcRect xOff="0.657851478317752" yOff="0" xSize="57044.3421485217" ySize="36759.0265804392" />
-      <DstRect xOff="0" yOff="4.97341956077144" xSize="57044.3421485217" ySize="36759.0265804392" />
+      <SourceProperties RasterXSize="57045" RasterYSize="36747" DataType="Byte" BlockXSize="256" BlockYSize="256" />
+      <SrcRect xOff="0" yOff="0" xSize="57045" ySize="36746" />
+      <DstRect xOff="0" yOff="1960" xSize="57045" ySize="36746" />
       <NODATA>255</NODATA>
     </ComplexSource>
   </VRTRasterBand>
@@ -113,11 +371,11 @@
     <NoDataValue>255</NoDataValue>
     <ColorInterp>Gray</ColorInterp>
     <ComplexSource>
-      <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/Hawaii/HI_Pop_Density_091020.tif</SourceFilename>
+      <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/Hawaii/HI_Marine_Index_4class_102820.tif</SourceFilename>
       <SourceBand>1</SourceBand>
-      <SourceProperties RasterXSize="57052" RasterYSize="36767" DataType="Byte" BlockXSize="256" BlockYSize="256" />
-      <SrcRect xOff="3.10201305898372" yOff="0" xSize="57048.897986941" ySize="36764" />
-      <DstRect xOff="0" yOff="0" xSize="57048.897986941" ySize="36764" />
+      <SourceProperties RasterXSize="57045" RasterYSize="36760" DataType="Byte" BlockXSize="256" BlockYSize="256" />
+      <SrcRect xOff="0.657851478317752" yOff="0" xSize="57044.3421485217" ySize="36759.3401597201" />
+      <DstRect xOff="0" yOff="1946.65984027991" xSize="57044.3421485217" ySize="36759.3401597201" />
       <NODATA>255</NODATA>
     </ComplexSource>
   </VRTRasterBand>
@@ -125,11 +383,11 @@
     <NoDataValue>255</NoDataValue>
     <ColorInterp>Gray</ColorInterp>
     <ComplexSource>
-      <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/Hawaii/HI_SLRXA_091120.tif</SourceFilename>
+      <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/Hawaii/HI_Pop_Density_091020.tif</SourceFilename>
       <SourceBand>1</SourceBand>
-      <SourceProperties RasterXSize="57045" RasterYSize="36760" DataType="Byte" BlockXSize="256" BlockYSize="256" />
-      <SrcRect xOff="0" yOff="0" xSize="57045" ySize="36759.6864207191" />
-      <DstRect xOff="0" yOff="4.31357928086072" xSize="57045" ySize="36759.6864207191" />
+      <SourceProperties RasterXSize="57052" RasterYSize="36767" DataType="Byte" BlockXSize="256" BlockYSize="256" />
+      <SrcRect xOff="3.10201305898372" yOff="0" xSize="57048.897986941" ySize="36764.3135792809" />
+      <DstRect xOff="0" yOff="1941.68642071914" xSize="57048.897986941" ySize="36764.3135792809" />
       <NODATA>255</NODATA>
     </ComplexSource>
   </VRTRasterBand>
@@ -137,11 +395,11 @@
     <NoDataValue>255</NoDataValue>
     <ColorInterp>Gray</ColorInterp>
     <ComplexSource>
-      <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/Hawaii/HI_Soc_Vulnerability_091020.tif</SourceFilename>
+      <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/Hawaii/HI_SLRXA_091120.tif</SourceFilename>
       <SourceBand>1</SourceBand>
-      <SourceProperties RasterXSize="57052" RasterYSize="36767" DataType="Byte" BlockXSize="256" BlockYSize="256" />
-      <SrcRect xOff="3.10201984553132" yOff="0" xSize="57048.8979801545" ySize="36764" />
-      <DstRect xOff="0" yOff="0" xSize="57048.8979801545" ySize="36764" />
+      <SourceProperties RasterXSize="57045" RasterYSize="36760" DataType="Byte" BlockXSize="256" BlockYSize="256" />
+      <SrcRect xOff="0" yOff="0" xSize="57045" ySize="36760" />
+      <DstRect xOff="0" yOff="1946" xSize="57045" ySize="36760" />
       <NODATA>255</NODATA>
     </ComplexSource>
   </VRTRasterBand>
@@ -149,11 +407,11 @@
     <NoDataValue>255</NoDataValue>
     <ColorInterp>Gray</ColorInterp>
     <ComplexSource>
-      <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/Hawaii/HI_Soil_Erodibility_091120.tif</SourceFilename>
+      <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/Hawaii/HI_Soc_Vulnerability_091020.tif</SourceFilename>
       <SourceBand>1</SourceBand>
-      <SourceProperties RasterXSize="57045" RasterYSize="36760" DataType="Byte" BlockXSize="256" BlockYSize="256" />
-      <SrcRect xOff="0" yOff="0" xSize="57045" ySize="36759.6864199927" />
-      <DstRect xOff="0" yOff="4.31358000729233" xSize="57045" ySize="36759.6864199927" />
+      <SourceProperties RasterXSize="57052" RasterYSize="36767" DataType="Byte" BlockXSize="256" BlockYSize="256" />
+      <SrcRect xOff="3.10201984553132" yOff="0" xSize="57048.8979801545" ySize="36764.3135704424" />
+      <DstRect xOff="0" yOff="1941.68642955758" xSize="57048.8979801545" ySize="36764.3135704424" />
       <NODATA>255</NODATA>
     </ComplexSource>
   </VRTRasterBand>
@@ -161,11 +419,11 @@
     <NoDataValue>255</NoDataValue>
     <ColorInterp>Gray</ColorInterp>
     <ComplexSource>
-      <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/Hawaii/HI_Storm_Surge_091120.tif</SourceFilename>
+      <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/Hawaii/HI_Soil_Erodibility_091120.tif</SourceFilename>
       <SourceBand>1</SourceBand>
       <SourceProperties RasterXSize="57045" RasterYSize="36760" DataType="Byte" BlockXSize="256" BlockYSize="256" />
-      <SrcRect xOff="0" yOff="0" xSize="57045" ySize="36759.6864199927" />
-      <DstRect xOff="0" yOff="4.31358000729233" xSize="57045" ySize="36759.6864199927" />
+      <SrcRect xOff="0" yOff="0" xSize="57045" ySize="36760" />
+      <DstRect xOff="0" yOff="1946" xSize="57045" ySize="36760" />
       <NODATA>255</NODATA>
     </ComplexSource>
   </VRTRasterBand>
@@ -173,11 +431,11 @@
     <NoDataValue>255</NoDataValue>
     <ColorInterp>Gray</ColorInterp>
     <ComplexSource>
-      <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/Hawaii/HI_Terrestrial_Index_4class_102720.tif</SourceFilename>
+      <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/Hawaii/HI_Storm_Surge_091120.tif</SourceFilename>
       <SourceBand>1</SourceBand>
       <SourceProperties RasterXSize="57045" RasterYSize="36760" DataType="Byte" BlockXSize="256" BlockYSize="256" />
-      <SrcRect xOff="0.657851478317752" yOff="0" xSize="57044.3421485217" ySize="36759.0265804392" />
-      <DstRect xOff="0" yOff="4.97341956077144" xSize="57044.3421485217" ySize="36759.0265804392" />
+      <SrcRect xOff="0" yOff="0" xSize="57045" ySize="36760" />
+      <DstRect xOff="0" yOff="1946" xSize="57045" ySize="36760" />
       <NODATA>255</NODATA>
     </ComplexSource>
   </VRTRasterBand>
@@ -185,11 +443,11 @@
     <NoDataValue>255</NoDataValue>
     <ColorInterp>Gray</ColorInterp>
     <ComplexSource>
-      <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/Hawaii/HI_Threat_Index_10class_091120.tif</SourceFilename>
+      <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/Hawaii/HI_Terrestrial_Index_4class_102720.tif</SourceFilename>
       <SourceBand>1</SourceBand>
-      <SourceProperties RasterXSize="57045" RasterYSize="36746" DataType="Byte" BlockXSize="256" BlockYSize="256" />
-      <SrcRect xOff="0" yOff="0" xSize="57045" ySize="36745.6864207191" />
-      <DstRect xOff="0" yOff="18.3135792808607" xSize="57045" ySize="36745.6864207191" />
+      <SourceProperties RasterXSize="57045" RasterYSize="36760" DataType="Byte" BlockXSize="256" BlockYSize="256" />
+      <SrcRect xOff="0.657851478317752" yOff="0" xSize="57044.3421485217" ySize="36759.3401597201" />
+      <DstRect xOff="0" yOff="1946.65984027991" xSize="57044.3421485217" ySize="36759.3401597201" />
       <NODATA>255</NODATA>
     </ComplexSource>
   </VRTRasterBand>
@@ -197,11 +455,11 @@
     <NoDataValue>255</NoDataValue>
     <ColorInterp>Gray</ColorInterp>
     <ComplexSource>
-      <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/Hawaii/HI_Tsunami_Evac_091120.tif</SourceFilename>
+      <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/Hawaii/HI_Threat_Index_10class_091120.tif</SourceFilename>
       <SourceBand>1</SourceBand>
-      <SourceProperties RasterXSize="57045" RasterYSize="36760" DataType="Byte" BlockXSize="256" BlockYSize="256" />
-      <SrcRect xOff="0" yOff="0" xSize="57045" ySize="36759.6864199927" />
-      <DstRect xOff="0" yOff="4.31358000729233" xSize="57045" ySize="36759.6864199927" />
+      <SourceProperties RasterXSize="57045" RasterYSize="36746" DataType="Byte" BlockXSize="256" BlockYSize="256" />
+      <SrcRect xOff="0" yOff="0" xSize="57045" ySize="36746" />
+      <DstRect xOff="0" yOff="1960" xSize="57045" ySize="36746" />
       <NODATA>255</NODATA>
     </ComplexSource>
   </VRTRasterBand>
@@ -209,11 +467,11 @@
     <NoDataValue>255</NoDataValue>
     <ColorInterp>Gray</ColorInterp>
     <ComplexSource>
-      <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/Hawaii/HI_Wildlife_Index_6class_102820.tif</SourceFilename>
+      <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/Hawaii/HI_Tsunami_Evac_091120.tif</SourceFilename>
       <SourceBand>1</SourceBand>
       <SourceProperties RasterXSize="57045" RasterYSize="36760" DataType="Byte" BlockXSize="256" BlockYSize="256" />
-      <SrcRect xOff="0.657851478317752" yOff="0" xSize="57044.3421485217" ySize="36759.0265804392" />
-      <DstRect xOff="0" yOff="4.97341956077144" xSize="57044.3421485217" ySize="36759.0265804392" />
+      <SrcRect xOff="0" yOff="0" xSize="57045" ySize="36760" />
+      <DstRect xOff="0" yOff="1946" xSize="57045" ySize="36760" />
       <NODATA>255</NODATA>
     </ComplexSource>
   </VRTRasterBand>
@@ -221,11 +479,23 @@
     <NoDataValue>255</NoDataValue>
     <ColorInterp>Gray</ColorInterp>
     <ComplexSource>
+      <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/Hawaii/HI_Wildlife_Index_6class_102820.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="57045" RasterYSize="36760" DataType="Byte" BlockXSize="256" BlockYSize="256" />
+      <SrcRect xOff="0.657851478317752" yOff="0" xSize="57044.3421485217" ySize="36759.3401597201" />
+      <DstRect xOff="0" yOff="1946.65984027991" xSize="57044.3421485217" ySize="36759.3401597201" />
+      <NODATA>255</NODATA>
+    </ComplexSource>
+  </VRTRasterBand>
+<VRTRasterBand dataType="Byte" band="20">
+    <NoDataValue>255</NoDataValue>
+    <ColorInterp>Gray</ColorInterp>
+    <ComplexSource>
       <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/Hawaii/hi_cores_hubs_111920.tif</SourceFilename>
       <SourceBand>1</SourceBand>
       <SourceProperties RasterXSize="57837" RasterYSize="36627" DataType="Byte" BlockXSize="256" BlockYSize="256" />
-      <SrcRect xOff="568.085333091103" yOff="0" xSize="57268.9146669089" ySize="36566.0956934643" />
-      <DstRect xOff="0" yOff="197.904306535702" xSize="57268.9146669089" ySize="36566.0956934643" />
+      <SrcRect xOff="568.085333091103" yOff="0" xSize="57268.9146669089" ySize="36566.4092727452" />
+      <DstRect xOff="0" yOff="2139.59072725484" xSize="57268.9146669089" ySize="36566.4092727452" />
       <NODATA>255</NODATA>
     </ComplexSource>
   </VRTRasterBand>
