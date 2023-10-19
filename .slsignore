@@ -1,1 +1,8 @@
-conus_tifs/*
+alaska_tifs/**
+Hawaii/**
+conus_tifs/**
+great_lakes/**
+new_landcover_tifs/**
+shape_files_to_process/**
+output_geojson_files/**
+virgin_islands_tifs/**
