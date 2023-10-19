@@ -1,6 +1,6 @@
-<VRTDataset rasterXSize="25884" rasterYSize="43531">
-  <SRS>PROJCS["WGS 84 / UTM zone 55N",GEOGCS["WGS 84",DATUM["WGS_1984",SPHEROID["WGS 84",6378137,298.257223563,AUTHORITY["EPSG","7030"]],AUTHORITY["EPSG","6326"]],PRIMEM["Greenwich",0,AUTHORITY["EPSG","8901"]],UNIT["degree",0.0174532925199433,AUTHORITY["EPSG","9122"]],AUTHORITY["EPSG","4326"]],PROJECTION["Transverse_Mercator"],PARAMETER["latitude_of_origin",0],PARAMETER["central_meridian",147],PARAMETER["scale_factor",0.9996],PARAMETER["false_easting",500000],PARAMETER["false_northing",0],UNIT["metre",1,AUTHORITY["EPSG","9001"]],AXIS["Easting",EAST],AXIS["Northing",NORTH],AUTHORITY["EPSG","32655"]]</SRS>
-  <GeoTransform>  2.9710000000000000e+05,  3.0000000000000000e+00,  0.0000000000000000e+00,  1.6909559663213692e+06,  0.0000000000000000e+00, -3.0000000000000000e+00</GeoTransform>
+<VRTDataset rasterXSize="25870" rasterYSize="43434">
+  <SRS dataAxisToSRSAxisMapping="1,2">PROJCS["WGS 84 / UTM zone 55N",GEOGCS["WGS 84",DATUM["WGS_1984",SPHEROID["WGS 84",6378137,298.257223563,AUTHORITY["EPSG","7030"]],AUTHORITY["EPSG","6326"]],PRIMEM["Greenwich",0,AUTHORITY["EPSG","8901"]],UNIT["degree",0.0174532925199433,AUTHORITY["EPSG","9122"]],AUTHORITY["EPSG","4326"]],PROJECTION["Transverse_Mercator"],PARAMETER["latitude_of_origin",0],PARAMETER["central_meridian",147],PARAMETER["scale_factor",0.9996],PARAMETER["false_easting",500000],PARAMETER["false_northing",0],UNIT["metre",1,AUTHORITY["EPSG","9001"]],AXIS["Easting",EAST],AXIS["Northing",NORTH],AUTHORITY["EPSG","32655"]]</SRS>
+  <GeoTransform>  2.9714200000000000e+05,  3.0000000000000000e+00,  0.0000000000000000e+00,  1.6909559663213692e+06,  0.0000000000000000e+00, -3.0000000000000000e+00</GeoTransform>
   <VRTRasterBand dataType="Byte" band="1">
     <NoDataValue>255</NoDataValue>
     <ColorInterp>Gray</ColorInterp>
@@ -8,8 +8,8 @@
       <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/cnmi/CNMI_Asset_Index_10class.tif</SourceFilename>
       <SourceBand>1</SourceBand>
       <SourceProperties RasterXSize="25888" RasterYSize="43535" DataType="Byte" BlockXSize="256" BlockYSize="256" />
-      <SrcRect xOff="5" yOff="0" xSize="25888" ySize="43535" />
-      <DstRect xOff="0" yOff="0.316140456590801" xSize="25888" ySize="43535" />
+      <SrcRect xOff="19" yOff="0" xSize="25869" ySize="43433.6838595434" />
+      <DstRect xOff="0" yOff="0.316140456590801" xSize="25869" ySize="43433.6838595434" />
       <NODATA>255</NODATA>
     </ComplexSource>
   </VRTRasterBand>
@@ -20,8 +20,8 @@
       <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/cnmi/CNMI_Critical_Facilities.tif</SourceFilename>
       <SourceBand>1</SourceBand>
       <SourceProperties RasterXSize="25888" RasterYSize="43535" DataType="Byte" BlockXSize="256" BlockYSize="256" />
-      <SrcRect xOff="5" yOff="0" xSize="25888" ySize="43535" />
-      <DstRect xOff="0" yOff="0.316141880272577" xSize="25888" ySize="43535" />
+      <SrcRect xOff="19" yOff="0" xSize="25869" ySize="43433.6838581197" />
+      <DstRect xOff="0" yOff="0.316141880272577" xSize="25869" ySize="43433.6838581197" />
       <NODATA>255</NODATA>
     </ComplexSource>
   </VRTRasterBand>
@@ -32,8 +32,8 @@
       <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/cnmi/CNMI_Critical_Infrastructure.tif</SourceFilename>
       <SourceBand>1</SourceBand>
       <SourceProperties RasterXSize="25888" RasterYSize="43535" DataType="Byte" BlockXSize="256" BlockYSize="256" />
-      <SrcRect xOff="5" yOff="0" xSize="25888" ySize="43535" />
-      <DstRect xOff="0" yOff="0.316140456590801" xSize="25888" ySize="43535" />
+      <SrcRect xOff="19" yOff="0" xSize="25869" ySize="43433.6838595434" />
+      <DstRect xOff="0" yOff="0.316140456590801" xSize="25869" ySize="43433.6838595434" />
       <NODATA>255</NODATA>
     </ComplexSource>
   </VRTRasterBand>
@@ -44,8 +44,8 @@
       <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/cnmi/CNMI_Erodible_Soils.tif</SourceFilename>
       <SourceBand>1</SourceBand>
       <SourceProperties RasterXSize="25888" RasterYSize="43535" DataType="Byte" BlockXSize="256" BlockYSize="256" />
-      <SrcRect xOff="5" yOff="0" xSize="25888" ySize="43535" />
-      <DstRect xOff="0" yOff="0.316140456590801" xSize="25888" ySize="43535" />
+      <SrcRect xOff="19" yOff="0" xSize="25869" ySize="43433.6838595434" />
+      <DstRect xOff="0" yOff="0.316140456590801" xSize="25869" ySize="43433.6838595434" />
       <NODATA>255</NODATA>
     </ComplexSource>
   </VRTRasterBand>
@@ -56,8 +56,8 @@
       <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/cnmi/CNMI_Exposure_Index.tif</SourceFilename>
       <SourceBand>1</SourceBand>
       <SourceProperties RasterXSize="25879" RasterYSize="43526" DataType="Byte" BlockXSize="256" BlockYSize="256" />
-      <SrcRect xOff="0" yOff="0" xSize="25879" ySize="43526" />
-      <DstRect xOff="0" yOff="5.3161404565908" xSize="25879" ySize="43526" />
+      <SrcRect xOff="14" yOff="0" xSize="25865" ySize="43428.6838595434" />
+      <DstRect xOff="0" yOff="5.3161404565908" xSize="25865" ySize="43428.6838595434" />
       <NODATA>255</NODATA>
     </ComplexSource>
   </VRTRasterBand>
@@ -68,8 +68,8 @@
       <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/cnmi/CNMI_Floodprone_Areas.tif</SourceFilename>
       <SourceBand>1</SourceBand>
       <SourceProperties RasterXSize="25888" RasterYSize="43535" DataType="Byte" BlockXSize="256" BlockYSize="256" />
-      <SrcRect xOff="5" yOff="0" xSize="25888" ySize="43535" />
-      <DstRect xOff="0" yOff="0.316140456590801" xSize="25888" ySize="43535" />
+      <SrcRect xOff="19" yOff="0" xSize="25869" ySize="43433.6838595434" />
+      <DstRect xOff="0" yOff="0.316140456590801" xSize="25869" ySize="43433.6838595434" />
       <NODATA>255</NODATA>
     </ComplexSource>
   </VRTRasterBand>
@@ -80,8 +80,8 @@
       <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/cnmi/CNMI_Impermeable_Soils.tif</SourceFilename>
       <SourceBand>1</SourceBand>
       <SourceProperties RasterXSize="25888" RasterYSize="43535" DataType="Byte" BlockXSize="256" BlockYSize="256" />
-      <SrcRect xOff="5" yOff="0" xSize="25888" ySize="43535" />
-      <DstRect xOff="0" yOff="0.316140456590801" xSize="25888" ySize="43535" />
+      <SrcRect xOff="19" yOff="0" xSize="25869" ySize="43433.6838595434" />
+      <DstRect xOff="0" yOff="0.316140456590801" xSize="25869" ySize="43433.6838595434" />
       <NODATA>255</NODATA>
     </ComplexSource>
   </VRTRasterBand>
@@ -92,8 +92,8 @@
       <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/cnmi/CNMI_Low_Lying_Areas.tif</SourceFilename>
       <SourceBand>1</SourceBand>
       <SourceProperties RasterXSize="25879" RasterYSize="43526" DataType="Byte" BlockXSize="256" BlockYSize="256" />
-      <SrcRect xOff="0" yOff="0" xSize="25879" ySize="43526" />
-      <DstRect xOff="0" yOff="5.3161404565908" xSize="25879" ySize="43526" />
+      <SrcRect xOff="14" yOff="0" xSize="25865" ySize="43428.6838595434" />
+      <DstRect xOff="0" yOff="5.3161404565908" xSize="25865" ySize="43428.6838595434" />
       <NODATA>255</NODATA>
     </ComplexSource>
   </VRTRasterBand>
@@ -104,8 +104,8 @@
       <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/cnmi/CNMI_Marine_Index.tif</SourceFilename>
       <SourceBand>1</SourceBand>
       <SourceProperties RasterXSize="25888" RasterYSize="43535" DataType="Byte" BlockXSize="256" BlockYSize="256" />
-      <SrcRect xOff="5" yOff="0" xSize="25888" ySize="43535" />
-      <DstRect xOff="0" yOff="0.316140456590801" xSize="25888" ySize="43535" />
+      <SrcRect xOff="19" yOff="0" xSize="25869" ySize="43433.6838595434" />
+      <DstRect xOff="0" yOff="0.316140456590801" xSize="25869" ySize="43433.6838595434" />
       <NODATA>255</NODATA>
     </ComplexSource>
   </VRTRasterBand>
@@ -116,8 +116,8 @@
       <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/cnmi/CNMI_Population_Density.tif</SourceFilename>
       <SourceBand>1</SourceBand>
       <SourceProperties RasterXSize="25888" RasterYSize="43535" DataType="Byte" BlockXSize="256" BlockYSize="256" />
-      <SrcRect xOff="5" yOff="0" xSize="25888" ySize="43535" />
-      <DstRect xOff="0" yOff="0.316140456590801" xSize="25888" ySize="43535" />
+      <SrcRect xOff="19" yOff="0" xSize="25869" ySize="43433.6838595434" />
+      <DstRect xOff="0" yOff="0.316140456590801" xSize="25869" ySize="43433.6838595434" />
       <NODATA>255</NODATA>
     </ComplexSource>
   </VRTRasterBand>
@@ -128,8 +128,8 @@
       <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/cnmi/CNMI_Sea_Level_Rise.tif</SourceFilename>
       <SourceBand>1</SourceBand>
       <SourceProperties RasterXSize="25888" RasterYSize="43535" DataType="Byte" BlockXSize="256" BlockYSize="256" />
-      <SrcRect xOff="5" yOff="0" xSize="25888" ySize="43535" />
-      <DstRect xOff="0" yOff="0.316140456590801" xSize="25888" ySize="43535" />
+      <SrcRect xOff="19" yOff="0" xSize="25869" ySize="43433.6838595434" />
+      <DstRect xOff="0" yOff="0.316140456590801" xSize="25869" ySize="43433.6838595434" />
       <NODATA>255</NODATA>
     </ComplexSource>
   </VRTRasterBand>
@@ -140,8 +140,8 @@
       <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/cnmi/CNMI_Social_Vulnerability.tif</SourceFilename>
       <SourceBand>1</SourceBand>
       <SourceProperties RasterXSize="25888" RasterYSize="43535" DataType="Byte" BlockXSize="256" BlockYSize="256" />
-      <SrcRect xOff="5" yOff="0" xSize="25888" ySize="43535" />
-      <DstRect xOff="0" yOff="0.316140456590801" xSize="25888" ySize="43535" />
+      <SrcRect xOff="19" yOff="0" xSize="25869" ySize="43433.6838595434" />
+      <DstRect xOff="0" yOff="0.316140456590801" xSize="25869" ySize="43433.6838595434" />
       <NODATA>255</NODATA>
     </ComplexSource>
   </VRTRasterBand>
@@ -152,8 +152,8 @@
       <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/cnmi/CNMI_Terrestrial_Index.tif</SourceFilename>
       <SourceBand>1</SourceBand>
       <SourceProperties RasterXSize="25888" RasterYSize="43535" DataType="Byte" BlockXSize="256" BlockYSize="256" />
-      <SrcRect xOff="5" yOff="0" xSize="25888" ySize="43535" />
-      <DstRect xOff="0" yOff="0.316140456590801" xSize="25888" ySize="43535" />
+      <SrcRect xOff="19" yOff="0" xSize="25869" ySize="43433.6838595434" />
+      <DstRect xOff="0" yOff="0.316140456590801" xSize="25869" ySize="43433.6838595434" />
       <NODATA>255</NODATA>
     </ComplexSource>
   </VRTRasterBand>
@@ -164,8 +164,8 @@
       <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/cnmi/CNMI_Threat_Index_10class.tif</SourceFilename>
       <SourceBand>1</SourceBand>
       <SourceProperties RasterXSize="25879" RasterYSize="43526" DataType="Byte" BlockXSize="256" BlockYSize="256" />
-      <SrcRect xOff="0" yOff="0" xSize="25879" ySize="43526" />
-      <DstRect xOff="0" yOff="5.3161404565908" xSize="25879" ySize="43526" />
+      <SrcRect xOff="14" yOff="0" xSize="25865" ySize="43428.6838595434" />
+      <DstRect xOff="0" yOff="5.3161404565908" xSize="25865" ySize="43428.6838595434" />
       <NODATA>255</NODATA>
     </ComplexSource>
   </VRTRasterBand>
@@ -176,8 +176,8 @@
       <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/cnmi/CNMI_Wave_Driven_Flooding.tif</SourceFilename>
       <SourceBand>1</SourceBand>
       <SourceProperties RasterXSize="25888" RasterYSize="43535" DataType="Byte" BlockXSize="256" BlockYSize="256" />
-      <SrcRect xOff="5" yOff="0" xSize="25888" ySize="43535" />
-      <DstRect xOff="0" yOff="0.316140456590801" xSize="25888" ySize="43535" />
+      <SrcRect xOff="19" yOff="0" xSize="25869" ySize="43433.6838595434" />
+      <DstRect xOff="0" yOff="0.316140456590801" xSize="25869" ySize="43433.6838595434" />
       <NODATA>255</NODATA>
     </ComplexSource>
   </VRTRasterBand>
@@ -188,8 +188,8 @@
       <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/cnmi/CNMI_Wildlife_Index.tif</SourceFilename>
       <SourceBand>1</SourceBand>
       <SourceProperties RasterXSize="25888" RasterYSize="43535" DataType="Byte" BlockXSize="256" BlockYSize="256" />
-      <SrcRect xOff="5" yOff="0" xSize="25888" ySize="43535" />
-      <DstRect xOff="0" yOff="0.316140456590801" xSize="25888" ySize="43535" />
+      <SrcRect xOff="19" yOff="0" xSize="25869" ySize="43433.6838595434" />
+      <DstRect xOff="0" yOff="0.316140456590801" xSize="25869" ySize="43433.6838595434" />
       <NODATA>255</NODATA>
     </ComplexSource>
   </VRTRasterBand>
@@ -200,8 +200,278 @@
       <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/cnmi/CNMI_Combined_Hub_Group_July2020.tif</SourceFilename>
       <SourceBand>1</SourceBand>
       <SourceProperties RasterXSize="25890" RasterYSize="43536" DataType="Byte" BlockXSize="256" BlockYSize="256" />
-      <SrcRect xOff="5.98742343885048" yOff="0" xSize="25890" ySize="43536" />
-      <DstRect xOff="0" yOff="0" xSize="25890" ySize="43536" />
+      <SrcRect xOff="19.9874234388505" yOff="0" xSize="25870" ySize="43434" />
+      <DstRect xOff="0" yOff="0" xSize="25870" ySize="43434" />
+      <NODATA>255</NODATA>
+    </ComplexSource>
+  </VRTRasterBand>
+<VRTRasterBand dataType="Byte" band="18">
+    <NoDataValue>255</NoDataValue>
+    <ColorInterp>Palette</ColorInterp>
+    <ColorTable>
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="237" c2="237" c3="237" c4="255" />
+      <Entry c1="163" c2="153" c3="163" c4="255" />
+      <Entry c1="138" c2="112" c3="125" c4="255" />
+      <Entry c1="186" c2="194" c3="51" c4="255" />
+      <Entry c1="79" c2="28" c3="0" c4="255" />
+      <Entry c1="189" c2="153" c3="74" c4="255" />
+      <Entry c1="242" c2="186" c3="138" c4="255" />
+      <Entry c1="0" c2="237" c3="0" c4="255" />
+      <Entry c1="0" c2="51" c3="0" c4="255" />
+      <Entry c1="5" c2="153" c3="51" c4="255" />
+      <Entry c1="102" c2="102" c3="0" c4="255" />
+      <Entry c1="0" c2="89" c3="89" c4="255" />
+      <Entry c1="237" c2="102" c3="0" c4="255" />
+      <Entry c1="237" c2="0" c3="237" c4="255" />
+      <Entry c1="59" c2="0" c3="59" c4="255" />
+      <Entry c1="102" c2="0" c3="102" c4="255" />
+      <Entry c1="171" c2="0" c3="171" c4="255" />
+      <Entry c1="0" c2="237" c3="237" c4="255" />
+      <Entry c1="237" c2="237" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="117" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="255" />
+      <Entry c1="0" c2="0" c3="0" c4="0" />
+    </ColorTable>
+    <ComplexSource>
+      <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/cnmi/CNMI_CCAP_CREST.tif</SourceFilename>
+      <SourceBand>1</SourceBand>
+      <SourceProperties RasterXSize="25789" RasterYSize="43387" DataType="Byte" BlockXSize="128" BlockYSize="128" />
+      <SrcRect xOff="0" yOff="0" xSize="25789" ySize="43386.6838595434" />
+      <DstRect xOff="0" yOff="47.3161404565908" xSize="25789" ySize="43386.6838595434" />
       <NODATA>255</NODATA>
     </ComplexSource>
   </VRTRasterBand>
