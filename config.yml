@@ -53,6 +53,8 @@ datasets:
       path: threat-inputs/CONUS_Slope_shift_111918.tif
     - name: storm_surge
       path: threat-inputs/CONUS_StormSurge_shift_111618.tif
+    - name: landcover
+      path: nlcd_2021_nfwf_conus_30m.tif
 
   puerto_rico:
     - name: exposure
@@ -93,6 +95,8 @@ datasets:
       path: puerto-rico/byte/PR_Tsunami_v2_clip.tif
     - name: hubs
       path: puerto-rico/byte/PR_Combined_Hub_group_July2020.tif
+    - name: landcover
+      path: puerto-rico/byte/pr_ccap_10m_clip.tif
 
   us_virgin_islands:
     - name: exposure
@@ -129,6 +133,8 @@ datasets:
       path: us-virgin-islands/byte/USVI_TerrestrialIndex_4class.tif
     - name: hubs
       path: us-virgin-islands/byte/USVI_Combined_Hub_Groups_July2020.tif
+    - name: landcover
+      path: us-virgin-islands/byte/vi_ccap_2012_3m_clip_epsg32161.tif
 
   northern_mariana_islands:
     - name: asset
@@ -165,6 +171,8 @@ datasets:
       path: cnmi/CNMI_Wildlife_Index.tif
     - name: hubs
       path: cnmi/CNMI_Combined_Hub_Group_July2020.tif
+    - name: landcover
+      path: cnmi/CNMI_CCAP_CREST.tif
 
   hawaii:
     - name: asset
@@ -179,6 +187,8 @@ datasets:
       path: Hawaii/HI_Floodprone_Areas_091120.tif
     - name: impermeable
       path: Hawaii/HI_Impermeable_Soils_091120.tif
+    - name: landcover
+      path: Hawaii/HI_CCAP_CREST.tif
     - name: landslides
       path: Hawaii/HI_LandslideSuscept_091120.tif
     - name: low_areas
@@ -243,6 +253,8 @@ datasets:
       path: AmericanSamoa/as_hubs_cores_merge_100421.tif
     - name: erosion
       path: AmericanSamoa/AS_Erodible_Soils_shift_v1_LZW.tif
+    - name: landcover
+      path: AmericanSamoa/American_Samoa_ccap_3m_clip.tif
 
   guam:
     - name: asset
@@ -285,6 +297,8 @@ datasets:
       path: guam/GU_tsunami.tif
     - name: wave_exposure
       path: guam/wave_exposure_5class_proj.tif
+    - name: landcover
+      path: guam/Guam_ccap_clip.tif
 
   alaska:
     - name: aquatic
@@ -303,6 +317,8 @@ datasets:
       path: Alaska/AK_floodprone_v3_8BitUnsigned.tif
     - name: hubs
       path: Alaska/ak_hubs_cores_030722.tif
+    - name: landcover
+      path: Alaska/ak_nlcd2016_clip.tif
     - name: low_areas
       path: Alaska/AK_Low_Lying_Areas_v2_8BitUnsigned.tif
     - name: permafrost
@@ -341,6 +357,8 @@ datasets:
       path: Great_Lakes/gl_hubs_cores_052323_102003_CREST.tif
     - name: impermeable
       path: Great_Lakes/GL_Impermeability_CREST_20230504.tif
+    - name: landcover
+      path: nlcd_2021_nfwf_conus_30m.tif
     - name: pop_density
       path: Great_Lakes/GL_Population_Density_CREST_20230504.tif
     - name: slope
@@ -393,3 +411,55 @@ test:
     guam: '{"type":"FeatureCollection","features":[{"type":"Feature","properties":{},"geometry":{"type":"Polygon","coordinates":[[[144.74343538284302,13.392604613355415],[144.74077463150024,13.38932734988023],[144.74549531936646,13.386300538244093],[144.7498512268066,13.391414784005304],[144.7441864013672,13.392813354740085],[144.74343538284302,13.392604613355415]]]}}]}'
     alaska: '{"type":"FeatureCollection","features":[{"type":"Feature","properties":{},"geometry":{"type":"Polygon","coordinates":[[[-159.38140869140625,58.63121664342478],[-159.26055908203125,58.37435815266593],[-158.60137939453122,58.39163652523205],[-158.6865234375,58.68122094860888],[-159.38140869140625,58.63121664342478]]]}}]}'
     great_lakes: '{"type":"FeatureCollection","features":[{"type":"Feature","properties":{},"geometry":{"type":"Polygon","coordinates":[[[-85.63179,44.75796],[-85.60149,44.75326],[-85.59717,44.77625],[-85.63557,44.77048],[-85.63179,44.75796]]]}}]}'
+
+NLCD_Landcover:
+  landcover_open_water: 11
+  landcover_perennial_icesnow: 12
+  landcover_developed_open_space: 21
+  landcover_developed_low_intensity: 22
+  landcover_developed_medium_intensity: 23
+  landcover_developed_high_intensity: 24
+  landcover_barren_land: 31
+  landcover_deciduous_forest: 41
+  landcover_evergreen_forest: 42
+  landcover_mixed_forest: 43
+  landcover_dwarf_scrub: 51
+  landcover_shrub_scrub: 52
+  landcover_grassland_herbaceous: 71
+  landcover_sedge_herbaceous: 72
+  landcover_lichens: 73
+  landcover_moss: 74
+  landcover_pasture_hay-areas: 81
+  landcover_cultivated_crops: 82
+  landcover_woody_wetlands: 90
+  landcover_emergent_herbaceous_wetlands: 95
+  # landcover_no_data: 255
+
+CCAP_Landcover:
+  landcover_background: 0
+  landcover_unclassified: 1
+  landcover_developed_high_intensity: 2 
+  landcover_developed_medium_intensity: 3
+  landcover_developed_low_intensity: 4
+  landcover_developed_open space: 5
+  landcover_cultivated_crops: 6
+  landcover_pasture_hay: 7
+  landcover_grassland/herbaceous: 8
+  landcover_deciduous_forest: 9
+  landcover_evergreen_forest: 10
+  landcover_mixed_forest: 11
+  landcover_scrub_shrub: 12
+  landcover_palustrine_forested_wetland: 13
+  landcover_palustrine_scrub_shrub_wetland: 14
+  landcover_palustrine_emergent_wetland: 15
+  landcover_estuarine_forested_wetland: 16
+  landcover_estuarine_scrub/shrub_wetland: 17
+  landcover_estuarine_emergent_wetland: 18
+  landcover_unconsolidated_shore: 19
+  landcover_bare_land: 20
+  landcover_open_water: 21
+  landcover_palustrine_aquatic_bed: 22
+  landcover_estuarine_aquatic_bed: 23
+  landcover_tundra: 24
+  landcover_snow_ice: 25
+  # landcover_no_data: 255
