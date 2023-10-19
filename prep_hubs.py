@@ -61,7 +61,8 @@ def get_shp_out_at(shp_path, crs, region, append=False):
   if append:
     return fiona.open(shp_path, 'a')
   else:
-    return fiona.open(shp_path, 'w', crs=crs, driver='ESRI Shapefile', schema=config[region]['schema'])
+    #return fiona.open(shp_path, 'w', crs=crs, driver='ESRI Shapefile', schema=config[region]['schema'])
+    return fiona.open(shp_path, 'w', crs=crs, driver='GeoJSON', schema=config[region]['schema'])
 
 
 def main(shpfile_path_in, shpfile_path_out, region, epsg, proj_string, local):
