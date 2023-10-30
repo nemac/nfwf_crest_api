@@ -5,14 +5,23 @@ user_shapes_bucket: nfwf-tool-user-shapes
 
 vrt:
   continental_us: continental_us.vrt
+  continental_us_landcover: continental_us_landcover.vrt
   puerto_rico: puerto_rico.vrt
+  puerto_rico_landcover: puerto_rico_landcover.vrt
   us_virgin_islands: virgin_islands.vrt
+  us_virgin_islands_landcover: virgin_islands_landcover.vrt
   northern_mariana_islands: northern_mariana_islands.vrt
+  northern_mariana_islands_landcover: northern_mariana_islands_landcover.vrt
   hawaii: hawaii.vrt
+  hawaii_landcover: hawaii_landcover.vrt
   american_samoa: american_samoa.vrt
+  american_samoa_landcover: american_samoa_landcover.vrt
   guam: guam.vrt
+  guam_landcover: guam_landcover.vrt
   alaska: alaska.vrt
+  alaska_landcover: alaska_landcover.vrt
   great_lakes: great_lakes.vrt
+  great_lakes_landcover: great_lakes_landcover.vrt
 
 datasets:
 
@@ -53,6 +62,8 @@ datasets:
       path: threat-inputs/CONUS_Slope_shift_111918.tif
     - name: storm_surge
       path: threat-inputs/CONUS_StormSurge_shift_111618.tif
+  
+  continental_us_landcover:
     - name: landcover
       path: nlcd_2021_nfwf_conus_30m.tif
 
@@ -95,6 +106,8 @@ datasets:
       path: puerto-rico/byte/PR_Tsunami_v2_clip.tif
     - name: hubs
       path: puerto-rico/byte/PR_Combined_Hub_group_July2020.tif
+  
+  puerto_rico_landcover:
     - name: landcover
       path: puerto-rico/byte/pr_ccap_10m_clip.tif
 
@@ -133,8 +146,10 @@ datasets:
       path: us-virgin-islands/byte/USVI_TerrestrialIndex_4class.tif
     - name: hubs
       path: us-virgin-islands/byte/USVI_Combined_Hub_Groups_July2020.tif
+
+  us_virgin_islands_landcover:
     - name: landcover
-      path: us-virgin-islands/byte/vi_ccap_2012_3m_clip_epsg32161.tif
+      path: us-virgin-islands/byte/vi_ccap_2012_merge_32161.tif
 
   northern_mariana_islands:
     - name: asset
@@ -171,6 +186,8 @@ datasets:
       path: cnmi/CNMI_Wildlife_Index.tif
     - name: hubs
       path: cnmi/CNMI_Combined_Hub_Group_July2020.tif
+
+  northern_mariana_islands_landcover:
     - name: landcover
       path: cnmi/CNMI_CCAP_CREST.tif
 
@@ -187,8 +204,6 @@ datasets:
       path: Hawaii/HI_Floodprone_Areas_091120.tif
     - name: impermeable
       path: Hawaii/HI_Impermeable_Soils_091120.tif
-    - name: landcover
-      path: Hawaii/HI_CCAP_CREST.tif
     - name: landslides
       path: Hawaii/HI_LandslideSuscept_091120.tif
     - name: low_areas
@@ -215,6 +230,10 @@ datasets:
       path: Hawaii/HI_Wildlife_Index_6class_102820.tif
     - name: hubs
       path: Hawaii/hi_cores_hubs_111920.tif
+
+  hawaii_landcover:
+    - name: landcover
+      path: Hawaii/HI_CCAP_CREST.tif
 
   american_samoa:
     - name: asset
@@ -253,6 +272,8 @@ datasets:
       path: AmericanSamoa/as_hubs_cores_merge_100421.tif
     - name: erosion
       path: AmericanSamoa/AS_Erodible_Soils_shift_v1_LZW.tif
+  
+  american_samoa_landcover:
     - name: landcover
       path: AmericanSamoa/American_Samoa_ccap_3m_clip.tif
 
@@ -297,6 +318,8 @@ datasets:
       path: guam/GU_tsunami.tif
     - name: wave_exposure
       path: guam/wave_exposure_5class_proj.tif
+
+  guam_landcover:
     - name: landcover
       path: guam/Guam_ccap_clip.tif
 
@@ -317,8 +340,6 @@ datasets:
       path: Alaska/AK_floodprone_v3_8BitUnsigned.tif
     - name: hubs
       path: Alaska/ak_hubs_cores_030722.tif
-    - name: landcover
-      path: Alaska/ak_nlcd2016_clip.tif
     - name: low_areas
       path: Alaska/AK_Low_Lying_Areas_v2_8BitUnsigned.tif
     - name: permafrost
@@ -335,6 +356,10 @@ datasets:
       path: Alaska/AK_Tsunami_v1_8BitUnsigned.tif
     - name: wildlife
       path: Alaska/AK_Wildlife_Index_10class_v2_8BitUnsigned.tif
+
+  alaska_landcover:
+    - name: landcover
+      path: Alaska/ak_nlcd2016_clip.tif
 
   great_lakes:
     - name: aquatic
@@ -357,8 +382,6 @@ datasets:
       path: Great_Lakes/gl_hubs_cores_052323_102003_CREST.tif
     - name: impermeable
       path: Great_Lakes/GL_Impermeability_CREST_20230504.tif
-    - name: landcover
-      path: nlcd_2021_nfwf_conus_30m.tif
     - name: pop_density
       path: Great_Lakes/GL_Population_Density_CREST_20230504.tif
     - name: slope
@@ -371,6 +394,10 @@ datasets:
       path: Great_Lakes/GL_Threat_Index_CREST_20230504.tif
     - name: wildlife
       path: Great_Lakes/GL_Fish_and_Wildlife_Index_CREST_20230504.tif
+
+  great_lakes_landcover:
+    - name: landcover
+      path: nlcd_2021_nfwf_conus_30m.tif
 
 test:
   points:

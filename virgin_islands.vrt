@@ -1,6 +1,6 @@
-<VRTDataset rasterXSize="7909" rasterYSize="19002">
+<VRTDataset rasterXSize="6913" rasterYSize="12442">
   <SRS dataAxisToSRSAxisMapping="1,2">PROJCS["NAD83 / Puerto Rico &amp; Virgin Is.",GEOGCS["NAD83",DATUM["North_American_Datum_1983",SPHEROID["GRS 1980",6378137,298.257222101,AUTHORITY["EPSG","7019"]],AUTHORITY["EPSG","6269"]],PRIMEM["Greenwich",0,AUTHORITY["EPSG","8901"]],UNIT["degree",0.0174532925199433,AUTHORITY["EPSG","9122"]],AUTHORITY["EPSG","4269"]],PROJECTION["Lambert_Conformal_Conic_2SP"],PARAMETER["latitude_of_origin",17.8333333333333],PARAMETER["central_meridian",-66.4333333333333],PARAMETER["standard_parallel_1",18.4333333333333],PARAMETER["standard_parallel_2",18.0333333333333],PARAMETER["false_easting",200000],PARAMETER["false_northing",200000],UNIT["metre",1,AUTHORITY["EPSG","9001"]],AXIS["Easting",EAST],AXIS["Northing",NORTH],AUTHORITY["EPSG","32161"]]</SRS>
-  <GeoTransform>  3.4234567314063711e+05,  1.0000000000000000e+01,  0.0000000000000000e+00,  3.7073784230000002e+05,  0.0000000000000000e+00, -1.0000000000000000e+01</GeoTransform>
+  <GeoTransform>  3.4234567314063711e+05,  1.0000000000000000e+01,  0.0000000000000000e+00,  3.0513457449999824e+05,  0.0000000000000000e+00, -1.0000000000000000e+01</GeoTransform>
   <VRTRasterBand dataType="Byte" band="1">
     <NoDataValue>255</NoDataValue>
     <ColorInterp>Gray</ColorInterp>
@@ -8,8 +8,8 @@
       <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/us-virgin-islands/byte/USVI_ExposureIndex_10class_021220_clip.tif</SourceFilename>
       <SourceBand>1</SourceBand>
       <SourceProperties RasterXSize="5605" RasterYSize="8459" DataType="Byte" BlockXSize="256" BlockYSize="256" />
-      <SrcRect xOff="0.251873789681122" yOff="0" xSize="5604.74812621032" ySize="8458.67322246708" />
-      <DstRect xOff="0" yOff="10543.3267775329" xSize="5604.74812621032" ySize="8458.67322246708" />
+      <SrcRect xOff="0.251873789681122" yOff="0" xSize="5604.74812621032" ySize="8459" />
+      <DstRect xOff="0" yOff="3983" xSize="5604.74812621032" ySize="8459" />
       <NODATA>255</NODATA>
     </ComplexSource>
   </VRTRasterBand>
@@ -20,8 +20,8 @@
       <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/us-virgin-islands/byte/USVI_ThreatIndex_10class_021220_clip.tif</SourceFilename>
       <SourceBand>1</SourceBand>
       <SourceProperties RasterXSize="5605" RasterYSize="8459" DataType="Byte" BlockXSize="256" BlockYSize="256" />
-      <SrcRect xOff="0.251873789681122" yOff="0" xSize="5604.74812621032" ySize="8458.67322246708" />
-      <DstRect xOff="0" yOff="10543.3267775329" xSize="5604.74812621032" ySize="8458.67322246708" />
+      <SrcRect xOff="0.251873789681122" yOff="0" xSize="5604.74812621032" ySize="8459" />
+      <DstRect xOff="0" yOff="3983" xSize="5604.74812621032" ySize="8459" />
       <NODATA>255</NODATA>
     </ComplexSource>
   </VRTRasterBand>
@@ -32,8 +32,8 @@
       <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/us-virgin-islands/byte/USVI_AssetIndex_10class_021020_clip.tif</SourceFilename>
       <SourceBand>1</SourceBand>
       <SourceProperties RasterXSize="5605" RasterYSize="8459" DataType="Byte" BlockXSize="256" BlockYSize="256" />
-      <SrcRect xOff="0.35389406378381" yOff="0" xSize="5604.64610593622" ySize="8458.98679999985" />
-      <DstRect xOff="0" yOff="10543.0132000002" xSize="5604.64610593622" ySize="8458.98679999985" />
+      <SrcRect xOff="0.35389406378381" yOff="0" xSize="5604.64610593622" ySize="8459" />
+      <DstRect xOff="0" yOff="3982.68641999997" xSize="5604.64610593622" ySize="8459" />
       <NODATA>255</NODATA>
     </ComplexSource>
   </VRTRasterBand>
@@ -44,8 +44,8 @@
       <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/us-virgin-islands/byte/USVI_CombinedWildlife_6class_040320.tif</SourceFilename>
       <SourceBand>1</SourceBand>
       <SourceProperties RasterXSize="6915" RasterYSize="12635" DataType="Byte" BlockXSize="256" BlockYSize="256" />
-      <SrcRect xOff="2.25187406386249" yOff="0" xSize="6912.74812593614" ySize="12441.6732199998" />
-      <DstRect xOff="0" yOff="6560.32678000018" xSize="6912.74812593614" ySize="12441.6732199998" />
+      <SrcRect xOff="2.25187406386249" yOff="0" xSize="6912.74812593614" ySize="12442" />
+      <DstRect xOff="0" yOff="0" xSize="6912.74812593614" ySize="12442" />
       <NODATA>255</NODATA>
     </ComplexSource>
   </VRTRasterBand>
@@ -56,8 +56,8 @@
       <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/us-virgin-islands/byte/USVI_CriticalFacilities_v2_clip.tif</SourceFilename>
       <SourceBand>1</SourceBand>
       <SourceProperties RasterXSize="5605" RasterYSize="8459" DataType="Byte" BlockXSize="256" BlockYSize="256" />
-      <SrcRect xOff="0.35389406378381" yOff="0" xSize="5604.64610593622" ySize="8458.98679999985" />
-      <DstRect xOff="0" yOff="10543.0132000002" xSize="5604.64610593622" ySize="8458.98679999985" />
+      <SrcRect xOff="0.35389406378381" yOff="0" xSize="5604.64610593622" ySize="8459" />
+      <DstRect xOff="0" yOff="3982.68641999997" xSize="5604.64610593622" ySize="8459" />
       <NODATA>255</NODATA>
     </ComplexSource>
   </VRTRasterBand>
@@ -68,8 +68,8 @@
       <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/us-virgin-islands/byte/USVI_CriticalInfrastructure_v2_clip.tif</SourceFilename>
       <SourceBand>1</SourceBand>
       <SourceProperties RasterXSize="5605" RasterYSize="8459" DataType="Byte" BlockXSize="256" BlockYSize="256" />
-      <SrcRect xOff="0.35389406378381" yOff="0" xSize="5604.64610593622" ySize="8458.98679999985" />
-      <DstRect xOff="0" yOff="10543.0132000002" xSize="5604.64610593622" ySize="8458.98679999985" />
+      <SrcRect xOff="0.35389406378381" yOff="0" xSize="5604.64610593622" ySize="8459" />
+      <DstRect xOff="0" yOff="3982.68641999997" xSize="5604.64610593622" ySize="8459" />
       <NODATA>255</NODATA>
     </ComplexSource>
   </VRTRasterBand>
@@ -80,8 +80,8 @@
       <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/us-virgin-islands/byte/USVI_ErodibleSoils_v2_clip.tif</SourceFilename>
       <SourceBand>1</SourceBand>
       <SourceProperties RasterXSize="5605" RasterYSize="8459" DataType="Byte" BlockXSize="256" BlockYSize="256" />
-      <SrcRect xOff="0.251873789681122" yOff="0" xSize="5604.74812621032" ySize="8458.67322246708" />
-      <DstRect xOff="0" yOff="10543.3267775329" xSize="5604.74812621032" ySize="8458.67322246708" />
+      <SrcRect xOff="0.251873789681122" yOff="0" xSize="5604.74812621032" ySize="8459" />
+      <DstRect xOff="0" yOff="3983" xSize="5604.74812621032" ySize="8459" />
       <NODATA>255</NODATA>
     </ComplexSource>
   </VRTRasterBand>
@@ -92,8 +92,8 @@
       <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/us-virgin-islands/byte/USVI_FloodproneAreas_v2_clip.tif</SourceFilename>
       <SourceBand>1</SourceBand>
       <SourceProperties RasterXSize="5605" RasterYSize="8459" DataType="Byte" BlockXSize="256" BlockYSize="256" />
-      <SrcRect xOff="0.251873789681122" yOff="0" xSize="5604.74812621032" ySize="8458.67322246708" />
-      <DstRect xOff="0" yOff="10543.3267775329" xSize="5604.74812621032" ySize="8458.67322246708" />
+      <SrcRect xOff="0.251873789681122" yOff="0" xSize="5604.74812621032" ySize="8459" />
+      <DstRect xOff="0" yOff="3983" xSize="5604.74812621032" ySize="8459" />
       <NODATA>255</NODATA>
     </ComplexSource>
   </VRTRasterBand>
@@ -104,8 +104,8 @@
       <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/us-virgin-islands/byte/USVI_Impermeable_v2_clip.tif</SourceFilename>
       <SourceBand>1</SourceBand>
       <SourceProperties RasterXSize="5605" RasterYSize="8459" DataType="Byte" BlockXSize="256" BlockYSize="256" />
-      <SrcRect xOff="0.251873789681122" yOff="0" xSize="5604.74812621032" ySize="8458.67322246708" />
-      <DstRect xOff="0" yOff="10543.3267775329" xSize="5604.74812621032" ySize="8458.67322246708" />
+      <SrcRect xOff="0.251873789681122" yOff="0" xSize="5604.74812621032" ySize="8459" />
+      <DstRect xOff="0" yOff="3983" xSize="5604.74812621032" ySize="8459" />
       <NODATA>255</NODATA>
     </ComplexSource>
   </VRTRasterBand>
@@ -117,7 +117,7 @@
       <SourceBand>1</SourceBand>
       <SourceProperties RasterXSize="5605" RasterYSize="8458" DataType="Byte" BlockXSize="256" BlockYSize="256" />
       <SrcRect xOff="0" yOff="0" xSize="5605" ySize="8458" />
-      <DstRect xOff="0" yOff="10543.8940980422" xSize="5605" ySize="8458" />
+      <DstRect xOff="0" yOff="3983.567318042" xSize="5605" ySize="8458" />
       <NODATA>255</NODATA>
     </ComplexSource>
   </VRTRasterBand>
@@ -128,8 +128,8 @@
       <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/us-virgin-islands/byte/USVI_MarineIndex_4class.tif</SourceFilename>
       <SourceBand>1</SourceBand>
       <SourceProperties RasterXSize="6915" RasterYSize="12635" DataType="Byte" BlockXSize="256" BlockYSize="256" />
-      <SrcRect xOff="2.25187406386249" yOff="0" xSize="6912.74812593614" ySize="12441.6732199998" />
-      <DstRect xOff="0" yOff="6560.32678000018" xSize="6912.74812593614" ySize="12441.6732199998" />
+      <SrcRect xOff="2.25187406386249" yOff="0" xSize="6912.74812593614" ySize="12442" />
+      <DstRect xOff="0" yOff="0" xSize="6912.74812593614" ySize="12442" />
       <NODATA>255</NODATA>
     </ComplexSource>
   </VRTRasterBand>
@@ -140,8 +140,8 @@
       <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/us-virgin-islands/byte/USVI_PopulationDensity_v2_clip.tif</SourceFilename>
       <SourceBand>1</SourceBand>
       <SourceProperties RasterXSize="5605" RasterYSize="8459" DataType="Byte" BlockXSize="256" BlockYSize="256" />
-      <SrcRect xOff="0.35389406378381" yOff="0" xSize="5604.64610593622" ySize="8458.98679999985" />
-      <DstRect xOff="0" yOff="10543.0132000002" xSize="5604.64610593622" ySize="8458.98679999985" />
+      <SrcRect xOff="0.35389406378381" yOff="0" xSize="5604.64610593622" ySize="8459" />
+      <DstRect xOff="0" yOff="3982.68641999997" xSize="5604.64610593622" ySize="8459" />
       <NODATA>255</NODATA>
     </ComplexSource>
   </VRTRasterBand>
@@ -152,8 +152,8 @@
       <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/us-virgin-islands/byte/USVI_SLR_v2_clip.tif</SourceFilename>
       <SourceBand>1</SourceBand>
       <SourceProperties RasterXSize="5605" RasterYSize="8459" DataType="Byte" BlockXSize="256" BlockYSize="256" />
-      <SrcRect xOff="0.251873789681122" yOff="0" xSize="5604.74812621032" ySize="8458.67322246708" />
-      <DstRect xOff="0" yOff="10543.3267775329" xSize="5604.74812621032" ySize="8458.67322246708" />
+      <SrcRect xOff="0.251873789681122" yOff="0" xSize="5604.74812621032" ySize="8459" />
+      <DstRect xOff="0" yOff="3983" xSize="5604.74812621032" ySize="8459" />
       <NODATA>255</NODATA>
     </ComplexSource>
   </VRTRasterBand>
@@ -164,8 +164,8 @@
       <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/us-virgin-islands/byte/USVI_SocialVulnerability_v2_clip.tif</SourceFilename>
       <SourceBand>1</SourceBand>
       <SourceProperties RasterXSize="5605" RasterYSize="8459" DataType="Byte" BlockXSize="256" BlockYSize="256" />
-      <SrcRect xOff="0.353893937123939" yOff="0" xSize="5604.64610606288" ySize="8458.98679233954" />
-      <DstRect xOff="0" yOff="10543.0132076605" xSize="5604.64610606288" ySize="8458.98679233954" />
+      <SrcRect xOff="0.353893937123939" yOff="0" xSize="5604.64610606288" ySize="8459" />
+      <DstRect xOff="0" yOff="3982.68642766029" xSize="5604.64610606288" ySize="8459" />
       <NODATA>255</NODATA>
     </ComplexSource>
   </VRTRasterBand>
@@ -176,8 +176,8 @@
       <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/us-virgin-islands/byte/USVI_StormSurge_v2_clip.tif</SourceFilename>
       <SourceBand>1</SourceBand>
       <SourceProperties RasterXSize="5605" RasterYSize="8459" DataType="Byte" BlockXSize="256" BlockYSize="256" />
-      <SrcRect xOff="0.251873789681122" yOff="0" xSize="5604.74812621032" ySize="8458.67322246708" />
-      <DstRect xOff="0" yOff="10543.3267775329" xSize="5604.74812621032" ySize="8458.67322246708" />
+      <SrcRect xOff="0.251873789681122" yOff="0" xSize="5604.74812621032" ySize="8459" />
+      <DstRect xOff="0" yOff="3983" xSize="5604.74812621032" ySize="8459" />
       <NODATA>255</NODATA>
     </ComplexSource>
   </VRTRasterBand>
@@ -188,8 +188,8 @@
       <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/us-virgin-islands/byte/USVI_TerrestrialIndex_4class.tif</SourceFilename>
       <SourceBand>1</SourceBand>
       <SourceProperties RasterXSize="6915" RasterYSize="12635" DataType="Byte" BlockXSize="256" BlockYSize="256" />
-      <SrcRect xOff="2.25187406386249" yOff="0" xSize="6912.74812593614" ySize="12441.6732199998" />
-      <DstRect xOff="0" yOff="6560.32678000018" xSize="6912.74812593614" ySize="12441.6732199998" />
+      <SrcRect xOff="2.25187406386249" yOff="0" xSize="6912.74812593614" ySize="12442" />
+      <DstRect xOff="0" yOff="0" xSize="6912.74812593614" ySize="12442" />
       <NODATA>255</NODATA>
     </ComplexSource>
   </VRTRasterBand>
@@ -200,20 +200,8 @@
       <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/us-virgin-islands/byte/USVI_Combined_Hub_Groups_July2020.tif</SourceFilename>
       <SourceBand>1</SourceBand>
       <SourceProperties RasterXSize="6916" RasterYSize="8863" DataType="Byte" BlockXSize="256" BlockYSize="256" />
-      <SrcRect xOff="2.80482406388037" yOff="0" xSize="6913.19517593612" ySize="8668.88552999996" />
-      <DstRect xOff="0" yOff="10333.11447" xSize="6913.19517593612" ySize="8668.88552999996" />
-      <NODATA>255</NODATA>
-    </ComplexSource>
-  </VRTRasterBand>
-<VRTRasterBand dataType="Byte" band="18">
-    <NoDataValue>255</NoDataValue>
-    <ColorInterp>Gray</ColorInterp>
-    <ComplexSource>
-      <SourceFilename relativeToVRT="0">/vsis3/nfwf-tool/us-virgin-islands/byte/vi_ccap_2012_3m_clip_epsg32161.tif</SourceFilename>
-      <SourceBand>1</SourceBand>
-      <SourceProperties RasterXSize="131308" RasterYSize="89842" DataType="Byte" BlockXSize="131308" BlockYSize="1" />
-      <SrcRect xOff="104783.233719233" yOff="0" xSize="26524.7662807673" ySize="63726" />
-      <DstRect xOff="0" yOff="0" xSize="26524.7662807673" ySize="63726" />
+      <SrcRect xOff="2.80482406388037" yOff="0" xSize="6913" ySize="8669.21231000014" />
+      <DstRect xOff="0" yOff="3772.78768999986" xSize="6913" ySize="8669.21231000014" />
       <NODATA>255</NODATA>
     </ComplexSource>
   </VRTRasterBand>
