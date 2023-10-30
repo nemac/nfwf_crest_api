@@ -45,40 +45,49 @@ def get_response(geojson, region, local=False):
   else:   
     config = util.get_config()
   data_source = config['vrt'][region]
+  data_source_landcover = config['vrt'][region + '_landcover']
   dataset_names = util.get_dataset_names(config, region)
+  dataset_names_landcover = util.get_dataset_names(config, region + '_landcover')
   if region == 'continental_us' or region == 'alaska' or region == 'great_lakes':
     landcover_to_use = config['NLCD_Landcover']
   else:
     landcover_to_use = config['CCAP_Landcover']
 
   with Env(GDAL_DISABLE_READDIR_ON_OPEN=True):
-    with open(data_source) as src:
+    # The reason there are two data sources here is because we needed to
+    # create an entirely separate VRT for landcover data. Trying to combine
+    # landcover data with the rest of the zonal stats data was causing too many errors
+    with open(data_source) as src, open(data_source_landcover) as src_landcover:
       for feature in geojson['features']:
+        proj_string_src = src.profile['crs'].to_proj4()
+        proj_string_src_landcover = src_landcover.profile['crs'].to_proj4()
+        transformer_src = Transformer.from_crs('epsg:4326', proj_string_src, always_xy=True)
+        transformer_landcover = Transformer.from_crs('epsg:4326', proj_string_src_landcover, always_xy=True)
         geom_latlng = deepcopy(feature['geometry'])
-        proj_string = src.profile['crs'].to_proj4()
-        transformer = Transformer.from_crs('epsg:4326', proj_string, always_xy=True)
-        geom_transformed = util.transform_geom(geom_latlng, transformer)
-        geom = [ geom_transformed ]
+        geom_transformed_src = util.transform_geom(geom_latlng, transformer_src)
+        geom_latlng = deepcopy(feature['geometry'])
+        geom_transformed_landcover = util.transform_geom(geom_latlng, transformer_landcover)
+        geom = [ geom_transformed_src ]
+        geom_landcover = [ geom_transformed_landcover ]
         out_image, out_transform = mask(src, geom, pad=True, crop=True)
+        out_image_landcover, out_transform_landcover = mask(src_landcover, geom_landcover, pad=True, crop=True)
         # TODO this might need to be refactored
         arr = masked_outside(out_image, 0.0, 100.0)
+        arr_landcover = masked_outside(out_image_landcover, 0.0, 100.0)
         if 'properties' not in feature:
           feature['properties'] = {}
         feature['properties']['mean'] = {}
         for i in range(0, len(arr)):
           index_name = dataset_names[i]
-          if (index_name == 'landcover'): # need to treat landcover differently due to it not being an average
-            #hist, bins = numpy.histogram(arr[i].compressed(), bins=range(0, 101))
-            hist, bins = numpy.histogram(arr[i], bins=range(0, 101))
-            try:
-              print(hist)
-              landcover_percent = hist / arr[i].compressed().size * 100
-            except: # catch divide by zero error?
-              landcover_percent = 0
-            for key, value in landcover_to_use.items():
-              feature['properties']['mean'][key] = landcover_percent[value]
-          else: # calculate mean
-            mean = get_zonal_stat(arr[i])
-            feature['properties']['mean'][index_name] = mean
+          mean = get_zonal_stat(arr[i])
+          feature['properties']['mean'][index_name] = mean
+        # landcover stuff
+        #hist, bins = numpy.histogram(arr[i].compressed(), bins=range(0, 101))
+        hist, bins = numpy.histogram(arr_landcover, bins=range(0, 101))
+        print(hist)
+        landcover_percent = hist / 1
+        #landcover_percent = hist / arr[i].compressed().size * 100
+        for key, value in landcover_to_use.items():
+          feature['properties']['mean'][key] = landcover_percent[value]
   return geojson
 
