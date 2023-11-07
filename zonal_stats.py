@@ -89,6 +89,6 @@ def get_response(geojson, region, local=False):
         #landcover_percent = hist / arr[i].compressed().size * 100
         for key, value in landcover_to_use.items():
           val = "NaN" if isnan(landcover_percent[value]) else landcover_percent[value]
-          feature['properties']['mean'][key] = landcover_percent[value]
+          feature['properties']['mean'][key] = val
   return geojson
 
