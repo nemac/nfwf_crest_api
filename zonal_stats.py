@@ -82,13 +82,11 @@ def get_response(geojson, region, local=False):
           mean = get_zonal_stat(arr[i])
           feature['properties']['mean'][index_name] = mean
         # landcover stuff
-        #hist, bins = numpy.histogram(arr[i].compressed(), bins=range(0, 101))
         hist, bins = numpy.histogram(arr_landcover, bins=range(0, 101))
-        print(hist)
-        landcover_percent = hist / 1
-        #landcover_percent = hist / arr[i].compressed().size * 100
-        for key, value in landcover_to_use.items():
-          val = "NaN" if isnan(landcover_percent[value]) else landcover_percent[value]
-          feature['properties']['mean'][key] = val
+        if (arr_landcover.compressed().size != 0):
+          landcover_percent = (hist / arr_landcover.compressed().size) * 100
+          for key, value in landcover_to_use.items():
+            val = "NaN" if isnan(landcover_percent[value]) else landcover_percent[value]
+            feature['properties']['mean'][key] = val
   return geojson
 
