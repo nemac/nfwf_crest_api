@@ -233,42 +233,42 @@ datasets:
       path: HI_CCAP_CREST.tif
 
   american_samoa:
-    - name: asset
-      path: AS_Asset_Index_10class_shift_v2-2_LZW.tif
-    - name: crit_facilities
-      path: AS_C_Facilities_v1_LZW.tif
-    - name: crit_infra
-      path: AS_C_Infrastructure_v2-2_LZW.tif
-    - name: exposure
-      path: AS_Exposure_Index_10class_v2-2_LZW.tif
-    - name: floodprone_areas
-      path: AS_Floodprone_Areas_shift_v1_LZW.tif
+    # - name: asset
+    #   path: AS_Asset_Index_10class_shift_v2-2_LZW.tif
+    # - name: crit_facilities
+    #   path: AS_C_Facilities_v1_LZW.tif
+    # - name: crit_infra
+    #   path: AS_C_Infrastructure_v2-2_LZW.tif
+    # - name: exposure
+    #   path: AS_Exposure_Index_10class_v2-2_LZW.tif
+    # - name: floodprone_areas
+    #   path: AS_Floodprone_Areas_shift_v1_LZW.tif
     - name: impermeable
       path: AS_Impermeable_Surfaces_shift_v1_LZW.tif
-    - name: slope
-      path: AS_Slope_resample_v1_LZW.tif
-    - name: marine
-      path: AS_Marine_Index_4class_v2_LZW.tif
-    - name: pop_density
-      path: AS_PopDensity_v1_LZW.tif
-    - name: sea_level_rise
-      path: AS_SLR_shift_v1_LZW.tif
-    - name: social_vuln
-      path: AS_SocVul_v1_LZW.tif
-    - name: terrestrial
-      path: AS_Terrestrial_Index_4class_v2_LZW.tif
-    - name: wave_flooding
-      path: AS_WaveDriven_Flooding_shift_v1_LZW.tif
-    - name: threat
-      path: AS_Threat_Index_10class_v2_LZW.tif
-    - name: tsunami
-      path: AS_Tsunami_LZW.tif
-    - name: wildlife
-      path: AS_Wildlife_Index_6class_v2_LZW.tif
-    - name: hubs
-      path: as_hubs_cores_merge_100421.tif
-    - name: erosion
-      path: AS_Erodible_Soils_shift_v1_LZW.tif
+    # - name: slope
+    #   path: AS_Slope_resample_v1_LZW.tif
+    # - name: marine
+    #   path: AS_Marine_Index_4class_v2_LZW.tif
+    # - name: pop_density
+    #   path: AS_PopDensity_v1_LZW.tif
+    # - name: sea_level_rise
+    #   path: AS_SLR_shift_v1_LZW.tif
+    # - name: social_vuln
+    #   path: AS_SocVul_v1_LZW.tif
+    # - name: terrestrial
+    #   path: AS_Terrestrial_Index_4class_v2_LZW.tif
+    # - name: wave_flooding
+    #   path: AS_WaveDriven_Flooding_shift_v1_LZW.tif
+    # - name: threat
+    #   path: AS_Threat_Index_10class_v2_LZW.tif
+    # - name: tsunami
+    #   path: AS_Tsunami_LZW.tif
+    # - name: wildlife
+    #   path: AS_Wildlife_Index_6class_v2_LZW.tif
+    # - name: hubs
+    #   path: as_hubs_cores_merge_100421.tif
+    # - name: erosion
+    #   path: AS_Erodible_Soils_shift_v1_LZW.tif
   
   american_samoa_landcover:
     - name: landcover
@@ -419,53 +419,53 @@ test:
     northern_mariana_islands: '{"type":"FeatureCollection","features":[{"type":"Feature","properties":{"id":"cnmi_poly"},"geometry":{"type":"Polygon","coordinates":[[[145.77878952026367,15.228125499059319],[145.77394008636475,15.225475339228003],[145.7759141921997,15.221707085774053],[145.78372478485107,15.222328231095478],[145.78308105468747,15.226013655644088],[145.77878952026367,15.228125499059319]]]}}]}'
 
 NLCD_Landcover:
-  landcover_open_water: 11
-  landcover_perennial_icesnow: 12
-  landcover_developed_open_space: 21
-  landcover_developed_low_intensity: 22
-  landcover_developed_medium_intensity: 23
-  landcover_developed_high_intensity: 24
-  landcover_barren_land: 31
-  landcover_deciduous_forest: 41
-  landcover_evergreen_forest: 42
-  landcover_mixed_forest: 43
-  landcover_dwarf_scrub: 51
-  landcover_shrub_scrub: 52
-  landcover_grassland_herbaceous: 71
-  landcover_sedge_herbaceous: 72
-  landcover_lichens: 73
-  landcover_moss: 74
-  landcover_pasture_hay-areas: 81
-  landcover_cultivated_crops: 82
-  landcover_woody_wetlands: 90
-  landcover_emergent_herbaceous_wetlands: 95
-  # landcover_no_data: 255
+  lc_open_water: 11
+  lc_perennial_icesnow: 12
+  lc_developed_open_space: 21
+  lc_developed_low_intensity: 22
+  lc_developed_medium_intensity: 23
+  lc_developed_high_intensity: 24
+  lc_barren_land: 31
+  lc_deciduous_forest: 41
+  lc_evergreen_forest: 42
+  lc_mixed_forest: 43
+  lc_dwarf_scrub: 51
+  lc_shrub_scrub: 52
+  lc_grassland_herbaceous: 71
+  lc_sedge_herbaceous: 72
+  lc_lichens: 73
+  lc_moss: 74
+  lc_pasture_hay_areas: 81
+  lc_cultivated_crops: 82
+  lc_woody_wetlands: 90
+  lc_emerg_herbaceous_wetlands: 95
+  # lc_no_data: 255
 
 CCAP_Landcover:
-  landcover_background: 0
-  landcover_unclassified: 1
-  landcover_developed_high_intensity: 2 
-  landcover_developed_medium_intensity: 3
-  landcover_developed_low_intensity: 4
-  landcover_developed_open space: 5
-  landcover_cultivated_crops: 6
-  landcover_pasture_hay: 7
-  landcover_grassland/herbaceous: 8
-  landcover_deciduous_forest: 9
-  landcover_evergreen_forest: 10
-  landcover_mixed_forest: 11
-  landcover_scrub_shrub: 12
-  landcover_palustrine_forested_wetland: 13
-  landcover_palustrine_scrub_shrub_wetland: 14
-  landcover_palustrine_emergent_wetland: 15
-  landcover_estuarine_forested_wetland: 16
-  landcover_estuarine_scrub/shrub_wetland: 17
-  landcover_estuarine_emergent_wetland: 18
-  landcover_unconsolidated_shore: 19
-  landcover_bare_land: 20
-  landcover_open_water: 21
-  landcover_palustrine_aquatic_bed: 22
-  landcover_estuarine_aquatic_bed: 23
-  landcover_tundra: 24
-  landcover_snow_ice: 25
-  # landcover_no_data: 255
+  lc_background: 0
+  lc_unclassified: 1
+  lc_developed_high_intensity: 2 
+  lc_developed_medium_intensity: 3
+  lc_developed_low_intensity: 4
+  lc_developed_open_space: 5
+  lc_cultivated_crops: 6
+  lc_pasture_hay: 7
+  lc_grassland_herbaceous: 8
+  lc_deciduous_forest: 9
+  lc_evergreen_forest: 10
+  lc_mixed_forest: 11
+  lc_scrub_shrub: 12
+  lc_palus_forested_wetland: 13
+  lc_palus_scrub_shrub_wetland: 14
+  lc_palus_emergent_wetland: 15
+  lc_estuar_forested_wetland: 16
+  lc_estuar_scrub_shrub_wetland: 17
+  lc_estuar_emergent_wetland: 18
+  lc_unconsolidated_shore: 19
+  lc_bare_land: 20
+  lc_open_water: 21
+  lc_palustrine_aquatic_bed: 22
+  lc_estuarine_aquatic_bed: 23
+  lc_tundra: 24
+  lc_snow_ice: 25
+  # lc_no_data: 255

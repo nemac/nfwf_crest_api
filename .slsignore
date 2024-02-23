@@ -1,8 +1,13 @@
+crest_tifs/**
 alaska_tifs/**
-Hawaii/**
+american_samoa_tifs/**
 conus_tifs/**
 great_lakes/**
+guam_tifs/**
+Hawaii/**
+mariana_tifs/**
 new_landcover_tifs/**
-shape_files_to_process/**
 output_geojson_files/**
+pr_tifs/**
+shape_files_to_process/**
 virgin_islands_tifs/**

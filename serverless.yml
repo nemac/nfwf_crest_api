@@ -30,6 +30,10 @@ provider:
       Action:
         - 's3:*'
       Resource: "arn:aws:s3:::nfwf-tool-user-shapes/*"
+    - Effect: 'Allow'
+      Action:
+      - 'sns:Publish'
+      Resource: "arn:aws:sns:us-east-1:104538610210:Crest_Upload_Shapefile_Response"
 
   environment:
     STAGE: ${self:provider.stage}
@@ -69,40 +73,27 @@ functions:
           method: post
           cors: true
 
-  read_geojson:
-    handler: read_geojson.lambda_handler
-    events:
-      - http:
-          path: read_geojson
-          method: get
-          cors: true
-          request:
-            parameters:
-              querystrings:
-                region: true
-                name: true
+  read_s3:
+   handler: read_s3.lambda_handler
+   events:
+     - http:
+         path: read_s3
+         method: get
+         cors: true
+         request:
+           parameters:
+             querystrings:
+               shareUrl: true
 
-#  read_s3:
-#    handler: read_s3.lambda_handler
-#    events:
-#      - http:
-#          path: read_s3
-#          method: get
-#          cors: true
-#          request:
-#            parameters:
-#              querystrings:
-#                shareUrl: true
-
-#  write_s3:
-#    handler: write_s3.lambda_handler
-#    events:
-#      - http:
-#          path: write_s3
-#          method: post
-#          cors: true
-#          # request:
-#           # parameters:
-#            #  querystrings:
-#            #    region: true
-#            #    name: true
+  write_s3:
+   handler: write_s3.lambda_handler
+   events:
+     - http:
+         path: write_s3
+         method: post
+         cors: true
+         request:
+          parameters:
+            querystrings:
+              region: true
+              name: true

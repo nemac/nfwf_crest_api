@@ -61,8 +61,8 @@ def get_shp_out_at(shp_path, crs, region, append=False):
   if append:
     return fiona.open(shp_path, 'a')
   else:
-    #return fiona.open(shp_path, 'w', crs=crs, driver='ESRI Shapefile', schema=config[region]['schema'])
-    return fiona.open(shp_path, 'w', crs=crs, driver='GeoJSON', schema=config[region]['schema'])
+    return fiona.open(shp_path, 'w', crs=crs, driver='ESRI Shapefile', schema=config[region]['schema'])
+    #return fiona.open(shp_path, 'w', crs=crs, driver='GeoJSON', schema=config[region]['schema'])
 
 
 def main(shpfile_path_in, shpfile_path_out, region, epsg, proj_string, local):
@@ -115,7 +115,7 @@ def main(shpfile_path_in, shpfile_path_out, region, epsg, proj_string, local):
             feature['geometry'] = new_geom
             stats_feature = get_stats_for(feature, region, local)
             new_feature = conform_feature(stats_feature, region)
-            new_feature['geometry'] = native_geom 
+            new_feature['geometry'] = native_geom
             shp_out.write(new_feature)
             print('Success:', new_feature['properties'][id_out])
           except Exception as e:

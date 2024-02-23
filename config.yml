@@ -440,53 +440,53 @@ test:
     great_lakes: '{"type":"FeatureCollection","features":[{"type":"Feature","properties":{},"geometry":{"type":"Polygon","coordinates":[[[-85.63179,44.75796],[-85.60149,44.75326],[-85.59717,44.77625],[-85.63557,44.77048],[-85.63179,44.75796]]]}}]}'
 
 NLCD_Landcover:
-  landcover_open_water: 11
-  landcover_perennial_icesnow: 12
-  landcover_developed_open_space: 21
-  landcover_developed_low_intensity: 22
-  landcover_developed_medium_intensity: 23
-  landcover_developed_high_intensity: 24
-  landcover_barren_land: 31
-  landcover_deciduous_forest: 41
-  landcover_evergreen_forest: 42
-  landcover_mixed_forest: 43
-  landcover_dwarf_scrub: 51
-  landcover_shrub_scrub: 52
-  landcover_grassland_herbaceous: 71
-  landcover_sedge_herbaceous: 72
-  landcover_lichens: 73
-  landcover_moss: 74
-  landcover_pasture_hay-areas: 81
-  landcover_cultivated_crops: 82
-  landcover_woody_wetlands: 90
-  landcover_emergent_herbaceous_wetlands: 95
-  # landcover_no_data: 255
+  lc_open_water: 11
+  lc_perennial_icesnow: 12
+  lc_developed_open_space: 21
+  lc_developed_low_intensity: 22
+  lc_developed_medium_intensity: 23
+  lc_developed_high_intensity: 24
+  lc_barren_land: 31
+  lc_deciduous_forest: 41
+  lc_evergreen_forest: 42
+  lc_mixed_forest: 43
+  lc_dwarf_scrub: 51
+  lc_shrub_scrub: 52
+  lc_grassland_herbaceous: 71
+  lc_sedge_herbaceous: 72
+  lc_lichens: 73
+  lc_moss: 74
+  lc_pasture_hay_areas: 81
+  lc_cultivated_crops: 82
+  lc_woody_wetlands: 90
+  lc_emerg_herbaceous_wetlands: 95
+  # lc_no_data: 255
 
 CCAP_Landcover:
-  landcover_background: 0
-  landcover_unclassified: 1
-  landcover_developed_high_intensity: 2 
-  landcover_developed_medium_intensity: 3
-  landcover_developed_low_intensity: 4
-  landcover_developed_open space: 5
-  landcover_cultivated_crops: 6
-  landcover_pasture_hay: 7
-  landcover_grassland/herbaceous: 8
-  landcover_deciduous_forest: 9
-  landcover_evergreen_forest: 10
-  landcover_mixed_forest: 11
-  landcover_scrub_shrub: 12
-  landcover_palustrine_forested_wetland: 13
-  landcover_palustrine_scrub_shrub_wetland: 14
-  landcover_palustrine_emergent_wetland: 15
-  landcover_estuarine_forested_wetland: 16
-  landcover_estuarine_scrub/shrub_wetland: 17
-  landcover_estuarine_emergent_wetland: 18
-  landcover_unconsolidated_shore: 19
-  landcover_bare_land: 20
-  landcover_open_water: 21
-  landcover_palustrine_aquatic_bed: 22
-  landcover_estuarine_aquatic_bed: 23
-  landcover_tundra: 24
-  landcover_snow_ice: 25
-  # landcover_no_data: 255
+  lc_background: 0
+  lc_unclassified: 1
+  lc_developed_high_intensity: 2 
+  lc_developed_medium_intensity: 3
+  lc_developed_low_intensity: 4
+  lc_developed_open_space: 5
+  lc_cultivated_crops: 6
+  lc_pasture_hay: 7
+  lc_grassland_herbaceous: 8
+  lc_deciduous_forest: 9
+  lc_evergreen_forest: 10
+  lc_mixed_forest: 11
+  lc_scrub_shrub: 12
+  lc_palus_forested_wetland: 13
+  lc_palus_scrub_shrub_wetland: 14
+  lc_palus_emergent_wetland: 15
+  lc_estuar_forested_wetland: 16
+  lc_estuar_scrub_shrub_wetland: 17
+  lc_estuar_emergent_wetland: 18
+  lc_unconsolidated_shore: 19
+  lc_bare_land: 20
+  lc_open_water: 21
+  lc_palustrine_aquatic_bed: 22
+  lc_estuarine_aquatic_bed: 23
+  lc_tundra: 24
+  lc_snow_ice: 25
+  # lc_no_data: 255
