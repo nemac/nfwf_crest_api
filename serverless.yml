@@ -34,6 +34,12 @@ provider:
       Action:
       - 'sns:Publish'
       Resource: "arn:aws:sns:us-east-1:104538610210:Crest_Upload_Shapefile_Response"
+    - Effect: Allow
+      Action:
+        - s3:PutObject
+        - s3:PutObjectAcl
+        - s3:GetObject
+      Resource: "arn:aws:s3:::crest-v2-share-link/*"
 
   environment:
     STAGE: ${self:provider.stage}
@@ -92,8 +98,3 @@ functions:
          path: write_s3
          method: post
          cors: true
-         request:
-          parameters:
-            querystrings:
-              region: true
-              name: true
